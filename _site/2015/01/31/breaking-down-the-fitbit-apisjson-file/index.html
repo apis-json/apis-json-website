@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html xmlns="https://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+  <html>
+  <title>Breaking Down The Fitbit APIs.json File</title>
+  <meta charset="utf-8" />
+	<meta name="keywords" content="API, API Lifecycle, API Search, Application Programming Interface">
+	<meta name="author" content="Kin Lane">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+	<link rel="stylesheet" href="https://kinlane-productions.s3.amazonaws.com/network/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="https://kinlane-productions.s3.amazonaws.com/network/css/main.css?1=1" />
+
+	<link rel="shortcut icon" type="image/x-icon" href="https://apievangelist.com/favicon.ico">
+	<link rel="icon" type="image/x-icon" href="https://apievangelist.com/favicon.ico">
+	<link rel="icon" href="https://apievangelist.com/favicon.ico">
+
+	<script src="https://kinlane-productions.s3.amazonaws.com/network/javascript/jquery-latest.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="https://kinlane-productions.s3.amazonaws.com/network/javascript/utility.js" type="text/javascript" charset="utf-8"></script>
+	<script src="https://kinlane-productions.s3.amazonaws.com/network/javascript/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+
+  <!-- Cookies.js - http://github.com/ScottHamper/Cookies -->
+  <script src="https://kinlane-productions.s3.amazonaws.com/js/cookies.js"></script>
+
+	<script src="https://kinlane-productions.s3.amazonaws.com/network/javascript/jquery.awesomeCloud-0.2.min.js"></script>
+
+	<style type="text/css">
+		.gist {width:100% !important;}
+		.gist-file
+		.gist-data {max-height: 500px;max-width: 100%;}
+	</style>
+
+</head>
+
+  <body>
+
+			<div id="wrapper">
+					<div id="main">
+						<div class="inner">
+
+              <header id="header">
+  <a href="http://localhost:4000" class="logo"><img src="https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg" width="50%" /></a>
+  <ul class="icons">
+    <li><a href="https://twitter.com/apisjson" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+    <li><a href="https://github.com/apis-json" class="icon fa-github"><span class="label">Github</span></a></li>
+    <li><a href="/atom.xml" class="icon fa-rss"><span class="label">RSS</span></a></li>
+  </ul>
+</header>
+
+              <!--<div class="alert alert-danger"><center>This website is currently dormant!</center></div>-->
+
+    	        <h2>Breaking Down The Fitbit APIs.json File</h2>
+<p><span class="post-date">31 Jan 2015</span></p>
+<p>The quantified-self API <a href="http://www.fitbit.com">Fitbit</a> recently added an <a href="http://www.fitbit.com/apis.json">APIs.json for their domain</a>. Their usage of APIs.json is a perfect, dead-simple, introductory example of how APIs can start putting APIs.json for their API platform. To help other providers understand, I wanted to take a look at the moving parts of Fitbits APIs.json, and to assist the conversation I labeled each part.</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/blog/www_fitbit_com-apis_json.png" alt="" width="95%" align="center" /></p>
+<blockquote><strong>A) </strong>The heart of an APIs.json, providing a name, description, image, and tags for API platform and collection.<br /> <strong>B)</strong> The technical details of where this APIs.json came from, which version it is, and when it was created and last modified.<br /> <strong>C) </strong>Similar to the overall APIs.json collection, each API gets a name, description, image, and tags, but also as the default URL people should go to find the API, as well as the base URL actually make calls to the AP, which is used as the API identifier.<br /> <strong>D) </strong>Properties collection for the API. This is where the flexibility in the APIs.json comes in, and you can define any type of URL you wish. Ideally we establish a core set of machine readable properties, but providing human links to blog, documentation, etc are essential too.<br /> <strong>E) </strong>X-blog - a link to the Fitbit blog, providing a direct link that users can use to read the blog.<br /> <strong>F) </strong>X-blog-rss-feed -a link to the RSS feed, providing a machine readable link to stories, and updates for the platform.<br /> <strong>G) </strong>X-github - a link to the official Github account for the Fitbit platform, when you consider the Github API, this becomes a machine readable link to multiple aspects of API operations.<br /> <strong>H) </strong>X-twitter -  a link to the official Twitter account for the Fitbit platform, which again, using the Twitter API, this becomes a machine readable resources for accessing platform communications, updates, and resources.<br /> <strong>I) </strong>Contact information for the Fitbit API team, which they route you to a forum. Some platforms put their Twitter handle here, and others put an email or phone number.<br /> <strong>J) </strong>Maintainer for the APIs.json, which since it is Fitbit, helps provide authority, showing this APIs.json comes from the source, and is not a collection built by someone else, which includes the Fitbit API.<br /></blockquote>
+<p>The initial APIs.json from Fitbit is simple, and while there is potential for additions like a Swagger or API blueprint definition, or maybe terms of services, and client code, would be an excellent start.</p>
+<p>So what now? What does this do for Fitbit?</p>
+<p>It makes the definition of their API portable. It acts like a sitemap.xml for their API program, allowing search engines like <a href="http://apis.io">APIs.io</a> to index Fitbit along with other APIs. You can also develop embeddable widgets, allowing the API information to be displayed on any site, and using Github and Twitter APis, and the Blog RSS, you could also pull other relevant information for display, and search within the widget, on any website or mobile application.</p>
+<p>We are just getting going with APIs.json tooling, that will help add to the benefits of having one. I know of several projects in the works, developing internal APIs.json search engines, directories, and when you include API definitions like Swagger and API Blueprint in your APIs.json, things get even better. I&rsquo;m using APIs.json for microservice discovery, navigation, and indexing, and as a way to connect API interfaces  with containers that deliver on the promise an API is supposed to deliver.</p>
+<p>I am seeing more API providers begin to deploy APIs.json for their providers, and I have two of the leading API management providers about to release APIs.json as a native part of their API management workflow, with others in the works. It is good to see APIs like Fitbit see the potential of indexing their API operations with <a href="http://apisjson.org">APIs.json</a>, something where the benefits are only going to grow over the coming years, as new tools, and services emerge that depend on APIs.json for engaging in the API economy.</p>
+<hr />
+<table cellpadding="5" cellspacing="5" align="center" border="0" style="border-bottom: 0px; padding-bottom: 10px;">
+	<tr>
+		<td align="center">
+			<a href="http://twitter.com/home?status=Breaking Down The Fitbit APIs.json File - /2015/01/31/breaking-down-the-fitbit-apisjson-file/ via @apievangelist" target="_bank"><img src="https://s3.amazonaws.com/kinlane-productions/icons/twitter.png" width="25" /></a>
+		</td>
+		<td align="center">
+			<a href="http://www.facebook.com/share.php?u=/2015/01/31/breaking-down-the-fitbit-apisjson-file/&title=Breaking Down The Fitbit APIs.json File" target="_bank"><img src="https://s3.amazonaws.com/kinlane-productions/icons/facebook.png" width="25" /></a>
+		</td>
+		<td align="center">
+			<a href="http://www.linkedin.com/shareArticle?mini=true&url=/2015/01/31/breaking-down-the-fitbit-apisjson-file/&title=Breaking Down The Fitbit APIs.json File&source=apievangelist.com" target="_bank"><img src="https://s3.amazonaws.com/kinlane-productions/icons/linkedin.png" width="25" /></a>
+		</td>
+		<td align="center">
+			<a href="https://plus.google.com/share?url=/2015/01/31/breaking-down-the-fitbit-apisjson-file/" target="_bank"><img src="https://s3.amazonaws.com/kinlane-productions/icons/google-plus.png" width="25" /></a>
+		</td>
+	</tr>
+</table>
+
+<div class="pagination">
+	
+	   	<a href="/2015/01/28/using-apisjson-for-my-microservice-navigation-and-discovery/" class="older">Older</a>
+	
+	  
+	    <a href="/2015/02/08/a-minimum-viable-apisjson-file-for-your-apis/" class="newer">Newer</a>
+	  
+</div>
+
+<div id="disqus_thread"></div>
+<script>
+
+/**
+ *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+ *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables */
+/*
+var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = '//apievangelist.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+              <footer>
+  <p align="center">
+    relevant work:
+    <a href="http://apievangelist.com">apievangelist.com</a> |
+    <a href="http://adopta.agency">adopta.agency</a> |
+  </p>
+</footer>
+
+
+            </div>
+          </div>
+
+          <div id="sidebar">
+          <div class="inner">
+
+            <nav id="menu">
+  <header class="major">
+    <h2>Navigation</h2>
+  </header>
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="/blog/">Blog</a></li>
+  </ul>
+</nav>
+
+
+            <section>
+  <header class="major">
+    <h2>Supported Specifications</h2>
+  </header>
+  <div class="mini-posts">
+    
+    
+        <article style="padding: 2px; margin: 0px 0px 0px 30px;"><a href="https://www.openapis.org/" class="image"><img src="https://kinlane-productions.s3.amazonaws.com/specifications/openapi.png" alt="" style="width: 200px; border: 1px solid #000;" /></a></article>
+    
+        <article style="padding: 2px; margin: 0px 0px 0px 30px;"><a href="https://www.asyncapi.com/" class="image"><img src="https://kinlane-productions.s3.amazonaws.com/specifications/asyncapi-horiozontal.png" alt="" style="width: 200px; border: 1px solid #000;" /></a></article>
+    
+        <article style="padding: 2px; margin: 0px 0px 0px 30px;"><a href="https://www.postman.com/collection/" class="image"><img src="https://kinlane-productions.s3.amazonaws.com/specifications/postman-logo.png" alt="" style="width: 200px; border: 1px solid #000;" /></a></article>
+    
+        <article style="padding: 2px; margin: 0px 0px 0px 30px;"><a href="https://json-schema.org/" class="image"><img src="https://kinlane-productions.s3.amazonaws.com/specifications/json-schema.png" alt="" style="width: 200px; border: 1px solid #000;" /></a></article>
+    
+  </div>
+</section>
+
+
+          </div>
+          </div>
+
+      </div>
+
+<script src="https://kinlane-productions.s3.amazonaws.com/network/javascript/skel.min.js"></script>
+<script src="https://kinlane-productions.s3.amazonaws.com/network/javascript/util.js"></script>
+<script src="https://kinlane-productions.s3.amazonaws.com/network/javascript/main.js"></script>	
+
+
+</body>
+</html>

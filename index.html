@@ -1,0 +1,95 @@
+---
+layout: default
+title: Home
+---
+
+<!-- Main -->
+<section id="banner">
+	<div class="content">
+
+		<header>
+			<h2>What is APIs.json?</h2>
+		</header>
+
+		<p style="margin-left; 15px; margin-right: 15px;">APIs.json is a machine readable specification that API providers can use to describe their API operations, similar to how web sites are described using sitemap.xml. Providing an index of internal, partner, and public APIs, which includes not just the the OpenAPI, JSON Schema, and other machine readable artifacts, but also the currently only human readable elements like documentation, pricing, and terms of service.</p>
+
+	</div>
+</section>
+
+<section id="banner">
+	<div class="content">
+
+		<header>
+			<h2>Who is using APIs.json?</h2>
+		</header>
+
+		<div class="features">
+		  {% assign showcases = site.data.showcase | sort: 'view_sort' %}
+		  {% for showcase in showcases %}
+		    <article>
+		      <div class="content">
+		        <p align="center"><a href="{{ showcase.url }}" target="_blank"><img src="{{ showcase.image }}" width="70%" style="padding: 15px; border: 1px solid #000;" /></a></p>
+		      </div>
+		    </article>
+		  {% endfor %}
+		</div>
+
+	</div>
+</section>
+
+<section id="banner">
+	<div class="content">
+
+		<header>
+			<h2>Latest Version</h2>
+		</header>
+		<iframe src="http://apisjson.org/format/apisjson_0.15.txt" style="padding: 15px; width: 100%; height: 500px; border: 1px solid #CCC;"></iframe>
+		<h3>Older Versions</h3>
+    <ul>
+			<li><a href="http://apisjson.org/format/apisjson_0.14.txt" target="_blank">http://apisjson.org/format/apisjson_0.14.txt</a></li>
+			<li><a href="http://apisjson.org/format/apisjson_0.13.txt" target="_blank">http://apisjson.org/format/apisjson_0.13.txt</a></li>
+			<li><a href="http://apisjson.org/format/apisjson_0.12.txt" target="_blank">http://apisjson.org/format/apisjson_0.12.txt</a></li>
+			<li><a href="http://apisjson.org/format/apisjson_0.11.txt" target="_blank">http://apisjson.org/format/apisjson_0.11.txt</a></li>
+    </ul>
+
+	</div>
+</section>
+
+<section id="banner">
+	<div class="content">
+
+		<header>
+			<h2>Example APIs.json</h2>
+		</header>
+
+    <script src="https://gist.github.com/kinlane/c5e71db5769a6d6b7f221ba89686e3e0.js"></script>
+
+	</div>
+
+</section>
+
+<section id="banner">
+
+	<div class="content">
+
+		<header>
+			<h2>Contributing</h2>
+		</header>
+
+		<p style="margin-left; 15px; margin-right: 15px;">If you have comments or would like to get involved in the conversation around APIs.json, feel free to jump in on the GitHub Issues for the specification, or the Google Group conversation.</p>
+
+		<div class="features">
+	    <article>
+	      <div class="content">
+	        <p align="center"><a href="https://github.com/apis-json/api-json/issues" target="_blank"><img src="https://kinlane-productions.s3.amazonaws.com/github-issue-icon.png" width="40%" style="padding: 15px; border: 1px solid #000;" /></a></p>
+	      </div>
+	    </article>
+	    <article>
+	      <div class="content">
+	        <p align="center"><a href="https://groups.google.com/forum/#!forum/apisjson" target="_blank"><img src="https://kinlane-productions.s3.amazonaws.com/google-group.png" width="40%" style="padding: 15px; border: 1px solid #000;" /></a></p>
+	      </div>
+	    </article>
+		</div>
+
+	</div>
+</section>

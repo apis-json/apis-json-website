@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html xmlns="https://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+  <html>
+  <title>My Experiences Generating API Server or Client Code Using Swagger</title>
+  <meta charset="utf-8" />
+	<meta name="keywords" content="API, API Lifecycle, API Search, Application Programming Interface">
+	<meta name="author" content="Kin Lane">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+	<link rel="stylesheet" href="https://kinlane-productions.s3.amazonaws.com/network/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="https://kinlane-productions.s3.amazonaws.com/network/css/main.css?1=1" />
+
+	<link rel="shortcut icon" type="image/x-icon" href="https://apievangelist.com/favicon.ico">
+	<link rel="icon" type="image/x-icon" href="https://apievangelist.com/favicon.ico">
+	<link rel="icon" href="https://apievangelist.com/favicon.ico">
+
+	<script src="https://kinlane-productions.s3.amazonaws.com/network/javascript/jquery-latest.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="https://kinlane-productions.s3.amazonaws.com/network/javascript/utility.js" type="text/javascript" charset="utf-8"></script>
+	<script src="https://kinlane-productions.s3.amazonaws.com/network/javascript/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+
+  <!-- Cookies.js - http://github.com/ScottHamper/Cookies -->
+  <script src="https://kinlane-productions.s3.amazonaws.com/js/cookies.js"></script>
+
+	<script src="https://kinlane-productions.s3.amazonaws.com/network/javascript/jquery.awesomeCloud-0.2.min.js"></script>
+
+	<style type="text/css">
+		.gist {width:100% !important;}
+		.gist-file
+		.gist-data {max-height: 500px;max-width: 100%;}
+	</style>
+
+</head>
+
+  <body>
+
+			<div id="wrapper">
+					<div id="main">
+						<div class="inner">
+
+              <header id="header">
+  <a href="http://localhost:4000" class="logo"><img src="https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg" width="50%" /></a>
+  <ul class="icons">
+    <li><a href="https://twitter.com/apisjson" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+    <li><a href="https://github.com/apis-json" class="icon fa-github"><span class="label">Github</span></a></li>
+    <li><a href="/atom.xml" class="icon fa-rss"><span class="label">RSS</span></a></li>
+  </ul>
+</header>
+
+              <!--<div class="alert alert-danger"><center>This website is currently dormant!</center></div>-->
+
+    	        <h2>My Experiences Generating API Server or Client Code Using Swagger</h2>
+<p><span class="post-date">26 Jan 2015</span></p>
+<p><img style="padding: 10px;" src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-gears.png" alt="" width="250" align="right" /></p>
+<p>When you start talking about generating server or client side code for APIs, using machine readable API definition formats like <a href="http://swagger.io">Swagger</a> or <a href="https://apiblueprint.org/">API Blueprint</a>, many technologists feel compelled to let you know, that at some point you will hit a wall. There is only so far you can go, when using your API definition as guide for generating server-side or clienit-side code, but in my experience you can definitely save some significant time an energy, by auto-generating code using Swagger definitions.</p>
+<p>I just finished re-designing 15 APIs that support the core of API Evangelist, and to support the work I wrote four separate code generation tools:</p>
+<ul>
+<li><strong>PHP Server - </strong>Generating a Slim PHP framework for my API, based upon Swagger definition.</li>
+<li><strong>PHP Client -</strong> Assemble a custom PHP client of my design, using Swagger definition as guide.</li>
+<li><strong>JavaScript Client -</strong>&nbsp;Assemble a custom JavaScript client of my design, using Swagger definition as guide.</li>
+<li><strong>MySQL Database - </strong>Generate a MySQL script based upon the data models available in a Swagger definition.</li>
+</ul>
+<p>Using Swagger, I can get myself 90-100% of the way for most of the common portions of the APIs I design. When writing a simple CRUD API like notes, or for links, I can auto-generate the PHP server, and a JS client, and underlying MySQL table structure, which in the end, runs perfectly with no changes.</p>
+<p>Once I needed more custom functionality, and have more unique API calls to make, I then have to get my hands dirty, and begin manually working in the code. However auto-generation of code sure gets me a long way down the road, saving me time doing the really mundane, heavy lifting in creating the skeleton code structures I need to get up an running with any new API.</p>
+<p>I&rsquo;m also exploring using <a href="http://apisjson.org">APIs.json</a>, complete with <a href="http://swagger.io">Swagger</a> references, and Docker image references to further bridge this gap. In my opinion, a Swagger definition for any API, can act as a fingerprint for which interfaces a docker image supports. I will write about this more in the future, as I produce better examples, but I'm finding that using APIs.json to bind a Swagger definition, with one or many Docker images, opens up a whole new view of how you can automate API deployment, management, and integration.</p>
+<hr />
+<table cellpadding="5" cellspacing="5" align="center" border="0" style="border-bottom: 0px; padding-bottom: 10px;">
+	<tr>
+		<td align="center">
+			<a href="http://twitter.com/home?status=My Experiences Generating API Server or Client Code Using Swagger - /2015/01/26/my-experiences-generating-api-server-or-client-code-using-swagger/ via @apievangelist" target="_bank"><img src="https://s3.amazonaws.com/kinlane-productions/icons/twitter.png" width="25" /></a>
+		</td>
+		<td align="center">
+			<a href="http://www.facebook.com/share.php?u=/2015/01/26/my-experiences-generating-api-server-or-client-code-using-swagger/&title=My Experiences Generating API Server or Client Code Using Swagger" target="_bank"><img src="https://s3.amazonaws.com/kinlane-productions/icons/facebook.png" width="25" /></a>
+		</td>
+		<td align="center">
+			<a href="http://www.linkedin.com/shareArticle?mini=true&url=/2015/01/26/my-experiences-generating-api-server-or-client-code-using-swagger/&title=My Experiences Generating API Server or Client Code Using Swagger&source=apievangelist.com" target="_bank"><img src="https://s3.amazonaws.com/kinlane-productions/icons/linkedin.png" width="25" /></a>
+		</td>
+		<td align="center">
+			<a href="https://plus.google.com/share?url=/2015/01/26/my-experiences-generating-api-server-or-client-code-using-swagger/" target="_bank"><img src="https://s3.amazonaws.com/kinlane-productions/icons/google-plus.png" width="25" /></a>
+		</td>
+	</tr>
+</table>
+
+<div class="pagination">
+	
+	   	<a href="/2015/01/21/rest-api-design-bridging-what-we-have-to-the-future-by-organizing-the-json-junk-drawer/" class="older">Older</a>
+	
+	  
+	    <a href="/2015/01/28/using-apisjson-for-my-microservice-navigation-and-discovery/" class="newer">Newer</a>
+	  
+</div>
+
+<div id="disqus_thread"></div>
+<script>
+
+/**
+ *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+ *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables */
+/*
+var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = '//apievangelist.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+              <footer>
+  <p align="center">
+    relevant work:
+    <a href="http://apievangelist.com">apievangelist.com</a> |
+    <a href="http://adopta.agency">adopta.agency</a> |
+  </p>
+</footer>
+
+
+            </div>
+          </div>
+
+          <div id="sidebar">
+          <div class="inner">
+
+            <nav id="menu">
+  <header class="major">
+    <h2>Navigation</h2>
+  </header>
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="/blog/">Blog</a></li>
+  </ul>
+</nav>
+
+
+            <section>
+  <header class="major">
+    <h2>Supported Specifications</h2>
+  </header>
+  <div class="mini-posts">
+    
+    
+        <article style="padding: 2px; margin: 0px 0px 0px 30px;"><a href="https://www.openapis.org/" class="image"><img src="https://kinlane-productions.s3.amazonaws.com/specifications/openapi.png" alt="" style="width: 200px; border: 1px solid #000;" /></a></article>
+    
+        <article style="padding: 2px; margin: 0px 0px 0px 30px;"><a href="https://www.asyncapi.com/" class="image"><img src="https://kinlane-productions.s3.amazonaws.com/specifications/asyncapi-horiozontal.png" alt="" style="width: 200px; border: 1px solid #000;" /></a></article>
+    
+        <article style="padding: 2px; margin: 0px 0px 0px 30px;"><a href="https://www.postman.com/collection/" class="image"><img src="https://kinlane-productions.s3.amazonaws.com/specifications/postman-logo.png" alt="" style="width: 200px; border: 1px solid #000;" /></a></article>
+    
+        <article style="padding: 2px; margin: 0px 0px 0px 30px;"><a href="https://json-schema.org/" class="image"><img src="https://kinlane-productions.s3.amazonaws.com/specifications/json-schema.png" alt="" style="width: 200px; border: 1px solid #000;" /></a></article>
+    
+  </div>
+</section>
+
+
+          </div>
+          </div>
+
+      </div>
+
+<script src="https://kinlane-productions.s3.amazonaws.com/network/javascript/skel.min.js"></script>
+<script src="https://kinlane-productions.s3.amazonaws.com/network/javascript/util.js"></script>
+<script src="https://kinlane-productions.s3.amazonaws.com/network/javascript/main.js"></script>	
+
+
+</body>
+</html>

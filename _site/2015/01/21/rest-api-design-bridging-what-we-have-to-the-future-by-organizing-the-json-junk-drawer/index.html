@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html xmlns="https://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+  <html>
+  <title>REST API Design: Bridging What We Have, To The Future, By Organizing The JSON Junk Drawer</title>
+  <meta charset="utf-8" />
+	<meta name="keywords" content="API, API Lifecycle, API Search, Application Programming Interface">
+	<meta name="author" content="Kin Lane">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+	<link rel="stylesheet" href="https://kinlane-productions.s3.amazonaws.com/network/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="https://kinlane-productions.s3.amazonaws.com/network/css/main.css?1=1" />
+
+	<link rel="shortcut icon" type="image/x-icon" href="https://apievangelist.com/favicon.ico">
+	<link rel="icon" type="image/x-icon" href="https://apievangelist.com/favicon.ico">
+	<link rel="icon" href="https://apievangelist.com/favicon.ico">
+
+	<script src="https://kinlane-productions.s3.amazonaws.com/network/javascript/jquery-latest.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="https://kinlane-productions.s3.amazonaws.com/network/javascript/utility.js" type="text/javascript" charset="utf-8"></script>
+	<script src="https://kinlane-productions.s3.amazonaws.com/network/javascript/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+
+  <!-- Cookies.js - http://github.com/ScottHamper/Cookies -->
+  <script src="https://kinlane-productions.s3.amazonaws.com/js/cookies.js"></script>
+
+	<script src="https://kinlane-productions.s3.amazonaws.com/network/javascript/jquery.awesomeCloud-0.2.min.js"></script>
+
+	<style type="text/css">
+		.gist {width:100% !important;}
+		.gist-file
+		.gist-data {max-height: 500px;max-width: 100%;}
+	</style>
+
+</head>
+
+  <body>
+
+			<div id="wrapper">
+					<div id="main">
+						<div class="inner">
+
+              <header id="header">
+  <a href="http://localhost:4000" class="logo"><img src="https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg" width="50%" /></a>
+  <ul class="icons">
+    <li><a href="https://twitter.com/apisjson" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+    <li><a href="https://github.com/apis-json" class="icon fa-github"><span class="label">Github</span></a></li>
+    <li><a href="/atom.xml" class="icon fa-rss"><span class="label">RSS</span></a></li>
+  </ul>
+</header>
+
+              <!--<div class="alert alert-danger"><center>This website is currently dormant!</center></div>-->
+
+    	        <h2>REST API Design: Bridging What We Have, To The Future, By Organizing The JSON Junk Drawer</h2>
+<p><span class="post-date">21 Jan 2015</span></p>
+<p><a href="https://www.youtube.com/watch?v=-MBXsmSrKE8"><img style="padding: 15px;" src="http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/blog/REST-API-Design-Avoid-future-proofing-with-the-JSON-junk-drawer-YouTube.png" alt="" width="250" align="right" /></a></p>
+<p>API storyteller J(a)son Harmon (<a href="https://twitter.com/jharmn">@jharmn</a>) has a new YouTube channel up called <a href="https://www.youtube.com/channel/UCKK2ir0jqCvfB-kzBGka_Lg">API Workshop</a>. He's going to be publishing regular API design workshop episodes, with the latest one titled <a href="https://www.youtube.com/channel/UCKK2ir0jqCvfB-kzBGka_Lg">REST API Design: Avoid future proofing with the JSON junk drawer</a>. J(a)son provides a nice overview of how you should be structuring the JSON for your API, focusing on the usage of key / value stores. Ironically he uses APIs.json as an example of why you <span style="text-decoration: underline;"><strong>SHOULD NOT</strong></span> use custom key / values within your JSON. What is ironic about this, is that he makes the case for APIs.json properties, giving me a great starting point for helping folks better understand <a href="http://apisjson.org">APIs.json</a>, and why properties are key to its evolution, and flexibility.</p>
+<p>The process J(a)son outlines in the portion of this segment that referred to APIs.json, describes the lifecycle of an APIs.json property, towards becoming more of a "first class property". There are three phases of an APIs.json property:</p>
+<ol>
+<li><strong>X-Property - </strong>A user defined property, allowing anyone to craft exactly the properties that matter to them</li>
+<li><strong>Property - </strong>An official machine readable APIs.json property element, acknowledging its wide usage, potential as common blueprint</li>
+<li><strong>"First Class Property or Collection"&nbsp;</strong>- Baking a property into the specification as default property of APIs collection, or establishing as sub-collection for the API</li>
+</ol>
+<p>The lesson J(a)son provides, describes the journey of each APIs.json property, the difference is in that his lesson provides best practices for API providers who are designing new APIs, helping them avoid the creation of a junk drawer, and the APIs.json property format is being applied to define the junk drawer that we have (aka the public API space). This represents the fundamental separation between my approach to defining the space vs. many other technologists&mdash;I am trying to map out what we have, and get us the next step in our evolution, while others are working hard to define where we should be going.</p>
+<p>When Steve and I originally hammered out the <a href="http://apisjson.org/">APIs.json format</a>, we couldn't 100% agree on what should be first class properties and collections for each API defined using an APIs.json file&mdash;what you see in version 0.14 is what we agreed to, the rest needs to be defined by the community, through actually implementations and discussion on the <a href="https://github.com/api-commons/api-json/issues">APIs.json Github repo</a>.</p>
+<p><img style="padding: 15px;" src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-recycling.jpg" alt="" width="225" align="right" /></p>
+<p>When you are crafting the JSON, for a new API, J(a)son&rsquo;s lesson is very important, but when you are evaluating hundreds of APIs, and trying to define a common pattern for representing not just the tech, but the business, and politics of an API&mdash;you don&rsquo;t have as much control over how things get defined. I&rsquo;m not worried about the overhead involved with adding a little more complexity to my code, to bridge the well-defined aspects of API operations with the lesser-defined parts of the space.</p>
+<p>Ideally, in one of the next iterations of APIs.json, the official properties of Swagger, RAML, Blueprint, and WADL can move up into a first class collection for each API called definitions, and maybe also consider moving API Commons up to be a first class licensing collection as well.  I&rsquo;m also looking to graduate some X-properties to official status, based upon <a href="https://github.com/kinlane/api-stack/tree/gh-pages/data">creating APIs.json for over 700+ companies</a>, and having identified almost <a href="https://github.com/kinlane/api-stack/blob/gh-pages/data/properties.json">150 separate properties that can be used to describe API operations</a>. All of this represents the API sector coming into focus, and I do not think all of these properties should become "first class" properties or collections&mdash;I am just trying to make sense of the "junk drawer" that we have, and help provide a blueprint for a machine readable formats that can help us evolve it towards the future we want.</p>
+<p>I have been asked by several folks to better explain Steve and mine APIs.json vision, and J(a)son&rsquo;s story gives me the opportunity to help kick off this storytelling. In an effort to keep this story short, I&rsquo;m going to follow J(a)son&rsquo;s lead and move the rest of this story on to YouTube, so if you want to better understand APIs.json properties, you can watch my video response to J(a)son's story, which augments this post, and hopefully provides some better examples, along with narrative.</p>
+<p><iframe src="http://www.youtube.com/embed/-MBXsmSrKE8" width="560" height="315" align="center"></iframe></p>
+<p><iframe src="http://www.youtube.com/embed/Eib2IXVEq-E" width="420" height="315"></iframe></p>
+<hr />
+<table cellpadding="5" cellspacing="5" align="center" border="0" style="border-bottom: 0px; padding-bottom: 10px;">
+	<tr>
+		<td align="center">
+			<a href="http://twitter.com/home?status=REST API Design: Bridging What We Have, To The Future, By Organizing The JSON Junk Drawer - /2015/01/21/rest-api-design-bridging-what-we-have-to-the-future-by-organizing-the-json-junk-drawer/ via @apievangelist" target="_bank"><img src="https://s3.amazonaws.com/kinlane-productions/icons/twitter.png" width="25" /></a>
+		</td>
+		<td align="center">
+			<a href="http://www.facebook.com/share.php?u=/2015/01/21/rest-api-design-bridging-what-we-have-to-the-future-by-organizing-the-json-junk-drawer/&title=REST API Design: Bridging What We Have, To The Future, By Organizing The JSON Junk Drawer" target="_bank"><img src="https://s3.amazonaws.com/kinlane-productions/icons/facebook.png" width="25" /></a>
+		</td>
+		<td align="center">
+			<a href="http://www.linkedin.com/shareArticle?mini=true&url=/2015/01/21/rest-api-design-bridging-what-we-have-to-the-future-by-organizing-the-json-junk-drawer/&title=REST API Design: Bridging What We Have, To The Future, By Organizing The JSON Junk Drawer&source=apievangelist.com" target="_bank"><img src="https://s3.amazonaws.com/kinlane-productions/icons/linkedin.png" width="25" /></a>
+		</td>
+		<td align="center">
+			<a href="https://plus.google.com/share?url=/2015/01/21/rest-api-design-bridging-what-we-have-to-the-future-by-organizing-the-json-junk-drawer/" target="_bank"><img src="https://s3.amazonaws.com/kinlane-productions/icons/google-plus.png" width="25" /></a>
+		</td>
+	</tr>
+</table>
+
+<div class="pagination">
+	
+	   	<a href="/2015/01/05/what-exactly-is-apisjson/" class="older">Older</a>
+	
+	  
+	    <a href="/2015/01/26/my-experiences-generating-api-server-or-client-code-using-swagger/" class="newer">Newer</a>
+	  
+</div>
+
+<div id="disqus_thread"></div>
+<script>
+
+/**
+ *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+ *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables */
+/*
+var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = '//apievangelist.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+              <footer>
+  <p align="center">
+    relevant work:
+    <a href="http://apievangelist.com">apievangelist.com</a> |
+    <a href="http://adopta.agency">adopta.agency</a> |
+  </p>
+</footer>
+
+
+            </div>
+          </div>
+
+          <div id="sidebar">
+          <div class="inner">
+
+            <nav id="menu">
+  <header class="major">
+    <h2>Navigation</h2>
+  </header>
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="/blog/">Blog</a></li>
+  </ul>
+</nav>
+
+
+            <section>
+  <header class="major">
+    <h2>Supported Specifications</h2>
+  </header>
+  <div class="mini-posts">
+    
+    
+        <article style="padding: 2px; margin: 0px 0px 0px 30px;"><a href="https://www.openapis.org/" class="image"><img src="https://kinlane-productions.s3.amazonaws.com/specifications/openapi.png" alt="" style="width: 200px; border: 1px solid #000;" /></a></article>
+    
+        <article style="padding: 2px; margin: 0px 0px 0px 30px;"><a href="https://www.asyncapi.com/" class="image"><img src="https://kinlane-productions.s3.amazonaws.com/specifications/asyncapi-horiozontal.png" alt="" style="width: 200px; border: 1px solid #000;" /></a></article>
+    
+        <article style="padding: 2px; margin: 0px 0px 0px 30px;"><a href="https://www.postman.com/collection/" class="image"><img src="https://kinlane-productions.s3.amazonaws.com/specifications/postman-logo.png" alt="" style="width: 200px; border: 1px solid #000;" /></a></article>
+    
+        <article style="padding: 2px; margin: 0px 0px 0px 30px;"><a href="https://json-schema.org/" class="image"><img src="https://kinlane-productions.s3.amazonaws.com/specifications/json-schema.png" alt="" style="width: 200px; border: 1px solid #000;" /></a></article>
+    
+  </div>
+</section>
+
+
+          </div>
+          </div>
+
+      </div>
+
+<script src="https://kinlane-productions.s3.amazonaws.com/network/javascript/skel.min.js"></script>
+<script src="https://kinlane-productions.s3.amazonaws.com/network/javascript/util.js"></script>
+<script src="https://kinlane-productions.s3.amazonaws.com/network/javascript/main.js"></script>	
+
+
+</body>
+</html>

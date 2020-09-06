@@ -1,0 +1,12 @@
+<div class="features">
+  {% assign partners = site.data.partners.index | sort: 'view_sort' %}
+  {% for partner in partners %}
+    {% if partner.type == 'Sponsor' %}
+    <article>
+      <div class="content">
+        <p align="center"><a href="{{ partner.url }}" target="_blank"><img src="{{ partner.image }}" width="75%" style="padding: 15px; border: 1px solid #000;" /></a></p>
+      </div>
+    </article>
+    {% endif %}
+  {% endfor %}
+</div>

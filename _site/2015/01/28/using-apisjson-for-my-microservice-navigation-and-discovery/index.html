@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html xmlns="https://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+  <html>
+  <title>Using APIs.json For My Microservice Navigation And Discovery</title>
+  <meta charset="utf-8" />
+	<meta name="keywords" content="API, API Lifecycle, API Search, Application Programming Interface">
+	<meta name="author" content="Kin Lane">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+	<link rel="stylesheet" href="https://kinlane-productions.s3.amazonaws.com/network/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="https://kinlane-productions.s3.amazonaws.com/network/css/main.css?1=1" />
+
+	<link rel="shortcut icon" type="image/x-icon" href="https://apievangelist.com/favicon.ico">
+	<link rel="icon" type="image/x-icon" href="https://apievangelist.com/favicon.ico">
+	<link rel="icon" href="https://apievangelist.com/favicon.ico">
+
+	<script src="https://kinlane-productions.s3.amazonaws.com/network/javascript/jquery-latest.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="https://kinlane-productions.s3.amazonaws.com/network/javascript/utility.js" type="text/javascript" charset="utf-8"></script>
+	<script src="https://kinlane-productions.s3.amazonaws.com/network/javascript/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+
+  <!-- Cookies.js - http://github.com/ScottHamper/Cookies -->
+  <script src="https://kinlane-productions.s3.amazonaws.com/js/cookies.js"></script>
+
+	<script src="https://kinlane-productions.s3.amazonaws.com/network/javascript/jquery.awesomeCloud-0.2.min.js"></script>
+
+	<style type="text/css">
+		.gist {width:100% !important;}
+		.gist-file
+		.gist-data {max-height: 500px;max-width: 100%;}
+	</style>
+
+</head>
+
+  <body>
+
+			<div id="wrapper">
+					<div id="main">
+						<div class="inner">
+
+              <header id="header">
+  <a href="http://localhost:4000" class="logo"><img src="https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg" width="50%" /></a>
+  <ul class="icons">
+    <li><a href="https://twitter.com/apisjson" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+    <li><a href="https://github.com/apis-json" class="icon fa-github"><span class="label">Github</span></a></li>
+    <li><a href="/atom.xml" class="icon fa-rss"><span class="label">RSS</span></a></li>
+  </ul>
+</header>
+
+              <!--<div class="alert alert-danger"><center>This website is currently dormant!</center></div>-->
+
+    	        <h2>Using APIs.json For My Microservice Navigation And Discovery</h2>
+<p><span class="post-date">28 Jan 2015</span></p>
+<p><a href="https://kin-lane.github.io/master/"><img style="padding: 10px;" src="http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/blog/kin-lane-api-navigation.png" alt="" width="325" align="right" /></a></p>
+<p>I&rsquo;m rebuilding my underlying architecture using microservices and docker containers, and the glue I&rsquo;m using to bind it all together is <a href="http://apisjson.org/">APIs.json</a>. I&rsquo;m not just using APIs.son to deliver on discoverability for all of my services, I am also using it to navigate around my stack. Right now I only have about 10 microservices running, but I have a plan to add almost 50 in total by the time I&rsquo;m done with this latest sprint.</p>
+<p>Each microservice lives as its own Github repository, within a <a href="https://github.com/kin-lane">specific organization</a>. I give each one its own APIs.json, indexing all the elements APIs of that specific microservice. APIs.json has two main collections, "apis" and "include". For each microservice APIs.json, I list all the properties for that API, but I use the include element to document the urls of other microservice APIs.json in the collection.</p>
+<p>All the Github repositories for this microservice stack lives within a single Github organization, which I give a "master" repo, which acts as a single landing page for the entire stack. It has its own APIs.json file, but rather than having any API collections, it just uses includes, referencing the APIs.json for each microservice in the stack.</p>
+<p><a href="https://kin-lane.github.io/master/"><img style="padding: 10px;" src="http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/blog/kin-lane-api-navigation-2_png.png" alt="" width="325" align="right" /></a></p>
+<p>APIs.json acts as an index for each microservice, but through the include collection it also provides links to other related microservices within its own stack, which I use to navigate, in a circular way between all supporting services. All of that sounds very dizzying to write out, and I&rsquo;m sure you are like WTF?  You can <a href="https://kin-lane.github.io/master/">browse my work on Github</a>, some of it is public, but much of it you have to have oAuth access to see. The public elements all live in the gh-pages branch, while the private aspects live within the private master branch.</p>
+<p>This is all a living workbench for me, so expect broken things. If you have questions, or would like more access to better understand, let me know. I&rsquo;m happy to consider adding you to the Github organization as collaborator so that you can see more of it in action. I will also chronicle my work here on the blog, as I have time, and have anything interesting things to share.</p>
+<hr />
+<table cellpadding="5" cellspacing="5" align="center" border="0" style="border-bottom: 0px; padding-bottom: 10px;">
+	<tr>
+		<td align="center">
+			<a href="http://twitter.com/home?status=Using APIs.json For My Microservice Navigation And Discovery - /2015/01/28/using-apisjson-for-my-microservice-navigation-and-discovery/ via @apievangelist" target="_bank"><img src="https://s3.amazonaws.com/kinlane-productions/icons/twitter.png" width="25" /></a>
+		</td>
+		<td align="center">
+			<a href="http://www.facebook.com/share.php?u=/2015/01/28/using-apisjson-for-my-microservice-navigation-and-discovery/&title=Using APIs.json For My Microservice Navigation And Discovery" target="_bank"><img src="https://s3.amazonaws.com/kinlane-productions/icons/facebook.png" width="25" /></a>
+		</td>
+		<td align="center">
+			<a href="http://www.linkedin.com/shareArticle?mini=true&url=/2015/01/28/using-apisjson-for-my-microservice-navigation-and-discovery/&title=Using APIs.json For My Microservice Navigation And Discovery&source=apievangelist.com" target="_bank"><img src="https://s3.amazonaws.com/kinlane-productions/icons/linkedin.png" width="25" /></a>
+		</td>
+		<td align="center">
+			<a href="https://plus.google.com/share?url=/2015/01/28/using-apisjson-for-my-microservice-navigation-and-discovery/" target="_bank"><img src="https://s3.amazonaws.com/kinlane-productions/icons/google-plus.png" width="25" /></a>
+		</td>
+	</tr>
+</table>
+
+<div class="pagination">
+	
+	   	<a href="/2015/01/26/my-experiences-generating-api-server-or-client-code-using-swagger/" class="older">Older</a>
+	
+	  
+	    <a href="/2015/01/31/breaking-down-the-fitbit-apisjson-file/" class="newer">Newer</a>
+	  
+</div>
+
+<div id="disqus_thread"></div>
+<script>
+
+/**
+ *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+ *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables */
+/*
+var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = '//apievangelist.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+              <footer>
+  <p align="center">
+    relevant work:
+    <a href="http://apievangelist.com">apievangelist.com</a> |
+    <a href="http://adopta.agency">adopta.agency</a> |
+  </p>
+</footer>
+
+
+            </div>
+          </div>
+
+          <div id="sidebar">
+          <div class="inner">
+
+            <nav id="menu">
+  <header class="major">
+    <h2>Navigation</h2>
+  </header>
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="/blog/">Blog</a></li>
+  </ul>
+</nav>
+
+
+            <section>
+  <header class="major">
+    <h2>Supported Specifications</h2>
+  </header>
+  <div class="mini-posts">
+    
+    
+        <article style="padding: 2px; margin: 0px 0px 0px 30px;"><a href="https://www.openapis.org/" class="image"><img src="https://kinlane-productions.s3.amazonaws.com/specifications/openapi.png" alt="" style="width: 200px; border: 1px solid #000;" /></a></article>
+    
+        <article style="padding: 2px; margin: 0px 0px 0px 30px;"><a href="https://www.asyncapi.com/" class="image"><img src="https://kinlane-productions.s3.amazonaws.com/specifications/asyncapi-horiozontal.png" alt="" style="width: 200px; border: 1px solid #000;" /></a></article>
+    
+        <article style="padding: 2px; margin: 0px 0px 0px 30px;"><a href="https://www.postman.com/collection/" class="image"><img src="https://kinlane-productions.s3.amazonaws.com/specifications/postman-logo.png" alt="" style="width: 200px; border: 1px solid #000;" /></a></article>
+    
+        <article style="padding: 2px; margin: 0px 0px 0px 30px;"><a href="https://json-schema.org/" class="image"><img src="https://kinlane-productions.s3.amazonaws.com/specifications/json-schema.png" alt="" style="width: 200px; border: 1px solid #000;" /></a></article>
+    
+  </div>
+</section>
+
+
+          </div>
+          </div>
+
+      </div>
+
+<script src="https://kinlane-productions.s3.amazonaws.com/network/javascript/skel.min.js"></script>
+<script src="https://kinlane-productions.s3.amazonaws.com/network/javascript/util.js"></script>
+<script src="https://kinlane-productions.s3.amazonaws.com/network/javascript/main.js"></script>	
+
+
+</body>
+</html>

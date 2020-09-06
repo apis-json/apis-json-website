@@ -1,0 +1,21 @@
+title: APIs.json
+description: APIs.json is a machine readable specification that API providers can use to describe their API operations, similar to how web sites are described using sitemap.xml. Providing an index of internal, partner, and public APIs, which includes not just the the OpenAPI, JSON Schema, and other machine readable artifacts, but also the currently only human readable elements like documentation, pricing, and terms of service.
+url: http://apisjson.org
+image: https://s3.amazonaws.com/kinlane-productions/api-evangelist-logos/api-evangelist-red-seal.png
+logo: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+
+version:      1.1.1
+author:
+  name:       'Kin Lane'
+  email:      'info@apievangelist.com'
+markdown:     kramdown
+
+permalink: /:categories/:year/:month/:day/:title/
+exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md", ".DS_Store"]
+
+paginate: 25
+paginate_path: "/blog/page:num"
+
+github_user: api-evangelist
+github_repo: design
+github_branch: gh-pages
