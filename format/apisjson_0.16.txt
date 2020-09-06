@@ -196,7 +196,8 @@ Table of Contents
 					- name [Optional]: The display name of the property.
 					- type: please see reserved keywords below.
 					- mediaType [Optional]: IANA media type representing the property.
-          - url or value.
+          - url [Optional]: The URL for the property. * must be url or data
+					- data [Optional]: The data for the property. * must be url or data
         * contact (collection)
           - [Person or Organization - see below]
 
@@ -214,7 +215,8 @@ Table of Contents
 					- name [Optional]: The display name of the property.
 					- type: please see reserved keywords below.
 					- mediaType [Optional]: IANA media type representing the property.
-          - url or value.
+          - url [Optional]: The URL for the property. * must be url or data
+					- data [Optional]: The data for the property. * must be url or data
         * contact (collection)
           - [Person or Organization - see below]
 
@@ -232,7 +234,26 @@ Table of Contents
 					- name [Optional]: The display name of the property.
 					- type: please see reserved keywords below.
 					- mediaType [Optional]: IANA media type representing the property.
-          - url or value.
+          - url [Optional]: The URL for the property. * must be url or data
+					- data [Optional]: The data for the property. * must be url or data
+        * contact (collection)
+          - [Person or Organization - see below]
+
+    * resources (collection) [Optional]: list of resources available for API operations.
+
+        * name [Mandatory]: name of the resource.
+        * description [Mandatory]: human readable text description of the resource.
+        * image [Optional]: URL of an image which can be used as an "icon" for the tool if displayed by a
+              search engine.
+        * url: Web URL corresponding to human readable information about the resource.
+        * tags: (collection) [Optional]: this is a list of descriptive strings which identify the API.
+      as an array.
+        * properties (collection):
+					- name [Optional]: The display name of the property.
+					- type: please see reserved keywords below.
+					- mediaType [Optional]: IANA media type representing the property.
+          - url [Optional]: The URL for the property. * must be url or data
+					- data [Optional]: The data for the property. * must be url or data
         * contact (collection)
           - [Person or Organization - see below]
 
