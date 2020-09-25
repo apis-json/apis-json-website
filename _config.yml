@@ -1,8 +1,8 @@
 title: APIs.json
 description: APIs.json is a machine readable specification that API providers can use to describe their API operations, similar to how web sites are described using sitemap.xml. Providing an index of internal, partner, and public APIs, which includes not just the the OpenAPI, JSON Schema, and other machine readable artifacts, but also the currently only human readable elements like documentation, pricing, and terms of service.
 url: http://apisjson.org
-image: https://s3.amazonaws.com/kinlane-productions/api-evangelist-logos/api-evangelist-red-seal.png
-logo: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://s3.amazonaws.com/kinlane-productions2/api-evangelist-logos/api-evangelist-red-seal.png
+logo: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 
 version:      1.1.1
 author:
