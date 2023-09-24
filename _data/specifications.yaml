@@ -9,11 +9,6 @@
   identifier: openapi
   url: https://www.asyncapi.com/
   image: https://kinlane-productions2.s3.amazonaws.com/specifications/asyncapi-horiozontal.png
-- view_sort: C
-  name: Postman
-  identifier: postman
-  url: https://www.postman.com/collection/
-  image: https://kinlane-productions2.s3.amazonaws.com/specifications/postman-logo.png
 - view_sort: D
   name: JSON Schema
   identifier: json-schema
