@@ -2,8 +2,8 @@ Draft for Comment
 Name: API Discovery Format
 Informal Name: APIs.json or APIs.yaml
 Authors: Kin Lane, Steve Willmott
-Date: 01/09/2020
-Location: http://apisjson.org/format/apisjson_v0.16.txt
+Date: 02/22/2024
+Location: http://apisjson.org/format/apisjson_v0.17.txt
 
 	A Simple Format for Publishing API Meta Data on the Web
 
@@ -168,6 +168,7 @@ Table of Contents
 
    A file shall be in JSON or YAML format and contain the following elements:
 
+    * aid [Mandatory]: A unique identifier for the collection, consisting of [root domain]:[string] (ie. apis.json:spec-example)
     * name [Mandatory]: text string of human readable name for the collection of APIs
     * description [Mandatory]: text human readable description of the collection of APIs.
 		* type [Optional]: Type of collection (Index [of a single API], Collection [of multiple APIs], Blueprint [of a new API]).
@@ -183,6 +184,7 @@ Table of Contents
 
     * apis (collection) [Optional]: list of APIs identified in the file, each containing:
 
+        * aid [Mandatory]: A unique identifier for the api, consisting of [root domain]:[string] (ie. apis.json:spec-api)
         * name [Mandatory]: name of the API
         * description [Mandatory]: human readable text description of the API.
         * image [Optional]: URL of an image which can be used as an "icon" for the API if displayed by a
@@ -198,18 +200,25 @@ Table of Contents
 					- mediaType [Optional]: IANA media type representing the property.
           - url [Optional]: The URL for the property. * must be url or data
 					- data [Optional]: The data for the property. * must be url or data
+        * overlays (collection) [Optional]: an optional list of overlays to apply to individual APIs.
+					- type [Optional]: The type of overlay being made available.
+          - url [Optional]: The URL for the property. * must be url or data       
         * contact (collection)
           - [Person or Organization - see below]
 
-    * common (collection) [Optional]: a list of common properties for use across all APIs and tools
+    * common (collection) [Optional]: a list of common properties for use across all APIs and tools.
 			- name [Optional]: The display name of the property.
 			- type: please see reserved keywords below.
 			- mediaType [Optional]: IANA media type representing the property.
       - url or value.
 
+    * overlays (collection) [Optional]: an optional list of overlays to apply to primary APIs.json.
+      - type [Optional]: The type of overlay being made available.
+      - url [Optional]: The URL for the property. * must be url or data     
+
     * include (collection) [Optional]
-        * Name [Mandatory]: name of the APIs.json file referenced.
-        * Url [Mandatory]: Web URL of the file.
+        * name [Mandatory]: name of the APIs.json file referenced.
+        * url [Mandatory]: Web URL of the file.
 
     * maintainers (collection)    [VCARD]
         * [Person or Organization - see below]
@@ -233,7 +242,6 @@ Table of Contents
         * vCard [Optional]: URL pointing to a vCard Objective RFC6350
 
     The labelled values are all taken from the vCard specification.
-
 
 3.3.2.	Other Formats
 
@@ -287,7 +295,8 @@ Table of Contents
    Here is an example api.json file:
 
 		{
-		   "name": "Example API",
+		   "aid": "apis.json:spec-example",
+       "name": "Example API",
 		   "type": "Index",
 		   "description": "This is an example APIs.json file, demonstrating what is possible with\nthe API discovery specification.",
 		   "image": "https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg",
@@ -295,13 +304,14 @@ Table of Contents
 		      "Application Programming Interface",
 		      "API"
 		   ],
-		   "created": "2014-04-07",
-		   "modified": "2020-09-03",
+		   "created": "2024-02-22",
+		   "modified": "2024-02-22",
 		   "url": "http://example.com/apis.json",
-		   "specificationVersion": "0.16",
+		   "specificationVersion": "0.17",
 		   "apis": [
 		      {
-		         "name": "Example API",
+		         "aid": "apis.json:spec-api",
+             "name": "Example API",
 		         "description": "This provides details about a specific API, telling what is possible.",
 		         "image": "https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg",
 		         "humanURL": "http://example.com",
@@ -324,6 +334,16 @@ Table of Contents
 		               "url": "http://example.com/json-schema.json"
 		            }
 		         ],
+		         "overlays": [
+		            {
+		               "type": "APIs.io Search",
+		               "url": "https://example.com/apis-io-search"
+		            },
+		            {
+		               "type": "API Evangelist Rating",
+		               "url": "http://example.com/api-evangelist-ratings"
+		            }
+		         ],             
 		         "contact": [
 		            {
 		               "FN": "APIs.json",
@@ -355,6 +375,16 @@ Table of Contents
 		         "url": "http://example.com/pricing"
 		      }
 		   ],
+		   "overlays": [
+		      {
+		         "type": "APIs.io Search",
+		         "url": "https://example.com/apis-io-search"
+		      },
+		      {
+		         "type": "API Evangelist Ratings",
+		         "url": "http://example.com/api-evangelist-ratings"
+		      }
+		   ],       
 		   "include": [
 		      {
 		         "name": "Another Example API",
@@ -372,60 +402,69 @@ Table of Contents
 
 	Here is an example api.yaml file:
 
-		name: Example API
-		type: Index
-		description: This is an example APIs.json file, demonstrating what is possible with
-		  the API discovery specification.
-		image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
-		tags:
-		  - Application Programming Interface
-		  - API
-		created: '2014-04-07'
-		modified: '2020-09-03'
-		url: http://example.com/apis.json
-		specificationVersion: '0.16'
-		apis:
-
-		- name: Example API
-		  description: This provides details about a specific API, telling what is possible.
-		  image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
-		  humanURL: http://example.com
-		  baseURL: http://api.example.com
-		  tags:
-		    - API
-		    - Application Programming Interface
-
-		  properties:
-		    - type: Documentation
-		      url: https://example.com/documentation
-		    - type: OpenAPI
-		      url: http://example.com/openapi.json
-		    - type: JSONSchema
-		      url: http://example.com/json-schema.json
-
-		  contact:
-		    - FN: APIs.json
-		      email: info@apisjson.org
-		      X-twitter: apisjson
-
-		common:
-		  - type: Signup
-		    url: https://example.com/signup
-		  - type: Authentication
-		    url: http://example.com/authentication
-		  - type: Login
-		    url: https://example.com/login
-		  - type: Blog
-		    url: http://example.com/blog
-		  - type: Pricing
-		    url: http://example.com/pricing
-		include:
-		  - name: Another Example API
-		    url: http://example.com/apis.json
-		maintainers:
-		  - FN: Kin Lane
-		    X-twitter: apievangelist
-		    email: info@apievangelist.com
+    aid: apis.json:spec-example
+    name: Example API
+    type: Index
+    description: |-
+      This is an example APIs.json file, demonstrating what is possible with
+      the API discovery specification.
+    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    tags:
+    - Application Programming Interface
+    - API
+    created: '2024-02-22'
+    modified: '2024-02-22'
+    url: http://example.com/apis.json
+    specificationVersion: '0.17'
+    apis:
+    - aid: apis.json:spec-api
+      name: Example API
+      description: This provides details about a specific API, telling what is possible.
+      image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+      humanURL: http://example.com
+      baseURL: http://api.example.com
+      tags:
+      - API
+      - Application Programming Interface
+      properties:
+      - type: Documentation
+        url: https://example.com/documentation
+      - type: OpenAPI
+        url: http://example.com/openapi.json
+      - type: JSONSchema
+        url: http://example.com/json-schema.json
+      overlays:
+      - type: APIs.io Search
+        url: https://example.com/apis-io-search
+      - type: API Evangelist Rating
+        url: http://example.com/api-evangelist-ratings
+      contact:
+      - FN: APIs.json
+        email: info@apisjson.org
+        X-twitter: apisjson
+    common:
+    - type: Signup
+      url: https://example.com/signup
+    - type: Authentication
+      url: http://example.com/authentication
+    - type: Login
+      url: https://example.com/login
+    - type: Blog
+      url: http://example.com/blog
+    - type: Pricing
+      url: http://example.com/pricing
+    overlays:
+    - type: APIs.io Search
+      url: https://example.com/apis-io-search
+    - type: API Evangelist Ratings
+      url: http://example.com/api-evangelist-ratings
+    include:
+    - name: Another Example API
+      url: http://example.com/apis.json
+    maintainers:
+    - FN: Kin Lane
+      X-twitter: apievangelist
+      email: info@apievangelist.com
 
 5. 	Security Considerations
 
@@ -492,25 +531,31 @@ Properties Elements:
  * Swagger
  * OpenAPI
  * JSONSchema
+ * GraphQLSchema
  * PostmanCollection
+ * PostmanWorkspace
  * AsyncAPI
  * RAML
  * Blueprint
  * WADL
  * WSDL
 
+ * GettingStarted
  * Documentation
  * Authentication
+ * Versioning 
  * Signup
  * Login
  * TermsOfService
  * InterfaceLicense
  * PrivacyPolicy
+ * DeprecationPolicy
+ * ServiceLevelAgreement
  * Security
  * SDKs
  * StatusPage
  * Pricing
- * Rate Limits
+ * RateLimits
  * Blog
  * BlogFeed
  * Forums
@@ -523,6 +568,8 @@ Properties Elements:
  * GitHubRepo
  * Twitter
  * AlertsTwitterHandle
+ * Webhooks
+ * Integrations
 
 Contact Elements:
 
