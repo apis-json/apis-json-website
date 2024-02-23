@@ -570,6 +570,7 @@ Properties Elements:
  * AlertsTwitterHandle
  * Webhooks
  * Integrations
+ * OpenAIPluginManifest
 
 Contact Elements:
 
