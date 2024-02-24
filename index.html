@@ -20,37 +20,17 @@ title: Home
 	<div class="content">
 
 		<header>
-			<h2>Who is using APIs.json?</h2>
-		</header>
-
-		<div class="features">
-		  {% assign showcases = site.data.showcase | sort: 'view_sort' %}
-		  {% for showcase in showcases %}
-		    <article>
-		      <div class="content">
-		        <p align="center"><a href="{{ showcase.url }}" target="_blank"><img src="{{ showcase.image }}" width="70%" style="padding: 15px; border: 1px solid #000;" /></a></p>
-		      </div>
-		    </article>
-		  {% endfor %}
-		</div>
-
-	</div>
-</section>
-
-<section id="banner">
-	<div class="content">
-
-		<header>
 			<h2>Latest Version</h2>
 		</header>
-		<iframe src="https://apisjson.org/format/apisjson_0.15.txt" style="padding: 15px; width: 100%; height: 500px; border: 1px solid #CCC;"></iframe>
+		<iframe src="https://apisjson.org/format/apisjson_0.16.txt" style="padding: 15px; width: 100%; height: 500px; border: 1px solid #CCC;"></iframe>
 		<h3>Next Version (Proposed)</h3>
-    <ul>
-			<li><a href="http://apisjson.org/format/apisjson_0.16.txt" target="_blank">apisjson_0.16.txt</a></li>
+    	<ul>
+			<li><a href="http://apisjson.org/format/apisjson_0.17.txt" target="_blank">apisjson_0.17.txt</a></li>
 		</ul>
 		<h3>Older Versions</h3>
     <ul>
-	    		<li><a href="http://apisjson.org/format/apisjson_0.15.txt" target="_blank">apisjson_0.15.txt</a></li>
+			<li><a href="http://apisjson.org/format/apisjson_0.16.txt" target="_blank">apisjson_0.16.txt</a></li>
+	    	<li><a href="http://apisjson.org/format/apisjson_0.15.txt" target="_blank">apisjson_0.15.txt</a></li>
 			<li><a href="http://apisjson.org/format/apisjson_0.14.txt" target="_blank">apisjson_0.14.txt</a></li>
 			<li><a href="http://apisjson.org/format/apisjson_0.13.txt" target="_blank">apisjson_0.13.txt</a></li>
 			<li><a href="http://apisjson.org/format/apisjson_0.12.txt" target="_blank">apisjson_0.12.txt</a></li>
@@ -94,6 +74,27 @@ title: Home
 	        <p align="center"><a href="https://groups.google.com/forum/#!forum/apisjson" target="_blank"><img src="https://kinlane-productions2.s3.amazonaws.com/google-group.png" width="40%" style="padding: 15px; border: 1px solid #000;" /></a></p>
 	      </div>
 	    </article>
+		</div>
+
+	</div>
+</section>
+
+<section id="banner">
+	<div class="content">
+
+		<header>
+			<h2>Who is using APIs.json?</h2>
+		</header>
+
+		<div class="features">
+		  {% assign showcases = site.data.showcase | sort: 'view_sort' %}
+		  {% for showcase in showcases %}
+		    <article>
+		      <div class="content">
+		        <p align="center"><a href="{{ showcase.url }}" target="_blank"><img src="{{ showcase.image }}" width="70%" style="padding: 15px; border: 1px solid #000;" /></a></p>
+		      </div>
+		    </article>
+		  {% endfor %}
 		</div>
 
 	</div>

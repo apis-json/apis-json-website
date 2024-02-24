@@ -1,0 +1,149 @@
+---
+- name: OpenAPI
+  description: The OpenAPI Specification provides a formal standard for describing HTTP APIs. 
+  image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-icon.jpg
+  url: https://www.openapis.org/
+  tags:
+    - Machine-Readable
+    - APIs
+- name: Swagger
+  description: The OpenAPI Specification provides a formal standard for describing HTTP APIs. 
+  image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-icon.jpg
+  url: https://www.openapis.org/
+  tags:
+    - Machine-Readable
+    - APIs  
+- name: JSONSchema
+  description: The JSON Schema allows for the validation of JSON objects, and is used by OpenAPI & AsyncAPI.
+  image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-icon.jpg
+  url: https://www.json-schema.org/
+  tags:
+    - Machine-Readable
+    - Schema        
+- name: GraphQLSchema
+  description: The GraphQL Schema is a machine readable collection of schema organized into a graph.
+  image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-icon.jpg
+  url: https://graphql.org/learn/schema/
+  tags:
+    - Machine-Readable
+    - Schema
+    - Graph  
+
+- name: PostmanCollection
+  description: A Postman Collection is a machine-readable collection of APIs for use in client, testing, and automation.
+  image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-icon.jpg
+  url: https://www.postman.com/collection/
+  tags:
+    - Machine-Readable
+    - Client
+    - Testing
+    - Automation      
+
+- name: PostmanWorkspace
+  description: A Postman Workspace is a cloud space where you can store collections, OpenAPI, tests, and other elements.
+  image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-icon.jpg
+  url: https://www.postman.com/product/workspaces/
+  tags:
+    - Workspaces
+
+- name: AsyncAPI
+  description: AsyncAPI allows you to describe the surface area of asynchronous APIs in a machine-readable way.
+  image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-icon.jpg
+  url: https://www.asyncapi.com/en
+  tags:
+    - Event-Driven
+
+- name: WADL
+  description: The Web Application Description Language (WADL) is a machine-readable XML description of HTTP-based web services. 
+  image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-icon.jpg
+  url: https://en.wikipedia.org/wiki/Web_Application_Description_Language
+  tags:
+    - HTTP
+
+- name: WSDL
+  description: A WSDL definition tells a client how to compose a web service request and describes the interface that is provided by provider.
+  image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-icon.jpg
+  url: https://en.wikipedia.org/wiki/Web_Services_Description_Language
+  tags:
+    - SOAP
+
+- name: GettingStarted
+  description: Providing the basic steps of how an API consumer can get started using an API with as few steps as possible, and all the info needed.
+  image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-icon.jpg
+  url: #
+  tags:
+    - Onboarding    
+
+- name: Documentation
+  description: A reference to the human readable documentation for an API, that describes the surface area of an API with all the details consumers need.
+  image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-icon.jpg
+  url: #
+  tags:
+    - Onboarding 
+    - Documentation
+    - Information
+
+- name: Authentication
+  description: An overview of the authentication for an API, providing everything needed to successful authenticate with API by consumers.
+  image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-icon.jpg
+  url: #
+  tags:
+    - Authentication 
+    - Security
+
+- name: Versioning
+  description: The details of how an API is being versioned with information about how change is being communicated with consumers across multiple channels.
+  image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-icon.jpg
+  url: #
+  tags:
+    - Change 
+    - Versioning
+
+- name: Signup
+  description: Where users can sign up for access to an API, providing what is needed to onboard in a manual or automated way, reducing friction in putting to work.
+  image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-icon.jpg
+  url: #
+  tags:
+    - Onboarding 
+
+- name: Login
+  description: Providing what is needed for existing API consumers to login and access their accouints, keys, and other information regarding their API consumption.
+  image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-icon.jpg
+  url: #
+  tags:
+    - Onboarding 
+    - Accounts
+
+- name: Login
+  description: Providing what is needed for existing API consumers to login and access their accouints, keys, and other information regarding their API consumption.
+  image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-icon.jpg
+  url: #
+  tags:
+    - Onboarding 
+    - Accounts
+    
+ * TermsOfService
+ * InterfaceLicense
+ * PrivacyPolicy
+ * DeprecationPolicy
+ * ServiceLevelAgreement
+ * Security
+ * SDKs
+ * StatusPage
+ * Pricing
+ * RateLimits
+ * Blog
+ * BlogFeed
+ * Forums
+ * Support
+ * ChangeLog
+ * RoadMap
+ * Contact
+ * ErrorCodes
+ * GitHubOrg
+ * GitHubRepo
+ * Twitter
+ * AlertsTwitterHandle
+ * Webhooks
+ * Integrations
+ * OpenAIPluginManifest

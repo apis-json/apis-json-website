@@ -1,0 +1,34 @@
+---
+layout: post
+title: 'A Proposal for APIs.json Version 0.17'
+image: https://kinlane-productions2.s3.amazonaws.com/apis-json/stripe-apis-json-screenshot.png
+---
+<p><img src="{{ page.image }}" width="45%" align="right" style="padding: 15px;"></p>
+<p>We have posted <a href="https://github.com/apis-json/apis-json-website/blob/master/format/apisjson_0.17.txt">a draft proposal for APIs.json 0.17</a> based upon the work we've been doing with <a href="https://apis.io">APIs.io</a> over the last couple of months. The project has been dormant for a while, but with renewed investment in APIs.io, we are finding a need for new properties of the API discovery format.</p>
+
+<p>This release is primarily about adding two new properties that play a role in APIs.json, APIs.io, and API Evangelist all working together to map the API landscape.</p>
+<ul>
+<li><strong>aid</strong> - A unique identifier at the collection and api levels.</li>
+<li><strong>overlays</strong> - References to collection and api level overlays.</li>
+</ul>
+<p>After that we are adding a handful of property types that API producers can use to index their API operations:</p>
+<ul>
+    <li>GettingStarted</li>
+    <li>DeprecationPolicy</li>
+    <li>GraphQLSchema</li>
+    <li>Integrations</li>
+    <li>OpenAIPluginManifest</li>
+    <li>PostmanWorkspace</li>
+    <li>ServiceLevelAgreement</li>
+    <li>Versioning</li>
+    <li>Webhooks</li>
+</ul>
+<p>These property types were identified profiling 75 APIs published to APIs.io, distilling what API producers are doing to manage their operations into properties that any API producer can use to index their operations..</p>
+
+<p>You can see the latest version in use in the <a href="https://github.com/apis-json/artisanal/tree/main">APIs.json Artisanal project</a>, for two of the top API producers out there:</p>
+<ul>
+<li><a href="https://github.com/apis-json/artisanal/blob/main/apis/stripe/apis.yml">Stripe</a></li>
+<li><a href="https://github.com/apis-json/artisanal/blob/main/apis/twilio/apis.yml">Twilio</a></li>
+</ul>
+<p>We'd love to <a href="https://github.com/apis-json/api-json/issues/79">hear any feedback on the spec</a>, as well as the properties we are adding to the specification this round. We are learning a lot about what is needed from building APis.io, but would love to learn from other applications beyond just search.</p>
+<p>The APIs.json specification is managed by Steve Willmott and Kin Lane, and we welcome contributes and feedback from the community.</p>

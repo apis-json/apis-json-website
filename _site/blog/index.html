@@ -7,21 +7,21 @@
 	<meta name="author" content="Kin Lane">
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
-	<link rel="stylesheet" href="https://kinlane-productions.s3.amazonaws.com/network/css/bootstrap.min.css" />
-	<link rel="stylesheet" href="https://kinlane-productions.s3.amazonaws.com/network/css/main.css?1=1" />
+	<link rel="stylesheet" href="https://kinlane-productions2.s3.amazonaws.com/network/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="https://kinlane-productions2.s3.amazonaws.com/network/css/main.css?1=1" />
 
 	<link rel="shortcut icon" type="image/x-icon" href="https://apievangelist.com/favicon.ico">
 	<link rel="icon" type="image/x-icon" href="https://apievangelist.com/favicon.ico">
 	<link rel="icon" href="https://apievangelist.com/favicon.ico">
 
-	<script src="https://kinlane-productions.s3.amazonaws.com/network/javascript/jquery-latest.min.js" type="text/javascript" charset="utf-8"></script>
-	<script src="https://kinlane-productions.s3.amazonaws.com/network/javascript/utility.js" type="text/javascript" charset="utf-8"></script>
-	<script src="https://kinlane-productions.s3.amazonaws.com/network/javascript/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="https://kinlane-productions2.s3.amazonaws.com/network/javascript/jquery-latest.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="https://kinlane-productions2.s3.amazonaws.com/network/javascript/utility.js" type="text/javascript" charset="utf-8"></script>
+	<script src="https://kinlane-productions2.s3.amazonaws.com/network/javascript/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
 
   <!-- Cookies.js - http://github.com/ScottHamper/Cookies -->
-  <script src="https://kinlane-productions.s3.amazonaws.com/js/cookies.js"></script>
+  <script src="https://kinlane-productions2.s3.amazonaws.com/js/cookies.js"></script>
 
-	<script src="https://kinlane-productions.s3.amazonaws.com/network/javascript/jquery.awesomeCloud-0.2.min.js"></script>
+	<script src="https://kinlane-productions2.s3.amazonaws.com/network/javascript/jquery.awesomeCloud-0.2.min.js"></script>
 
 	<style type="text/css">
 		.gist {width:100% !important;}
@@ -38,9 +38,8 @@
 						<div class="inner">
 
               <header id="header">
-  <a href="http://localhost:4000" class="logo"><img src="https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg" width="50%" /></a>
+  <a href="http://localhost:4000" class="logo"><img src="https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg" width="50%" /></a>
   <ul class="icons">
-    <li><a href="https://twitter.com/apisjson" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
     <li><a href="https://github.com/apis-json" class="icon fa-github"><span class="label">Github</span></a></li>
     <li><a href="/atom.xml" class="icon fa-rss"><span class="label">RSS</span></a></li>
   </ul>
@@ -52,18 +51,32 @@
 
 <!-- Tools -->
 <section>
-	<table align="right" style="width: 200px; height: 100px;">
-		<tr style="border: 1px solid #FFF;">
-			<td style="background-color:#FFF; padding: 10px;">
-				<a href="/feeds/blog/atom.xml" class="icon fa-rss-square fa-4x"><span class="label">RSS</span></a>
-			</td>
-		</tr>
-	</table>
   <header class="main">
     <h2></h2>
   </header>
   <p></p>
 	
+  
+	 	
+    
+			
+        <h3><a href="/2020/09/06/the-future-of-apis-json/">The Future of APIs.json (2020 Edition)</a></h3>
+        <span class="post-date">06 Sep 2020</span>
+        <p><img src="https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg" width="45%" align="right" style="padding: 15px;"></p>
+<p>This website and the conversation around APIs.json has been dormant for a couple of years. This was due to acquisitions, job changes, and just not enough time to invest in the specification beyond just putting it to use. Even though we haven’t iterated upon the version in a couple years doesn’t mean it has been put to the test when it comes to indexing internal and external APIs. With all this work, and a renewed energy in APIs, 2020 it feels like just the right time to get back to investing in the spec, and make recommendations for what the future of the APIs.json should look like.</p>
+
+<p>API discovery still hasn’t been fixed as part of the overall API lifecycle, and more companies are just resorting to trying to make sense of the chaos after the fact, by indexing OpenAPI, log files, and other artifacts from across the API lifecycle, but alongside this madness there is also renewed interest in having a machine readable index of not just the OpenAPI and Swagger artifacts laying around, but also the other critical parts of API operations. Even with the growth in the adoption of Swagger and OpenAPI, these APIs specifications do not address the need for developers to find pricing, plans, rate limits, terms of service, documentation, SDKs, and the other building blocks of API operations. Resulting in a steady stream of questions from the community about what is APIs.json, and whether it might help us make sense of what is going on.</p>
+
+<p>In 2020 we have refreshed the website for APIs.json, and [working on a proposal for version 0.16 of the specification](http://apisjson.org/format/apisjson_0.16.txt). This version includes some additional details for properties including name and media type, as well as opening up the conversation for a YAML edition of the spec. I have been pushing the specification in recent years to act as not just an index for individual APIs, but also for catalogs of APIs, and for blueprints that help you deploy templated APIs. As I push forward these conversations I am finding that having my APIs define as yaml is pretty critical to make the conversation more inclusive to business stakeholders, leaving conversations around the APIs.json nme pretty humorous. Opening up the doors for both JSON and YAML editions of the API discovery format, both leaning on the core specification to define what is possible with actual implementations.</p>
+
+<p>Refreshing the website, updating the blog and Twitter account were the first business items on the list. Next we want to continue the conversation around the next version of the specification, getting us closer to an official 1.0 version that the community has helped define. There is still a lot of work to be done on the tooling side of things. There are a handful of open source tooling developed around the specification, as well as a growing number of API providers who have adopted the specification, but there is still a ton of work ahead to help make the specification something that is seen as the defacto API discovery format. We’ll continue going through the specification, as well as working on the available search engine, catalog, and toolbox implementations that put the specification to work. If you are using the APIs.json specification, or have comments and feedback about what the roadmap should look like, [please head over to GitHub issues for the project and share your thoughts](https://github.com/apis-json/api-json/issues). We look forward to hearing from you about what the future of  APIs.json, and now APIs.yaml format might look like.</p>
+
+        <ul class="actions" style="text-align: center;">
+          <li><a href="/2020/09/06/the-future-of-apis-json/" class="button big">Details</a></li>
+        </ul>
+      	<center><hr style="width: 75%;" /></center>
+				
+    
   
 	 	
     
@@ -681,6 +694,7 @@
   <ul>
     <li><a href="/">Home</a></li>
     <li><a href="/blog/">Blog</a></li>
+    <li><a href="/properties/">Properties</a></li>
   </ul>
 </nav>
 
@@ -692,13 +706,11 @@
   <div class="mini-posts">
     
     
-        <article style="padding: 2px; margin: 0px 0px 0px 30px;"><a href="https://www.openapis.org/" class="image"><img src="https://kinlane-productions.s3.amazonaws.com/specifications/openapi.png" alt="" style="width: 200px; border: 1px solid #000;" /></a></article>
+        <article style="padding: 2px; margin: 0px 0px 0px 30px;"><a href="https://www.openapis.org/" class="image"><img src="https://kinlane-productions2.s3.amazonaws.com/specifications/openapi.png" alt="" style="width: 200px; border: 1px solid #000;" /></a></article>
     
-        <article style="padding: 2px; margin: 0px 0px 0px 30px;"><a href="https://www.asyncapi.com/" class="image"><img src="https://kinlane-productions.s3.amazonaws.com/specifications/asyncapi-horiozontal.png" alt="" style="width: 200px; border: 1px solid #000;" /></a></article>
+        <article style="padding: 2px; margin: 0px 0px 0px 30px;"><a href="https://www.asyncapi.com/" class="image"><img src="https://kinlane-productions2.s3.amazonaws.com/specifications/asyncapi-horiozontal.png" alt="" style="width: 200px; border: 1px solid #000;" /></a></article>
     
-        <article style="padding: 2px; margin: 0px 0px 0px 30px;"><a href="https://www.postman.com/collection/" class="image"><img src="https://kinlane-productions.s3.amazonaws.com/specifications/postman-logo.png" alt="" style="width: 200px; border: 1px solid #000;" /></a></article>
-    
-        <article style="padding: 2px; margin: 0px 0px 0px 30px;"><a href="https://json-schema.org/" class="image"><img src="https://kinlane-productions.s3.amazonaws.com/specifications/json-schema.png" alt="" style="width: 200px; border: 1px solid #000;" /></a></article>
+        <article style="padding: 2px; margin: 0px 0px 0px 30px;"><a href="https://json-schema.org/" class="image"><img src="https://kinlane-productions2.s3.amazonaws.com/specifications/json-schema.png" alt="" style="width: 200px; border: 1px solid #000;" /></a></article>
     
   </div>
 </section>
@@ -709,9 +721,9 @@
 
       </div>
 
-<script src="https://kinlane-productions.s3.amazonaws.com/network/javascript/skel.min.js"></script>
-<script src="https://kinlane-productions.s3.amazonaws.com/network/javascript/util.js"></script>
-<script src="https://kinlane-productions.s3.amazonaws.com/network/javascript/main.js"></script>	
+<script src="https://kinlane-productions2.s3.amazonaws.com/network/javascript/skel.min.js"></script>
+<script src="https://kinlane-productions2.s3.amazonaws.com/network/javascript/util.js"></script>
+<script src="https://kinlane-productions2.s3.amazonaws.com/network/javascript/main.js"></script>
 
 
 </body>

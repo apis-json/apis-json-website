@@ -170,6 +170,7 @@ Table of Contents
 
     * name [Mandatory]: text string of human readable name for the collection of APIs
     * description [Mandatory]: text human readable description of the collection of APIs.
+		* type [Optional]: Type of collection (Index [of a single API], Collection [of multiple APIs], Blueprint [of a new API]).
     * image [Optional]: Web URL leading to an image to be used to represent the collection of
       APIs defined in this file.
     * url [Mandatory]: Web URL indicating the location of the latest version of this file
@@ -195,47 +196,12 @@ Table of Contents
 					- name [Optional]: The display name of the property.
 					- type: please see reserved keywords below.
 					- mediaType [Optional]: IANA media type representing the property.
-          - url or value.
+          - url [Optional]: The URL for the property. * must be url or data
+					- data [Optional]: The data for the property. * must be url or data
         * contact (collection)
           - [Person or Organization - see below]
 
-    * tools (collection) [Optional]: list of open source tooling available as part of operations:
-
-        * name [Mandatory]: name of the tool.
-        * description [Mandatory]: human readable text description of the tool.
-        * image [Optional]: URL of an image which can be used as an "icon" for the tool if displayed by a
-              search engine.
-        * url: Web URL corresponding to human readable information about the API.
-        * version [Optional]: String representing the version number of the API this description refers to.
-        * tags: (collection) [Optional]: this is a list of descriptive strings which identify the API.
-      as an array.
-        * properties (collection):
-					- name [Optional]: The display name of the property.
-					- type: please see reserved keywords below.
-					- mediaType [Optional]: IANA media type representing the property.
-          - url or value.
-        * contact (collection)
-          - [Person or Organization - see below]
-
-    * specifications (collection) [Optional]: list of open specifications adopted as part of operations:
-
-        * name [Mandatory]: name of the specification.
-        * description [Mandatory]: human readable text description of the specification.
-        * image [Optional]: URL of an image which can be used as an "icon" for the tool if displayed by a
-              search engine.
-        * url: Web URL corresponding to human readable information about the API.
-        * version [Optional]: String representing the version number of the API this description refers to.
-        * tags: (collection) [Optional]: this is a list of descriptive strings which identify the API.
-      as an array.
-        * properties (collection):
-					- name [Optional]: The display name of the property.
-					- type: please see reserved keywords below.
-					- mediaType [Optional]: IANA media type representing the property.
-          - url or value.
-        * contact (collection)
-          - [Person or Organization - see below]
-
-    * Common (collection) [Optional]: a list of common properties for use across all APIs and tools
+    * common (collection) [Optional]: a list of common properties for use across all APIs and tools
 			- name [Optional]: The display name of the property.
 			- type: please see reserved keywords below.
 			- mediaType [Optional]: IANA media type representing the property.
@@ -321,124 +287,145 @@ Table of Contents
    Here is an example api.json file:
 
 		{
-		  "name": "Example API",
-		  "description": "This is an example APIs.json file, demonstrating what is possible with the API discovery specification.",
-		  "image": "https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg",
-		  "tags": [
-		    "Application Programming Interface",
-		    "API"
-		  ],
-		  "created": "2014-04-07",
-		  "modified": "2020-09-03",
-		  "url": "http://example.com/apis.json",
-		  "specificationVersion": "0.14",
-		  "apis": [
-		    {
-		      "name": "Example API",
-		      "description": "This provides details about a specific API, telling what is possible.",
-		      "image": "https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg",
-		      "humanURL": "http://example.com",
-		      "baseURL": "http://api.example.com",
-		      "tags": [
-		        "API",
-		        "Application Programming Interface"
-		      ],
-		      "properties": [
-		        {
-		          "type": "x-signup",
-		          "url": "https://example.com/signup"
-		        },
-		        {
-		          "type": "x-documentation",
-		          "url": "https://example.com/documentation"
-		        },
-		        {
-		          "type": "x-openapi",
-		          "url": "http://example.com/openapi.json"
-		        },
-		        {
-		          "type": "x-json-schema",
-		          "url": "http://example.com/json-schema.json"
-		        },
-		        {
-		          "type": "x-blog",
-		          "url": "http://example.com/blog"
-		        },
-		        {
-		          "type": "pricing",
-		          "url": "http://example.com/pricing"
-		        }
-		      ],
-		      "contact": [
-		        {
-		          "FN": "APIs.json",
-		          "email": "info@apisjson.org",
-		          "X-twitter": "apisjson"
-		        }
-		      ]
-		    }
-		  ],
-		  "include": [
-		    {
-		      "name": "Another Example API",
-		      "url": "http://example.com/apis.json"
-		    }
-		  ],
-		  "maintainers": [
-		    {
-		      "FN": "Kin Lane",
-		      "X-twitter": "apievangelist",
-		      "email": "info@apievangelist.com"
-		    }
-		  ]
+		   "name": "Example API",
+		   "type": "Index",
+		   "description": "This is an example APIs.json file, demonstrating what is possible with\nthe API discovery specification.",
+		   "image": "https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg",
+		   "tags": [
+		      "Application Programming Interface",
+		      "API"
+		   ],
+		   "created": "2014-04-07",
+		   "modified": "2020-09-03",
+		   "url": "http://example.com/apis.json",
+		   "specificationVersion": "0.16",
+		   "apis": [
+		      {
+		         "name": "Example API",
+		         "description": "This provides details about a specific API, telling what is possible.",
+		         "image": "https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg",
+		         "humanURL": "http://example.com",
+		         "baseURL": "http://api.example.com",
+		         "tags": [
+		            "API",
+		            "Application Programming Interface"
+		         ],
+		         "properties": [
+		            {
+		               "type": "Documentation",
+		               "url": "https://example.com/documentation"
+		            },
+		            {
+		               "type": "OpenAPI",
+		               "url": "http://example.com/openapi.json"
+		            },
+		            {
+		               "type": "JSONSchema",
+		               "url": "http://example.com/json-schema.json"
+		            }
+		         ],
+		         "contact": [
+		            {
+		               "FN": "APIs.json",
+		               "email": "info@apisjson.org",
+		               "X-twitter": "apisjson"
+		            }
+		         ]
+		      }
+		   ],
+		   "common": [
+		      {
+		         "type": "Signup",
+		         "url": "https://example.com/signup"
+		      },
+		      {
+		         "type": "Authentication",
+		         "url": "http://example.com/authentication"
+		      },
+		      {
+		         "type": "Login",
+		         "url": "https://example.com/login"
+		      },
+		      {
+		         "type": "Blog",
+		         "url": "http://example.com/blog"
+		      },
+		      {
+		         "type": "Pricing",
+		         "url": "http://example.com/pricing"
+		      }
+		   ],
+		   "include": [
+		      {
+		         "name": "Another Example API",
+		         "url": "http://example.com/apis.json"
+		      }
+		   ],
+		   "maintainers": [
+		      {
+		         "FN": "Kin Lane",
+		         "X-twitter": "apievangelist",
+		         "email": "info@apievangelist.com"
+		      }
+		   ]
 		}
 
 	Here is an example api.yaml file:
 
 		name: Example API
+		type: Index
 		description: This is an example APIs.json file, demonstrating what is possible with
 		  the API discovery specification.
 		image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 		tags:
-		- Application Programming Interface
-		- API
+		  - Application Programming Interface
+		  - API
 		created: '2014-04-07'
 		modified: '2020-09-03'
 		url: http://example.com/apis.json
-		specificationVersion: '0.14'
+		specificationVersion: '0.16'
 		apis:
+
 		- name: Example API
 		  description: This provides details about a specific API, telling what is possible.
 		  image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 		  humanURL: http://example.com
 		  baseURL: http://api.example.com
 		  tags:
-		  - API
-		  - Application Programming Interface
+		    - API
+		    - Application Programming Interface
+
 		  properties:
-		  - type: x-signup
-		    url: https://example.com/signup
-		  - type: x-documentation
-		    url: https://example.com/documentation
-		  - type: x-openapi
-		    url: http://example.com/openapi.json
-		  - type: x-json-schema
-		    url: http://example.com/json-schema.json
-		  - type: x-blog
-		    url: http://example.com/blog
-		  - type: pricing
-		    url: http://example.com/pricing
+		    - type: Documentation
+		      url: https://example.com/documentation
+		    - type: OpenAPI
+		      url: http://example.com/openapi.json
+		    - type: JSONSchema
+		      url: http://example.com/json-schema.json
+
 		  contact:
-		  - FN: APIs.json
-		    email: info@apisjson.org
-		    X-twitter: apisjson
+		    - FN: APIs.json
+		      email: info@apisjson.org
+		      X-twitter: apisjson
+
+		common:
+		  - type: Signup
+		    url: https://example.com/signup
+		  - type: Authentication
+		    url: http://example.com/authentication
+		  - type: Login
+		    url: https://example.com/login
+		  - type: Blog
+		    url: http://example.com/blog
+		  - type: Pricing
+		    url: http://example.com/pricing
 		include:
-		- name: Another Example API
-		  url: http://example.com/apis.json
+		  - name: Another Example API
+		    url: http://example.com/apis.json
 		maintainers:
-		- FN: Kin Lane
-		  X-twitter: apievangelist
-		  email: info@apievangelist.com
+		  - FN: Kin Lane
+		    X-twitter: apievangelist
+		    email: info@apievangelist.com
 
 5. 	Security Considerations
 
