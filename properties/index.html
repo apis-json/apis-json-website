@@ -3,37 +3,18 @@ layout: default
 title: Home
 ---
 
-<!-- Main -->
-<section id="banner">
-	<div class="content">
-
-		<header>
-			<h2>APIs.json Properties</h2>
-		</header>
-
-		<p style="margin-left; 15px; margin-right: 15px;">The individual API properties, as well as the common ones are the building blocks of APIs.json. These human and machine-readable are what makes it easy or difficult to discover and onboard with an API, and are what consumers need to find and put API resources to work in their applications and integrations.</p>
-
-	</div>
-</section>
-
-<section id="banner">
-	<div class="content">
-
-		<header>
-			<h2>APIs.json Properties</h2>
-		</header>
-
-		<div class="features">
-		<p style="margin-left; 15px; margin-right: 15px;">These are all of the properties we encourage API producers to include in their APIs.json indexes.</p>
-		  {% assign properties = site.data.properties | sort: 'view_sort' %}
-		  {% for property in properties %}
-		    <article>
-		      <div class="content" style="text-align: left;">
-		        <a href="{{ property.url }}" target="_blank"><img src="{{ property.image }}" width="50px" style="margin-right: 15px; border: 1px solid #FFF;" align="left" /></a><a href="{{ property.url }}" target="_blank"><strong>{{ property.name }}</strong></a> - {{ property.description }}
-		      </div>
-		    </article>
-		  {% endfor %}
+<h2>APIs.json Properties</h2>
+<p style="margin-left; 15px; margin-right: 15px;">These are all of the properties we encourage API producers to include in their APIs.json indexes. They are based upon the common building blocks of leading API providers, and are what API consumers have come to expect when it comes to API experience.</p>
+<div class="container text-center"></div>
+{% assign properties = site.common %}
+{% for property in properties %}
+	<div class="row">
+		<div class="col-1">
+			<a href="{{ property.url }}"><img src="{{ property.image }}" width="65%" /></a>
 		</div>
-
+		<div class="col-11">
+			<a href="{{ property.url }}"><strong>{{ property.name }}</strong></a> - {{ property.description }}
+		</div>
 	</div>
-</section>
+{% endfor %}
+</div>

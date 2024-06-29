@@ -1,33 +1,72 @@
-<!DOCTYPE html>
-<html xmlns="https://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
-  {% include head.html %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ site.name }} - {{ page.title }}</title>
+    <link href="{{ site.url }}/assets/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ site.url }}/assets/sticky-footer.css" rel="stylesheet">
+    <style type="text/css">
+      .gist-file
+      .gist-data {max-height: 600px;}
+    </style>    
+  </head>
   <body>
-
-			<div id="wrapper">
-					<div id="main">
-						<div class="inner">
-
-              {% include header.html %}
-              {% include alert.html %}
-    	        {{ content }}
-              {% include footer.html %}
-
-            </div>
-          </div>
-
-          <div id="sidebar">
-          <div class="inner">
-
-            {% include sidebar_nav.html %}
-
-            {% include sidebar_partners.html %}
-
-          </div>
-          </div>
-
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">{{ site.name }}</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="{{ site.url }}/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ site.url }}/blog/">Blog</a>
+            </li>                            
+            <li class="nav-item">
+              <a class="nav-link" href="{{ site.url }}/properties/">Properties</a>
+            </li>        
+            <li class="nav-item">
+              <a class="nav-link" href="https://github.com/apis-json/api-json/issues">Issues</a>
+            </li>    
+            <li class="nav-item">
+              <a class="nav-link" href="https://github.com/orgs/apis-json/discussions">Discussion</a>
+            </li>    
+            <li class="nav-item">
+              <a class="nav-link" href="https://github.com/apis-json">GitHub</a>
+            </li>                                                 
+          </ul>
+        </div>
       </div>
+    </nav>
+    <!--
+    <div class="alert alert-danger" role="alert" style="text-align: center;">
+      This Search is in an Alpha Stage -- <a href="https://github.com/api-search/explore/issues">Submit An Issue</a>!
+    </div>
+    -->
+    <div class="container my-5">
+      {{ content }}
+    </div>
 
-{% include footer_scripts.html %}
+    <script src="{{ site.url }}/assets/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="{{ site.url }}/assets/js-yaml.min.js"></script>
 
-</body>
+    <footer class="footer">
+      <div class="container">
+        <table cellspacing="5" cellpadding="5" align="center">
+          <tr>
+            <td align="center"><a href="https://apis.io" style="color: #000;">APIs.io</a></td>
+            <td align="center" style="padding-left: 25px; padding-right: 25px;">|</td>
+            <td align="center"><a href="https://apisjson.org" style="color: #000;">APIs.json</a></td>
+            <td align="center" style="padding-left: 25px; padding-right: 25px;">|</td>
+            <td align="center"><a href="https://apicommons.org" style="color: #000;">API Commons</a></td>
+          </tr>
+        </table>
+      </div>
+    </footer>
+
+  </body>
 </html>

@@ -1,302 +1,122 @@
-<!DOCTYPE html>
-<html xmlns="https://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
-  <html>
-  <title>APIs.json Is An Index For API Operations</title>
-  <meta charset="utf-8" />
-	<meta name="keywords" content="API, API Lifecycle, API Search, Application Programming Interface">
-	<meta name="author" content="Kin Lane">
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-
-	<link rel="stylesheet" href="https://kinlane-productions2.s3.amazonaws.com/network/css/bootstrap.min.css" />
-	<link rel="stylesheet" href="https://kinlane-productions2.s3.amazonaws.com/network/css/main.css?1=1" />
-
-	<link rel="shortcut icon" type="image/x-icon" href="https://apievangelist.com/favicon.ico">
-	<link rel="icon" type="image/x-icon" href="https://apievangelist.com/favicon.ico">
-	<link rel="icon" href="https://apievangelist.com/favicon.ico">
-
-	<script src="https://kinlane-productions2.s3.amazonaws.com/network/javascript/jquery-latest.min.js" type="text/javascript" charset="utf-8"></script>
-	<script src="https://kinlane-productions2.s3.amazonaws.com/network/javascript/utility.js" type="text/javascript" charset="utf-8"></script>
-	<script src="https://kinlane-productions2.s3.amazonaws.com/network/javascript/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
-
-  <!-- Cookies.js - http://github.com/ScottHamper/Cookies -->
-  <script src="https://kinlane-productions2.s3.amazonaws.com/js/cookies.js"></script>
-
-	<script src="https://kinlane-productions2.s3.amazonaws.com/network/javascript/jquery.awesomeCloud-0.2.min.js"></script>
-
-	<style type="text/css">
-		.gist {width:100% !important;}
-		.gist-file
-		.gist-data {max-height: 500px;max-width: 100%;}
-	</style>
-
-</head>
-
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>APIs.json - APIs.json Is An Index For API Operations</title>
+    <link href="http://localhost:4000/assets/bootstrap.min.css" rel="stylesheet">
+    <link href="http://localhost:4000/assets/sticky-footer.css" rel="stylesheet">
+    <style type="text/css">
+      .gist-file
+      .gist-data {max-height: 600px;}
+    </style>    
+  </head>
   <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">APIs.json</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="http://localhost:4000/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="http://localhost:4000/blog/">Blog</a>
+            </li>                            
+            <li class="nav-item">
+              <a class="nav-link" href="http://localhost:4000/properties/">Properties</a>
+            </li>        
+            <li class="nav-item">
+              <a class="nav-link" href="https://github.com/apis-json/api-json/issues">Issues</a>
+            </li>    
+            <li class="nav-item">
+              <a class="nav-link" href="https://github.com/orgs/apis-json/discussions">Discussion</a>
+            </li>    
+            <li class="nav-item">
+              <a class="nav-link" href="https://github.com/apis-json">GitHub</a>
+            </li>                                                 
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!--
+    <div class="alert alert-danger" role="alert" style="text-align: center;">
+      This Search is in an Alpha Stage -- <a href="https://github.com/api-search/explore/issues">Submit An Issue</a>!
+    </div>
+    -->
+    <div class="container my-5">
+      <div class="uk-section">
+    <div class="uk-container uk-container-xsmall">
+        <article class="uk-article">
 
-			<div id="wrapper">
-					<div id="main">
-						<div class="inner">
+            <h1 class="uk-article-title"></h1>
 
-              <header id="header">
-  <a href="http://localhost:4000" class="logo"><img src="https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg" width="50%" /></a>
-  <ul class="icons">
-    <li><a href="https://github.com/apis-json" class="icon fa-github"><span class="label">Github</span></a></li>
-    <li><a href="/atom.xml" class="icon fa-rss"><span class="label">RSS</span></a></li>
-  </ul>
-</header>
+            <div class="article-content" style="color: #000;">
 
-              <!--<div class="alert alert-danger"><center>This website is currently dormant!</center></div>-->
+                <!--<img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-api-discovery.png" width="100" align="left" style="padding: 5px;">-->
+                <span></span>
+                <br><br>
+                <h2>Links</h2>
+                <ul>
+                    <li><a href="" target="_blank">View API</a></li>
+                </ul>     
+                
+                
+                                       
 
-    	        <h2>APIs.json Is An Index For API Operations</h2>
-<p><span class="post-date">01 Mar 2016</span></p>
-<p><img style="padding: 15px;" src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-api-discovery.png" alt="" width="150" align="right" /></p>
-<p>As part of the latest wave of work around the APIs.json format We wanted to take some time to help folks better understand exactly what APIs.json is, and what it can do for API providers, consumers, as well as the fast moving API sector. <a href="http://apisjson.org/format.html">We are working on version 0.16 of the API discovery format</a>, and we wanted to help get the word out about some of the cool stuff that is being done with APIs.json, as well as what is possible in the future.</p>
-<p><em><strong>What is APIs.json? </strong></em>APIs.json provides a machine readable approach that API providers can put work in describing their API operations, similar to how web site providers describe their websites using <a href="https://www.xml-sitemaps.com/">sitemap.xml</a>. Here are the APIs, who are describing their APIs using APIs.json:</p>
-<table cellspacing="2" cellpadding="3" width="100%">
-<tbody>
-<tr>
-<td width="33%" valign="top">
-<table style="padding-left: 25px;" border="0" cellspacing="2" cellpadding="3">
-<tbody>
-<tr>
-<td width="80%" align="left"><a href="http://austin2015.apistrat.com/apis.json"><strong>APIStrat Austin API</strong></a></td>
-<td width="50" align="center"><a title="Website" href="http://austin2015.apistrat.com/apis.json" target="_blank"><img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-api-a.png" alt="" width="25" align="middle" /></a></td>
-</tr>
-<tr>
-<td width="80%" align="left"><a href="http://developer.apievangelist.com/apis.json"><strong>API Evangelist</strong></a></td>
-<td width="50" align="center"><a title="Website" href="http://developer.apievangelist.com/apis.json" target="_blank"><img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-api-a.png" alt="" width="25" align="middle" /></a></td>
-</tr>
-<tr>
-<td width="80%" align="left"><a href="https://acuityscheduling.com/apis.json"><strong>Acuity Scheduling</strong></a></td>
-<td width="50" align="center"><a title="Website" href="https://acuityscheduling.com/apis.json" target="_blank"><img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-api-a.png" alt="" width="25" align="middle" /></a></td>
-</tr>
-<tr>
-<td width="80%" align="left"><a href="http://breezometer.com/static/apis.json"><strong>BreezoMeter</strong></a></td>
-<td width="50" align="center"><a title="Website" href="http://breezometer.com/static/apis.json" target="_blank"><img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-api-a.png" alt="" width="25" align="middle" /></a></td>
-</tr>
-<tr>
-<td width="80%" align="left"><a href="https://api.checkmarket.com/3/apis.json"><strong>CheckMarket</strong></a></td>
-<td width="50" align="center"><a title="Website" href="https://api.checkmarket.com/3/apis.json" target="_blank"><img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-api-a.png" alt="" width="25" align="middle" /></a></td>
-</tr>
-<tr>
-<td width="80%" align="left"><a href="http://clarify.io/apis.json"><strong>Clarify</strong></a></td>
-<td width="50" align="center"><a title="Website" href="http://clarify.io/apis.json" target="_blank"><img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-api-a.png" alt="" width="25" align="middle" /></a></td>
-</tr>
-<tr>
-<td width="80%" align="left"><a href="https://developer.datavalidation.com/apis.json"><strong>Data Validation</strong></a></td>
-<td width="50" align="center"><a title="Website" href="https://developer.datavalidation.com/apis.json" target="_blank"><img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-api-a.png" alt="" width="25" align="middle" /></a></td>
-</tr>
-<tr>
-<td width="80%" align="left"><a href="https://www.dnscheck.co/apis.json"><strong>DNS Check</strong></a></td>
-<td width="50" align="center"><a title="Website" href="https://www.dnscheck.co/apis.json" target="_blank"><img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-api-a.png" alt="" width="25" align="middle" /></a></td>
-</tr>
-<tr>
-<td width="80%" align="left"><a href="https://emailhunter.co/apis.json"><strong>Email Hunter</strong></a></td>
-<td width="50" align="center"><a title="Website" href="https://emailhunter.co/apis.json" target="_blank"><img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-api-a.png" alt="" width="25" align="middle" /></a></td>
-</tr>
-<tr>
-<td width="80%" align="left"><a href="https://feedbackhub.co.uk/api/apis.json"><strong>FeedbackHub</strong></a></td>
-<td width="50" align="center"><a title="Website" href="https://feedbackhub.co.uk/api/apis.json" target="_blank"><img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-api-a.png" alt="" width="25" align="middle" /></a></td>
-</tr>
-</tbody>
-</table>
-</td>
-<td width="33%" valign="top">
-<table style="padding-left: 25px;" border="0" cellspacing="2" cellpadding="3">
-<tbody>
-<tr>
-<td width="80%" align="left"><a href="https://www.fitbit.com/apis.json"><strong>Fitbit</strong></a></td>
-<td width="50" align="center"><a title="Website" href="https://www.fitbit.com/apis.json" target="_blank"><img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-api-a.png" alt="" width="25" align="middle" /></a></td>
-</tr>
-<tr>
-<td width="80%" align="left"><a href="http://gavagai.se/apis.json"><strong>Gavagai</strong></a></td>
-<td width="50" align="center"><a title="Website" href="http://gavagai.se/apis.json" target="_blank"><img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-api-a.png" alt="" width="25" align="middle" /></a></td>
-</tr>
-<tr>
-<td width="80%" align="left"><a href="http://developer.kinlane.com/apis.json"><strong>Kin Lane</strong></a></td>
-<td width="50" align="center"><a title="Website" href="http://developer.kinlane.com/apis.json" target="_blank"><img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-api-a.png" alt="" width="25" align="middle" /></a></td>
-</tr>
-<tr>
-<td width="80%" align="left"><a href="https://www.linkcreationstudio.com/developer/apis.json"><strong>Link Creation Studio</strong></a></td>
-<td width="50" align="center"><a title="Website" href="https://www.linkcreationstudio.com/developer/apis.json" target="_blank"><img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-api-a.png" alt="" width="25" align="middle" /></a></td>
-</tr>
-<tr>
-<td width="80%" align="left"><a href="http://www.onemusicapi.com/apis.json"><strong>OneMusicAPI</strong></a></td>
-<td width="50" align="center"><a title="Website" href="http://www.onemusicapi.com/apis.json" target="_blank"><img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-api-a.png" alt="" width="25" align="middle" /></a></td>
-</tr>
-<tr>
-<td width="80%" align="left"><a href="https://s3.amazonaws.com/enterprise-multitenant.3scale.net.3scale.net/pandorabots/2014/11/24/apis-35a2e2943bc0ef78.json?AWSAccessKeyId=AKIAIRYLTWBQ37ZNGBZA&amp;Expires=1455947523&amp;Signature=0RKNkK%2BnlCbkILpfwno6wh2neZo%3D"><strong>Pandorabots API</strong></a></td>
-<td width="50" align="center"><a title="Website" href="https://s3.amazonaws.com/enterprise-multitenant.3scale.net.3scale.net/pandorabots/2014/11/24/apis-35a2e2943bc0ef78.json?AWSAccessKeyId=AKIAIRYLTWBQ37ZNGBZA&amp;Expires=1455947523&amp;Signature=0RKNkK%2BnlCbkILpfwno6wh2neZo%3D" target="_blank"><img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-api-a.png" alt="" width="25" align="middle" /></a></td>
-</tr>
-<tr>
-<td width="80%" align="left"><a href="https://qalendra.com/apis.json"><strong>Qalendra</strong></a></td>
-<td width="50" align="center"><a title="Website" href="https://qalendra.com/apis.json" target="_blank"><img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-api-a.png" alt="" width="25" align="middle" /></a></td>
-</tr>
-<tr>
-<td width="80%" align="left"><a href="https://ritetag.com/assets/apis.json"><strong>RiteTag</strong></a></td>
-<td width="50" align="center"><a title="Website" href="https://ritetag.com/assets/apis.json" target="_blank"><img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-api-a.png" alt="" width="25" align="middle" /></a></td>
-</tr>
-<tr>
-<td width="80%" align="left"><a href="https://www.singlewire.com/apis.json"><strong>Singlewire</strong></a></td>
-<td width="50" align="center"><a title="Website" href="https://www.singlewire.com/apis.json" target="_blank"><img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-api-a.png" alt="" width="25" align="middle" /></a></td>
-</tr>
-<tr>
-<td width="80%" align="left"><a href="https://sitecapt.com/apis.json"><strong>SiteCapt</strong></a></td>
-<td width="50" align="center"><a title="Website" href="https://sitecapt.com/apis.json" target="_blank"><img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-api-a.png" alt="" width="25" align="middle" /></a></td>
-</tr>
-</tbody>
-</table>
-</td>
-<td width="33%" valign="top">
-<table style="padding-left: 25px;" border="0" cellspacing="2" cellpadding="3">
-<tbody>
-<tr>
-<td width="80%" align="left"><a href="https://sitecapt.com/apis.json"><strong>SiteCapt</strong></a></td>
-<td width="50" align="center"><a title="Website" href="https://sitecapt.com/apis.json" target="_blank"><img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-api-a.png" alt="" width="25" align="middle" /></a></td>
-</tr>
-<tr>
-<td width="80%" align="left"><a href="http://www.social-searcher.com/apis.json"><strong>Social Searcher API</strong></a></td>
-<td width="50" align="center"><a title="Website" href="http://www.social-searcher.com/apis.json" target="_blank"><img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-api-a.png" alt="" width="25" align="middle" /></a></td>
-</tr>
-<tr>
-<td width="80%" align="left"><a href="http://www.supermonitoring.com/apis.json"><strong>Super Monitoring</strong></a></td>
-<td width="50" align="center"><a title="Website" href="http://www.supermonitoring.com/apis.json" target="_blank"><img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-api-a.png" alt="" width="25" align="middle" /></a></td>
-</tr>
-<tr>
-<td width="80%" align="left"><a href="http://api.timekit.io/apis.json"><strong>Timekit</strong></a></td>
-<td width="50" align="center"><a title="Website" href="http://api.timekit.io/apis.json" target="_blank"><img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-api-a.png" alt="" width="25" align="middle" /></a></td>
-</tr>
-<tr>
-<td width="80%" align="left"><a href="http://developer.trade.gov/apis.json"><strong>Trade.gov</strong></a></td>
-<td width="50" align="center"><a title="Website" href="http://developer.trade.gov/apis.json" target="_blank"><img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-api-a.png" alt="" width="25" align="middle" /></a></td>
-</tr>
-<tr>
-<td width="80%" align="left"><a href="https://twitchbots.info/apis.json"><strong>Twitch Bot Directory</strong></a></td>
-<td width="50" align="center"><a title="Website" href="https://twitchbots.info/apis.json" target="_blank"><img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-api-a.png" alt="" width="25" align="middle" /></a></td>
-</tr>
-<tr>
-<td width="80%" align="left"><a href="http://enclout.com/api/apis.json"><strong>EnClout</strong></a></td>
-<td width="50" align="center"><a title="Website" href="http://enclout.com/api/apis.json" target="_blank"><img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-api-a.png" alt="" width="25" align="middle" /></a></td>
-</tr>
-<tr>
-<td width="80%" align="left"><a href="http://api.meerkat.com.br/frapi/docs/apis.json"><strong>frAPI</strong></a></td>
-<td width="50" align="center"><a title="Website" href="http://api.meerkat.com.br/frapi/docs/apis.json" target="_blank"><img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-api-a.png" alt="" width="25" align="middle" /></a></td>
-</tr>
-<tr>
-<td width="80%" align="left"><a href="https://aperture.section.io/apis.json"><strong>Section.io</strong></a></td>
-<td width="50" align="center"><a title="Website" href="https://aperture.section.io/apis.json" target="_blank"><img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-api-a.png" alt="" width="25" align="middle" /></a></td>
-</tr>
-<tr>
-<td width="80%" align="left"><a href="https://spoonacular.com/apis.json"><strong>Spoonacular</strong></a></td>
-<td width="50" align="center"><a title="Website" href="https://spoonacular.com/apis.json" target="_blank"><img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-api-a.png" alt="" width="25" align="middle" /></a></td>
-</tr>
-</tbody>
-</table>
-</td>
-</tr>
-</tbody>
-</table>
-<p>These are the API providers who have crafted their own APIs.json file, and have registered them with APIs.io. We consider these the <span style="text-decoration: underline;">authoritative version</span> of the APIs.json, but as you'll see in future blog posts, APIs.json is not limited to just the API provider--API consumers can also craft their own APIs.json files describing 3rd party APIs that they depend on.</p>
-<hr />
-<table cellpadding="5" cellspacing="5" align="center" border="0" style="border-bottom: 0px; padding-bottom: 10px;">
-	<tr>
-		<td align="center">
-			<a href="http://twitter.com/home?status=APIs.json Is An Index For API Operations - /2016/03/01/apisjson-is-an-index-for-api-operations/ via @apievangelist" target="_bank"><img src="https://s3.amazonaws.com/kinlane-productions/icons/twitter.png" width="25" /></a>
-		</td>
-		<td align="center">
-			<a href="http://www.facebook.com/share.php?u=/2016/03/01/apisjson-is-an-index-for-api-operations/&title=APIs.json Is An Index For API Operations" target="_bank"><img src="https://s3.amazonaws.com/kinlane-productions/icons/facebook.png" width="25" /></a>
-		</td>
-		<td align="center">
-			<a href="http://www.linkedin.com/shareArticle?mini=true&url=/2016/03/01/apisjson-is-an-index-for-api-operations/&title=APIs.json Is An Index For API Operations&source=apievangelist.com" target="_bank"><img src="https://s3.amazonaws.com/kinlane-productions/icons/linkedin.png" width="25" /></a>
-		</td>
-		<td align="center">
-			<a href="https://plus.google.com/share?url=/2016/03/01/apisjson-is-an-index-for-api-operations/" target="_bank"><img src="https://s3.amazonaws.com/kinlane-productions/icons/google-plus.png" width="25" /></a>
-		</td>
-	</tr>
-</table>
+                
+                 
+                
+                
+                  
 
-<div class="pagination">
-	
-	   	<a href="/2015/07/23/setting-relapi-into-motion-with-latest-apisjson-release/" class="older">Older</a>
-	
-	  
-	    <a href="/2020/09/06/the-future-of-apis-json/" class="newer">Newer</a>
-	  
-</div>
-
-<div id="disqus_thread"></div>
-<script>
-
-/**
- *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
- *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables */
-/*
-var disqus_config = function () {
-    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-};
-*/
-(function() { // DON'T EDIT BELOW THIS LINE
-    var d = document, s = d.createElement('script');
-    s.src = '//apievangelist.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-})();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-
-              <footer>
-  <p align="center">
-    do you prefer yaml?
-    <a href="http://apisyaml.org">apis.yaml</a>
-  </p>
-</footer>
-
+                <h2><a name="rating">Rating</a></h2>
+                <ul>
+                    <li>Score: </li>
+                </ul>                   
+                
+                
+                
+                
+                
+                 
 
             </div>
-          </div>
 
-          <div id="sidebar">
-          <div class="inner">
+        </article>
 
-            <nav id="menu">
-  <header class="major">
-    <h2>Navigation</h2>
-  </header>
-  <ul>
-    <li><a href="/">Home</a></li>
-    <li><a href="/blog/">Blog</a></li>
-    <li><a href="/properties/">Properties</a></li>
-  </ul>
-</nav>
+        <script>
+            // Table of contents scroll to
+            UIkit.scroll('#markdown-toc a', {
+                duration: 400,
+                offset: 120
+            });
+        </script>
 
+    </div>
+</div>
 
-            <section>
-  <header class="major">
-    <h2>Supported Specifications</h2>
-  </header>
-  <div class="mini-posts">
-    
-    
-        <article style="padding: 2px; margin: 0px 0px 0px 30px;"><a href="https://www.openapis.org/" class="image"><img src="https://kinlane-productions2.s3.amazonaws.com/specifications/openapi.png" alt="" style="width: 200px; border: 1px solid #000;" /></a></article>
-    
-        <article style="padding: 2px; margin: 0px 0px 0px 30px;"><a href="https://www.asyncapi.com/" class="image"><img src="https://kinlane-productions2.s3.amazonaws.com/specifications/asyncapi-horiozontal.png" alt="" style="width: 200px; border: 1px solid #000;" /></a></article>
-    
-        <article style="padding: 2px; margin: 0px 0px 0px 30px;"><a href="https://json-schema.org/" class="image"><img src="https://kinlane-productions2.s3.amazonaws.com/specifications/json-schema.png" alt="" style="width: 200px; border: 1px solid #000;" /></a></article>
-    
-  </div>
-</section>
+    </div>
 
+    <script src="http://localhost:4000/assets/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="http://localhost:4000/assets/js-yaml.min.js"></script>
 
-          </div>
-          </div>
-
+    <footer class="footer">
+      <div class="container">
+        <table cellspacing="5" cellpadding="5" align="center">
+          <tr>
+            <td align="center"><a href="https://apis.io" style="color: #000;">APIs.io</a></td>
+            <td align="center" style="padding-left: 25px; padding-right: 25px;">|</td>
+            <td align="center"><a href="https://apisjson.org" style="color: #000;">APIs.json</a></td>
+            <td align="center" style="padding-left: 25px; padding-right: 25px;">|</td>
+            <td align="center"><a href="https://apicommons.org" style="color: #000;">API Commons</a></td>
+          </tr>
+        </table>
       </div>
+    </footer>
 
-<script src="https://kinlane-productions2.s3.amazonaws.com/network/javascript/skel.min.js"></script>
-<script src="https://kinlane-productions2.s3.amazonaws.com/network/javascript/util.js"></script>
-<script src="https://kinlane-productions2.s3.amazonaws.com/network/javascript/main.js"></script>
-
-
-</body>
+  </body>
 </html>

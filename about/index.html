@@ -1,0 +1,28 @@
+---
+layout: page
+title: About APIs.io
+---
+
+<p class="uk-text-lead uk-text-center" style="font-size: 24px; margin-bottom: 10px;">{{ site.name }} {{ page.title }}</p>
+<p>This is the alpha version of the <a href="https://apis.io">APIs.io</a> search engine to help us define what is next for the API search engine. We are actively profiling new APIs and experimenting with different ways of organizing the APIs.json indexes and search--this site represents the latest of these iterations.</p>
+<p>This round we have broken up our <a href="https://github.com/apis-json/artisanal">Artisanal repo</a> that we are using to store all of the APIs.json of APIs profiled, but instead of publishing to a single repo, we now have things broken into the network search and the individual search nodes representing a single topic.</p>
+<center>
+<hr>
+<table width="90%">
+    <tr>
+        <td width="50" align="center">
+            <h2>Network</h2>
+            <p><img src="{{ site.url }}/assets/network.png" width="235"></p>
+            <p>This website reflects what we would call a network APIs.io node, providing a single APIs.json that utilizes the new network property for APIs.json to list many different search nodes. There is only a <a href="https://apis.io/apis.json">single APIs.json in this website</a>, which provides the search index for all of the others.</p>
+        </td>
+        <td width="50" align="center">
+            <h2>Search</h2>
+            <p><img src="{{ site.url }}/assets/search.png" width="250"></p>
+            <p>APIs.io search nodes are individual topics with many APIs profiled, providing a single cluster of APIs that represent a specific industry or type of APIs. There are just a handful of nodes identified, pulling some of the most well known APIs we have profiled, with others coming soon.</p>
+        </td>            
+        </td>
+    </tr>
+</table>
+<hr>
+</center>
+<p>The goal of breaking things into more modular chunks is to help reduce the processing power it takes to work with each node, but also reduce the cognitive load for anyone wanting to fork and put these APis to work. However, we still want to evolve a search engine that will not just discovery new APIs.json and make them available for discovery, but also make it easier to manage and work with thousands of different types of APIs.</p>
