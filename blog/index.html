@@ -5,17 +5,11 @@ title: Blog
 
 <h2>API.json Blog</h2>
 
-{% capture nowunix %}{{'now' | date: '%s'}}{% endcapture %}
 {% for post in paginator.posts %}
-  {% capture posttime %}{{post.date | date: '%s'}}{% endcapture %}
-  {% if post.title != null %}
-    {% if posttime < nowunix %}
-      <h3><a href="{{ post.url }}" style="color:#000;">{{ post.title }}</a></h3>
-      <span class="post-date">{{ post.date | date_to_string }}</span>
-      <a href="{{ post.url }}" style="color:#000; text-decoration: none;">{{ post.content }}</a>
-      <center><hr style="width: 75%;" /></center>
-      {% endif %}
-  {% endif %}
+    <h3><a href="{{ post.url }}" style="color:#000;">{{ post.title }}</a></h3>
+    <span class="post-date">{{ post.date | date_to_string }}</span>
+    <a href="{{ post.url }}" style="color:#000; text-decoration: none;">{{ post.content }}</a>
+    <center><hr style="width: 75%;" /></center>
 {% endfor %}
 
 <ul class="pagination" style="text-align: center;">
