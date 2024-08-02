@@ -10,6 +10,15 @@
       .gist-file
       .gist-data {max-height: 600px;}
     </style>    
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3S0JD3JF6R"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-3S0JD3JF6R');
+  </script>    
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -25,7 +34,10 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" href="http://localhost:4000/blog/">Blog</a>
-            </li>                            
+            </li>       
+            <li class="nav-item">
+              <a class="nav-link" href="http://localhost:4000/schema/">Schema</a>
+            </li>                                    
             <li class="nav-item">
               <a class="nav-link" href="http://localhost:4000/properties/">Properties</a>
             </li>        
@@ -50,11 +62,13 @@
     <div class="container my-5">
       <h3>Trade.gov Using APIs.json And Added To APIs.io</h3>
 <span class="post-date"></span>
+<img src="https://s3.amazonaws.com/kinlane-productions/federal-government/trade-gov/developer-trade-gov.png" width="30%" align="right" style="padding: 15px;">
 <p><a href="http://developer.trade.gov/"><img style="padding: 15px;" src="https://s3.amazonaws.com/kinlane-productions/federal-government/trade-gov/developer-trade-gov.png" alt="" width="250" align="right" /></a></p>
 <p>I've been a big proponent of APIs in the federal government, and it makes me really happy to see <a href="http://developer.trade.gov/">Developer.Trade.Gov</a> using <a href="http://developer.trade.gov/api.json">APIs.json to provide an inventory of APIs available at the federal agency</a> dedicated to strengthening "the competitiveness of U.S. industry, promotes trade and investment, and ensures fair trade through the rigorous enforcement of our trade laws and agreements".</p>
 <p>If you aren&rsquo;t familiar with <a href="http://apisjson.org/">APIs.json</a>, it is the open format that <a href="http://bit.ly/1cHBhd5">3Scale</a> and API Evangelist are working on to help make APIs discoverable. You can see APIs.json in action at the <a href="http://apis.io">open source API search engine APIs.io</a>, where the <a href="http://trade.gov/">International Trade Administration (ITA)</a> has submitted their APIs.json file for inclusion. ITA is the first of many federal agencies I will get to adopt the APIs.json format, and help make their valuable API resources much more discoverable, and ultimately more consumable.</p>
 <p>Can you imagine a future where <span style="text-decoration: underline;">all global trade</span> is machine readable by default, and there are millions of simple, discoverable APIs available to help stimulate, as well as regulate industry? A future where the Department of Commerce and other relevant agencies are at the center, with the highest quality APIs you can imagine, and the healthiest outreach to not just industry, but also individual business owners.</p>
 <p>Trade.gov&rsquo;s impressive entry into the world of APIs with <a href="http://developer.trade.gov/">Developer.Trade.gov</a>, their <a href="http://apievangelist.com/2014/08/14/the-speed-of-federal-government-when-it-runs-on-github/">quick responses to feedback</a>, and the publishing of an APIs.json file for the agency, makes me optimistic for this vision of the API economy. If our federal government can do it, then I think industries can follow the lead, ensure that the future of trade and commerce is more real-time, transparent, and accessible to everyone.</p>
+<p align="center"><a href="/blog/" style="font-size: 18px; font-weight: bold;">Return to Blog</a></p>
     </div>
 
     <script src="http://localhost:4000/assets/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
@@ -66,9 +80,13 @@
           <tr>
             <td align="center"><a href="https://apis.io" style="color: #000;">APIs.io</a></td>
             <td align="center" style="padding-left: 25px; padding-right: 25px;">|</td>
-            <td align="center"><a href="https://apisjson.org" style="color: #000;">APIs.json</a></td>
-            <td align="center" style="padding-left: 25px; padding-right: 25px;">|</td>
             <td align="center"><a href="https://apicommons.org" style="color: #000;">API Commons</a></td>
+            <td>|</td>
+            <td><a href="https://github.com/apis-json/apis-json/issues" style="color: #000;">GitHub Issues</a></td>
+            <td>|</td>
+            <td><a href="https://github.com/orgs/apis-json/discussions" style="color: #000;">GitHub Discussions</a></td>
+            <td>|</td>
+            <td><a href="https://github.com/apis-json/apis-json" style="color: #000;">GitHub Org</a></td>              
           </tr>
         </table>
       </div>

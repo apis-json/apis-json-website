@@ -5,16 +5,18 @@ title: Properties
 
 <h2>APIs.json Properties</h2>
 <p style="margin-left; 15px; margin-right: 15px;">These are all of the properties we encourage API producers to include in their APIs.json indexes. They are based upon the common building blocks of leading API providers, and are what API consumers have come to expect when it comes to API experience.</p>
-<div class="container text-center"></div>
+<div class="container">
+	<hr>
 {% assign properties = site.common %}
 {% for property in properties %}
 	<div class="row">
 		<div class="col-1" style="text-align: center;">
-			<a href="{{ property.url }}"><img src="{{ property.image }}" width="65%" /></a>
+			<a href="{{ property.url }}"><img src="{{ property.image }}" width="65%" align="center" /></a>
 		</div>
 		<div class="col-11">
-			<a href="{{ property.url }}"><strong>{{ property.name }}</strong></a> - {{ property.description }}
+			<a href="{{ property.url }}" style="color:#000;"><strong>{{ property.name }}</strong></a> - {{ property.description }}
 		</div>
 	</div>
+	<hr>
 {% endfor %}
 </div>

@@ -34,7 +34,10 @@ search_local: true
 collections:
   common:
     output: true
-    permalink: /common/:path/    
+    permalink: /common/:path/ 
+  schema:
+    output: true
+    permalink: /schema/:path/        
 
 defaults:
 
@@ -43,3 +46,8 @@ defaults:
       type:         common
     values:
       layout:       common
+  - scope:
+      path:         ""
+      type:         schema
+    values:
+      layout:       schema      

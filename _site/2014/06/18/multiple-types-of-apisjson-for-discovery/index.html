@@ -10,6 +10,15 @@
       .gist-file
       .gist-data {max-height: 600px;}
     </style>    
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3S0JD3JF6R"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-3S0JD3JF6R');
+  </script>    
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -25,7 +34,10 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" href="http://localhost:4000/blog/">Blog</a>
-            </li>                            
+            </li>       
+            <li class="nav-item">
+              <a class="nav-link" href="http://localhost:4000/schema/">Schema</a>
+            </li>                                    
             <li class="nav-item">
               <a class="nav-link" href="http://localhost:4000/properties/">Properties</a>
             </li>        
@@ -50,6 +62,7 @@
     <div class="container my-5">
       <h3>Multiple Types of APIs.json For Discovery</h3>
 <span class="post-date"></span>
+<img src="https://s3.amazonaws.com/kinlane-productions/apis-json/apisdotjson.png" width="30%" align="right" style="padding: 15px;">
 <p><a href="http://apisjson.org/"><img style="padding: 15px;" src="https://s3.amazonaws.com/kinlane-productions/apis-json/apisdotjson.png" alt="" width="300" align="right" /></a></p>
 <p>I&rsquo;m working through thoughts around a suggestion for future versions of&nbsp;<a href="http://apisjson.org/">APIs.json API discovery format</a>, and as I do with other things I&rsquo;m trying to make sense of, I wanted to write a blog post on API Evangelist. If you aren't familiar with the format, APIs.json is meant to be a machine readable JSON file that provides an overview and listing APIs available within a specific domain.</p>
 <p><strong>Authoritative APIs.json</strong><br /> This is an APIs.json that is made available in the root of a domain, that is providing detail on an API that is managed within the same domain. This use case is for API providers to list the APIs that they offer publicly.</p>
@@ -64,6 +77,7 @@
 <p>Right now we are working on just stabilizing the latest release of APIs.json, so that people can get to work on publishing their own APIs.json. My goal with these thoughts is to just explore what is possible, and maybe, if successful some of these thoughts will be incorporated in future versions.</p>
 
 
+<p align="center"><a href="/blog/" style="font-size: 18px; font-weight: bold;">Return to Blog</a></p>
     </div>
 
     <script src="http://localhost:4000/assets/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
@@ -75,9 +89,13 @@
           <tr>
             <td align="center"><a href="https://apis.io" style="color: #000;">APIs.io</a></td>
             <td align="center" style="padding-left: 25px; padding-right: 25px;">|</td>
-            <td align="center"><a href="https://apisjson.org" style="color: #000;">APIs.json</a></td>
-            <td align="center" style="padding-left: 25px; padding-right: 25px;">|</td>
             <td align="center"><a href="https://apicommons.org" style="color: #000;">API Commons</a></td>
+            <td>|</td>
+            <td><a href="https://github.com/apis-json/apis-json/issues" style="color: #000;">GitHub Issues</a></td>
+            <td>|</td>
+            <td><a href="https://github.com/orgs/apis-json/discussions" style="color: #000;">GitHub Discussions</a></td>
+            <td>|</td>
+            <td><a href="https://github.com/apis-json/apis-json" style="color: #000;">GitHub Org</a></td>              
           </tr>
         </table>
       </div>

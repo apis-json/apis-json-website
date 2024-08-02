@@ -10,6 +10,15 @@
       .gist-file
       .gist-data {max-height: 600px;}
     </style>    
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3S0JD3JF6R"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-3S0JD3JF6R');
+  </script>    
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -25,7 +34,10 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" href="http://localhost:4000/blog/">Blog</a>
-            </li>                            
+            </li>       
+            <li class="nav-item">
+              <a class="nav-link" href="http://localhost:4000/schema/">Schema</a>
+            </li>                                    
             <li class="nav-item">
               <a class="nav-link" href="http://localhost:4000/properties/">Properties</a>
             </li>        
@@ -110,9 +122,13 @@
           <tr>
             <td align="center"><a href="https://apis.io" style="color: #000;">APIs.io</a></td>
             <td align="center" style="padding-left: 25px; padding-right: 25px;">|</td>
-            <td align="center"><a href="https://apisjson.org" style="color: #000;">APIs.json</a></td>
-            <td align="center" style="padding-left: 25px; padding-right: 25px;">|</td>
             <td align="center"><a href="https://apicommons.org" style="color: #000;">API Commons</a></td>
+            <td>|</td>
+            <td><a href="https://github.com/apis-json/apis-json/issues" style="color: #000;">GitHub Issues</a></td>
+            <td>|</td>
+            <td><a href="https://github.com/orgs/apis-json/discussions" style="color: #000;">GitHub Discussions</a></td>
+            <td>|</td>
+            <td><a href="https://github.com/apis-json/apis-json" style="color: #000;">GitHub Org</a></td>              
           </tr>
         </table>
       </div>

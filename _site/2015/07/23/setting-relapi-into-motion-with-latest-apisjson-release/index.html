@@ -10,6 +10,15 @@
       .gist-file
       .gist-data {max-height: 600px;}
     </style>    
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3S0JD3JF6R"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-3S0JD3JF6R');
+  </script>    
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -25,7 +34,10 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" href="http://localhost:4000/blog/">Blog</a>
-            </li>                            
+            </li>       
+            <li class="nav-item">
+              <a class="nav-link" href="http://localhost:4000/schema/">Schema</a>
+            </li>                                    
             <li class="nav-item">
               <a class="nav-link" href="http://localhost:4000/properties/">Properties</a>
             </li>        
@@ -50,6 +62,7 @@
     <div class="container my-5">
       <h3>Setting rel=api Into Motion With Latest APIs.json Release</h3>
 <span class="post-date"></span>
+<img src="http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/blog/api-icon.jpg" width="30%" align="right" style="padding: 15px;">
 <p><a href="http://apisjson.org/"><img style="padding: 15px;" src="http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/blog/api-icon.jpg" alt="" width="200" align="right" /></a>Bruno Pedro (<a href="/admin/blog/bpedro">@bpedro</a>) who has been building <a href="http://apisjson.org/">APIs.json</a> into his <a href="https://www.apichangelog.com">API Changelog service</a>, made a pull request to the specification recently, pushing forward the link relation conversation for APIs.json. As listed in the specification, we have long intended to make APIs.json an official media type:</p>
 <p><strong>3.5. &nbsp;Media Type</strong></p>
 <p style="padding-left: 30px;">It is intended that if there is sufficient traction, the media type "application/apis+json" will be&nbsp;&nbsp; submitted to IANA as per RFC:&nbsp;http://tools.ietf.org/html/rfc4288</p>
@@ -66,6 +79,7 @@
 <p><img style="display: block; margin-left: auto; margin-right: auto;" src="http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/blog/api-evangelist-link-relation.png" alt="" width="75%" align="middle" /></p>
 <p>I have added a link relation to my <a href="http://apievangelist.com">API Evangelist</a>, <a href="/admin/blog/Kin Lane">Kin Lane</a>, and <a href="https://kin-lane.github.io/master/">Master API project</a>, all pointing to my <a href="https://kin-lane.github.io/master/apis.json">central APIs.json</a>, which provides an index of not just each of the APIs I use to operate the API Evangelist network, but also the supporting building blocks of API operations like pricing, support, etc.&nbsp;</p>
 <p>Thanks Bruno for the pull request, pushing out a minor release of the APIs.json spec, <a href="http://apisjson.org/format/apisjson_0.15.txt">moving us to&nbsp;0.15</a>. This release primes the pump, for a queue of APIs.json requests that are in the works, like more API property types, country origin, and much more.&nbsp;</p>
+<p align="center"><a href="/blog/" style="font-size: 18px; font-weight: bold;">Return to Blog</a></p>
     </div>
 
     <script src="http://localhost:4000/assets/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
@@ -77,9 +91,13 @@
           <tr>
             <td align="center"><a href="https://apis.io" style="color: #000;">APIs.io</a></td>
             <td align="center" style="padding-left: 25px; padding-right: 25px;">|</td>
-            <td align="center"><a href="https://apisjson.org" style="color: #000;">APIs.json</a></td>
-            <td align="center" style="padding-left: 25px; padding-right: 25px;">|</td>
             <td align="center"><a href="https://apicommons.org" style="color: #000;">API Commons</a></td>
+            <td>|</td>
+            <td><a href="https://github.com/apis-json/apis-json/issues" style="color: #000;">GitHub Issues</a></td>
+            <td>|</td>
+            <td><a href="https://github.com/orgs/apis-json/discussions" style="color: #000;">GitHub Discussions</a></td>
+            <td>|</td>
+            <td><a href="https://github.com/apis-json/apis-json" style="color: #000;">GitHub Org</a></td>              
           </tr>
         </table>
       </div>

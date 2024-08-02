@@ -10,6 +10,15 @@
       .gist-file
       .gist-data {max-height: 600px;}
     </style>    
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3S0JD3JF6R"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-3S0JD3JF6R');
+  </script>    
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -25,7 +34,10 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" href="http://localhost:4000/blog/">Blog</a>
-            </li>                            
+            </li>       
+            <li class="nav-item">
+              <a class="nav-link" href="http://localhost:4000/schema/">Schema</a>
+            </li>                                    
             <li class="nav-item">
               <a class="nav-link" href="http://localhost:4000/properties/">Properties</a>
             </li>        
@@ -50,6 +62,7 @@
     <div class="container my-5">
       <h3>APIs.json Is An Index For API Operations</h3>
 <span class="post-date"></span>
+<img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-api-discovery.png" width="30%" align="right" style="padding: 15px;">
 <p><img style="padding: 15px;" src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-api-discovery.png" alt="" width="150" align="right" /></p>
 <p>As part of the latest wave of work around the APIs.json format We wanted to take some time to help folks better understand exactly what APIs.json is, and what it can do for API providers, consumers, as well as the fast moving API sector. <a href="http://apisjson.org/format.html">We are working on version 0.16 of the API discovery format</a>, and we wanted to help get the word out about some of the cool stuff that is being done with APIs.json, as well as what is possible in the future.</p>
 <p><em><strong>What is APIs.json? </strong></em>APIs.json provides a machine readable approach that API providers can put work in describing their API operations, similar to how web site providers describe their websites using <a href="https://www.xml-sitemaps.com/">sitemap.xml</a>. Here are the APIs, who are describing their APIs using APIs.json:</p>
@@ -198,6 +211,7 @@
 </tbody>
 </table>
 <p>These are the API providers who have crafted their own APIs.json file, and have registered them with APIs.io. We consider these the <span style="text-decoration: underline;">authoritative version</span> of the APIs.json, but as you'll see in future blog posts, APIs.json is not limited to just the API provider--API consumers can also craft their own APIs.json files describing 3rd party APIs that they depend on.</p>
+<p align="center"><a href="/blog/" style="font-size: 18px; font-weight: bold;">Return to Blog</a></p>
     </div>
 
     <script src="http://localhost:4000/assets/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
@@ -209,9 +223,13 @@
           <tr>
             <td align="center"><a href="https://apis.io" style="color: #000;">APIs.io</a></td>
             <td align="center" style="padding-left: 25px; padding-right: 25px;">|</td>
-            <td align="center"><a href="https://apisjson.org" style="color: #000;">APIs.json</a></td>
-            <td align="center" style="padding-left: 25px; padding-right: 25px;">|</td>
             <td align="center"><a href="https://apicommons.org" style="color: #000;">API Commons</a></td>
+            <td>|</td>
+            <td><a href="https://github.com/apis-json/apis-json/issues" style="color: #000;">GitHub Issues</a></td>
+            <td>|</td>
+            <td><a href="https://github.com/orgs/apis-json/discussions" style="color: #000;">GitHub Discussions</a></td>
+            <td>|</td>
+            <td><a href="https://github.com/apis-json/apis-json" style="color: #000;">GitHub Org</a></td>              
           </tr>
         </table>
       </div>

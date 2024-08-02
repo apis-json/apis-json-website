@@ -10,6 +10,15 @@
       .gist-file
       .gist-data {max-height: 600px;}
     </style>    
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3S0JD3JF6R"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-3S0JD3JF6R');
+  </script>    
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -25,7 +34,10 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" href="http://localhost:4000/blog/">Blog</a>
-            </li>                            
+            </li>       
+            <li class="nav-item">
+              <a class="nav-link" href="http://localhost:4000/schema/">Schema</a>
+            </li>                                    
             <li class="nav-item">
               <a class="nav-link" href="http://localhost:4000/properties/">Properties</a>
             </li>        
@@ -50,6 +62,7 @@
     <div class="container my-5">
       <h3>Solving The Problem Of API Discovery</h3>
 <span class="post-date"></span>
+<img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-api-discovery.png" width="30%" align="right" style="padding: 15px;">
 <p><img style="padding: 15px;" src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-api-discovery.png" alt="" width="150" align="right" /></p>
 <p>API discovery has not changed much since 2005, when <a href="http://apievangelist.com/2012/12/30/history-of-apis--programmableweb/">John Musser launched ProgrammableWeb</a>, the API directory we've all come to know and love. In 2014 (9 years later), we have <a href="https://www.mashape.com/">Mashape</a> and a handful of other API directory and discovery tools, but we have not made progress on truly being able to discover the best APIs possible, in a distributed, machine-readable way.</p>
 <p>Steve Willmott of <a title="3Scale" href="http://3scale.net">3Scale</a>, and Kin Lane of <a href="http://apievangelist.com">API Evangelist</a>, are at it again, looking to provide a possible solution, that we are calling APIs.json&mdash;a machine readable listing of your APIs and supporting building blocks that lives in the root of your domain.</p>
@@ -57,6 +70,7 @@
 <p>We are just getting started, so make sure and get involved via the <a href="https://github.com/api-commons/api-json">Github repository </a>or via the <a href="https://groups.google.com/forum/#!forum/apisjson">Google Group</a> we've setup to facilitate discussion.</p>
 
 
+<p align="center"><a href="/blog/" style="font-size: 18px; font-weight: bold;">Return to Blog</a></p>
     </div>
 
     <script src="http://localhost:4000/assets/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
@@ -68,9 +82,13 @@
           <tr>
             <td align="center"><a href="https://apis.io" style="color: #000;">APIs.io</a></td>
             <td align="center" style="padding-left: 25px; padding-right: 25px;">|</td>
-            <td align="center"><a href="https://apisjson.org" style="color: #000;">APIs.json</a></td>
-            <td align="center" style="padding-left: 25px; padding-right: 25px;">|</td>
             <td align="center"><a href="https://apicommons.org" style="color: #000;">API Commons</a></td>
+            <td>|</td>
+            <td><a href="https://github.com/apis-json/apis-json/issues" style="color: #000;">GitHub Issues</a></td>
+            <td>|</td>
+            <td><a href="https://github.com/orgs/apis-json/discussions" style="color: #000;">GitHub Discussions</a></td>
+            <td>|</td>
+            <td><a href="https://github.com/apis-json/apis-json" style="color: #000;">GitHub Org</a></td>              
           </tr>
         </table>
       </div>

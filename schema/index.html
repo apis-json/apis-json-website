@@ -1,0 +1,22 @@
+---
+layout: default
+title: Schema
+---
+
+<h2>APIs.json Schema</h2>
+<p style="margin-left; 15px; margin-right: 15px;">These are all of the schema we encourage API producers to include in their APIs.json indexes. They provide the metadata needed to properly describe API contracts, indexes, blueprints, and other ways of using APIs.json.</p>
+<div class="container">
+<hr>
+{% assign schemas = site.schema %}
+{% for schema in schemas %}
+	<div class="row">
+		<div class="col-1" style="text-align: center;">
+			<a href="{{ schema.url }}"><img src="{{ schema.image }}" width="35%" align="center" /></a>
+		</div>
+		<div class="col-11">
+			<a href="{{ schema.url }}" style="color:#000;"><strong>{{ schema.name }}</strong></a> - {{ schema.description }}
+		</div>
+	</div>
+	<hr>
+{% endfor %}
+</div>

@@ -10,6 +10,15 @@
       .gist-file
       .gist-data {max-height: 600px;}
     </style>    
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3S0JD3JF6R"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-3S0JD3JF6R');
+  </script>    
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -25,7 +34,10 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" href="http://localhost:4000/blog/">Blog</a>
-            </li>                            
+            </li>       
+            <li class="nav-item">
+              <a class="nav-link" href="http://localhost:4000/schema/">Schema</a>
+            </li>                                    
             <li class="nav-item">
               <a class="nav-link" href="http://localhost:4000/properties/">Properties</a>
             </li>        
@@ -50,6 +62,7 @@
     <div class="container my-5">
       <h3>Using APIs.json For My Microservice Navigation And Discovery</h3>
 <span class="post-date"></span>
+<img src="http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/blog/kin-lane-api-navigation.png" width="30%" align="right" style="padding: 15px;">
 <p><a href="https://kin-lane.github.io/master/"><img style="padding: 10px;" src="http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/blog/kin-lane-api-navigation.png" alt="" width="325" align="right" /></a></p>
 <p>I&rsquo;m rebuilding my underlying architecture using microservices and docker containers, and the glue I&rsquo;m using to bind it all together is <a href="http://apisjson.org/">APIs.json</a>. I&rsquo;m not just using APIs.son to deliver on discoverability for all of my services, I am also using it to navigate around my stack. Right now I only have about 10 microservices running, but I have a plan to add almost 50 in total by the time I&rsquo;m done with this latest sprint.</p>
 <p>Each microservice lives as its own Github repository, within a <a href="https://github.com/kin-lane">specific organization</a>. I give each one its own APIs.json, indexing all the elements APIs of that specific microservice. APIs.json has two main collections, "apis" and "include". For each microservice APIs.json, I list all the properties for that API, but I use the include element to document the urls of other microservice APIs.json in the collection.</p>
@@ -57,6 +70,7 @@
 <p><a href="https://kin-lane.github.io/master/"><img style="padding: 10px;" src="http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/blog/kin-lane-api-navigation-2_png.png" alt="" width="325" align="right" /></a></p>
 <p>APIs.json acts as an index for each microservice, but through the include collection it also provides links to other related microservices within its own stack, which I use to navigate, in a circular way between all supporting services. All of that sounds very dizzying to write out, and I&rsquo;m sure you are like WTF?  You can <a href="https://kin-lane.github.io/master/">browse my work on Github</a>, some of it is public, but much of it you have to have oAuth access to see. The public elements all live in the gh-pages branch, while the private aspects live within the private master branch.</p>
 <p>This is all a living workbench for me, so expect broken things. If you have questions, or would like more access to better understand, let me know. I&rsquo;m happy to consider adding you to the Github organization as collaborator so that you can see more of it in action. I will also chronicle my work here on the blog, as I have time, and have anything interesting things to share.</p>
+<p align="center"><a href="/blog/" style="font-size: 18px; font-weight: bold;">Return to Blog</a></p>
     </div>
 
     <script src="http://localhost:4000/assets/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
@@ -68,9 +82,13 @@
           <tr>
             <td align="center"><a href="https://apis.io" style="color: #000;">APIs.io</a></td>
             <td align="center" style="padding-left: 25px; padding-right: 25px;">|</td>
-            <td align="center"><a href="https://apisjson.org" style="color: #000;">APIs.json</a></td>
-            <td align="center" style="padding-left: 25px; padding-right: 25px;">|</td>
             <td align="center"><a href="https://apicommons.org" style="color: #000;">API Commons</a></td>
+            <td>|</td>
+            <td><a href="https://github.com/apis-json/apis-json/issues" style="color: #000;">GitHub Issues</a></td>
+            <td>|</td>
+            <td><a href="https://github.com/orgs/apis-json/discussions" style="color: #000;">GitHub Discussions</a></td>
+            <td>|</td>
+            <td><a href="https://github.com/apis-json/apis-json" style="color: #000;">GitHub Org</a></td>              
           </tr>
         </table>
       </div>
