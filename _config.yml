@@ -6,10 +6,13 @@ url: https://apisjson.org
 node: explore
 
 keywords:
-
-  - APIs
-  - Search
-  - Discovery
+  - APIs.json
+  - API discovery
+  - API index
+  - machine-readable APIs
+  - API operations
+  - API catalog
+future: false
 
 version:      1.1.1
 author:

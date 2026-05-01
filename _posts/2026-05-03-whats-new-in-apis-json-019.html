@@ -1,0 +1,43 @@
+---
+layout: post
+title: "What's New in APIs.json 0.19"
+date: 2026-05-03
+image: https://kinlane-productions2.s3.amazonaws.com/apis-json/stripe-apis-json-screenshot.png
+tags:
+  - APIs.json
+  - API discovery
+  - specification
+  - versioning
+---
+
+<p>APIs.json 0.19 is the current stable version of the format, and it represents a meaningful step forward in how we express the operational context of an API alongside its technical contracts. If you last looked at APIs.json during the 0.14 or 0.15 era, a lot has changed. This post walks through what's new and why the changes matter.</p>
+
+<h2>A Quick Recap of What APIs.json Does</h2>
+
+<p>Before diving into the changes, a brief reminder of the format's purpose. APIs.json is a machine-readable index file that API providers publish to describe their API operations. Think of it like a <code>sitemap.xml</code> for an API — it doesn't replace OpenAPI or JSON Schema, it wraps around them and says: here are the technical contracts for this API, here is the documentation, here is where you authenticate, here is the pricing page, here is the support channel. It makes the full operational surface of an API discoverable by tooling rather than just humans reading a developer portal.</p>
+
+<h2>What Changed in 0.19</h2>
+
+<p>The <a href="https://github.com/apis-json/diff/pull/8/files" target="_blank" rel="noopener">full diff is on GitHub</a>, but the substantive changes fall into a few categories:</p>
+
+<h3>Richer Property Type Vocabulary</h3>
+
+<p>The <code>properties</code> array in an APIs.json entry is where you list the URLs that describe different aspects of an API. In 0.19 we've expanded and clarified the vocabulary of recognized type values. Types like <code>GitHubOrg</code>, <code>GitHubRepo</code>, <code>PostmanCollection</code>, <code>PostmanWorkspace</code>, and <code>AsyncAPI</code> now have first-class definitions. This matters because tooling that parses APIs.json files can now make reliable assumptions about what a property URL contains based on its type, rather than having to guess or fetch and inspect.</p>
+
+<h3>Overlay Support</h3>
+
+<p>APIs.json 0.19 adds support for referencing OpenAPI Overlays — a relatively new specification that lets you apply targeted modifications to an OpenAPI document without changing the source. If you're maintaining a canonical OpenAPI spec but need environment-specific or audience-specific variants, overlays let you do that cleanly. Being able to reference overlays from an APIs.json file means discovery tools can surface the right variant of an API contract for a given context.</p>
+
+<h3>Spec-Driven Integration Properties</h3>
+
+<p>One of the bigger conceptual additions in recent versions is the capability to reference spec-driven integration artifacts — the machine-readable descriptions of what an API can do in the context of a specific workflow or integration pattern. This starts to push APIs.json beyond pure discovery into describing how an API fits into a larger operational picture. It's early, but it's directionally important as AI agents increasingly need to understand not just "what does this API do" but "how does this API participate in an integration."</p>
+
+<h3>Cleaner Schema</h3>
+
+<p>The JSON Schema that validates APIs.json files has been tightened in 0.19. Several fields that were previously loosely typed have been given more specific schemas. Required vs. optional fields are more clearly delineated. This makes validators more reliable and reduces the ambiguity that has historically caused inconsistencies between valid-but-differently-structured APIs.json files in the wild.</p>
+
+<h2>Upgrading from Earlier Versions</h2>
+
+<p>The format has maintained strong backward compatibility across versions. A valid 0.17 or 0.18 file will still parse correctly under 0.19 tooling. The additions are additive rather than breaking. That said, if you want to take advantage of the new property types or overlay support, you'll want to review the <a href="https://apisjson.org/format/apisjson_0.19.txt">current spec</a> and update your index files accordingly.</p>
+
+<p>If you haven't yet published an APIs.json file for your API, 0.19 is the right place to start. The format is stable, the tooling has matured, and <a href="https://apis.io">apis.io</a> will index your API as soon as you publish a valid file at the root of your domain or at a well-known location.</p>

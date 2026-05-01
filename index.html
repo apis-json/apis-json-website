@@ -1,41 +1,68 @@
 ---
-layout: page
+layout: default
 title: Home
+description: APIs.json is the open source machine-readable format for describing API operations — a sitemap.xml for APIs that indexes OpenAPI specs, documentation, pricing, terms of service, and more.
 ---
 
-<h2>What is APIs.json?</h2>
-<p style="margin-left; 15px; margin-right: 15px;">APIs.json is a machine readable specification that API providers can use to describe their API operations, similar to how web sites are described using sitemap.xml. Providing an index of internal, partner, and public APIs, which includes not just the the OpenAPI, JSON Schema, and other machine readable artifacts, but also the currently only human readable elements like documentation, pricing, and terms of service.</p>
+<style>
+  .page-hero { text-align: center; padding: 2.5rem 0 2rem; }
+  .page-hero h1 { font-size: 2.2rem; font-weight: 800; color: #1a1a2e; margin-bottom: 0.75rem; }
+  .page-hero p { color: #555; font-size: 1.1rem; max-width: 680px; margin: 0 auto 1.5rem; line-height: 1.7; }
+  .version-card { border: 1px solid #e3e7ee; border-radius: 12px; overflow: hidden; margin-bottom: 2rem; }
+  .version-card-header { background: #1a1a2e; color: white; padding: 0.75rem 1.25rem; display: flex; justify-content: space-between; align-items: center; font-size: 0.9rem; font-weight: 600; }
+  .version-card-header a { color: #90caf9; text-decoration: none; font-weight: 400; }
+  .version-card-header a:hover { text-decoration: underline; }
+  .version-frame { width: 100%; height: 480px; border: none; background: #f8f9fb; }
+  .versions-list { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 1rem 0 2rem; }
+  .version-badge { display: inline-flex; gap: 0.5rem; align-items: center; padding: 0.35em 0.85em; border: 1px solid #e3e7ee; border-radius: 999px; font-size: 0.85rem; background: white; }
+  .version-badge a { color: #0d6efd; text-decoration: none; }
+  .version-badge a:hover { text-decoration: underline; }
+  .showcase-grid { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; margin: 1rem 0 2rem; }
+  .showcase-item img { height: 50px; width: auto; object-fit: contain; filter: grayscale(30%); transition: filter 0.2s; }
+  .showcase-item img:hover { filter: grayscale(0%); }
+  h2 { font-size: 1.4rem; font-weight: 700; color: #1a1a2e; margin: 2rem 0 0.75rem; padding-bottom: 0.5rem; border-bottom: 1px solid #e3e7ee; }
+  h3 { font-size: 1.1rem; font-weight: 600; color: #1a1a2e; margin: 1.5rem 0 0.5rem; }
+</style>
 
-<h2>Latest Version (<a href="https://github.com/apis-json/diff/pull/8/files" target="_blank">Diff</a>)</h2>
-<iframe src="format/apisjson_0.19.txt" style="padding: 15px; width: 100%; height: 500px; border: 1px solid #CCC;"></iframe>
+<div class="page-hero">
+  <h1>A Machine-Readable Index for Your APIs</h1>
+  <p>APIs.json is an open source format that API providers use to describe their API operations — like a <code>sitemap.xml</code> for APIs. It indexes OpenAPI specs, JSON Schema, documentation, pricing, terms of service, and more, making your APIs discoverable by <a href="https://apis.io">APIs.io</a> and other tools.</p>
+</div>
 
-<br>
+<h2>Latest Version <small class="text-muted fw-normal fs-6">— <a href="https://github.com/apis-json/diff/pull/8/files" target="_blank" rel="noopener">View diff</a></small></h2>
+
+<div class="version-card">
+  <div class="version-card-header">
+    <span>apis.json v0.19</span>
+    <a href="https://github.com/apis-json/diff/pull/8/files" target="_blank" rel="noopener">What changed &rarr;</a>
+  </div>
+  <iframe src="format/apisjson_0.19.txt" class="version-frame" title="APIs.json v0.19 specification"></iframe>
+</div>
+
 <h3>Previous Versions</h3>
-<ul>
-<li><strong>0.18</strong> (<a href="http://apisjson.org/format/apisjson_0.18.txt" target="_blank">Spec</a>) (<a href="https://github.com/apis-json/diff/pull/7/files" target="_blank">Diff</a>)</li>
-<li><strong>0.17</strong> (<a href="http://apisjson.org/format/apisjson_0.17.txt" target="_blank">Spec</a>) (<a href="https://github.com/apis-json/diff/pull/6/files" target="_blank">Diff</a>)</li>
-<li><strong>0.16</strong> (<a href="http://apisjson.org/format/apisjson_0.16.txt" target="_blank">Spec</a>) (<a href="https://github.com/apis-json/diff/pull/5/files" target="_blank">Diff</a>)</li>
-<li><strong>0.15</strong> (<a href="http://apisjson.org/format/apisjson_0.15.txt" target="_blank">Spec</a>) (<a href="https://github.com/apis-json/diff/pull/4/files" target="_blank">Diff</a>)</li>
-<li><strong>0.14</strong> (<a href="http://apisjson.org/format/apisjson_0.14.txt" target="_blank">Spec</a>) (<a href="https://github.com/apis-json/diff/pull/3/files" target="_blank">Diff</a>)</li>
-<li><strong>0.13</strong> (<a href="http://apisjson.org/format/apisjson_0.13.txt" target="_blank">Spec</a>) (<a href="https://github.com/apis-json/diff/pull/2/files" target="_blank">Diff</a>)</li>
-<li><strong>0.12</strong> (<a href="http://apisjson.org/format/apisjson_0.12.txt" target="_blank">Spec</a>) (<a href="https://github.com/apis-json/diff/pull/1/files" target="_blank">Diff</a>)</li>
-<li><strong>0.11</strong> (<a href="http://apisjson.org/format/apisjson_0.11.txt" target="_blank">Spec</a>)</li>
-</ul>
+<div class="versions-list">
+  <span class="version-badge"><strong>0.18</strong> <a href="https://apisjson.org/format/apisjson_0.18.txt" target="_blank">Spec</a> <a href="https://github.com/apis-json/diff/pull/7/files" target="_blank">Diff</a></span>
+  <span class="version-badge"><strong>0.17</strong> <a href="https://apisjson.org/format/apisjson_0.17.txt" target="_blank">Spec</a> <a href="https://github.com/apis-json/diff/pull/6/files" target="_blank">Diff</a></span>
+  <span class="version-badge"><strong>0.16</strong> <a href="https://apisjson.org/format/apisjson_0.16.txt" target="_blank">Spec</a> <a href="https://github.com/apis-json/diff/pull/5/files" target="_blank">Diff</a></span>
+  <span class="version-badge"><strong>0.15</strong> <a href="https://apisjson.org/format/apisjson_0.15.txt" target="_blank">Spec</a> <a href="https://github.com/apis-json/diff/pull/4/files" target="_blank">Diff</a></span>
+  <span class="version-badge"><strong>0.14</strong> <a href="https://apisjson.org/format/apisjson_0.14.txt" target="_blank">Spec</a> <a href="https://github.com/apis-json/diff/pull/3/files" target="_blank">Diff</a></span>
+  <span class="version-badge"><strong>0.13</strong> <a href="https://apisjson.org/format/apisjson_0.13.txt" target="_blank">Spec</a> <a href="https://github.com/apis-json/diff/pull/2/files" target="_blank">Diff</a></span>
+  <span class="version-badge"><strong>0.12</strong> <a href="https://apisjson.org/format/apisjson_0.12.txt" target="_blank">Spec</a> <a href="https://github.com/apis-json/diff/pull/1/files" target="_blank">Diff</a></span>
+  <span class="version-badge"><strong>0.11</strong> <a href="https://apisjson.org/format/apisjson_0.11.txt" target="_blank">Spec</a></span>
+</div>
 
-<br>
 <h2>Example APIs.json</h2>
 <script src="https://gist.github.com/kinlane/3b893b9343ade1906ed8b5b18ecc9279.js"></script>
 
-<br>
 <h2>Example APIs.yaml</h2>
 <script src="https://gist.github.com/kinlane/29cb12217e3aa092489b35a5600c40ca.js"></script>
 
-<br>
-<h2>Who is using APIs.json?</h2>
-<center>
-{% assign showcases = site.data.showcase | sort: 'view_sort' %}
-{% for showcase in showcases %}
-<div class="container-fluid" style="display: inline;"><a href="{{ showcase.url }}" target="_blank"><img src="{{ showcase.image }}" width="250" style="padding: 15px; border: 1px solid #000;" /></a></div>
-{% endfor %}
-</center>
-<br><br>
+<h2>Who Is Using APIs.json?</h2>
+<div class="showcase-grid">
+  {% assign showcases = site.data.showcase | sort: 'view_sort' %}
+  {% for showcase in showcases %}
+  <a href="{{ showcase.url }}" target="_blank" rel="noopener" class="showcase-item" title="{{ showcase.name }}">
+    <img src="{{ showcase.image }}" alt="{{ showcase.name }}">
+  </a>
+  {% endfor %}
+</div>

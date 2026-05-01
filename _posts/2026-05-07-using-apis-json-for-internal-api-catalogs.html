@@ -1,0 +1,74 @@
+---
+layout: post
+title: 'Using APIs.json for Internal API Catalogs'
+date: 2026-05-07
+image: https://s3.amazonaws.com/kinlane-productions/apis-json/apisdotjson.png
+tags:
+  - APIs.json
+  - API catalog
+  - internal APIs
+  - enterprise
+  - API governance
+---
+
+<p>Most of the conversation around APIs.json focuses on public API discovery — making your APIs findable by <a href="https://apis.io">apis.io</a> and other tools that crawl the open web. But the format is equally useful, and arguably more immediately valuable, when applied to internal API catalogs inside an organization.</p>
+
+<p>If your company runs more than a handful of internal APIs, you already have a discovery problem. Engineering teams build APIs, publish minimal documentation, and then move on. Other teams find those APIs through word of mouth, Slack messages, or by stumbling across an endpoint in someone else's code. New engineers spend days tracking down the authentication details for an internal service that's been running for three years and has exactly one paragraph of documentation in a wiki nobody updates.</p>
+
+<p>APIs.json doesn't solve the underlying discipline problem — you still have to write the documentation — but it gives you a consistent, machine-readable way to describe where that documentation lives and what it contains.</p>
+
+<h2>What an Internal APIs.json Looks Like</h2>
+
+<p>The format is the same whether the API is public or internal. You publish an <code>apis.json</code> file that contains an array of API entries. Each entry has a name, description, the URL of the API, and a properties array that links to the artifacts associated with it.</p>
+
+<pre><code>{
+  "name": "Acme Internal API Catalog",
+  "description": "Internal APIs for the Acme engineering organization",
+  "url": "https://internal.acme.com/apis.json",
+  "apis": [
+    {
+      "name": "Orders API",
+      "description": "Manages order creation, status, and fulfillment",
+      "baseURL": "https://api.internal.acme.com/orders",
+      "properties": [
+        { "type": "OpenAPI", "url": "https://internal.acme.com/specs/orders.yaml" },
+        { "type": "Documentation", "url": "https://docs.internal.acme.com/orders" },
+        { "type": "Authentication", "url": "https://docs.internal.acme.com/auth" },
+        { "type": "ChangeLog", "url": "https://docs.internal.acme.com/orders/changelog" }
+      ]
+    }
+  ]
+}</code></pre>
+
+<p>The key insight is that you're not moving your documentation — you're indexing it. The OpenAPI spec stays wherever you already host it. The docs stay in your wiki or developer portal. The APIs.json file just tells tooling where to find all of it.</p>
+
+<h2>Network-Level Indexes</h2>
+
+<p>For organizations with many teams, you can create team-level or domain-level APIs.json files and then aggregate them into a root-level index using the <code>include</code> field. This mirrors how a large website might have multiple sitemaps aggregated into a sitemap index — each team owns their slice, and the root provides a unified discovery point.</p>
+
+<pre><code>{
+  "name": "Acme Engineering APIs",
+  "url": "https://internal.acme.com/apis.json",
+  "include": [
+    { "name": "Platform Team", "url": "https://platform.internal.acme.com/apis.json" },
+    { "name": "Commerce Team", "url": "https://commerce.internal.acme.com/apis.json" },
+    { "name": "Data Team", "url": "https://data.internal.acme.com/apis.json" }
+  ]
+}</code></pre>
+
+<h2>What You Get Out of It</h2>
+
+<p>Once you have a valid APIs.json catalog, several things become possible that weren't before:</p>
+
+<ul>
+  <li><strong>Automated documentation audits</strong> — tooling can crawl the index and flag APIs that are missing documentation, change logs, or authentication references without someone manually checking each one.</li>
+  <li><strong>Governance enforcement</strong> — combined with <a href="https://apicommons.org">API Commons</a> rules and rulesets, you can run automated checks that verify each API meets your organization's standards for completeness and quality.</li>
+  <li><strong>AI agent integration</strong> — tools and agents that need to interact with internal APIs can discover the relevant contracts, authentication patterns, and documentation through a single consistent entry point rather than requiring manual configuration for each API.</li>
+  <li><strong>Onboarding acceleration</strong> — new engineers can get a complete picture of the internal API landscape through a single URL rather than having to ask around.</li>
+</ul>
+
+<h2>Getting Started</h2>
+
+<p>The lowest-friction path is to start with your five most-used internal APIs and write a minimal APIs.json entry for each one. You don't need to have every property — even a name, description, base URL, and OpenAPI spec link is a significant improvement over nothing. Once you have the file published and validated, you can incrementally add properties as you document them.</p>
+
+<p>The current spec and JSON Schema are at <a href="https://apisjson.org">apisjson.org</a>. The schema validator will tell you immediately if your file has structural issues.</p>

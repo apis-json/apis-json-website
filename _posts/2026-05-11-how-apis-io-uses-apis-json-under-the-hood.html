@@ -1,0 +1,52 @@
+---
+layout: post
+title: 'How APIs.io Uses APIs.json Under the Hood'
+date: 2026-05-11
+image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-api-discovery.png
+tags:
+  - APIs.json
+  - APIs.io
+  - API discovery
+  - indexing
+  - search
+---
+
+<p><a href="https://apis.io">APIs.io</a> is a search engine for APIs — a place where you can search across thousands of APIs, browse by provider, filter by capability, and find the API that does what you need. What powers it is APIs.json. Every API in the index got there because someone published a valid APIs.json file, and apis.io crawled it.</p>
+
+<p>Understanding how that pipeline works demystifies both apis.io and APIs.json, and it shows clearly why getting the format right in your own APIs.json file matters for how your API appears in search results.</p>
+
+<h2>Discovery: How APIs.io Finds APIs</h2>
+
+<p>apis.io uses several methods to discover new APIs.json files:</p>
+
+<ul>
+  <li><strong>Well-known paths</strong> — The crawler checks <code>/.well-known/apis.json</code> on domains it already knows about. This is the recommended location for your APIs.json file because it's a stable, predictable path that crawlers can find without any additional configuration.</li>
+  <li><strong>Root-level files</strong> — <code>/apis.json</code> at the root of a domain is also checked, following the pattern of <code>/sitemap.xml</code> for web crawlers.</li>
+  <li><strong>Explicit submissions</strong> — You can submit your APIs.json URL directly through the <a href="https://github.com/api-search/network/issues/new?labels=new&assignees=kinlane&title=%5BNew+API%5D+&body=URL%3A+%5Byour+api+url%5D" target="_blank" rel="noopener">GitHub issues form</a> on the network repository.</li>
+  <li><strong>Include references</strong> — When a crawled APIs.json file contains an <code>include</code> array pointing to other indexes, the crawler follows those references. This lets you build hierarchical catalogs where a root index points to team or product-specific sub-indexes.</li>
+</ul>
+
+<h2>Indexing: What Gets Stored</h2>
+
+<p>When the crawler processes an APIs.json file, it extracts structured data about each API entry. The fields that matter most for how your API appears in search are:</p>
+
+<ul>
+  <li><strong>name</strong> — the display name in search results</li>
+  <li><strong>description</strong> — the summary shown under the name</li>
+  <li><strong>tags</strong> — keywords used for filtering and categorization</li>
+  <li><strong>properties</strong> — the list of associated artifacts, which determines what icons and links appear on the detail page</li>
+</ul>
+
+<p>A terse or missing description means your API appears as a bare name in results with no context. Sparse or inaccurate tags means it won't surface for relevant searches. Missing property references means the detail page looks thin even if the API itself is well-documented.</p>
+
+<h2>Capabilities: What the Property Types Drive</h2>
+
+<p>One of the most important things that APIs.json property types drive in apis.io is the capabilities index. When your properties array includes a recognized type like <code>OpenAPI</code>, <code>AsyncAPI</code>, <code>GraphQL</code>, <code>Authentication</code>, or <code>Webhooks</code>, apis.io can surface your API in capability-based searches — "show me all APIs that have a GraphQL interface," "show me all APIs that support webhooks."</p>
+
+<p>This is why the property type vocabulary matters. Using a recognized type from the current APIs.json spec means your API gets indexed correctly into the capabilities layer. Using a free-form or nonstandard type means it gets stored but doesn't contribute to capability discovery.</p>
+
+<h2>The Network Structure</h2>
+
+<p>apis.io is itself built as a network of sites, each powered by its own APIs.json-backed data. The <a href="https://providers.apis.io">providers index</a> lists API providers organized by domain. The <a href="https://apis.apis.io">API index</a> lists individual APIs. The <a href="https://capabilities.apis.io">capabilities index</a> maps property types to the APIs that have them. All of these are driven by the same underlying APIs.json data — different views into the same indexed content.</p>
+
+<p>Publishing a well-formed APIs.json file doesn't just get your API into the search results — it makes it navigable through every layer of the apis.io network. That's the infrastructure that APIs.json was designed to power.</p>

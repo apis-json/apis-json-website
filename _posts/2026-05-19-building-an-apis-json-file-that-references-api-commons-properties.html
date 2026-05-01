@@ -1,0 +1,124 @@
+---
+layout: post
+title: 'Building an APIs.json File That References API Commons Properties'
+date: 2026-05-19
+image: https://kinlane-productions2.s3.amazonaws.com/apis-json/stripe-apis-json-screenshot.png
+tags:
+  - APIs.json
+  - API Commons
+  - tutorial
+  - API discovery
+  - API operations
+---
+
+<p>The connection between APIs.json and API Commons is a natural one: APIs.json provides the format for indexing your API's operational artifacts, and API Commons provides the standard vocabulary for naming and typing those artifacts. When you use them together, you get an index file that any tool — including <a href="https://apis.io">apis.io</a> — can parse, understand, and act on without ambiguity.</p>
+
+<p>This post walks through building a complete, well-formed APIs.json file that makes full use of the API Commons property vocabulary.</p>
+
+<h2>Start With the Basics</h2>
+
+<p>An APIs.json file has a few required top-level fields and an array of API entries. Here's the minimal structure:</p>
+
+<pre><code>{
+  "name": "Acme API",
+  "description": "The Acme platform API for managing accounts, resources, and integrations",
+  "url": "https://api.acme.com/apis.json",
+  "created": "2024-01-01",
+  "modified": "2026-05-01",
+  "specificationVersion": "0.19",
+  "apis": []
+}</code></pre>
+
+<p>The <code>url</code> field should point to the canonical location of the file itself. The <code>specificationVersion</code> should reflect the current version — 0.19 as of this writing.</p>
+
+<h2>Add an API Entry</h2>
+
+<p>Each entry in the <code>apis</code> array describes one API. The key fields are the name, description, humanURL (the developer portal page), baseURL (the API root), and tags:</p>
+
+<pre><code>{
+  "name": "Accounts API",
+  "description": "Create and manage Acme accounts, users, and permissions",
+  "humanURL": "https://developers.acme.com/accounts",
+  "baseURL": "https://api.acme.com/v2/accounts",
+  "tags": ["accounts", "users", "permissions", "identity"]
+}</code></pre>
+
+<p>The <code>tags</code> field is important for how your API surfaces in capability-based searches on apis.io. Use terms that describe what the API does, not just what it's called.</p>
+
+<h2>Add Properties Using API Commons Types</h2>
+
+<p>The <code>properties</code> array is where the API Commons vocabulary comes in. Each property has a <code>type</code> (the API Commons standard name) and a <code>url</code> (where the artifact lives). Here's a full example using the most important Common properties:</p>
+
+<pre><code>"properties": [
+  {
+    "type": "Documentation",
+    "url": "https://developers.acme.com/accounts/docs"
+  },
+  {
+    "type": "OpenAPI",
+    "url": "https://developers.acme.com/specs/accounts-v2.yaml"
+  },
+  {
+    "type": "Authentication",
+    "url": "https://developers.acme.com/authentication"
+  },
+  {
+    "type": "GettingStarted",
+    "url": "https://developers.acme.com/getting-started"
+  },
+  {
+    "type": "Plans",
+    "url": "https://acme.com/pricing"
+  },
+  {
+    "type": "ChangeLog",
+    "url": "https://developers.acme.com/changelog"
+  },
+  {
+    "type": "RoadMap",
+    "url": "https://developers.acme.com/roadmap"
+  },
+  {
+    "type": "TermsOfService",
+    "url": "https://acme.com/terms"
+  },
+  {
+    "type": "PrivacyPolicy",
+    "url": "https://acme.com/privacy"
+  },
+  {
+    "type": "Support",
+    "url": "https://github.com/acme/api/issues"
+  },
+  {
+    "type": "Status",
+    "url": "https://status.acme.com"
+  }
+]</code></pre>
+
+<p>Each of these type values is a recognized API Commons Common property. Using the standard types means apis.io can index your API correctly into the capabilities layer, and API Commons governance rules can verify their presence automatically.</p>
+
+<h2>Add Community Properties as Relevant</h2>
+
+<p>Beyond the Common properties, API Commons defines Community properties for artifacts that aren't universal but are important for specific API types. If your API supports webhooks, has a Postman collection, or provides an AsyncAPI spec, reference them too:</p>
+
+<pre><code>{
+  "type": "PostmanCollection",
+  "url": "https://www.postman.com/acme/workspace/accounts-api"
+},
+{
+  "type": "Webhooks",
+  "url": "https://developers.acme.com/webhooks"
+},
+{
+  "type": "SDKs",
+  "url": "https://developers.acme.com/sdks"
+}</code></pre>
+
+<h2>Validate and Publish</h2>
+
+<p>Before publishing, validate your file against the <a href="https://apisjson.org/schema/">APIs.json JSON Schema</a>. A valid file has no structural errors and all required fields are present. Then publish it at <code>https://yourdomain.com/.well-known/apis.json</code>.</p>
+
+<p>Once it's live, submit the URL via the <a href="https://github.com/api-search/network/issues/new?labels=new&assignees=kinlane&title=%5BNew+API%5D+&body=URL%3A+%5Byour+api+url%5D" target="_blank" rel="noopener">apis.io GitHub form</a> and the crawler will index it. Run the <a href="https://apicommons.org/rulesets/">API Commons rulesets</a> against the file in your CI pipeline to keep the index complete as your operations evolve.</p>
+
+<p>The full example above covers most of what the Common properties collection defines. Start with whatever subset of those artifacts you already have published, and add entries as you create the remaining ones. An incomplete but accurate index is better than a complete but inaccurate one.</p>
