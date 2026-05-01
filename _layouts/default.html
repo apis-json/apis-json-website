@@ -3,86 +3,93 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{ site.name }} - {{ page.title }}</title>
-    <link href="{{ site.url }}/assets/bootstrap.min.css" rel="stylesheet">
-    <link href="{{ site.url }}/assets/sticky-footer.css" rel="stylesheet">
-    <style type="text/css">
-      .gist-file
-      .gist-data {max-height: 600px;}
-    </style>    
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3S0JD3JF6R"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+    <title>{% if page.title %}{{ page.title }} | {{ site.name }}{% else %}{{ site.name }} - {{ site.description }}{% endif %}</title>
+    <meta name="description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+    <link rel="canonical" href="{{ page.url | absolute_url }}">
 
-    gtag('config', 'G-3S0JD3JF6R');
-  </script>    
+    <!-- Open Graph -->
+    <meta property="og:title" content="{% if page.title %}{{ page.title }} | {{ site.name }}{% else %}{{ site.name }}{% endif %}">
+    <meta property="og:description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 200 }}{% else %}{{ site.description }}{% endif %}">
+    <meta property="og:url" content="{{ page.url | absolute_url }}">
+    <meta property="og:site_name" content="{{ site.name }}">
+    <meta property="og:type" content="website">
+
+    <link href="/assets/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/sticky-footer.css" rel="stylesheet">
+    <script src="/assets/bootstrap.bundle.min.js"></script>
+    <script src="/assets/js-yaml.min.js"></script>
+
+    <style>
+      body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; color: #333; }
+      .navbar { padding: 0.75rem 0; }
+      .navbar-brand { font-weight: 700; font-size: 1.4rem; letter-spacing: -0.5px; }
+      .nav-link { font-size: 0.95rem; padding: 0.5rem 1rem !important; }
+      .container.my-5 { max-width: 960px; }
+      .footer { background-color: #f8f9fa; border-top: 1px solid #e9ecef; }
+      .footer a { color: #555; text-decoration: none; font-size: 0.9rem; }
+      .footer a:hover { color: #000; text-decoration: underline; }
+      a { color: #0d6efd; }
+      a:hover { color: #0a58ca; }
+      .gist-file .gist-data { max-height: 600px; }
+    </style>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3S0JD3JF6R"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-3S0JD3JF6R');
+    </script>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container">
-        <a class="navbar-brand" href="#">{{ site.name }}</a>
+        <a class="navbar-brand" href="{{ site.url }}/">APIs.json</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="{{ site.url }}/">Home</a>
+              <a class="nav-link{% if page.url == '/' %} active{% endif %}" href="{{ site.url }}/">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{{ site.url }}/blog/">Blog</a>
-            </li>       
+              <a class="nav-link{% if page.url contains '/blog/' %} active{% endif %}" href="{{ site.url }}/blog/">Blog</a>
+            </li>
             <li class="nav-item">
-              <a class="nav-link" href="{{ site.url }}/schema/">Schema</a>
-            </li>                                    
+              <a class="nav-link{% if page.url contains '/schema/' %} active{% endif %}" href="{{ site.url }}/schema/">Schema</a>
+            </li>
             <li class="nav-item">
-              <a class="nav-link" href="{{ site.url }}/properties/">Properties</a>
-            </li>        
+              <a class="nav-link{% if page.url contains '/properties/' %} active{% endif %}" href="{{ site.url }}/properties/">Properties</a>
+            </li>
             <li class="nav-item">
-              <a class="nav-link" href="https://github.com/apis-json/api-json/issues">Issues</a>
-            </li>    
+              <a class="nav-link" href="https://github.com/apis-json/api-json/issues" target="_blank" rel="noopener">Issues</a>
+            </li>
             <li class="nav-item">
-              <a class="nav-link" href="https://github.com/orgs/apis-json/discussions">Discussion</a>
-            </li>    
+              <a class="nav-link" href="https://github.com/orgs/apis-json/discussions" target="_blank" rel="noopener">Discussion</a>
+            </li>
             <li class="nav-item">
-              <a class="nav-link" href="https://github.com/apis-json">GitHub</a>
-            </li>                                                 
+              <a class="nav-link" href="https://github.com/apis-json" target="_blank" rel="noopener">GitHub</a>
+            </li>
           </ul>
         </div>
       </div>
     </nav>
-    <!--
-    <div class="alert alert-danger" role="alert" style="text-align: center;">
-      This Search is in an Alpha Stage -- <a href="https://github.com/api-search/explore/issues">Submit An Issue</a>!
-    </div>
-    -->
-    <div class="container my-5">
+    <main class="container my-5" role="main">
       {{ content }}
-    </div>
-
-    <script src="{{ site.url }}/assets/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <script src="{{ site.url }}/assets/js-yaml.min.js"></script>
+    </main>
 
     <footer class="footer">
       <div class="container">
-        <table cellspacing="5" cellpadding="5" align="center">
-          <tr>
-            <td align="center"><a href="https://apis.io" style="color: #000;">APIs.io</a></td>
-            <td align="center" style="padding-left: 25px; padding-right: 25px;">|</td>
-            <td align="center"><a href="https://apicommons.org" style="color: #000;">API Commons</a></td>
-            <td>|</td>
-            <td><a href="https://github.com/apis-json/apis-json/issues" style="color: #000;">GitHub Issues</a></td>
-            <td>|</td>
-            <td><a href="https://github.com/orgs/apis-json/discussions" style="color: #000;">GitHub Discussions</a></td>
-            <td>|</td>
-            <td><a href="https://github.com/apis-json/apis-json" style="color: #000;">GitHub Org</a></td>              
-          </tr>
-        </table>
+        <div class="d-flex justify-content-center gap-4 align-items-center" style="height: 60px;">
+          <a href="https://apis.io">APIs.io</a>
+          <a href="https://apicommons.org">API Commons</a>
+          <a href="https://github.com/apis-json/apis-json/issues">GitHub Issues</a>
+          <a href="https://github.com/orgs/apis-json/discussions">GitHub Discussions</a>
+          <a href="https://github.com/apis-json/apis-json">GitHub</a>
+        </div>
       </div>
     </footer>
-
   </body>
 </html>
