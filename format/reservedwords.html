@@ -1,0 +1,130 @@
+---
+layout: default
+title: Reserved Words
+description: The reserved property type keywords for APIs.json — the standard vocabulary for naming properties in an APIs.json index.
+---
+
+<style>
+  .page-hero { padding: 1.5rem 0 2rem; }
+  .page-hero h1 { font-size: 1.8rem; font-weight: 800; color: #1a1a2e; margin-bottom: 0.5rem; }
+  .page-hero p { color: #555; font-size: 1rem; max-width: 720px; line-height: 1.7; }
+  .word-group { margin-bottom: 2rem; }
+  .word-group h2 { font-size: 1.1rem; font-weight: 700; color: #1a1a2e; margin-bottom: 0.75rem; padding-bottom: 0.4rem; border-bottom: 1px solid #e3e7ee; text-transform: uppercase; letter-spacing: 0.5px; font-size: 0.8rem; }
+  .word-grid { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+  .word-badge { display: inline-block; padding: 0.3em 0.85em; background: #f1f3f5; border: 1px solid #e3e7ee; border-radius: 6px; font-family: monospace; font-size: 0.9rem; color: #1a1a2e; }
+  .word-badge.extension { background: #eef2f7; color: #0d6efd; border-color: #c8d8f5; }
+  .note { background: #f8f9fb; border-left: 4px solid #0d6efd; border-radius: 0 8px 8px 0; padding: 1rem 1.25rem; margin: 1.5rem 0; font-size: 0.95rem; color: #444; line-height: 1.7; }
+</style>
+
+<div class="page-hero">
+  <h1>APIs.json Reserved Words</h1>
+  <p>These are the reserved <code>type</code> values for the <code>properties</code> array in an APIs.json index. Using these standard types ensures your API is correctly indexed by <a href="https://apis.io">APIs.io</a> and understood by tools that consume APIs.json files. Custom types are allowed using the <code>X-</code> prefix.</p>
+</div>
+
+<div class="note">
+  These reserved words apply to the <code>type</code> field of each entry in the <code>properties</code> array of an API entry, and in the root-level <code>common</code> array. They are validated by the <a href="https://github.com/apis-json/api-json/blob/develop/spec/schema_0.19.yml">JSON Schema</a> included with the specification.
+</div>
+
+<div class="word-group">
+  <h2>Technical Contracts</h2>
+  <div class="word-grid">
+    <span class="word-badge">OpenAPI</span>
+    <span class="word-badge">AsyncAPI</span>
+    <span class="word-badge">JSONSchema</span>
+    <span class="word-badge">GraphQLSchema</span>
+    <span class="word-badge">WSDL</span>
+    <span class="word-badge">WADL</span>
+    <span class="word-badge">RAML</span>
+    <span class="word-badge">Blueprint</span>
+    <span class="word-badge">Swagger</span>
+  </div>
+</div>
+
+<div class="word-group">
+  <h2>Collections &amp; Workspaces</h2>
+  <div class="word-grid">
+    <span class="word-badge">PostmanCollection</span>
+    <span class="word-badge">PostmanWorkspace</span>
+  </div>
+</div>
+
+<div class="word-group">
+  <h2>Onboarding &amp; Access</h2>
+  <div class="word-grid">
+    <span class="word-badge">GettingStarted</span>
+    <span class="word-badge">Documentation</span>
+    <span class="word-badge">Authentication</span>
+    <span class="word-badge">Signup</span>
+    <span class="word-badge">Login</span>
+    <span class="word-badge">SDKs</span>
+    <span class="word-badge">Versioning</span>
+  </div>
+</div>
+
+<div class="word-group">
+  <h2>Plans &amp; Operations</h2>
+  <div class="word-grid">
+    <span class="word-badge">Pricing</span>
+    <span class="word-badge">RateLimits</span>
+    <span class="word-badge">StatusPage</span>
+    <span class="word-badge">ServiceLevelAgreement</span>
+    <span class="word-badge">DeprecationPolicy</span>
+  </div>
+</div>
+
+<div class="word-group">
+  <h2>Legal &amp; Compliance</h2>
+  <div class="word-grid">
+    <span class="word-badge">TermsOfService</span>
+    <span class="word-badge">InterfaceLicense</span>
+    <span class="word-badge">PrivacyPolicy</span>
+    <span class="word-badge">Security</span>
+  </div>
+</div>
+
+<div class="word-group">
+  <h2>Community &amp; Support</h2>
+  <div class="word-grid">
+    <span class="word-badge">Support</span>
+    <span class="word-badge">Forums</span>
+    <span class="word-badge">Blog</span>
+    <span class="word-badge">BlogFeed</span>
+    <span class="word-badge">Contact</span>
+    <span class="word-badge">ErrorCodes</span>
+  </div>
+</div>
+
+<div class="word-group">
+  <h2>Lifecycle</h2>
+  <div class="word-grid">
+    <span class="word-badge">ChangeLog</span>
+    <span class="word-badge">RoadMap</span>
+  </div>
+</div>
+
+<div class="word-group">
+  <h2>Integrations &amp; Automation</h2>
+  <div class="word-grid">
+    <span class="word-badge">Webhooks</span>
+    <span class="word-badge">Integrations</span>
+    <span class="word-badge">OpenAIPluginManifest</span>
+  </div>
+</div>
+
+<div class="word-group">
+  <h2>Source Control &amp; Social</h2>
+  <div class="word-grid">
+    <span class="word-badge">GitHubOrg</span>
+    <span class="word-badge">GitHubRepo</span>
+    <span class="word-badge">Twitter</span>
+    <span class="word-badge">AlertsTwitterHandle</span>
+  </div>
+</div>
+
+<div class="word-group">
+  <h2>Custom Extensions</h2>
+  <div class="word-grid">
+    <span class="word-badge extension">X-{name}</span>
+  </div>
+  <p class="mt-2" style="font-size:0.9rem; color:#555;">Any type prefixed with <code>X-</code> followed by alphanumeric characters and hyphens is valid for custom, non-standard property types.</p>
+</div>
