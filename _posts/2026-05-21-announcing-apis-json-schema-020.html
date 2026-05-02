@@ -1,0 +1,67 @@
+---
+layout: post
+title: "Announcing APIs.json Schema 0.20"
+date: 2026-05-21
+image: https://kinlane-productions2.s3.amazonaws.com/apis-json/stripe-apis-json-screenshot.png
+tags:
+  - APIs.json
+  - specification
+  - API discovery
+  - versioning
+  - 0.20
+---
+
+<p>We've published a draft of APIs.json schema 0.20, and it's <a href="https://github.com/apis-json/api-json/pull/116" target="_blank" rel="noopener">open for review on GitHub</a>. The primary focus of this release is an expanded reserved word vocabulary — the set of recognized <code>type</code> values for the <code>properties</code> array in an APIs.json file. Based on analysis of how real providers are using APIs.json in the wild, 0.20 adds 24 new reserved types and fixes a handful of naming inconsistencies that had crept in.</p>
+
+<h2>What Changed</h2>
+
+<p>The <code>properties</code> array is the heart of an APIs.json file. It's where you link the operational artifacts that define what it means to work with your API — the spec, the docs, the authentication guide, the pricing page, the support channel. The <code>type</code> value on each entry is how tooling, indexers, and AI agents understand what kind of thing is being referenced.</p>
+
+<p>Until 0.20, the reserved word list was fairly conservative — it captured the most common property types but left a lot of real-world provider usage in the <code>X-</code> custom prefix space. We analyzed how APIs.json is actually being used across providers and promoted the most common patterns to first-class reserved words.</p>
+
+<h2>New Reserved Types</h2>
+
+<p>The additions fall into a few natural groups:</p>
+
+<h3>Web Presence</h3>
+<p><code>Website</code>, <code>Portal</code>, and <code>DeveloperPortal</code> let you explicitly reference the provider's web presence. These are distinct from <code>Documentation</code> — a website or portal is the top-level entry point; documentation is a specific technical resource within it. <code>YouTube</code> and <code>LinkedIn</code> round out the social web presence category.</p>
+
+<h3>Developer Experience</h3>
+<p><code>CLI</code>, <code>Console</code>, and <code>Sandbox</code> address the tools developers use to explore and interact with an API. A <code>CLI</code> is the command-line interface for an API. A <code>Console</code> is the interactive API explorer in a developer portal. A <code>Sandbox</code> is the safe testing environment. These are common enough in API operations that they deserve reserved status rather than custom extensions.</p>
+
+<h3>Reference Material</h3>
+<p><code>Examples</code> and <code>FAQ</code> were both appearing commonly enough to warrant promotion. <code>Examples</code> is distinct from <code>ApiExamples</code> — the latter refers to machine-readable request/response examples in a structured format, while <code>Examples</code> covers human-readable examples in documentation. <code>Summary</code> is also added for a high-level overview resource.</p>
+
+<h3>Community</h3>
+<p><code>Community</code>, <code>StackOverflow</code>, <code>Slack</code>, and <code>Discord</code> recognize that developer community has moved well beyond forums. These cover the actual places where API consumers ask questions and get help in 2026.</p>
+
+<h3>Lifecycle</h3>
+<p><code>ReleaseNotes</code> joins <code>ChangeLog</code> and <code>RoadMap</code>. Many providers use release notes and change log to mean different things — release notes are often more narrative and linked to a specific version, while a change log is a running record of all changes. Both are now reserved.</p>
+
+<h3>Technical Contracts</h3>
+<p><code>JSONStructure</code>, <code>JSONLD</code>, <code>Vocabulary</code>, and <code>SpectralRules</code> extend the contract vocabulary. <code>SpectralRules</code> in particular recognizes that Spectral ruleset files have become first-class API artifacts — a machine-readable description of the governance rules that apply to an API's spec.</p>
+
+<h3>Legal &amp; Compliance</h3>
+<p><code>Compliance</code>, <code>License</code>, and <code>Training</code> fill gaps in the legal and regulatory space that have become more important as enterprise API adoption has matured.</p>
+
+<h3>Social &amp; Source Control Aliases</h3>
+<p><code>X</code> is added as the current name for the platform formerly known as Twitter (keeping <code>Twitter</code> for backward compatibility). <code>GitHubOrganization</code> and <code>GitHubRepository</code> are added as canonical long-form aliases for the existing <code>GitHubOrg</code> and <code>GitHubRepo</code> shorthand types.</p>
+
+<h2>Naming Fixes</h2>
+
+<p>Two naming issues from earlier versions are corrected in 0.20:</p>
+
+<ul>
+  <li><code>JsonStructure</code> is corrected to <code>JSONStructure</code> — consistent with the naming convention used by <code>JSONSchema</code> and <code>JSONLD</code></li>
+  <li>A duplicate <code>ApiExamples</code> entry in the schema pattern has been removed</li>
+</ul>
+
+<h2>The Full Reserved Word List</h2>
+
+<p>The complete list of reserved words — including all 0.20 additions — is published at <a href="/format/reservedwords">apisjson.org/format/reservedwords</a>. The JSON Schema validation pattern is in the <a href="https://github.com/apis-json/api-json/blob/spec-0.20-property-types/spec/schema_0.20.yml" target="_blank" rel="noopener">spec file on GitHub</a>.</p>
+
+<h2>How to Participate</h2>
+
+<p>The 0.20 schema is in draft. Review the <a href="https://github.com/apis-json/api-json/pull/116" target="_blank" rel="noopener">PR on GitHub</a>, leave comments on any types you think are missing, misnamed, or shouldn't be reserved. We're particularly interested in feedback on the AI/agent-related types — <code>AgentSkills</code>, <code>LlmsText</code>, <code>MockMCPServer</code> — which were added in earlier 0.20 work and represent an area where the vocabulary is still settling.</p>
+
+<p>Once the PR is merged and 0.20 is marked stable, <a href="https://apis.io">apis.io</a> will start indexing against the new vocabulary. Providers who are already using custom <code>X-</code> types for any of the newly reserved words can migrate to the reserved form at any time — both will remain valid.</p>
