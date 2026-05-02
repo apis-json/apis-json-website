@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'Considering Some New APIs.json Types'
-image: https://apisjson.org/images/types.png
+image: /images/types.png
 ---
 I am evaluating all of the enums for APIs.json before I plan for the next version. One of the enumerators that haven’t been updated in a while, but has some interesting changes on the table is the type property. To date the APIs.json type property has the following three values.
 

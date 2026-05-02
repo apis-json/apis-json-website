@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'Pushing APIs.json V0.19'
-image: https://apisjson.org/images/types.png
+image: /images/versioning.png
 ---
 We have accumulated a number of additions to the spec lately based upon work on APIs.io APIs, but also profiling new APIs. You can find a list of all [the new features on Github as issues for v0.19](https://github.com/apis-json/api-json/issues?q=is%3Aissue+is%3Aclosed+label%3A0.19).
 

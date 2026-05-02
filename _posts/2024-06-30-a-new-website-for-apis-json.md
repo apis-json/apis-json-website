@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'A New Website for APIs.json'
-image: https://apisjson.org/images/new.png
+image: /images/blog-icon.png
 ---
 It was time for an overhaul of the APIs.json website. We wanted to align it with a makeover coming for [API Commons](http://apicommons.org/), as well as with [APIs.io](https://apis.io/). It has been about four years since we overhauled the website, and it used a template that had been associated for years with API Evangelist. With this overhaul it now is something that is more extensible and configurable, using a simple Bootstrap and Jekyll theme for the layout.
 
