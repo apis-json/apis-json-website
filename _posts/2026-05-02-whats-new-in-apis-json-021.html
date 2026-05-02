@@ -9,6 +9,7 @@ tags:
   - API Discovery
   - FinOps
   - Sustainability
+  - Naftiko
   - 0.21
 ---
 
@@ -57,6 +58,17 @@ tags:
   <li><strong>SoftwareCarbonIntensity</strong> — links to a published SCI score or methodology document. <a href="https://sci.greensoftware.foundation/" target="_blank" rel="noopener">SCI</a> is an ISO-ratified standard from the Green Software Foundation using the formula <code>SCI = ((E × I) + M) per R</code> — energy consumed, marginal carbon intensity of electricity, embodied carbon, per functional unit (such as per API call or per user). It is the only ISO-ratified standard specifically designed for measuring the carbon intensity of software.</li>
   <li><strong>SCIReport</strong> — links to a full calculated carbon intensity report for a specific version or deployment of the API, including methodology, data sources, inputs, functional unit, and resulting score. Distinct from a standing SCI declaration — this is a time-stamped measurement.</li>
   <li><strong>GHGProtocolReport</strong> — links to a greenhouse gas emissions report structured according to the <a href="https://ghgprotocol.org/" target="_blank" rel="noopener">GHG Protocol</a>, which defines Scope 1, 2, and 3 emissions categories. Cloud provider carbon dashboards from AWS, Azure, and GCP all align their reporting to GHG Protocol. This type makes provider-level emissions data discoverable by enterprise customers with Scope 3 supply chain reporting requirements.</li>
+</ul>
+
+<h2>Naftiko Capability Orchestration</h2>
+
+<p><a href="https://naftiko.io/" target="_blank" rel="noopener">Naftiko</a> is a spec-driven API integration platform for the AI era. Rather than exposing APIs directly, Naftiko wraps them in governed capability specs — single declarative YAML files that define what APIs are consumed upstream, what surfaces are exposed (REST, MCP, Agent Skills simultaneously), and what governance, identity, and telemetry rules apply. Each capability spec is validated by JSON Schema and committed to Git; it is the deployable unit, the documentation, and the governance contract in one artifact.</p>
+
+<p>Two new types cover the Naftiko artifact surface:</p>
+
+<ul>
+  <li><strong>NaftikoCapability</strong> — links to a Naftiko capability YAML specification for an API. This is the primary Naftiko artifact: a machine-readable definition that describes the capability's upstream API dependencies, exposed protocol surfaces, and governance constraints. AI agents, orchestration tools, and developer portals can use this link to discover and invoke a governed capability.</li>
+  <li><strong>NaftikoFleet</strong> — links to a Naftiko fleet catalog that registers and manages a collection of capability specs as a runtime-deployed fleet. The fleet provides the execution environment: routing, identity propagation, observability, and multi-protocol exposure for all capabilities in the collection.</li>
 </ul>
 
 <h2>Why These Types Now</h2>

@@ -1081,6 +1081,10 @@ Properties Elements:
  * SCIReport                  [NEW in 0.21]
  * GHGProtocolReport          [NEW in 0.21]
 
+ Naftiko (Capability Orchestration):
+ * NaftikoCapability          [NEW in 0.21]
+ * NaftikoFleet               [NEW in 0.21]
+
 Contact Elements:
 
  * Any vCard Element
