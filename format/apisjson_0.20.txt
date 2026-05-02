@@ -976,6 +976,15 @@ Properties Elements:
  * JSONStructure       [NEW in 0.20]
  * Vocabulary          [NEW in 0.20]
  * SpectralRules       [NEW in 0.20]
+ * AgentSkills         [NEW in 0.20]
+ * LlmsText            [NEW in 0.20]
+ * ModelContextProtocol [NEW in 0.20]
+ * MockRestServer      [NEW in 0.20]
+ * MockMCPServer       [NEW in 0.20]
+ * BackstageApi        [NEW in 0.20]
+ * ApiExamples         [NEW in 0.20]
+ * Standards           [NEW in 0.20]
+ * Services            [NEW in 0.20]
 
  Collections & Workspaces:
  * PostmanCollection
@@ -1047,6 +1056,10 @@ Properties Elements:
  * GitHubOrganization  [NEW in 0.20 — alias for GitHubOrg]
  * GitHubRepo
  * GitHubRepository    [NEW in 0.20 — alias for GitHubRepo]
+ * GitHubHttpUrl       [NEW in 0.20]
+ * GitHubSshUrl        [NEW in 0.20]
+ * GitHubIssues        [NEW in 0.20]
+ * GitHubDiscussions   [NEW in 0.20]
  * Twitter
  * X                   [NEW in 0.20 — current name for Twitter platform]
  * AlertsTwitterHandle
