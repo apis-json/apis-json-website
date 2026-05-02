@@ -9,4 +9,8 @@ tags:
   - Vocabulary
   - Semantics
   - Data Model
+yaml_example: |
+  - type: Vocabulary
+    url: https://developers.example.com/vocabulary.jsonld
+    mediaType: application/ld+json
 ---

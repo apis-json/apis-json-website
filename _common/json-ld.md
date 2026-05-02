@@ -9,4 +9,8 @@ tags:
   - JSON-LD
   - Linked Data
   - Semantics
+yaml_example: |
+  - type: JSONLD
+    url: https://developers.example.com/context.jsonld
+    mediaType: application/ld+json
 ---

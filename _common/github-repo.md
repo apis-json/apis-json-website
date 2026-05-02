@@ -7,4 +7,7 @@ machineReadable: false
 source: platform
 tags:
   - GitHub 
+yaml_example: |
+  - type: GitHubRepo
+    url: https://github.com/example/api
 ---

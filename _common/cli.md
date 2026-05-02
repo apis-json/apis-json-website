@@ -10,4 +10,7 @@ tags:
   - Command Line
   - Tools
   - Developer Experience
+yaml_example: |
+  - type: CLI
+    url: https://developers.example.com/cli
 ---

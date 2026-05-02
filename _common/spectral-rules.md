@@ -10,4 +10,8 @@ tags:
   - Governance
   - Linting
   - Rules
+yaml_example: |
+  - type: SpectralRules
+    url: https://developers.example.com/.spectral.yaml
+    mediaType: application/yaml
 ---

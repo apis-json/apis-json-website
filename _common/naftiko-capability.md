@@ -10,4 +10,8 @@ tags:
   - Capability
   - AI
   - Governance
+yaml_example: |
+  - type: NaftikoCapability
+    url: https://developers.example.com/naftiko/capability.yaml
+    mediaType: application/yaml
 ---

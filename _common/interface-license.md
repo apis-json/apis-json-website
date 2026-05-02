@@ -7,4 +7,7 @@ machineReadable: true
 source: commons
 tags:
   - Legal 
+yaml_example: |
+  - type: InterfaceLicense
+    url: https://developers.example.com/license
 ---

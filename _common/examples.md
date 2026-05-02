@@ -9,4 +9,7 @@ tags:
   - Examples
   - Code Samples
   - Documentation
+yaml_example: |
+  - type: Examples
+    url: https://developers.example.com/examples
 ---

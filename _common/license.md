@@ -9,4 +9,7 @@ tags:
   - License
   - Open Source
   - Legal
+yaml_example: |
+  - type: License
+    url: https://developers.example.com/license
 ---

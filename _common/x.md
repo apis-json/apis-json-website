@@ -10,4 +10,7 @@ tags:
   - Twitter
   - Social
   - Community
+yaml_example: |
+  - type: X
+    url: https://x.com/example
 ---

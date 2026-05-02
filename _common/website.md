@@ -9,4 +9,7 @@ tags:
   - Website
   - Web Presence
   - Marketing
+yaml_example: |
+  - type: Website
+    url: https://example.com/
 ---

@@ -10,4 +10,7 @@ tags:
   - Regulatory
   - Security
   - Governance
+yaml_example: |
+  - type: Compliance
+    url: https://developers.example.com/compliance
 ---

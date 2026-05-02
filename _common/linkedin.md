@@ -9,4 +9,7 @@ tags:
   - LinkedIn
   - Social
   - Community
+yaml_example: |
+  - type: LinkedIn
+    url: https://linkedin.com/company/example
 ---

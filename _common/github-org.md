@@ -7,4 +7,7 @@ machineReadable: false
 source: platform
 tags:
   - GitHub 
+yaml_example: |
+  - type: GitHubOrg
+    url: https://github.com/example
 ---

@@ -9,4 +9,7 @@ tags:
   - FAQ
   - Documentation
   - Support
+yaml_example: |
+  - type: FAQ
+    url: https://developers.example.com/faq
 ---

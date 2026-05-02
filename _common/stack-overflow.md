@@ -9,4 +9,7 @@ tags:
   - Stack Overflow
   - Community
   - Support
+yaml_example: |
+  - type: StackOverflow
+    url: https://stackoverflow.com/questions/tagged/example-api
 ---

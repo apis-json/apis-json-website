@@ -9,4 +9,7 @@ tags:
   - Sandbox
   - Testing
   - Developer Experience
+yaml_example: |
+  - type: Sandbox
+    url: https://sandbox.example.com/
 ---

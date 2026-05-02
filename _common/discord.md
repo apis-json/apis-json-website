@@ -9,4 +9,7 @@ tags:
   - Discord
   - Community
   - Support
+yaml_example: |
+  - type: Discord
+    url: https://discord.gg/example
 ---

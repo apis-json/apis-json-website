@@ -9,4 +9,7 @@ tags:
   - Portal
   - Developer Experience
   - Onboarding
+yaml_example: |
+  - type: Portal
+    url: https://portal.example.com/
 ---

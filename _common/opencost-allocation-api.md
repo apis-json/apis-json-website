@@ -11,4 +11,7 @@ tags:
   - Kubernetes
   - Cost Allocation
   - API
+yaml_example: |
+  - type: OpenCostAllocationAPI
+    url: https://developers.example.com/costs/allocation
 ---

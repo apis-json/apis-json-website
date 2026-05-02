@@ -8,4 +8,7 @@ source: community
 tags:
   - Webhooks
   - Event-Driven
+yaml_example: |
+  - type: Webhooks
+    url: https://developers.example.com/webhooks
 ---

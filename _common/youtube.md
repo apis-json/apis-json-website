@@ -9,4 +9,7 @@ tags:
   - YouTube
   - Video
   - Community
+yaml_example: |
+  - type: YouTube
+    url: https://youtube.com/@example
 ---

@@ -9,4 +9,7 @@ tags:
   - Slack
   - Community
   - Support
+yaml_example: |
+  - type: Slack
+    url: https://example.slack.com/
 ---

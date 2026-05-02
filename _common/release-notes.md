@@ -9,4 +9,7 @@ tags:
   - Release Notes
   - Changelog
   - Versioning
+yaml_example: |
+  - type: ReleaseNotes
+    url: https://developers.example.com/releases
 ---

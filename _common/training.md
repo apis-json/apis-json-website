@@ -9,4 +9,7 @@ tags:
   - Training
   - Education
   - Learning
+yaml_example: |
+  - type: Training
+    url: https://developers.example.com/training
 ---

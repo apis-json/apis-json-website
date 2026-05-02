@@ -10,4 +10,7 @@ tags:
   - Interactive
   - Explorer
   - Developer Experience
+yaml_example: |
+  - type: Console
+    url: https://developers.example.com/console
 ---

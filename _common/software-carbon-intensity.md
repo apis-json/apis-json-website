@@ -10,4 +10,7 @@ tags:
   - Sustainability
   - SCI
   - Green Software
+yaml_example: |
+  - type: SoftwareCarbonIntensity
+    url: https://developers.example.com/sustainability/sci
 ---

@@ -9,4 +9,7 @@ tags:
   - Community
   - Support
   - Developers
+yaml_example: |
+  - type: Community
+    url: https://community.example.com/
 ---

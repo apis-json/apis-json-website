@@ -10,4 +10,7 @@ tags:
   - FinOps
   - Conformance
   - Billing
+yaml_example: |
+  - type: FocusConformanceReport
+    url: https://developers.example.com/billing/focus-conformance
 ---
