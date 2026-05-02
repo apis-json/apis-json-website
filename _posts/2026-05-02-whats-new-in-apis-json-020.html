@@ -1,0 +1,108 @@
+---
+layout: post
+title: "What's New in APIs.json 0.20"
+date: 2026-05-02
+image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - APIs.json
+  - Specification
+  - API Discovery
+  - Versioning
+  - 0.20
+---
+
+<p>APIs.json 0.20 is the largest vocabulary expansion in the specification's history. The <code>type</code> field on each property entry in an APIs.json file is how tooling, indexers, and AI agents understand what kind of thing is being referenced — the spec, the docs, the pricing page, the Slack community. Until now, that vocabulary was conservative. Version 0.20 significantly expands it based on analysis of how real API providers are actually using APIs.json in the wild, and adds a large block of types that belong to a schema-validated list rather than the <code>X-</code> custom prefix space.</p>
+
+<p>The <a href="https://github.com/apis-json/api-json/pull/116" target="_blank" rel="noopener">full diff is on GitHub</a>. Here's what changed by category.</p>
+
+<h2>Technical Contracts</h2>
+
+<p>Several formats that have matured into broad adoption are now first-class reserved types:</p>
+
+<ul>
+  <li><strong>JSONStructure</strong> — link to a JSON Structure definition for the API's data model</li>
+  <li><strong>Vocabulary</strong> — link to the controlled vocabulary or semantic model used by the API</li>
+  <li><strong>SpectralRules</strong> — link to the Spectral ruleset that governs the API's OpenAPI/AsyncAPI validation</li>
+  <li><strong>AgentSkills</strong> — link to an Agent Skills definition for AI agent integration</li>
+  <li><strong>LlmsText</strong> — link to a <code>llms.txt</code> file for LLM consumption</li>
+  <li><strong>ModelContextProtocol</strong> — link to an MCP server definition</li>
+  <li><strong>MockRestServer</strong> / <strong>MockMCPServer</strong> — links to mock server endpoints for development and testing</li>
+  <li><strong>BackstageApi</strong> — link to a Backstage catalog entity for the API</li>
+  <li><strong>ApiExamples</strong> — link to a structured examples file</li>
+  <li><strong>Standards</strong> — link to the standards or specifications the API claims conformance with</li>
+  <li><strong>Services</strong> — link to a services catalog or service mesh definition</li>
+</ul>
+
+<p>Additionally, several formats that were documented in the specification text but not yet in the schema validation are now formally reserved: <strong>ALPS</strong>, <strong>Arazzo</strong>, <strong>JSONForms</strong>, <strong>DataContract</strong>, and <strong>ServerlessWorkflow</strong>.</p>
+
+<h2>Collections &amp; Workspaces</h2>
+
+<p><strong>InsomniaCollection</strong> and <strong>BrunoCollection</strong> are now reserved types alongside the existing <code>PostmanCollection</code> and <code>PostmanWorkspace</code>. These cover the two most widely used open-source REST client collection formats.</p>
+
+<h2>Developer Experience</h2>
+
+<p>Six new types cover the parts of developer experience that weren't previously addressable as first-class properties:</p>
+
+<ul>
+  <li><strong>CLI</strong> — link to the command-line interface for the API</li>
+  <li><strong>Console</strong> — link to an interactive API console or explorer</li>
+  <li><strong>Sandbox</strong> — link to a sandbox environment for testing without production credentials</li>
+  <li><strong>Examples</strong> — link to a general examples page or repository</li>
+  <li><strong>FAQ</strong> — link to a frequently asked questions page</li>
+  <li><strong>Summary</strong> — link to a high-level summary or overview document</li>
+</ul>
+
+<h2>Business</h2>
+
+<p><strong>Plans</strong> is now a reserved type — distinct from <code>Pricing</code>, which points to a pricing page. <code>Plans</code> points to a structured plans comparison page or machine-readable plans document. <strong>UseCases</strong> is also now formally reserved for linking use case documentation or case studies.</p>
+
+<h2>Lifecycle</h2>
+
+<p><strong>ReleaseNotes</strong> joins <code>ChangeLog</code> and <code>RoadMap</code> as a reserved lifecycle property. Many providers publish granular release notes distinct from a full changelog, and this type covers that distinction.</p>
+
+<h2>Legal &amp; Compliance</h2>
+
+<p>Three new types round out the compliance picture:</p>
+
+<ul>
+  <li><strong>Compliance</strong> — link to compliance certification documentation (SOC 2, GDPR, HIPAA, PCI-DSS, etc.)</li>
+  <li><strong>License</strong> — link to the API's interface license, distinct from the existing <code>InterfaceLicense</code> type</li>
+  <li><strong>Training</strong> — link to structured learning resources (courses, certification paths, guided tutorials)</li>
+</ul>
+
+<h2>Community &amp; Support</h2>
+
+<p>Four community channel types are now reserved:</p>
+
+<ul>
+  <li><strong>Community</strong> — link to the primary community hub or forum</li>
+  <li><strong>StackOverflow</strong> — link to the API's tagged questions on Stack Overflow</li>
+  <li><strong>Slack</strong> — link to the provider's developer Slack workspace</li>
+  <li><strong>Discord</strong> — link to the provider's Discord server</li>
+</ul>
+
+<h2>Web Presence</h2>
+
+<p>Five types now cover the web and portal footprint of an API provider:</p>
+
+<ul>
+  <li><strong>Website</strong> — the API provider's main website</li>
+  <li><strong>Portal</strong> — the API portal (may differ from the developer portal)</li>
+  <li><strong>DeveloperPortal</strong> — the dedicated developer portal</li>
+  <li><strong>YouTube</strong> — the provider's YouTube channel</li>
+  <li><strong>LinkedIn</strong> — the provider's LinkedIn profile</li>
+</ul>
+
+<h2>Source Control &amp; Social</h2>
+
+<p>The GitHub property set is now complete: <strong>GitHubHttpUrl</strong>, <strong>GitHubSshUrl</strong>, <strong>GitHubIssues</strong>, and <strong>GitHubDiscussions</strong> join the existing <code>GitHubOrg</code>, <code>GitHubRepo</code>, and their aliases. <strong>GitHubOrganization</strong> and <strong>GitHubRepository</strong> are now formal aliases for <code>GitHubOrg</code> and <code>GitHubRepo</code> respectively. <strong>X</strong> is now reserved as the current platform name alongside the legacy <code>Twitter</code> type.</p>
+
+<h2>Naming Fixes</h2>
+
+<p>One naming inconsistency was corrected: <code>JsonStructure</code> was renamed to <strong>JSONStructure</strong> to match the capitalization convention used by JSONSchema, JSONLD, and other JSON-prefixed types in the specification.</p>
+
+<h2>Schema and Spec Document Now in Sync</h2>
+
+<p>As part of the 0.20 work, we audited the specification text document and the JSON Schema validation file to ensure they list the same reserved types. Previously, a number of types were documented in the spec text but not enforced by the schema, and vice versa. Both are now consistent. The canonical list of reserved words is maintained at <a href="https://apisjson.org/format/reservedwords">apisjson.org/format/reservedwords</a>.</p>
+
+<p>The 0.20 schema is available at <a href="https://apisjson.org/format/apisjson_0.20.txt">apisjson.org/format/apisjson_0.20.txt</a>. If you have feedback on any of the new types or want to propose additional additions for 0.21, <a href="https://github.com/apis-json/api-json/issues" target="_blank" rel="noopener">open an issue on GitHub</a>.</p>

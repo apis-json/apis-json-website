@@ -1,0 +1,68 @@
+---
+layout: post
+title: "What's New in APIs.json 0.21"
+date: 2026-05-02
+image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - APIs.json
+  - Specification
+  - API Discovery
+  - FinOps
+  - Sustainability
+  - 0.21
+---
+
+<p>APIs.json 0.21 introduces a new category of property types: financial operations and sustainability. As API consumption at enterprise scale has matured, two things have become clear. First, organizations need machine-readable links to billing, cost allocation, and pricing transparency artifacts — not just a generic <code>Pricing</code> URL. Second, as sustainability reporting requirements expand, API providers need a standard way to surface carbon intensity and emissions data alongside their technical artifacts.</p>
+
+<p>Version 0.21 adds thirteen new reserved types across three areas: FOCUS billing standards, FinOps practice documents, and sustainability certifications.</p>
+
+<h2>FOCUS Billing Standards</h2>
+
+<p>The <a href="https://focus.finops.org/" target="_blank" rel="noopener">FOCUS (FinOps Open Cost and Usage Specification)</a> is the cross-vendor open standard for billing data, maintained by the FinOps Foundation and now at version 1.3. It defines a normalized schema for cost and usage data across cloud, SaaS, and PaaS providers, enabling FinOps tools to ingest billing data without custom transformation per provider.</p>
+
+<p>Three new types cover the FOCUS artifact surface:</p>
+
+<ul>
+  <li><strong>FocusBillingExport</strong> — links to an endpoint or documentation for a FOCUS-conformant billing data export. This is the primary artifact: the actual cost and usage data in normalized form.</li>
+  <li><strong>FocusConformanceReport</strong> — links to a published conformance gap report describing how the provider's native billing fields map to FOCUS columns. The FinOps Foundation's certification program requires this document.</li>
+  <li><strong>FocusContractCommitments</strong> — links to commitment-based pricing data structured according to the FOCUS Contract Commitment Dataset (introduced in FOCUS v1.3), which covers reserved instances, savings plans, and enterprise discount program terms separately from per-row usage data.</li>
+</ul>
+
+<h2>OpenCost</h2>
+
+<p><a href="https://opencost.io/" target="_blank" rel="noopener">OpenCost</a> is a CNCF Incubating project that defines a vendor-neutral specification for measuring and allocating Kubernetes and cloud infrastructure costs — covering node costs, persistent volumes, load balancers, network egress, and workload allocation by namespace, deployment, pod, and label.</p>
+
+<ul>
+  <li><strong>OpenCostSpecification</strong> — links to documentation describing how an API or platform's cost reporting conforms to the OpenCost Specification.</li>
+  <li><strong>OpenCostAllocationAPI</strong> — links to an OpenCost-compatible cost allocation endpoint that returns Kubernetes workload cost data broken down by namespace, deployment, or label.</li>
+</ul>
+
+<h2>FinOps Practice Documents</h2>
+
+<p>Beyond billing data formats, the <a href="https://www.finops.org/framework/" target="_blank" rel="noopener">FinOps Framework</a> defines a set of capabilities that API providers can support and document. Five new types cover the most common FinOps practice artifacts:</p>
+
+<ul>
+  <li><strong>UnitEconomics</strong> — links to a document describing the per-unit cost model for an API: cost per API call, per gigabyte processed, per token consumed, per transaction. This is a core FinOps capability for enterprise procurement and cost-aware application design.</li>
+  <li><strong>ChargebackPolicy</strong> — links to documentation describing how costs are allocated and recovered across teams, cost centers, or business units — covering both chargeback (actual cost transfer) and showback (visibility without transfer).</li>
+  <li><strong>TaggingPolicy</strong> — links to the cost allocation tag taxonomy for an API or platform, including required tag keys (CostCenter, Environment, Product, Owner) and compliance requirements. Essential for consumers who need to integrate the API into their own FinOps cost allocation workflows.</li>
+  <li><strong>InvoiceReconciliation</strong> — links to documentation explaining how billing export data maps to issued invoices. FOCUS 1.2 introduced dedicated Invoice ID columns specifically to enable this reconciliation, which is a compliance and audit requirement for enterprise API consumers.</li>
+  <li><strong>FinOpsFramework</strong> — links to a document describing the provider's alignment to the FinOps Framework — which capabilities they support, at what maturity level, and how they enable customer FinOps practices. The 2025 Framework revision expanded scope to cover cloud, SaaS, data center, and AI.</li>
+</ul>
+
+<h2>Sustainability Standards</h2>
+
+<p>Carbon intensity and emissions reporting is becoming a supplier due diligence requirement. Three new types cover the most widely used sustainability standards applicable to API services:</p>
+
+<ul>
+  <li><strong>SoftwareCarbonIntensity</strong> — links to a published SCI score or methodology document. <a href="https://sci.greensoftware.foundation/" target="_blank" rel="noopener">SCI</a> is an ISO-ratified standard from the Green Software Foundation using the formula <code>SCI = ((E × I) + M) per R</code> — energy consumed, marginal carbon intensity of electricity, embodied carbon, per functional unit (such as per API call or per user). It is the only ISO-ratified standard specifically designed for measuring the carbon intensity of software.</li>
+  <li><strong>SCIReport</strong> — links to a full calculated carbon intensity report for a specific version or deployment of the API, including methodology, data sources, inputs, functional unit, and resulting score. Distinct from a standing SCI declaration — this is a time-stamped measurement.</li>
+  <li><strong>GHGProtocolReport</strong> — links to a greenhouse gas emissions report structured according to the <a href="https://ghgprotocol.org/" target="_blank" rel="noopener">GHG Protocol</a>, which defines Scope 1, 2, and 3 emissions categories. Cloud provider carbon dashboards from AWS, Azure, and GCP all align their reporting to GHG Protocol. This type makes provider-level emissions data discoverable by enterprise customers with Scope 3 supply chain reporting requirements.</li>
+</ul>
+
+<h2>Why These Types Now</h2>
+
+<p>The addition of FinOps and sustainability types reflects two converging trends in enterprise API consumption. FinOps has matured from a cloud cost management practice into a formal discipline with open standards — FOCUS is now vendor-certified and machine-readable, and enterprise buyers increasingly expect billing data in a normalized, tooling-compatible format. At the same time, Scope 3 emissions reporting requirements under emerging regulations in the EU, UK, and US are pushing organizations to gather carbon data from their software suppliers.</p>
+
+<p>Making these artifacts discoverable via APIs.json means they can be indexed, audited, and surfaced by tooling the same way OpenAPI specs and documentation are today. A FinOps tool can discover whether a provider publishes a FOCUS export. A procurement platform can surface whether an API has a published SCI score. That's the same value proposition APIs.json has always offered — but applied to a new layer of the API operational surface.</p>
+
+<p>The 0.21 schema draft is available in the <a href="https://github.com/apis-json/api-json" target="_blank" rel="noopener">apis-json/api-json repository</a>. All thirteen new types are documented at <a href="https://apisjson.org/properties/">apisjson.org/properties/</a> and at <a href="https://apicommons.org/common/">apicommons.org/common/</a>. If you have feedback or want to propose additional types, <a href="https://github.com/apis-json/api-json/issues" target="_blank" rel="noopener">open an issue on GitHub</a>.</p>
