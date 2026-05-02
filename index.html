@@ -8,7 +8,7 @@ description: APIs.json is the open source machine-readable format for describing
   .page-hero { text-align: center; padding: 2.5rem 0 2rem; }
   .page-hero h1 { font-size: 2.2rem; font-weight: 800; color: #1a1a2e; margin-bottom: 0.75rem; }
   .page-hero p { color: #555; font-size: 1.1rem; max-width: 680px; margin: 0 auto 1.5rem; line-height: 1.7; }
-  .version-card { border: 1px solid #e3e7ee; border-radius: 12px; overflow: hidden; margin-bottom: 2rem; }
+  .version-card { border: 1px solid #e3e7ee; border-radius: 12px; overflow: hidden; margin-bottom: 1rem; }
   .version-card-header { background: #1a1a2e; color: white; padding: 0.75rem 1.25rem; display: flex; justify-content: space-between; align-items: center; font-size: 0.9rem; font-weight: 600; }
   .version-card-header a { color: #90caf9; text-decoration: none; font-weight: 400; }
   .version-card-header a:hover { text-decoration: underline; }
@@ -17,6 +17,8 @@ description: APIs.json is the open source machine-readable format for describing
   .version-badge { display: inline-flex; gap: 0.5rem; align-items: center; padding: 0.35em 0.85em; border: 1px solid #e3e7ee; border-radius: 999px; font-size: 0.85rem; background: white; }
   .version-badge a { color: #0d6efd; text-decoration: none; }
   .version-badge a:hover { text-decoration: underline; }
+  .version-badge.draft { border-color: #fbbf24; background: #fffbeb; }
+  .version-badge.draft strong { color: #92400e; }
   .showcase-grid { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; margin: 1rem 0 2rem; }
   .showcase-item img { height: 50px; width: auto; object-fit: contain; filter: grayscale(30%); transition: filter 0.2s; }
   .showcase-item img:hover { filter: grayscale(0%); }
@@ -29,18 +31,20 @@ description: APIs.json is the open source machine-readable format for describing
   <p>APIs.json is an open source format that API providers use to describe their API operations — like a <code>sitemap.xml</code> for APIs. It indexes OpenAPI specs, JSON Schema, documentation, pricing, terms of service, and more, making your APIs discoverable by <a href="https://apis.io">APIs.io</a> and other tools.</p>
 </div>
 
-<h2>Latest Version <small class="text-muted fw-normal fs-6">— <a href="https://github.com/apis-json/diff/pull/8/files" target="_blank" rel="noopener">View diff</a></small></h2>
+<h2>Latest Version <small class="text-muted fw-normal fs-6">— <a href="https://github.com/apis-json/diff/pull/8/files" target="_blank" rel="noopener">View diff from 0.18</a></small></h2>
 
 <div class="version-card">
   <div class="version-card-header">
-    <span>apis.json v0.19</span>
+    <span>APIs.json v0.19 — Current Stable</span>
     <a href="https://github.com/apis-json/diff/pull/8/files" target="_blank" rel="noopener">What changed &rarr;</a>
   </div>
   <iframe src="format/apisjson_0.19.txt" class="version-frame" title="APIs.json v0.19 specification"></iframe>
 </div>
 
-<h3>Previous Versions</h3>
+<h3>All Versions</h3>
 <div class="versions-list">
+  <span class="version-badge draft"><strong>0.20</strong> <a href="https://github.com/apis-json/api-json/pull/116" target="_blank" rel="noopener">Draft PR</a></span>
+  <span class="version-badge"><strong>0.19</strong> <a href="https://apisjson.org/format/apisjson_0.19.txt" target="_blank">Spec</a> <a href="https://github.com/apis-json/diff/pull/8/files" target="_blank">Diff</a></span>
   <span class="version-badge"><strong>0.18</strong> <a href="https://apisjson.org/format/apisjson_0.18.txt" target="_blank">Spec</a> <a href="https://github.com/apis-json/diff/pull/7/files" target="_blank">Diff</a></span>
   <span class="version-badge"><strong>0.17</strong> <a href="https://apisjson.org/format/apisjson_0.17.txt" target="_blank">Spec</a> <a href="https://github.com/apis-json/diff/pull/6/files" target="_blank">Diff</a></span>
   <span class="version-badge"><strong>0.16</strong> <a href="https://apisjson.org/format/apisjson_0.16.txt" target="_blank">Spec</a> <a href="https://github.com/apis-json/diff/pull/5/files" target="_blank">Diff</a></span>
@@ -52,10 +56,90 @@ description: APIs.json is the open source machine-readable format for describing
 </div>
 
 <h2>Example APIs.json</h2>
-<script src="https://gist.github.com/kinlane/3b893b9343ade1906ed8b5b18ecc9279.js"></script>
+<div class="src-widget" data-src-widget data-original-lang="yaml" data-current-lang="yaml" data-original-filename="apis.yaml">
+  <div class="src-widget-head">
+    <span class="src-label" data-src-filename>apis.yaml</span>
+    <span class="src-search">
+      <input type="search" data-src-search placeholder="Search in source… (n / N to navigate)" aria-label="Search source">
+    </span>
+    <span class="src-actions">
+      <button type="button" data-src-toggle data-target="yaml" aria-label="View as YAML">YAML</button>
+      <button type="button" data-src-toggle data-target="json" aria-label="View as JSON">JSON</button>
+      <button type="button" data-src-download aria-label="Download">Download</button>
+      <button type="button" data-src-copy>Copy</button>
+    </span>
+  </div>
+  <pre class="line-numbers language-yaml"><code class="language-yaml" data-src-code>name: Acme Developer API
+description: The Acme platform API for managing accounts, resources, and integrations.
+url: https://api.acme.com/apis.json
+created: "2024-01-01"
+modified: "2026-05-01"
+specificationVersion: "0.19"
+tags:
+  - acme
+  - accounts
+  - platform
+maintainers:
+  - FN: Acme Engineering
+    email: api@acme.com
+    url: https://developers.acme.com
+common:
+  - type: Authentication
+    url: https://developers.acme.com/authentication
+  - type: TermsOfService
+    url: https://acme.com/terms
+  - type: PrivacyPolicy
+    url: https://acme.com/privacy
+  - type: StatusPage
+    url: https://status.acme.com
+apis:
+  - name: Accounts API
+    description: Create and manage Acme accounts, users, and permissions.
+    humanURL: https://developers.acme.com/accounts
+    baseURL: https://api.acme.com/v2/accounts
+    image: https://acme.com/images/api-icon.png
+    tags:
+      - accounts
+      - users
+      - permissions
+    properties:
+      - type: Documentation
+        url: https://developers.acme.com/accounts/docs
+      - type: OpenAPI
+        url: https://developers.acme.com/specs/accounts-v2.yaml
+      - type: GettingStarted
+        url: https://developers.acme.com/getting-started
+      - type: Pricing
+        url: https://acme.com/pricing
+      - type: ChangeLog
+        url: https://developers.acme.com/changelog
+      - type: RoadMap
+        url: https://developers.acme.com/roadmap
+      - type: Support
+        url: https://github.com/acme/api/issues
+  - name: Payments API
+    description: Process payments, manage subscriptions, and handle refunds.
+    humanURL: https://developers.acme.com/payments
+    baseURL: https://api.acme.com/v2/payments
+    image: https://acme.com/images/api-icon.png
+    tags:
+      - payments
+      - billing
+      - subscriptions
+    properties:
+      - type: Documentation
+        url: https://developers.acme.com/payments/docs
+      - type: OpenAPI
+        url: https://developers.acme.com/specs/payments-v2.yaml
+      - type: PostmanCollection
+        url: https://www.postman.com/acme/workspace/payments-api
+      - type: Webhooks
+        url: https://developers.acme.com/payments/webhooks
+      - type: SDKs
+        url: https://developers.acme.com/sdks</code></pre>
+</div>
 
-<h2>Example APIs.yaml</h2>
-<script src="https://gist.github.com/kinlane/29cb12217e3aa092489b35a5600c40ca.js"></script>
+{% include src-widget-scripts.html %}
 
 <h2>Who Is Using APIs.json?</h2>
 <div class="showcase-grid">
