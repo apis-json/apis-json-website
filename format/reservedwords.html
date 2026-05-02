@@ -9,7 +9,7 @@ description: The reserved property type keywords for APIs.json — the standard 
   .page-hero h1 { font-size: 1.8rem; font-weight: 800; color: #1a1a2e; margin-bottom: 0.5rem; }
   .page-hero p { color: #555; font-size: 1rem; max-width: 720px; line-height: 1.7; }
   .word-group { margin-bottom: 2rem; }
-  .word-group h2 { font-size: 1.1rem; font-weight: 700; color: #1a1a2e; margin-bottom: 0.75rem; padding-bottom: 0.4rem; border-bottom: 1px solid #e3e7ee; text-transform: uppercase; letter-spacing: 0.5px; font-size: 0.8rem; }
+  .word-group h2 { font-size: 0.8rem; font-weight: 700; color: #1a1a2e; margin-bottom: 0.75rem; padding-bottom: 0.4rem; border-bottom: 1px solid #e3e7ee; text-transform: uppercase; letter-spacing: 0.5px; }
   .word-grid { display: flex; flex-wrap: wrap; gap: 0.5rem; }
   .word-badge { display: inline-block; padding: 0.3em 0.85em; background: #f1f3f5; border: 1px solid #e3e7ee; border-radius: 6px; font-family: monospace; font-size: 0.9rem; color: #1a1a2e; }
   .word-badge.extension { background: #eef2f7; color: #0d6efd; border-color: #c8d8f5; }
@@ -22,7 +22,7 @@ description: The reserved property type keywords for APIs.json — the standard 
 </div>
 
 <div class="note">
-  These reserved words apply to the <code>type</code> field of each entry in the <code>properties</code> array of an API entry, and in the root-level <code>common</code> array. They are validated by the <a href="https://github.com/apis-json/api-json/blob/develop/spec/schema_0.19.yml">JSON Schema</a> included with the specification.
+  These reserved words apply to the <code>type</code> field of each entry in the <code>properties</code> array of an API entry, and in the root-level <code>common</code> array. They are validated by the <a href="https://github.com/apis-json/api-json/blob/develop/spec/schema_0.20.yml">JSON Schema</a> included with the specification.
 </div>
 
 <div class="word-group">
@@ -37,6 +37,10 @@ description: The reserved property type keywords for APIs.json — the standard 
     <span class="word-badge">RAML</span>
     <span class="word-badge">Blueprint</span>
     <span class="word-badge">Swagger</span>
+    <span class="word-badge">JSONStructure</span>
+    <span class="word-badge">JSONLD</span>
+    <span class="word-badge">Vocabulary</span>
+    <span class="word-badge">SpectralRules</span>
   </div>
 </div>
 
@@ -57,7 +61,22 @@ description: The reserved property type keywords for APIs.json — the standard 
     <span class="word-badge">Signup</span>
     <span class="word-badge">Login</span>
     <span class="word-badge">SDKs</span>
+    <span class="word-badge">CLI</span>
+    <span class="word-badge">Console</span>
+    <span class="word-badge">Sandbox</span>
     <span class="word-badge">Versioning</span>
+    <span class="word-badge">Training</span>
+  </div>
+</div>
+
+<div class="word-group">
+  <h2>Reference &amp; Examples</h2>
+  <div class="word-grid">
+    <span class="word-badge">Examples</span>
+    <span class="word-badge">ApiExamples</span>
+    <span class="word-badge">ErrorCodes</span>
+    <span class="word-badge">FAQ</span>
+    <span class="word-badge">Summary</span>
   </div>
 </div>
 
@@ -79,6 +98,9 @@ description: The reserved property type keywords for APIs.json — the standard 
     <span class="word-badge">InterfaceLicense</span>
     <span class="word-badge">PrivacyPolicy</span>
     <span class="word-badge">Security</span>
+    <span class="word-badge">Compliance</span>
+    <span class="word-badge">License</span>
+    <span class="word-badge">Standards</span>
   </div>
 </div>
 
@@ -90,7 +112,10 @@ description: The reserved property type keywords for APIs.json — the standard 
     <span class="word-badge">Blog</span>
     <span class="word-badge">BlogFeed</span>
     <span class="word-badge">Contact</span>
-    <span class="word-badge">ErrorCodes</span>
+    <span class="word-badge">Community</span>
+    <span class="word-badge">StackOverflow</span>
+    <span class="word-badge">Slack</span>
+    <span class="word-badge">Discord</span>
   </div>
 </div>
 
@@ -98,6 +123,7 @@ description: The reserved property type keywords for APIs.json — the standard 
   <h2>Lifecycle</h2>
   <div class="word-grid">
     <span class="word-badge">ChangeLog</span>
+    <span class="word-badge">ReleaseNotes</span>
     <span class="word-badge">RoadMap</span>
   </div>
 </div>
@@ -107,7 +133,25 @@ description: The reserved property type keywords for APIs.json — the standard 
   <div class="word-grid">
     <span class="word-badge">Webhooks</span>
     <span class="word-badge">Integrations</span>
+    <span class="word-badge">Services</span>
     <span class="word-badge">OpenAIPluginManifest</span>
+    <span class="word-badge">ModelContextProtocol</span>
+    <span class="word-badge">MockRestServer</span>
+    <span class="word-badge">MockMCPServer</span>
+    <span class="word-badge">AgentSkills</span>
+    <span class="word-badge">LlmsText</span>
+    <span class="word-badge">BackstageApi</span>
+  </div>
+</div>
+
+<div class="word-group">
+  <h2>Web &amp; Portal</h2>
+  <div class="word-grid">
+    <span class="word-badge">Website</span>
+    <span class="word-badge">Portal</span>
+    <span class="word-badge">DeveloperPortal</span>
+    <span class="word-badge">YouTube</span>
+    <span class="word-badge">LinkedIn</span>
   </div>
 </div>
 
@@ -115,8 +159,15 @@ description: The reserved property type keywords for APIs.json — the standard 
   <h2>Source Control &amp; Social</h2>
   <div class="word-grid">
     <span class="word-badge">GitHubOrg</span>
+    <span class="word-badge">GitHubOrganization</span>
     <span class="word-badge">GitHubRepo</span>
+    <span class="word-badge">GitHubRepository</span>
+    <span class="word-badge">GitHubHttpUrl</span>
+    <span class="word-badge">GitHubSshUrl</span>
+    <span class="word-badge">GitHubIssues</span>
+    <span class="word-badge">GitHubDiscussions</span>
     <span class="word-badge">Twitter</span>
+    <span class="word-badge">X</span>
     <span class="word-badge">AlertsTwitterHandle</span>
   </div>
 </div>
