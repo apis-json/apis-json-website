@@ -1,0 +1,83 @@
+name: APIs.json
+description: The open source machine-readable format for describing API operations — a sitemap.xml for APIs that indexes OpenAPI specs, documentation, pricing, terms of service, and more, making APIs discoverable by APIs.io and other tools.
+url: https://apisjson.org/apis.json
+image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+created: "2014-03-01"
+modified: "2026-05-02"
+specificationVersion: "0.20"
+tags:
+  - APIs.json
+  - API Discovery
+  - API Index
+  - Machine-Readable APIs
+  - API Catalog
+  - OpenAPI
+  - RFC 9727
+maintainers:
+  - FN: Kin Lane
+    email: info@apievangelist.com
+    url: https://kinlane.com
+  - FN: Steve Willmott
+    email: steve@3scale.net
+apis:
+  - name: APIs.json Specification
+    description: The APIs.json 0.20 specification — a machine-readable YAML or JSON format for indexing API operations, including OpenAPI specs, documentation, pricing, support, and lifecycle resources.
+    humanURL: https://apisjson.org
+    baseURL: https://apisjson.org
+    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    tags:
+      - Specification
+      - APIs.json
+      - API Discovery
+      - API Catalog
+    properties:
+      - type: Documentation
+        url: https://apisjson.org
+      - type: Specification
+        url: https://apisjson.org/format/apisjson_0.20.txt
+      - type: JSONSchema
+        url: https://apisjson.org/schema/apis.json
+      - type: GitHubRepository
+        url: https://github.com/apis-json/api-json
+
+  - name: APIs.json Schema
+    description: JSON Schema for validating APIs.json documents — covers all required and optional fields in the 0.20 specification.
+    humanURL: https://apisjson.org/schema/
+    baseURL: https://apisjson.org
+    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    tags:
+      - JSON Schema
+      - Validation
+      - APIs.json
+    properties:
+      - type: Documentation
+        url: https://apisjson.org/schema/
+      - type: JSONSchema
+        url: https://apisjson.org/schema/apis.json
+
+  - name: APIs.json Properties
+    description: Reference documentation for all reserved property types defined in the APIs.json specification — from OpenAPI and AsyncAPI to Pricing, TermsOfService, and the 24 new types in 0.20.
+    humanURL: https://apisjson.org/properties/
+    baseURL: https://apisjson.org
+    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    tags:
+      - Properties
+      - Reference
+      - APIs.json
+    properties:
+      - type: Documentation
+        url: https://apisjson.org/properties/
+
+common:
+  - type: Website
+    url: https://apisjson.org
+  - type: Blog
+    url: https://apisjson.org/blog/
+  - type: BlogFeed
+    url: https://apisjson.org/atom.xml
+  - type: About
+    url: https://apisjson.org/about/
+  - type: GitHubOrganization
+    url: https://github.com/apis-json
+  - type: GitHubRepository
+    url: https://github.com/apis-json/api-json
