@@ -1,0 +1,102 @@
+---
+layout: post
+title: "The Anatomy of Mastercard's apis.yml File — A 4,383-Line Worked Example"
+date: 2026-05-05
+image: /images/the-anatomy-of-mastercards-apis-yml-file.png
+tags:
+  - APIs.json
+  - apis.yml
+  - Mastercard
+  - API discovery
+  - API Commons
+  - worked example
+---
+
+<p>Most APIs.json files in the wild describe a single API or a handful of APIs. They're useful examples, but they don't show what the format looks like at scale — what an APIs.json file describing a hundred APIs across a major enterprise's developer portal actually looks like when it's done thoroughly.</p>
+
+<p>Mastercard's apis.yml file in the api-evangelist catalog is a worked example at exactly that scale. It's <strong>4,383 lines long</strong>, describes <strong>101 APIs</strong>, and uses <strong>20 distinct property types per API entry</strong>. Walking through its structure is a useful way to understand how APIs.json scales beyond the toy examples.</p>
+
+<h2>The Top-Level Shape</h2>
+
+<p>The file opens like any apis.yml file:</p>
+
+<pre><code>aid: mastercard
+url: https://github.com/api-evangelist/mastercard/raw/refs/heads/main/apis.yml
+apis:
+  - aid: mastercard:mastercard-universal-specification-submission-api
+    name: Mastercard Universal Specification Submission API
+    ...</code></pre>
+
+<p>An <code>aid</code> at the provider level, a <code>url</code> pointing at the canonical location, and an <code>apis</code> array. From there, every entry in the array is one API — and the array is one hundred and one entries long, each describing one slice of Mastercard's developer surface.</p>
+
+<h2>The Twenty Property Types Per API</h2>
+
+<p>What makes the file long isn't the API count alone. It's that each API entry carries a thorough property set. Mastercard's apis.yml uses twenty different property types across the file:</p>
+
+<p><strong>Discovery and orientation:</strong> <code>Documentation</code>, <code>GettingStarted</code>, <code>UseCases</code>, <code>Tutorials</code>, <code>FAQ</code>, <code>Glossary</code>. These are the surfaces a developer first encounters when they land on a new API.</p>
+
+<p><strong>Machine-readable contracts:</strong> <code>OpenAPI</code> and <code>APIReference</code>. The OpenAPI spec is the canonical contract; the API reference is the human-rendered version.</p>
+
+<p><strong>Production-readiness:</strong> <code>Authentication</code>, <code>Security</code>, <code>RateLimits</code>, <code>Errors</code>, <code>StatusPage</code>. The operational surface a team needs before they put an integration into production.</p>
+
+<p><strong>Lifecycle and change management:</strong> <code>Versioning</code>, <code>ReleaseNotes</code>, <code>ChangeLog</code>. The signals an integrator needs to maintain an integration over time without surprises.</p>
+
+<p><strong>Implementation aids:</strong> <code>SDK</code>, <code>CodeExamples</code>, <code>Sandbox</code>, <code>Support</code>. The path from "I read about it" to "I deployed it."</p>
+
+<p>That's twenty distinct types in a single APIs.json file. For comparison, most apis.json files in the wild use four to six property types per API — typically Documentation, OpenAPI, Authentication, GettingStarted, and not much else. Mastercard's file is what the format looks like when an organization treats every operational artifact as a first-class, machine-readable index entry.</p>
+
+<h2>A Single API Entry, Up Close</h2>
+
+<p>Here's a representative entry from the file (Mastercard's Account-to-Account Commerce for CSP API), trimmed for length:</p>
+
+<pre><code>- aid: mastercard:mastercard-universal-specification-submission-api
+  name: Mastercard Universal Specification Submission API
+  tags:
+    - Account Services
+    - Card Management
+    - Issuers
+  baseURL: https://api.example.com
+  humanURL: https://developer.mastercard.com/product/account-services-catalogue/
+  properties:
+    - url: https://developer.mastercard.com/product/account-services-catalogue/
+      type: Documentation
+    - url: https://developer.mastercard.com/account-to-account-commerce-for-csp/documentation/getting-started/
+      type: GettingStarted
+    - url: https://developer.mastercard.com/account-to-account-commerce-for-csp/documentation/use-cases/
+      type: UseCases
+    - url: https://developer.mastercard.com/account-to-account-commerce-for-csp/documentation/tutorials-and-guides/
+      type: Tutorials
+    - url: https://developer.mastercard.com/account-to-account-commerce-for-csp/documentation/code-and-formats/error-codes/
+      type: Errors
+    ...</code></pre>
+
+<p>Each <code>properties</code> entry is two fields: a URL and a type. That's the entire schema. The format is simple; the value comes from the discipline of populating it for every operational artifact and every API.</p>
+
+<h2>What Makes the File Useful</h2>
+
+<p>The reason this matters: every property in the file is something an indexer can act on. The <a href="https://apis.io">APIs.io</a> network ingests this apis.yml and produces a provider page, an APIs index, capability pages, an OpenAPI spec collection, an api-catalog endpoint, and a search index — all from this one file.</p>
+
+<p>An integrator using Mastercard doesn't need to navigate the developer portal to find the Authentication URL or the Sandbox URL or the StatusPage. The apis.yml lists all of them, addressed by type. A tool building an integration can fetch the apis.yml and pull every artifact it needs by property type. An agent reasoning about Mastercard can ground its answers in the listed URLs without scraping the portal.</p>
+
+<p>This is what APIs.json is supposed to enable. The Mastercard file is a useful reference because it shows what the format looks like when the operational surface is fully indexed — not just the OpenAPI specs, but every getting-started guide, every status page, every set of error codes, every release notes feed, all addressed by type and machine-readable from a single entry point.</p>
+
+<h2>Common Properties at the Provider Level</h2>
+
+<p>Below the per-API <code>apis</code> array, the file uses the provider-level <code>common</code> array for properties that span the entire portfolio:</p>
+
+<ul>
+  <li><code>type: Summary</code> — a high-level description of the provider's API portfolio</li>
+  <li><code>type: Features</code> — cross-cutting features available across APIs</li>
+  <li><code>type: UseCases</code> — provider-level use case index</li>
+  <li><code>type: Integrations</code> — partner and ecosystem integrations</li>
+</ul>
+
+<p>The <code>common</code> array is for things that belong to the provider as a whole rather than to any single API. It's the difference between "Mastercard's API portfolio supports tokenization across most products" (provider-level) and "this specific API exposes the tokenization endpoint" (API-level).</p>
+
+<h2>The Lesson From a Big File</h2>
+
+<p>Most APIs.json examples in tutorials are necessarily small — three or four properties on a single API entry. They show the format. They don't show what the format looks like fully populated.</p>
+
+<p>Mastercard's apis.yml is what fully populated looks like: a hundred and one API entries, twenty property types, four thousand lines of structured operational metadata, all of it machine-readable, all of it indexable, all of it linkable from a single entry point. The file isn't impressive because it's long. It's useful because every line is a property an integrator or a tool can act on, and the format scales to that level without any structural change from the small examples.</p>
+
+<p>If you're building an apis.yml for an enterprise API portfolio and you want a reference for what "complete" looks like at scale, <a href="https://github.com/api-evangelist/mastercard/blob/main/apis.yml">the Mastercard file</a> is the worked example to study. It's also the file that the <a href="https://providers.apis.io/providers/mastercard/">Mastercard provider page on APIs.io</a> is generated from, so you can see the file and the rendered output side by side.</p>
