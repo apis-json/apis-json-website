@@ -25,6 +25,10 @@ description: The reserved property type keywords for APIs.json — the standard 
   These reserved words apply to the <code>type</code> field of each entry in the <code>properties</code> array of an API entry, and in the root-level <code>common</code> array. They are validated by the <a href="https://github.com/apis-json/api-json/blob/develop/spec/schema_0.20.yml">JSON Schema</a> included with the specification.
 </div>
 
+<div class="note">
+  <strong>Naming convention.</strong> Reserved <code>type</code> values are <strong>CamelCase</strong> with <strong>no spaces, no hyphens, and no underscores</strong>, and they are <strong>case-sensitive</strong>. Acronyms are kept in their conventional form (<code>FAQ</code>, <code>SDKs</code>, <code>CLI</code>, <code>JSONSchema</code>). Use <code>TermsOfService</code>, not <code>Terms of Service</code> or <code>terms-of-service</code>; use <code>GettingStarted</code>, not <code>Getting Started</code>. The corresponding <a href="https://apicommons.org">API Commons</a> property files use kebab-case filenames (<code>terms-of-service.md</code>) — that is a Jekyll filename convention, not the type value.
+</div>
+
 <div class="word-group">
   <h2>Technical Contracts</h2>
   <div class="word-grid">
@@ -58,7 +62,7 @@ description: The reserved property type keywords for APIs.json — the standard 
     <span class="word-badge">GettingStarted</span>
     <span class="word-badge">Documentation</span>
     <span class="word-badge">Authentication</span>
-    <span class="word-badge">Signup</span>
+    <span class="word-badge">SignUp</span>
     <span class="word-badge">Login</span>
     <span class="word-badge">SDKs</span>
     <span class="word-badge">CLI</span>
@@ -77,6 +81,8 @@ description: The reserved property type keywords for APIs.json — the standard 
     <span class="word-badge">ErrorCodes</span>
     <span class="word-badge">FAQ</span>
     <span class="word-badge">Summary</span>
+    <span class="word-badge">Tutorials</span>
+    <span class="word-badge">Features</span>
   </div>
 </div>
 
@@ -150,6 +156,7 @@ description: The reserved property type keywords for APIs.json — the standard 
     <span class="word-badge">Website</span>
     <span class="word-badge">Portal</span>
     <span class="word-badge">DeveloperPortal</span>
+    <span class="word-badge">Index</span>
     <span class="word-badge">YouTube</span>
     <span class="word-badge">LinkedIn</span>
   </div>
