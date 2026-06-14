@@ -1,0 +1,84 @@
+---
+layout: post
+title: 'How APIs.json Powers a 10,000-Repository API Catalog'
+date: 2026-06-14
+image: /images/apis-json-logo.png
+tags:
+  - APIs.json
+  - API Discovery
+  - Catalog
+  - Milestone
+---
+
+<p>The <a href="https://github.com/api-evangelist">api-evangelist GitHub organization</a> now contains 10,000 repositories, each one representing a distinct API provider. Every repository includes an <code>apis.yml</code> file — an APIs.json document at <code>specificationVersion: 0.19</code> — that describes what that provider offers, where its documentation lives, and what machine-readable artifacts are available. In aggregate, those 10,000 files form one of the largest structured API catalogs assembled using a single consistent format.</p>
+
+<p>This post looks at what the format made possible, where it performed well, and what patterns emerged from indexing at this scale.</p>
+
+<h2>What Each apis.yml Contains</h2>
+
+<p>Every file in the catalog follows the same structure. At the top level is provider identity: an <code>aid</code> (a unique provider identifier), a <code>name</code>, a human-readable <code>description</code>, and a <code>tags</code> array that places the provider in one or more categories. Below that are <code>apis</code> entries — one per API product the provider offers — each carrying a <code>properties</code> array that links to the relevant artifacts: documentation, OpenAPI specs, pricing pages, status pages, and more.</p>
+
+<p>The third structural piece is <code>common[]</code>: a block of properties that apply across all of a provider's APIs rather than to a single one. This is where links to the provider's main website, developer blog, LinkedIn profile, GitHub organization, and governance-relevant resources like rate limit policies and billing documentation live.</p>
+
+<pre><code>aid: stripe
+name: Stripe
+description: Online payment processing for internet businesses
+tags:
+  - Payments
+  - FinTech
+apis:
+  - name: Stripe API
+    properties:
+      - type: OpenAPI
+        url: https://github.com/stripe/openapi/blob/master/openapi/spec3.yaml
+      - type: Documentation
+        url: https://stripe.com/docs/api
+common:
+  - type: Website
+    url: https://stripe.com
+  - type: Plans
+    url: https://stripe.com/pricing
+  - type: RateLimits
+    url: https://stripe.com/docs/rate-limits
+  - type: FinOps
+    url: https://stripe.com/docs/billing</code></pre>
+
+<h2>What 10,000 Files Reveals</h2>
+
+<p>Indexing across 10,000 providers surfaces patterns that wouldn't be visible at smaller scale. Here are the counts for the most common property types across the catalog:</p>
+
+<ul>
+  <li><strong>Website</strong> — 7,836 providers</li>
+  <li><strong>Documentation</strong> — 6,723 providers</li>
+  <li><strong>LinkedIn</strong> — 5,830 providers</li>
+  <li><strong>GitHubOrganization</strong> — 3,958 providers</li>
+  <li><strong>Blog</strong> — 3,315 providers</li>
+  <li><strong>JSONSchema</strong> — 3,033 providers</li>
+  <li><strong>Pricing</strong> — 2,482 providers</li>
+  <li><strong>RateLimits</strong> — 2,295 providers</li>
+  <li><strong>Plans</strong> — 2,116 providers</li>
+  <li><strong>FinOps</strong> — 2,016 providers</li>
+  <li><strong>Vocabulary</strong> — 1,535 providers</li>
+</ul>
+
+<p>10,754 OpenAPI specs have been linked via APIs.json properties — meaning a significant portion of the catalog has machine-readable contracts attached, not just documentation links.</p>
+
+<h2>Where the common[] Block Proved Its Value</h2>
+
+<p>The most practically useful structural insight from this exercise is the power of the <code>common[]</code> block for governance-relevant properties. Rate limits, billing plans, and FinOps documentation exist for APIs that publish no OpenAPI spec at all — gated, proprietary, or enterprise-only APIs that surface their interface through documentation and contracts rather than a downloadable spec file.</p>
+
+<p>Without a dedicated place to capture these properties at the provider level rather than the per-API level, a catalog entry for a provider like that would look nearly empty: a name, a description, and nothing else. With <code>common[]</code>, you can index the Plans URL, the RateLimits page, and the FinOps documentation even when there's no spec to link. That's 2,000-plus providers in this catalog that have billing and rate-limit context indexed despite having no OpenAPI artifact.</p>
+
+<h2>Consistency Across Wildly Different Categories</h2>
+
+<p>The catalog spans an unusual breadth of provider types: DeFi protocols, EHR systems, federal government agencies, blockchain networks, IoT platforms, academic databases, payments infrastructure, identity providers, logistics APIs, and everything between. The APIs.json format held up across all of them without modification.</p>
+
+<p>That's not a coincidence — the format is intentionally type-agnostic. The <code>properties</code> array accepts any type string, and the vocabulary of recognized types is broad enough to cover most real-world provider artifacts while still being specific enough to drive meaningful differentiation. A federal agency and a DeFi protocol can both have a <code>Documentation</code> property and a <code>Plans</code> property without the format needing to know what either of those things contains.</p>
+
+<h2>What This Enables Downstream</h2>
+
+<p>A catalog at this scale, structured consistently, becomes infrastructure. Tools that consume it can filter across the full 10,000-provider set by tag, by property type, by the presence or absence of an OpenAPI spec, by whether rate limits are documented. API governance tooling can audit the catalog for completeness gaps. AI agents that need to locate an API for a specific task can search the catalog rather than relying on training data. Search indexes like <a href="https://apis.io">apis.io</a> can ingest the entire set through a single crawl rather than requiring 10,000 individual submissions.</p>
+
+<p>None of that works if the underlying data is inconsistent. The reason a catalog this large is usable is that every entry follows the same structure. APIs.json at <code>specificationVersion: 0.19</code> provided that structure, and the result is a catalog where the same tooling applies uniformly from the first entry to the ten-thousandth.</p>
+
+<p>The spec and JSON Schema are at <a href="https://apisjson.org">apisjson.org</a>. If you want to add your own provider to the catalog, a minimal <code>apis.yml</code> with a name, description, base URL, and a few property links is enough to start.</p>
