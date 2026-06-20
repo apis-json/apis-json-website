@@ -1,6 +1,6 @@
 name: APIs.json
 description: The open source API discovery format.
-image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 url: https://apisjson.org
 
 node: explore

@@ -1,7 +1,7 @@
 name: APIs.json
 description: The open source machine-readable format for describing API operations — a sitemap.xml for APIs that indexes OpenAPI specs, documentation, pricing, terms of service, and more, making APIs discoverable by APIs.io and other tools.
 url: https://apisjson.org/apis.json
-image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 created: "2014-03-01"
 modified: "2026-05-02"
 specificationVersion: "0.20"
@@ -24,7 +24,7 @@ apis:
     description: The APIs.json 0.20 specification — a machine-readable YAML or JSON format for indexing API operations, including OpenAPI specs, documentation, pricing, support, and lifecycle resources.
     humanURL: https://apisjson.org
     baseURL: https://apisjson.org
-    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     tags:
       - Specification
       - APIs.json
@@ -44,7 +44,7 @@ apis:
     description: JSON Schema for validating APIs.json documents — covers all required and optional fields in the 0.20 specification.
     humanURL: https://apisjson.org/schema/
     baseURL: https://apisjson.org
-    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     tags:
       - JSON Schema
       - Validation
@@ -59,7 +59,7 @@ apis:
     description: Reference documentation for all reserved property types defined in the APIs.json specification — from OpenAPI and AsyncAPI to Pricing, TermsOfService, and the 24 new types in 0.20.
     humanURL: https://apisjson.org/properties/
     baseURL: https://apisjson.org
-    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     tags:
       - Properties
       - Reference
