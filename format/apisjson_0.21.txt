@@ -185,6 +185,7 @@ Table of Contents
     * created [Mandatory]: date of creation of the file
     * modified [Mandatory]: date of last modification of the file
     * type [Optional]: Type of collection (Index [of a single API], Collection [of multiple APIs], Blueprint [of a new API]).
+    * kind [Optional]: The kind of entity the collection describes (company, government, opensource, standard, contract, topic, etc.).
     * position [Optional]: The position held by the maintainer of an APIs.json.
     * access [Optional]: The access available for the APIs.json being defined.
     * specificationVersion [Mandatory]: version of the APIs.json specification in use.
@@ -213,6 +214,30 @@ Table of Contents
         * overlays (collection) [Optional]: an optional list of overlays to apply to individual APIs.
             - type [Optional]: The type of overlay being made available.
             - url [Optional]: The URL for the property. * must be url or data
+        * prompts (collection) [Optional]: an optional list of AI prompts that apply to this API.
+            - name [Optional]: The display name of the prompt.
+            - description [Optional]: human readable text description of the prompt.
+            - type: please see reserved keywords below (e.g. Prompt, AgentPrompt, PromptTemplate).
+            - mediaType [Optional]: IANA media type representing the prompt.
+            - url [Optional]: The URL for the prompt. * must be url or data
+            - data [Optional]: The data for the prompt. * must be url or data
+            - tags: (collection) [Optional]: this is a list of descriptive strings which identify the prompt.
+        * rules (collection) [Optional]: an optional list of governance rulesets that apply to this API.
+            - name [Optional]: The display name of the ruleset.
+            - description [Optional]: human readable text description of the ruleset.
+            - type: please see reserved keywords below (e.g. SpectralRules, Rules).
+            - mediaType [Optional]: IANA media type representing the ruleset.
+            - url [Optional]: The URL for the ruleset. * must be url or data
+            - data [Optional]: The data for the ruleset. * must be url or data
+            - tags: (collection) [Optional]: this is a list of descriptive strings which identify the ruleset.
+        * workflows (collection) [Optional]: an optional list of Arazzo (or other) workflows that apply to this API.
+            - name [Optional]: The display name of the workflow.
+            - description [Optional]: human readable text description of the workflow.
+            - type: please see reserved keywords below (e.g. Arazzo, ServerlessWorkflow).
+            - mediaType [Optional]: IANA media type representing the workflow.
+            - url [Optional]: The URL for the workflow. * must be url or data
+            - data [Optional]: The data for the workflow. * must be url or data
+            - tags: (collection) [Optional]: this is a list of descriptive strings which identify the workflow.
         * contact (collection)
             - [Person or Organization - see below]
 
@@ -224,6 +249,33 @@ Table of Contents
          - url or value.
          - data [Optional]: The data for the property. * must be url or data
          - tags: (collection) [Optional]: this is a list of descriptive strings which identify the property.
+
+    * prompts (collection) [Optional]: a list of AI prompts for use across all APIs and tools.
+      - name [Optional]: The display name of the prompt.
+      - description [Optional]: human readable text description of the prompt.
+      - type: please see reserved keywords below (e.g. Prompt, AgentPrompt, PromptTemplate).
+      - mediaType [Optional]: IANA media type representing the prompt.
+      - url [Optional]: The URL for the prompt. * must be url or data
+      - data [Optional]: The data for the prompt. * must be url or data
+      - tags: (collection) [Optional]: this is a list of descriptive strings which identify the prompt.
+
+    * rules (collection) [Optional]: a list of governance rulesets for use across all APIs.
+      - name [Optional]: The display name of the ruleset.
+      - description [Optional]: human readable text description of the ruleset.
+      - type: please see reserved keywords below (e.g. SpectralRules, Rules).
+      - mediaType [Optional]: IANA media type representing the ruleset.
+      - url [Optional]: The URL for the ruleset. * must be url or data
+      - data [Optional]: The data for the ruleset. * must be url or data
+      - tags: (collection) [Optional]: this is a list of descriptive strings which identify the ruleset.
+
+    * workflows (collection) [Optional]: a list of Arazzo (or other) workflows for use across all APIs.
+      - name [Optional]: The display name of the workflow.
+      - description [Optional]: human readable text description of the workflow.
+      - type: please see reserved keywords below (e.g. Arazzo, ServerlessWorkflow).
+      - mediaType [Optional]: IANA media type representing the workflow.
+      - url [Optional]: The URL for the workflow. * must be url or data
+      - data [Optional]: The data for the workflow. * must be url or data
+      - tags: (collection) [Optional]: this is a list of descriptive strings which identify the workflow.
 
     * overlays (collection) [Optional]: an optional list of overlays to apply to primary APIs.json.
       - type [Optional]: The type of overlay being made available.
@@ -407,7 +459,7 @@ Table of Contents
                "url": "http://example.com/compare"
             },
             {
-               "type": "RunInInsomnia",
+               "type": "InsomniaCollection",
                "url": "http://example.com/run-in-insomnia"
             },
             {
@@ -450,6 +502,15 @@ Table of Contents
                "FN": "APIs.json",
                "email": "info@apisjson.org"
             }
+            ],
+            "prompts": [
+               { "type": "AgentPrompt", "url": "http://example.com/prompts/example-api-onboarding.md" }
+            ],
+            "rules": [
+               { "type": "SpectralRules", "url": "http://example.com/rules/example-api-rules.yml" }
+            ],
+            "workflows": [
+               { "type": "Arazzo", "url": "http://example.com/workflows/example-api-workflow.yml" }
             ]
          }
       ],
@@ -667,6 +728,15 @@ Table of Contents
             "url": "http://example.com/training"
          }
       ],
+      "prompts": [
+         { "type": "AgentPrompt", "url": "http://example.com/prompts/getting-started.md" }
+      ],
+      "rules": [
+         { "type": "SpectralRules", "url": "http://example.com/rules/org-rules.yml" }
+      ],
+      "workflows": [
+         { "type": "Arazzo", "url": "http://example.com/workflows/org-workflow.yml" }
+      ],
       "overlays": [
          {
             "type": "APIs.io Search",
@@ -752,7 +822,7 @@ Table of Contents
             url: http://example.com/arazzo
             - type: Compare
             url: http://example.com/compare
-            - type: RunInInsomnia
+            - type: InsomniaCollection
             url: http://example.com/run-in-insomnia
             - type: Evolution
             url: http://example.com/evolution
@@ -774,6 +844,15 @@ Table of Contents
          contact:
             - FN: APIs.json
             email: info@apisjson.org
+         prompts:
+            - type: AgentPrompt
+              url: http://example.com/prompts/example-api-onboarding.md
+         rules:
+            - type: SpectralRules
+              url: http://example.com/rules/example-api-rules.yml
+         workflows:
+            - type: Arazzo
+              url: http://example.com/workflows/example-api-workflow.yml
       common:
       - type: Signup
          url: https://example.com/signup
@@ -881,6 +960,15 @@ Table of Contents
          url: http://example.com/license
       - type: Training
          url: http://example.com/training
+      prompts:
+      - type: AgentPrompt
+        url: http://example.com/prompts/getting-started.md
+      rules:
+      - type: SpectralRules
+        url: http://example.com/rules/org-rules.yml
+      workflows:
+      - type: Arazzo
+        url: http://example.com/workflows/org-workflow.yml
       overlays:
       - type: APIs.io Search
          url: https://example.com/apis-io-search
@@ -967,6 +1055,8 @@ Properties Elements:
  * ALPS
  * OpenAIPluginManifest
  * JSONLD
+ * JSONLDContext       [NEW in 0.21]
+ * GraphQL             [NEW in 0.21]
  * JSONForms
  * Arazzo
  * Compare
@@ -985,6 +1075,7 @@ Properties Elements:
  * ApiExamples         [NEW in 0.20]
  * Standards           [NEW in 0.20]
  * Services            [NEW in 0.20]
+ * Specification       [NEW in 0.21]
 
  Collections & Workspaces:
  * PostmanCollection
@@ -995,6 +1086,7 @@ Properties Elements:
  Developer Experience:
  * GettingStarted
  * Documentation
+ * APIReference        [NEW in 0.21]
  * Authentication
  * Versioning
  * Signup
@@ -1006,6 +1098,10 @@ Properties Elements:
  * Examples            [NEW in 0.20]
  * FAQ                 [NEW in 0.20]
  * Summary             [NEW in 0.20]
+ * Features            [NEW in 0.21]
+ * Solutions           [NEW in 0.21]
+ * Tools               [NEW in 0.21]
+ * Careers             [NEW in 0.21]
 
  Business:
  * Plans
@@ -1048,6 +1144,7 @@ Properties Elements:
  * Website             [NEW in 0.20]
  * Portal              [NEW in 0.20]
  * DeveloperPortal     [NEW in 0.20]
+ * About               [NEW in 0.21]
  * YouTube             [NEW in 0.20]
  * LinkedIn            [NEW in 0.20]
 
@@ -1065,6 +1162,7 @@ Properties Elements:
  * AlertsTwitterHandle
 
  Financial Operations (FinOps):
+ * FinOps                     [NEW in 0.21]
  * FocusBillingExport         [NEW in 0.21]
  * FocusConformanceReport     [NEW in 0.21]
  * FocusContractCommitments   [NEW in 0.21]
@@ -1081,9 +1179,24 @@ Properties Elements:
  * SCIReport                  [NEW in 0.21]
  * GHGProtocolReport          [NEW in 0.21]
 
- Naftiko (Capability Orchestration):
- * NaftikoCapability          [NEW in 0.21]
- * NaftikoFleet               [NEW in 0.21]
+ AI Prompts (referenced from the "prompts" collection):
+ * Prompt                     [NEW in 0.21]
+ * AgentPrompt                [NEW in 0.21]
+ * PromptTemplate             [NEW in 0.21]
+
+ Governance & Rules (referenced from the "rules" collection):
+ * SpectralRules
+ * Rules                      [NEW in 0.21]
+ * GovernanceRules            [NEW in 0.21]
+
+ API Workflows (referenced from the "workflows" collection):
+ * Arazzo
+ * ServerlessWorkflow
+ * Workflow                   [NEW in 0.21]
+
+ Discovery & Catalog:
+ * PublicAPIsListing          [NEW in 0.21]
+ * Review                     [NEW in 0.21]
 
 Contact Elements:
 

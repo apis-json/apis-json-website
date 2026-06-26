@@ -1,0 +1,50 @@
+---
+layout: post
+title: "What's New in APIs.json 0.21"
+date: 2026-06-26
+image: /images/change-log.png
+tags:
+  - APIs.json
+  - Specification
+  - API Discovery
+  - Versioning
+  - 0.21
+---
+
+<p>APIs.json 0.21 turns the index into something an AI agent can act on. Where 0.20 was about expanding the property <em>vocabulary</em>, 0.21 adds three new top-level collections — <code>prompts</code>, <code>rules</code>, and <code>workflows</code> — that describe how to use, govern, and orchestrate an API, not just where to find it. Each is available at both the top level (applying across every API in the index) and on an individual API entry, mirroring the existing <code>common</code> and <code>properties</code> split.</p>
+
+<p>As with prior releases, the additions were driven by analysis of how API providers are already using APIs.json in the wild. Spectral rulesets, Arazzo workflows, and a growing set of AI prompts were already appearing inside <code>common</code> and <code>properties</code> — 0.21 gives them dedicated, discoverable homes.</p>
+
+<h2>Three new collections</h2>
+
+<p>Each entry in the new collections uses the same shape as a property — <code>type</code>, <code>url</code> (or inline <code>data</code>), and optional <code>name</code>, <code>description</code>, <code>mediaType</code>, and <code>tags</code>.</p>
+
+<ul>
+  <li><strong>prompts</strong> — AI prompts that help humans and agents work with an API. Types: <code>Prompt</code>, <code>AgentPrompt</code>, <code>PromptTemplate</code>.</li>
+  <li><strong>rules</strong> — governance rulesets the API is held to. Types: <code>SpectralRules</code>, <code>Rules</code>, <code>GovernanceRules</code>.</li>
+  <li><strong>workflows</strong> — multi-step jobs-to-be-done across operations. Types: <code>Arazzo</code>, <code>ServerlessWorkflow</code>, <code>Workflow</code>.</li>
+</ul>
+
+<pre><code>prompts:
+  - type: AgentPrompt
+    url: https://developers.example.com/prompts/getting-started.md
+rules:
+  - type: SpectralRules
+    url: https://developers.example.com/governance/example-rules.yaml
+workflows:
+  - type: Arazzo
+    url: https://developers.example.com/workflows/onboard-and-charge.yaml</code></pre>
+
+<h2>A new top-level <code>kind</code></h2>
+
+<p>0.21 documents <code>kind</code>, which classifies the entity an index is about — <code>company</code>, <code>government</code>, <code>opensource</code>, <code>standard</code>, <code>contract</code>, <code>topic</code>, and so on — separately from the document <code>type</code>. It replaces the old <code>x-type</code> / <code>xType</code> vendor extensions.</p>
+
+<h2>Vocabulary promoted from real-world usage</h2>
+
+<p>A survey of indexes in the wild surfaced widely-used types that were not yet reserved. These are now first-class: <code>FinOps</code>, <code>Features</code>, <code>Solutions</code>, <code>Tools</code>, <code>Careers</code>, <code>APIReference</code>, <code>GraphQL</code>, <code>JSONLDContext</code>, <code>PublicAPIsListing</code>, <code>Review</code>, <code>About</code>, and <code>Specification</code>.</p>
+
+<h2>Schema and spec back in sync</h2>
+
+<p>The JSON Schema <code>type</code> pattern had drifted behind the reserved-words list — several types documented in the spec text (including <code>Arazzo</code>, <code>JSONLD</code>, and <code>Vocabulary</code>) were not actually enforced, and there was a casing bug (<code>JsonStructure</code> vs. <code>JSONStructure</code>). The schema's allowlist is now complete and consistent with the specification text and the <a href="https://apisjson.org/format/reservedwords">reserved words</a> page.</p>
+
+<p>The canonical specification text and JSON Schema live in the <a href="https://github.com/apis-json/api-json/tree/develop/spec" target="_blank" rel="noopener">api-json repository</a> as <code>apisjson_0.21.txt</code> and <code>schema_0.21.yml</code>.</p>

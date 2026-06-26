@@ -1,0 +1,51 @@
+---
+layout: post
+title: "The Diversity of API Properties in the Wild"
+date: 2026-06-26
+image: /images/types.png
+tags:
+  - APIs.json
+  - Properties
+  - Discovery
+  - Vocabulary
+  - APIs.io
+---
+
+<p>An APIs.json index is mostly a list of <em>properties</em>. Each entry's <code>type</code> field — <code>OpenAPI</code>, <code>Documentation</code>, <code>Pricing</code>, <code>RateLimits</code>, <code>FinOps</code> — is how a machine knows what it's looking at. The vocabulary of those types is the part of the format that does the real work, so we went looking at how it is actually being used across a large body of real indexes.</p>
+
+<p>The corpus is the <a href="https://github.com/api-evangelist" target="_blank" rel="noopener">API Evangelist GitHub organization</a>: <strong>10,245 API providers</strong>, each maintained as its own repository with an <code>apis.yml</code> index at its root. Across those indexes there are <strong>212,780 property references</strong>. That is the surface area of the modern API — not the endpoints, but everything surrounding them.</p>
+
+<h2>What providers actually publish</h2>
+
+<p>The most-adopted properties are not the specs — they are the human entry points. Counting how many of the 10,245 providers publish each property type:</p>
+
+<ul>
+  <li><strong>Documentation</strong> — 8,393 providers</li>
+  <li><strong>Website</strong> — 8,135</li>
+  <li><strong>LinkedIn</strong> — 6,240</li>
+  <li><strong>GitHubOrganization</strong> — 4,205</li>
+  <li><strong>OpenAPI</strong> — 4,203</li>
+  <li><strong>Blog</strong> — 3,282</li>
+  <li><strong>RateLimits</strong> — 2,870, <strong>Pricing</strong> — 2,749, <strong>Plans</strong> — 2,616</li>
+  <li><strong>FinOps</strong> — 2,521</li>
+  <li><strong>GettingStarted</strong> — 2,440, <strong>TermsOfService</strong> — 2,412, <strong>Authentication</strong> — 2,001</li>
+</ul>
+
+<p>OpenAPI is important, but it is the fifth thing a provider publishes — behind docs, a website, a social presence, and their source. An index that only captured the spec would miss most of what a consumer (or an AI agent) needs to actually adopt an API.</p>
+
+<h2>The long tail is the point</h2>
+
+<p>Even after a normalization pass, those indexes use <strong>7,134 distinct <code>type</code> values</strong>. The <a href="https://apisjson.org/format/reservedwords">reserved vocabulary</a> is 123 types — the building blocks every tool understands — and the rest is the long tail of how real providers describe themselves: investor relations, trust centers, status feeds, Kubernetes CRDs, marketplace listings, carbon reports. The format accommodates that diversity through the <code>X-</code> custom prefix, and 157 distinct custom types are already in use.</p>
+
+<p>That tension — a shared core vocabulary plus room for everything else — is the whole design. We recently cleaned up the collisions where the <em>same</em> concept was being written a dozen ways (<code>SDK</code> / <code>SDKs</code>, <code>Sign Up</code> / <code>SignUp</code> / <code>Signup</code>, <code>JSON Schema</code> / <code>JSONSchema</code>), folding roughly 19,000 references back onto their canonical reserved type. Genuinely distinct properties were left alone. The result is an index vocabulary that is consistent where it should be and open where it needs to be.</p>
+
+<h2>How to get at all of it</h2>
+
+<p>Every one of these properties is public and machine-readable in two ways:</p>
+
+<ul>
+  <li><strong>As source, on GitHub</strong> — each provider is a repository under <a href="https://github.com/api-evangelist" target="_blank" rel="noopener">github.com/api-evangelist</a>, with its <code>apis.yml</code> and the referenced artifacts (OpenAPI, plans, rate limits, FinOps, rules, workflows) checked in alongside it. Clone one and you have its entire described operational footprint.</li>
+  <li><strong>As search, on <a href="https://apis.io" target="_blank" rel="noopener">APIs.io</a></strong> — the same indexes are crawled into a search engine you can query by provider, property, tag, or region, available as both a web experience and an <a href="https://apisjson.org/format/reservedwords">MCP server</a> so AI agents can discover providers and their properties directly.</li>
+</ul>
+
+<p>The properties are the vocabulary. The <code>apis.yml</code> files are the index. The GitHub org is the source of truth, and APIs.io is the query layer. Together they turn the diversity of how APIs describe themselves into something you can actually crawl, search, and build on.</p>

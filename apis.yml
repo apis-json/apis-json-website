@@ -4,7 +4,7 @@ url: https://apisjson.org/apis.json
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 created: "2014-03-01"
 modified: "2026-05-02"
-specificationVersion: "0.20"
+specificationVersion: "0.21"
 tags:
   - APIs.json
   - API Discovery
@@ -21,7 +21,7 @@ maintainers:
     email: steve@3scale.net
 apis:
   - name: APIs.json Specification
-    description: The APIs.json 0.20 specification — a machine-readable YAML or JSON format for indexing API operations, including OpenAPI specs, documentation, pricing, support, and lifecycle resources.
+    description: The APIs.json 0.21 specification — a machine-readable YAML or JSON format for indexing API operations, including OpenAPI specs, documentation, pricing, support, and lifecycle resources.
     humanURL: https://apisjson.org
     baseURL: https://apisjson.org
     image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
@@ -41,7 +41,7 @@ apis:
         url: https://github.com/apis-json/api-json
 
   - name: APIs.json Schema
-    description: JSON Schema for validating APIs.json documents — covers all required and optional fields in the 0.20 specification.
+    description: JSON Schema for validating APIs.json documents — covers all required and optional fields in the 0.21 specification.
     humanURL: https://apisjson.org/schema/
     baseURL: https://apisjson.org
     image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
