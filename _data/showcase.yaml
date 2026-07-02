@@ -83,3 +83,9 @@
   url: https://demo.bump.sh/apis.json
   description: API documentation platform
   image: /images/showcase/bump-sh.png
+- view_sort: M
+  name: APIs.io
+  identifier: apis-io
+  url: https://apis.io/apis.json
+  description: APIs.json-powered API search engine
+  image: /images/showcase/apis-io.png
