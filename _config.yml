@@ -5,6 +5,11 @@ url: https://apisjson.org
 
 node: explore
 
+alert:
+  enabled: true
+  type: info
+  message: 'New — render any APIs.json as browsable docs with the <a href="https://documentation.apicommons.org/" class="alert-link">API Documentation</a> tool from API Commons.'
+
 keywords:
   - APIs.json
   - API discovery
