@@ -83,6 +83,12 @@
   url: https://demo.bump.sh/apis.json
   description: API documentation platform
   image: /images/showcase/bump-sh.png
+- view_sort: L2
+  name: AppsMax
+  identifier: appsmax
+  url: https://appsmax.ru/apis.json
+  description: Business workflows, mini apps and bots in MAX and Telegram
+  image: /images/showcase/appsmax.png
 - view_sort: M
   name: APIs.io
   identifier: apis-io
