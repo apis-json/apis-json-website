@@ -1,0 +1,46 @@
+---
+layout: post
+title: "What's New in APIs.json 0.22"
+date: 2026-08-11
+tags:
+  - specification
+  - 0.22
+---
+
+<p>APIs.json 0.22 is a vocabulary release. It does not change the structure of an index — no new collections, no new required fields. What it changes is how much of the real world the specification is willing to recognise.</p>
+
+<h3>The measurement that prompted it</h3>
+
+<p>We counted every <code>type</code> value across 26,598 published APIs.json indexes — 332,345 property references in total — and validated them against the 0.21 schema. <strong>Only 67.6% passed.</strong></p>
+
+<p>The single most common invalid value, <code>DomainSecurity</code>, appears on 23,135 of those indexes. <code>LLMsTxt</code> appears on 6,926. <code>AgenticAccess</code> on 6,520. <code>SignUp</code> on 4,434. These are not typos or vendor inventions; they are the vocabulary publishers reached for when the specification had no word for what they were pointing at.</p>
+
+<p>A format that a third of real usage fails is describing something other than the web it claims to index.</p>
+
+<h3>Sixty-four property types promoted</h3>
+
+<p>Two grounds, both stated so the reasoning can be argued with.</p>
+
+<p><strong>Measured use.</strong> Generic, cross-vendor types carried by at least 100 distinct organizations. Security and trust: <code>DomainSecurity</code>, <code>VulnerabilityDisclosure</code>, <code>TrustCenter</code>, <code>WellKnown</code>, <code>SecurityTxt</code>, <code>OAuthScopes</code>. Operations and developer experience: <code>Lifecycle</code>, <code>Conventions</code>, <code>ErrorCatalog</code>, <code>DataModel</code>, <code>Packages</code>, <code>Idempotency</code>, <code>Components</code>.</p>
+
+<p><strong>Design intent.</strong> Two surfaces the ecosystem needs declared even where publishing has not caught up. The agent surface — <code>AgenticAccess</code>, <code>LLMsTxt</code>, <code>AgentSkill</code>, <code>AgentCard</code>, <code>A2A</code>, <code>APICatalog</code>. And the open-source and supply-chain surface — <code>SourceCode</code>, <code>Repository</code>, <code>HelmChart</code>, <code>DockerImage</code>, <code>ContributionGuide</code>, <code>CodeOfConduct</code>, <code>SecurityPolicy</code>, <code>Releases</code>, <code>IssueTracker</code>, <code>Contributors</code>, <code>Maintainers</code>, <code>SBOM</code>, <code>Attestation</code>, <code>Provenance</code>.</p>
+
+<p>That second group matters. An open-source project can be exemplary at everything open source is good at — a clear licence, a real contribution guide, signed releases, a published SBOM — and until now an APIs.json index had no way to say so.</p>
+
+<p>Some candidates were deliberately left out. <code>Company</code>, <code>Platform</code>, <code>Developer</code> and <code>Technology</code> all appear on more than a hundred indexes and all were rejected: a property type that does not tell a consumer what to expect is worse than no type at all.</p>
+
+<h3>Synonyms are now valid</h3>
+
+<p>0.22 accepts recognised alternate spellings of types the specification already defines. <code>Terms of Service</code> beside <code>TermsOfService</code>. <code>Sign Up</code> beside <code>SignUp</code>. <code>LlmsText</code> beside <code>LLMsTxt</code>. <code>Python SDK</code> beside <code>SDKs</code>.</p>
+
+<p>The canonical name is documented and publishers should prefer it. But a specification that accepts exactly one spelling of a word the world spells five ways does not make publishers more consistent — it pushes them into extensions, and a consumer then has to handle the variant anyway, without the specification's help.</p>
+
+<h3>Extensions accept x- as well as X-</h3>
+
+<p>0.21 permitted only capital <code>X-</code>. OpenAPI and JSON Schema both use lower case, and 311 organizations were publishing lower-case extensions that failed validation on nothing but the case of a letter. Both are now valid; lower case is preferred.</p>
+
+<h3>The result</h3>
+
+<p><strong>93.5% of real-world property references now validate</strong>, up from 67.6%. The remainder are genuinely provider-specific and belong in extensions, which is what extensions are for.</p>
+
+<p>The canonical specification text and JSON Schema live in the <a href="https://github.com/apis-json/api-json/tree/develop/spec" target="_blank" rel="noopener">api-json repository</a> as <code>apisjson_0.22.txt</code> and <code>schema_0.22.yml</code>. If a type you publish is still invalid and you think it should not be, <a href="https://github.com/apis-json/api-json/issues" target="_blank" rel="noopener">open an issue</a> — that is exactly the evidence this release was built from.</p>
