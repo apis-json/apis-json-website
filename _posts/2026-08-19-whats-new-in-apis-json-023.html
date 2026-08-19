@@ -1,0 +1,50 @@
+---
+layout: post
+title: "What's New in APIs.json 0.23"
+date: 2026-08-19
+tags:
+  - specification
+  - 0.23
+---
+
+<p>APIs.json 0.23 is a vocabulary release, the same shape as 0.22 and a great deal smaller. It registers eight property types and repairs the reserved words listing. No structural change, no new collections, no new required fields.</p>
+
+<h3>0.22 was a coverage release. This one is a precision release.</h3>
+
+<p>0.22 moved real-world property validity from 67.6% to 93.5% by promoting sixty-four types that thousands of organizations were already publishing. Measured again today, against 26,866 indexes on the same basis, <strong>94.4% of top-level <code>common</code> property references validate under 0.22, and 94.5% under 0.23</strong>.</p>
+
+<p>That is a gain of 161 references. It is not much and it is not supposed to be. The high-volume backlog is cleared; what is left is a long tail, and the interesting question about a long tail is not how many references it holds but who trips over it.</p>
+
+<h3>What prompted it</h3>
+
+<p>A scoring pipeline. The <a href="https://apis.io" target="_blank" rel="noopener">APIs.io</a> rating rubric reads an index and asks whether a provider has declared machine-readable authentication, or a consent signal, or the standard they conform to. It was asking for vocabulary the specification rejected. A provider could publish exactly the property the rubric wanted and fail schema validation for doing it.</p>
+
+<p>That is the wrong way round. If a consumer is looking for a property type, the specification should have a word for it.</p>
+
+<h3>Eight types promoted</h3>
+
+<p>Counted across 26,866 published indexes, reading only the <code>type</code> field of entries in <code>properties</code>, <code>common</code>, <code>prompts</code>, <code>rules</code> and <code>workflows</code>. 162 organizations publish at least one of them.</p>
+
+<ul>
+  <li><code>ContentSignal</code> — 67 organizations. The Content-Signals directive in <code>robots.txt</code>: how a provider permits its content to be used for search, AI input, and AI training. Distinct from <code>AgenticAccess</code>, which says whether agents may call an API, and <code>LLMsTxt</code>, which says what an agent should read. ContentSignal is where the terms are stated.</li>
+  <li><code>APIKeys</code> and <code>APIKey</code> — 28 organizations across the family. Key issuance, rotation and revocation as its own property rather than folded into <code>Authentication</code>. Which scheme is in use and how you obtain the credential are different questions, and the second is the one that blocks integrations.</li>
+  <li><code>Certification</code> — 27 organizations. The conformance testing programme an integrator must pass. The process, where <code>Conformance</code> is the result.</li>
+  <li><code>Standard</code> — 16 organizations. The singular of <code>Standards</code>, which 0.21 already registered. A provider pointing at one standard should not have to pluralise it.</li>
+  <li><code>Licensing</code> — 25 organizations. Licensing terms for the data or content an API serves, distinct from <code>License</code> (the software licence on SDKs) and <code>InterfaceLicense</code> (the licence on the interface).</li>
+</ul>
+
+<p>0.23 also accepts <code>API Key</code> and <code>API Keys</code> as synonyms of <code>APIKeys</code>, continuing the position 0.22 took: the canonical name is documented and publishers should prefer it, but a specification that accepts one spelling of a word the world spells four ways does not produce consistency, it produces extensions.</p>
+
+<h3>The reserved words listing was 117 types behind</h3>
+
+<p>This is the part worth reading if you have ever validated against the listing rather than the schema.</p>
+
+<p>The reserved words section of the specification text — the human-readable listing of every property type — was never updated for 0.22. Every one of the sixty-four types promoted in that release, plus seven promoted in 0.21, were accepted by the JSON Schema and absent from the listing that documents it. <code>DomainSecurity</code>, on 23,135 indexes, was not in it. Nor were <code>LLMsTxt</code>, <code>AgenticAccess</code>, <code>SBOM</code>, <code>OAuthScopes</code>, or <code>MCPServer</code>.</p>
+
+<p>Two artifacts, one vocabulary, silently disagreeing. Anyone reading the specification to find out what they were allowed to publish got an answer 117 types short of the truth.</p>
+
+<p>In 0.23 the listing is generated from the schema and the two are verified to agree: <strong>197 canonical types and 48 accepted synonyms</strong>, all present in both.</p>
+
+<h3>The canonical files</h3>
+
+<p>The specification text and JSON Schema live in the <a href="https://github.com/apis-json/api-json/tree/develop/spec" target="_blank" rel="noopener">api-json repository</a> as <code>apisjson_0.23.txt</code> and <code>schema_0.23.yml</code>. If a type you publish is still invalid and you think it should not be, <a href="https://github.com/apis-json/api-json/issues" target="_blank" rel="noopener">open an issue</a> — every type in this release got there because someone published it first.</p>
