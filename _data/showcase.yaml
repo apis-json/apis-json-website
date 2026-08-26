@@ -286,7 +286,7 @@
   url: https://crob.at/apis.json
   description: Public APIs for creating, retrieving, and generating competitive Pokemon Showdown teams
     and reading supporting reference data.
-  image: null
+  image: /images/showcase/crob-at-apis.png
   source: all/crob-at
   found_by: probe
   status: live
@@ -341,7 +341,7 @@
     battery capacity and charging, camera counts and resolutions, physical dimensions and IP rating, sound,
     connectivity, AnTuTu/Geekbench benchmarks, retail pricing in USD/EUR/GBP and EU energy-label data
     (energy class, battery endurance, repairability)
-  image: /images/showcase/device-specs-api.png
+  image: /images/showcase/device-specs-api.jpg
   source: all/device-specs-api
   status: live
   verified: '2026-08-26'
@@ -884,7 +884,7 @@
   url: https://serbia-company-x402.vercel.app/.well-known/apis.json
   description: A single-purpose, pay-per-call REST API serving normalized Serbian company registry data
     and latest financial-statement summaries from official APR high-value open data
-  image: null
+  image: /images/showcase/serbia-company-data.svg
   source: all/serbia-company-data
   status: live
   verified: '2026-08-26'
@@ -908,7 +908,7 @@
   identifier: snapapi
   url: https://snap.michaelcli.com/apis.json
   description: REST API for website screenshots, metadata extraction, text extraction, and PDF generation
-  image: null
+  image: /images/showcase/snapapi.svg
   source: all/snapapi
   found_by: probe
   status: live
@@ -948,7 +948,7 @@
   description: SouthendOnSea.city is an independent local information and community-participation platform
     for Southend-on-Sea, Essex, covering local news, community propositions and public voting, city information
     and the Southend Science Exhibition
-  image: null
+  image: /images/showcase/southendonsea-city.svg
   source: all/southendonsea
   status: live
   verified: '2026-08-26'

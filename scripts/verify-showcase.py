@@ -256,24 +256,88 @@ def image_candidates(entry, doc):
     return sorted(ordered, key=lambda u: 1 if social.search(u) else 0)
 
 
+# Deterministic palette. A provider with no logo still gets a tile that looks
+# deliberate rather than broken, and the same provider always gets the same
+# colour across rebuilds.
+MONOGRAM_COLORS = [
+    "#1a1a2e", "#0d6efd", "#0f766e", "#7c3aed", "#b45309",
+    "#be123c", "#15803d", "#0369a1", "#9333ea", "#c2410c",
+]
+
+
+def initials(name):
+    words = [w for w in re.split(r"[^A-Za-z0-9]+", name or "") if w]
+    if not words:
+        return "?"
+    skip = {"the", "api", "apis", "inc", "ltd", "llc", "co", "com", "io", "ai", "app"}
+    keep = [w for w in words if w.lower() not in skip] or words
+    if len(keep) == 1:
+        return keep[0][:2].upper()
+    return (keep[0][0] + keep[1][0]).upper()
+
+
+def monogram(entry):
+    """Write a lettermark SVG for a provider that publishes no usable logo."""
+    name = entry.get("name") or entry["identifier"]
+    text = initials(name)
+    color = MONOGRAM_COLORS[sum(ord(c) for c in entry["identifier"]) % len(MONOGRAM_COLORS)]
+    size = "26" if len(text) > 1 else "30"
+    svg = (
+        '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" '
+        'width="64" height="64" role="img" aria-label="%s">'
+        '<rect width="64" height="64" rx="14" fill="%s"/>'
+        '<text x="32" y="32" fill="#fff" font-family="Helvetica,Arial,sans-serif" '
+        'font-size="%s" font-weight="700" text-anchor="middle" '
+        'dominant-baseline="central">%s</text></svg>'
+    ) % (name.replace('"', "&quot;").replace("&", "&amp;"), color, size, text)
+    os.makedirs(IMAGES_DIR, exist_ok=True)
+    dest = os.path.join(IMAGES_DIR, "%s.svg" % entry["identifier"])
+    with open(dest, "w") as f:
+        f.write(svg)
+    return "/images/showcase/%s.svg" % entry["identifier"]
+
+
 def fetch_image(entry, doc):
     """Save a logo to images/showcase/<identifier>.<ext>. Returns the site path."""
     for src in image_candidates(entry, doc):
         got = _save_image(entry, src)
         if got:
             return got
-    return None
+    # Nothing declared. Ask the host for the icons a browser would ask for.
+    origin = urllib.parse.urlparse(entry["url"])
+    root = "%s://%s" % (origin.scheme, origin.netloc)
+    for path in ("/apple-touch-icon.png", "/apple-touch-icon-precomposed.png",
+                 "/favicon.svg", "/favicon.png", "/favicon.ico"):
+        got = _save_image(entry, root + path)
+        if got:
+            return got
+    return monogram(entry)
 
 
 def _save_image(entry, src):
     status, ctype, body = fetch(src)
     if status != 200 or not body or len(body) < 200:
         return None
-    ext = {'image/png': 'png', 'image/jpeg': 'jpg', 'image/svg+xml': 'svg',
-           'image/webp': 'webp', 'image/gif': 'gif'}.get(ctype.split(';')[0].strip())
-    if not ext:
-        ext = os.path.splitext(urllib.parse.urlparse(src).path)[1].lstrip('.').lower() or 'png'
-    if ext not in ('png', 'jpg', 'jpeg', 'svg', 'webp', 'gif'):
+    # Identify by MAGIC BYTES ONLY. Neither the Content-Type nor the path
+    # extension is evidence: a host that soft-200s every path will hand back its
+    # HTML shell for /favicon.png, and taking the extension on faith wrote a
+    # 5,666-byte <!doctype html> to disk as a .png. Same failure family as the
+    # soft-200s this whole pass exists to reject -- if the bytes are not an
+    # image, there is no image.
+    head = body[:400].lstrip()
+    if head.startswith(b'<svg') or (head.startswith(b'<?xml') and b'<svg' in body[:2000]):
+        ext = 'svg'
+    elif body[:8] == b'\x89PNG\r\n\x1a\n':
+        ext = 'png'
+    elif body[:3] == b'\xff\xd8\xff':
+        ext = 'jpg'
+    elif body[:4] == b'RIFF' and body[8:12] == b'WEBP':
+        ext = 'webp'
+    elif body[:6] in (b'GIF87a', b'GIF89a'):
+        ext = 'gif'
+    elif body[:4] == b'\x00\x00\x01\x00':
+        ext = 'ico'
+    else:
         return None
     os.makedirs(IMAGES_DIR, exist_ok=True)
     dest = os.path.join(IMAGES_DIR, f"{entry['identifier']}.{ext}")
