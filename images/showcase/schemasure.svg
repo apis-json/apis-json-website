@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="SchemaSure logo">
+  <defs>
+    <linearGradient id="ss-g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4f46e5"/>
+      <stop offset="1" stop-color="#06b6d4"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="url(#ss-g)"/>
+  <g fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M24 15c-6 0-6 6-6 9s0 6-5 8c5 2 5 5 5 8s0 9 6 9"/>
+    <path d="M40 15c6 0 6 6 6 9s0 6 5 8c-5 2-5 5-5 8s0 9-6 9"/>
+    <path d="M27 33l4.5 4.5L40 28"/>
+  </g>
+</svg>

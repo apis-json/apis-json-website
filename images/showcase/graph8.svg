@@ -1,0 +1,17 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Tenbound">
+  <defs>
+    <linearGradient id="tb" x1="12" y1="52" x2="52" y2="12" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#00CAEB"/>
+      <stop offset="0.5" stop-color="#FB62D6"/>
+      <stop offset="1" stop-color="#9C73FF"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="#1B1B1B"/>
+  <g stroke="#FFFFFF" stroke-width="3.4" fill="none">
+    <ellipse cx="32" cy="32" rx="22.5" ry="9"/>
+    <ellipse cx="32" cy="32" rx="22.5" ry="9" transform="rotate(60 32 32)"/>
+  </g>
+  <ellipse cx="32" cy="32" rx="22.5" ry="9" transform="rotate(-60 32 32)" stroke="url(#tb)" stroke-width="3.8" fill="none"/>
+  <circle cx="45" cy="15.4" r="3.5" fill="url(#tb)"/>
+  <circle cx="32" cy="32" r="3" fill="#FFFFFF"/>
+</svg>

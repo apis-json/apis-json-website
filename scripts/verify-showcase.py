@@ -285,6 +285,8 @@ def _save_image(entry, src):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--discover', action='store_true', help='scan all/* for new providers')
+    ap.add_argument('--from-probe', metavar='JSON',
+                    help='ingest hosts found by all/0-working/probe-apisjson.py')
     ap.add_argument('--images', action='store_true', help='fetch logos for entries missing one')
     ap.add_argument('--write', action='store_true', help='persist changes to _data/showcase.yaml')
     args = ap.parse_args()
@@ -318,6 +320,49 @@ def main():
             by_url[cand['url']] = e
             added.append(e)
         print(f'discovered {len(added)} new candidate(s)')
+
+    # Declared pointers only ever find providers who told us. The network probe
+    # asks every host directly, which is how the 2026-08-26 sweep found 44
+    # adopters nobody had recorded -- see all/0-working/probe-apisjson.py.
+    if args.from_probe:
+        found = json.load(open(args.from_probe))
+        listed = {registrable(urllib.parse.urlparse(u or '').hostname) for u in by_url}
+
+        def base(host):
+            parts = registrable(host).split('.')
+            if len(parts) > 2 and parts[-2] in ('co', 'com', 'org', 'net', 'gov', 'ac'):
+                return '.'.join(parts[-3:])
+            return '.'.join(parts[-2:])
+
+        listed_bases = {base(urllib.parse.urlparse(u or '').hostname or '') for u in by_url}
+        listed_slugs = {(e.get('source') or '')[4:] for e in entries if e.get('source')}
+        ingested = 0
+        for r in sorted(found, key=lambda r: r['host']):
+            host = urllib.parse.urlparse(r['host']).hostname or ''
+            if registrable(host) in listed or base(host) in listed_bases:
+                continue
+            if set(r.get('providers') or []) & listed_slugs:
+                continue
+            hit = max(r['hits'], key=lambda h: h['api_count'])
+            url = r['host'].rstrip('/') + hit['path']
+            name = hit.get('name') or (r.get('providers') or [host])[0]
+            ident = identifier_for(name, url, taken)
+            taken.add(ident)
+            listed_bases.add(base(host))
+            e = {
+                'view_sort': f"N-{ident}",
+                'name': name,
+                'identifier': ident,
+                'url': url,
+                'description': '',
+                'image': None,
+                'source': f"all/{(r.get('providers') or ['?'])[0]}",
+                'found_by': 'probe',
+            }
+            entries.append(e)
+            by_url[url] = e
+            ingested += 1
+        print(f'ingested {ingested} provider(s) from the network probe')
 
     live = unreachable = 0
     rejected = []

@@ -172,6 +172,102 @@
   verified: '2026-08-26'
   api_count: 1
   spec_version: '0.16'
+- view_sort: N-ablo
+  name: Ablo
+  identifier: ablo
+  url: https://docs.abloatai.com/apis.json
+  description: 'Collaboration infrastructure for AI agents: one API for agents, apps, and services to
+    claim, change, and confirm the same rows.'
+  image: /images/showcase/ablo.svg
+  source: all/abloatai
+  found_by: probe
+  status: live
+  verified: '2026-08-26'
+  api_count: 1
+  spec_version: '0.21'
+- view_sort: N-admakeai
+  name: AdMakeAI
+  identifier: admakeai
+  url: https://admakeai.com/apis.json
+  description: AdMakeAI is an AI ad creative platform for Meta, Instagram, and TikTok advertisers
+  image: /images/showcase/admakeai.png
+  source: all/admakeai
+  found_by: probe
+  status: live
+  verified: '2026-08-26'
+  api_count: 1
+  spec_version: '0.21'
+- view_sort: N-alphaai
+  name: AlphaAI
+  identifier: alphaai
+  url: https://api.alphai.io/apis.json
+  description: Relevance-scored, ticker-linked financial news for AI agents and trading bots
+  image: /images/showcase/alphaai.svg
+  source: all/alphaai
+  found_by: probe
+  status: live
+  verified: '2026-08-26'
+  api_count: 2
+  spec_version: '0.21'
+- view_sort: N-api-evangelist
+  name: API Evangelist
+  identifier: api-evangelist
+  url: https://aviation-edge.com/apis.json
+  description: This is an inventory of APIs available as part of the API Evangelist network.
+  image: /images/showcase/api-evangelist.png
+  source: all/aviation-edge
+  found_by: probe
+  status: live
+  verified: '2026-08-26'
+  api_count: 2
+- view_sort: N-api-met-no
+  name: api.met.no
+  identifier: api-met-no
+  url: https://api.met.no/apis.json
+  description: Services available via the MET Norway Weather API
+  image: /images/showcase/api-met-no.png
+  source: all/meteorologisk-institutt
+  found_by: probe
+  status: live
+  verified: '2026-08-26'
+  api_count: 32
+  spec_version: '0.15'
+- view_sort: N-api-snap
+  name: API Snap
+  identifier: api-snap
+  url: https://api-snap.com/apis.json
+  description: 13+ utility APIs in one REST service — QR codes, screenshots, image processing & more
+  image: /images/showcase/api-snap.png
+  source: all/api-snap
+  found_by: probe
+  status: live
+  verified: '2026-08-26'
+  api_count: 1
+  spec_version: '0.18'
+- view_sort: N-apideck
+  name: Apideck
+  identifier: apideck
+  url: https://www.apideck.com/apis.json
+  description: Unified API platform for SaaS integrations
+  image: /images/showcase/apideck.jpg
+  source: all/apideck
+  found_by: probe
+  status: live
+  verified: '2026-08-26'
+  api_count: 7
+  spec_version: '0.16'
+- view_sort: N-btc-war-public-apis
+  name: BTC War Public APIs
+  identifier: btc-war-public-apis
+  url: https://btcwar.net/apis.json
+  description: Authoritative discovery index for BTC War's public, read-only crypto market data API
+  image: /images/showcase/btc-war-public-apis.jpg
+  source: all/btc-war-live-market-data-api
+  found_by: probe
+  status: live
+  verified: '2026-08-26'
+  api_count: 1
+  spec_version: '0.21'
 - view_sort: N-catalog-guard
   name: Catalog Guard
   identifier: catalog-guard
@@ -184,6 +280,57 @@
   verified: '2026-08-26'
   api_count: 1
   spec_version: '0.21'
+- view_sort: N-crob-at-apis
+  name: crob.at APIs
+  identifier: crob-at-apis
+  url: https://crob.at/apis.json
+  description: Public APIs for creating, retrieving, and generating competitive Pokemon Showdown teams
+    and reading supporting reference data.
+  image: null
+  source: all/crob-at
+  found_by: probe
+  status: live
+  verified: '2026-08-26'
+  api_count: 1
+  spec_version: '0.21'
+- view_sort: N-crs-credit-api
+  name: CRS Credit API
+  identifier: crs-credit-api
+  url: https://crscreditapi.com/apis.json
+  description: CRS provides one API for tri-bureau consumer and business credit data
+  image: /images/showcase/crs-credit-api.svg
+  source: all/crs-credit-api
+  found_by: probe
+  status: live
+  verified: '2026-08-26'
+  api_count: 1
+  spec_version: '0.21'
+- view_sort: N-cyclecalcs
+  name: CycleCalcs
+  identifier: cyclecalcs
+  url: https://www.cyclecalcs.com/apis.json
+  description: 'CycleCalcs publishes a read-only astronomy API and an MCP server over the same engine:
+    sun and moon times, moon phases, planet positions and visibility, eclipses, seasons, retrogrades,
+    conjunctions, twilight and dark-sky windows'
+  image: /images/showcase/cyclecalcs.png
+  source: all/cyclecalcs
+  found_by: probe
+  status: live
+  verified: '2026-08-26'
+  api_count: 1
+  spec_version: '0.21'
+- view_sort: N-debitura
+  name: Debitura
+  identifier: debitura
+  url: https://docs.debitura.com/apis.json
+  description: Debitura is an API-first international debt collection platform
+  image: /images/showcase/debitura.png
+  source: all/debitura
+  found_by: probe
+  status: live
+  verified: '2026-08-26'
+  api_count: 3
+  spec_version: '0.20'
 - view_sort: N-device-specs-api
   name: Device Specs API
   identifier: device-specs-api
@@ -224,6 +371,47 @@
   verified: '2026-08-26'
   api_count: 1
   spec_version: '0.21'
+- view_sort: N-ean-search-api
+  name: EAN-Search API
+  identifier: ean-search-api
+  url: https://www.ean-search.org/apis.json
+  description: This API lets you lookup EAN, GTIN, UPC or ISBN barcodes or search by product names
+  image: /images/showcase/ean-search-api.png
+  source: all/barcode-scanners
+  found_by: probe
+  status: live
+  verified: '2026-08-26'
+  api_count: 1
+- view_sort: N-email-verifier-api
+  name: Email Verifier API
+  identifier: email-verifier-api
+  url: https://emailverifierapi.com/apis.json
+  description: High-performance 16-point email verification API
+  image: /images/showcase/email-verifier-api.png
+  source: all/email-verifier-api
+  found_by: probe
+  status: live
+  verified: '2026-08-26'
+  api_count: 1
+  spec_version: '0.16'
+- view_sort: N-famxplor-family-travel-api
+  name: Famxplor Family Travel API
+  identifier: famxplor-family-travel-api
+  url: https://famxplor.com/apis.yml
+  description: 'The First API 100% Dedicated to Family Travel.
+
+    Designed for developers, travel apps and businesses, the Famxplor API delivers personalized, family-focused
+    recommendations tested and loved by real families.
+
+    Seamlessly integrate to provide location-based activities, global travel ideas, and engaging content
+    that enhances user experiences and engagement.'
+  image: /images/showcase/famxplor-family-travel-api.jpg
+  source: all/famxplor-family-travel-api
+  found_by: probe
+  status: live
+  verified: '2026-08-26'
+  api_count: 1
+  spec_version: '0.19'
 - view_sort: N-faturapdf-brazilian-invoice-receipt-pdf-api
   name: FaturaPDF — Brazilian Invoice & Receipt PDF API
   identifier: faturapdf-brazilian-invoice-receipt-pdf-api
@@ -236,6 +424,18 @@
   verified: '2026-08-26'
   api_count: 1
   spec_version: '0.16'
+- view_sort: N-foxy
+  name: Foxy
+  identifier: foxy
+  url: https://api.foxycart.com/apis.json
+  description: The hypermedia API for the Foxy.io and FoxyCart.com system
+  image: /images/showcase/foxy.png
+  source: all/foxycart
+  found_by: probe
+  status: live
+  verified: '2026-08-26'
+  api_count: 1
+  spec_version: '0.14'
 - view_sort: N-frostbyte
   name: Frostbyte
   identifier: frostbyte
@@ -248,6 +448,32 @@
   verified: '2026-08-26'
   api_count: 7
   spec_version: '0.18'
+- view_sort: N-gender-api-com
+  name: Gender-API.com
+  identifier: gender-api-com
+  url: https://gender-api.com/apis.json
+  description: Gender-API.com helps you determine the likely gender and country of origin from first names,
+    full names, and email addresses.
+  image: /images/showcase/gender-api-com.png
+  source: all/gender-api
+  found_by: probe
+  status: live
+  verified: '2026-08-26'
+  api_count: 1
+  spec_version: '0.15'
+- view_sort: N-graph8
+  name: graph8
+  identifier: graph8
+  url: https://graph8.com/apis.json
+  description: 'graph8 is the autonomous revenue system: it finds buyers, launches campaigns, runs conversations,
+    and builds pipeline on one buyer graph'
+  image: /images/showcase/graph8.svg
+  source: all/graph8
+  found_by: probe
+  status: live
+  verified: '2026-08-26'
+  api_count: 2
+  spec_version: '0.21'
 - view_sort: N-hellosafe-atlas
   name: HelloSafe Atlas
   identifier: hellosafe-atlas
@@ -272,6 +498,20 @@
   verified: '2026-08-26'
   api_count: 1
   spec_version: '0.22'
+- view_sort: N-ibanforge
+  name: IBANforge
+  identifier: ibanforge
+  url: https://api.ibanforge.com/apis.json
+  description: 'Pre-payout IBAN screening for developers and AI agents: validation, issuing-bank identification
+    against 121,000+ BIC entries and 6 national bank registers, Swiss clearing (1,100+ SIX entries), sanctions
+    at bank level, SEPA + VoP reachability, risk scoring'
+  image: /images/showcase/ibanforge.png
+  source: all/ibanforge
+  found_by: probe
+  status: live
+  verified: '2026-08-26'
+  api_count: 1
+  spec_version: '0.21'
 - view_sort: N-infer-by-flow7
   name: Infer by Flow7
   identifier: infer-by-flow7
@@ -284,6 +524,32 @@
   verified: '2026-08-26'
   api_count: 1
   spec_version: '0.21'
+- view_sort: N-ip-find
+  name: IP Find
+  identifier: ip-find
+  url: https://www.geoplugin.com/apis.json
+  description: The API for fetching a location from an IP Address couldn't be simpler
+  image: /images/showcase/ip-find.png
+  source: all/geoplugin
+  found_by: probe
+  status: live
+  verified: '2026-08-26'
+  api_count: 1
+- view_sort: N-kairos-facial-recognition-api
+  name: Kairos Facial Recognition API
+  identifier: kairos-facial-recognition-api
+  url: https://face.kairos.com/apis.json
+  description: 'WE''VE TAKEN SOMETHING COMPLEX AND MADE IT EASY
+
+
+    You don’t need to be an expert in face recognition software to get the benefits'
+  image: /images/showcase/kairos-facial-recognition-api.png
+  source: all/kairos-ar
+  found_by: probe
+  status: live
+  verified: '2026-08-26'
+  api_count: 1
+  spec_version: '0.14'
 - view_sort: N-leadping
   name: Leadping
   identifier: leadping
@@ -324,6 +590,19 @@
   verified: '2026-08-26'
   api_count: 1
   spec_version: '0.19'
+- view_sort: N-listings-api
+  name: Listings API
+  identifier: listings-api
+  url: https://docs.listingsapi.com/apis.json
+  description: 'REST API for managing business locations: sync listings across Google, Facebook, Bing
+    and other publishers, respond to reviews, publish posts, and pull local search analytics.'
+  image: /images/showcase/listings-api.svg
+  source: all/listings-api
+  found_by: probe
+  status: live
+  verified: '2026-08-26'
+  api_count: 1
+  spec_version: '0.14'
 - view_sort: N-loa-healthcare-pricing-api
   name: Loa Healthcare Pricing API
   identifier: loa-healthcare-pricing-api
@@ -335,6 +614,20 @@
   verified: '2026-08-26'
   api_count: 1
   spec_version: '0.21'
+- view_sort: N-lone-wolf-technologies
+  name: Lone Wolf Technologies
+  identifier: lone-wolf-technologies
+  url: https://apidocs.lwolf.com/apis.json
+  description: "## Lone Wolf APIs\r\nFor a high-level overview of Lone Wolf APIs or to request access,\
+    \ visit the [Lone Wolf API Portal](https://www.lwolf.com/api-portal).\r\n\r\nDocumentation on many\
+    \ of Lone Wolf's product suite APIs that are part of Lone Wolf Foundation are outlined below."
+  image: /images/showcase/lone-wolf-technologies.jpg
+  source: all/lone-wolf
+  found_by: probe
+  status: live
+  verified: '2026-08-26'
+  api_count: 10
+  spec_version: '0.16'
 - view_sort: N-lookip
   name: Lookip
   identifier: lookip
@@ -359,6 +652,30 @@
   verified: '2026-08-26'
   api_count: 1
   spec_version: '0.22'
+- view_sort: N-microlink-io
+  name: microlink.io
+  identifier: microlink-io
+  url: https://microlink.io/apis.json
+  description: Turn websites into data
+  image: /images/showcase/microlink-io.png
+  source: all/microlink-io
+  found_by: probe
+  status: live
+  verified: '2026-08-26'
+  api_count: 1
+  spec_version: '1.0'
+- view_sort: N-mobileapi-dev
+  name: MobileAPI.dev
+  identifier: mobileapi-dev
+  url: https://api.mobileapi.dev/apis.json
+  description: Device specifications API for smartphones, tablets, and wearables
+  image: /images/showcase/mobileapi-dev.png
+  source: all/mobileapi-dev
+  found_by: probe
+  status: live
+  verified: '2026-08-26'
+  api_count: 1
+  spec_version: '0.16'
 - view_sort: N-mydentify-public-apis
   name: Mydentify Public APIs
   identifier: mydentify-public-apis
@@ -371,6 +688,44 @@
   verified: '2026-08-26'
   api_count: 1
   spec_version: '0.21'
+- view_sort: N-mystars-faas
+  name: MyStars FaaS
+  identifier: mystars-faas
+  url: https://mystars.tg/apis.json
+  description: Public B2B fulfilment API for buying and reselling Telegram Stars and Telegram Premium,
+    paid in GRAM or USDT on the TON network.
+  image: /images/showcase/mystars-faas.png
+  source: all/mystars-faas-fulfilment-api
+  found_by: probe
+  status: live
+  verified: '2026-08-26'
+  api_count: 1
+  spec_version: '0.18'
+- view_sort: N-nutrientsdb
+  name: NutrientsDB
+  identifier: nutrientsdb
+  url: https://www.nutrientsdb.com/.well-known/apis.json
+  description: NutrientsDB is a downloadable nutrition database with nearly 3 million foods, 86 normalized
+    nutrient fields, standard units, and global coverage
+  image: /images/showcase/nutrientsdb.png
+  source: all/nutrientsdb
+  found_by: probe
+  status: live
+  verified: '2026-08-26'
+  api_count: 1
+  spec_version: '0.21'
+- view_sort: N-opencage-geocoding-api
+  name: OpenCage Geocoding API
+  identifier: opencage-geocoding-api
+  url: https://opencagedata.com/apis.json
+  description: Worldwide forward and reverse geocoding API using open data
+  image: /images/showcase/opencage-geocoding-api.png
+  source: all/opencage
+  found_by: probe
+  status: live
+  verified: '2026-08-26'
+  api_count: 1
+  spec_version: '0.15'
 - view_sort: N-openmercantil
   name: OpenMercantil
   identifier: openmercantil
@@ -382,6 +737,32 @@
   verified: '2026-08-26'
   api_count: 2
   spec_version: '0.16'
+- view_sort: N-pdf-generator-api
+  name: PDF Generator API
+  identifier: pdf-generator-api
+  url: https://us1.pdfgeneratorapi.com/apis.json
+  description: An API and template builder to generate PDF documents from Your software with Your data.
+  image: /images/showcase/pdf-generator-api.png
+  source: all/pdfgeneratorapi
+  found_by: probe
+  status: live
+  verified: '2026-08-26'
+  api_count: 1
+  spec_version: '0.15'
+- view_sort: N-pixelixe
+  name: Pixelixe
+  identifier: pixelixe
+  url: https://pixelixe.com/apis.json
+  description: 'Pixelixe API enables you to embed a top of the
+
+    art "White label" graphic design tool & photo editor inside any website'
+  image: /images/showcase/pixelixe.png
+  source: all/pixelixe
+  found_by: probe
+  status: live
+  verified: '2026-08-26'
+  api_count: 1
+  spec_version: '0.14'
 - view_sort: N-plinth-us-grants-data
   name: Plinth US Grants Data
   identifier: plinth-us-grants-data
@@ -395,6 +776,18 @@
   verified: '2026-08-26'
   api_count: 2
   spec_version: '0.19'
+- view_sort: N-plotapi
+  name: PlotAPI
+  identifier: plotapi
+  url: https://plotapi.co/apis.json
+  description: Premium developer API for vehicle specification, parts fitment, and real estate data.
+  image: /images/showcase/plotapi.png
+  source: all/plotapi
+  found_by: probe
+  status: live
+  verified: '2026-08-26'
+  api_count: 2
+  spec_version: '0.17'
 - view_sort: N-qr-code-crafter
   name: QR Code Crafter
   identifier: qr-code-crafter
@@ -409,6 +802,44 @@
   verified: '2026-08-26'
   api_count: 1
   spec_version: '0.21'
+- view_sort: N-quickchart
+  name: QuickChart
+  identifier: quickchart
+  url: https://quickchart.io/apis.json
+  description: QuickChart is a cloud chart rendering service
+  image: /images/showcase/quickchart.png
+  source: all/quickchart
+  found_by: probe
+  status: live
+  verified: '2026-08-26'
+  api_count: 1
+  spec_version: '0.14'
+- view_sort: N-real-time-uv-index-forecast-api-openuv
+  name: Real-time UV Index Forecast API - OpenUV
+  identifier: real-time-uv-index-forecast-api-openuv
+  url: https://api.openuv.io/apis.json
+  description: The missing minimalistic JSON real-time UV Index API for awesome Developers, Innovators
+    and Smart Home Enthusiasts you've been looking for.
+  image: /images/showcase/real-time-uv-index-forecast-api-openuv.png
+  source: all/openuv
+  found_by: probe
+  status: live
+  verified: '2026-08-26'
+  api_count: 3
+  spec_version: '0.14'
+- view_sort: N-roxyapi
+  name: RoxyAPI
+  identifier: roxyapi
+  url: https://roxyapi.com/apis.json
+  description: 'Multi-domain spiritual and insight API: astrology, Vedic astrology, forecast, human design,
+    numerology, tarot, and more, under one key, with a Remote MCP server per domain and typed SDKs'
+  image: /images/showcase/roxyapi.svg
+  source: all/roxyapi
+  found_by: probe
+  status: live
+  verified: '2026-08-26'
+  api_count: 15
+  spec_version: '0.21'
 - view_sort: N-rugspull-read-api
   name: Rugspull Read API
   identifier: rugspull-read-api
@@ -421,6 +852,32 @@
   verified: '2026-08-26'
   api_count: 1
   spec_version: '0.21'
+- view_sort: N-sagaris
+  name: SAGARIS
+  identifier: sagaris
+  url: https://www.sagaris.ai/apis.json
+  description: 'SAGARIS is an AI Sales Operator: CRM, dialer, email, SMS and social on one shared memory,
+    with AI agents that execute under approval gates'
+  image: /images/showcase/sagaris.svg
+  source: all/sagaris
+  found_by: probe
+  status: live
+  verified: '2026-08-26'
+  api_count: 2
+  spec_version: '0.19'
+- view_sort: N-schemasure
+  name: SchemaSure
+  identifier: schemasure
+  url: https://schemasure.com/apis.json
+  description: Pay-per-call APIs that extract strict, JSON-Schema-valid typed JSON from unstructured text,
+    HTML, or document images
+  image: /images/showcase/schemasure.svg
+  source: all/schemasure
+  found_by: probe
+  status: live
+  verified: '2026-08-26'
+  api_count: 6
+  spec_version: '0.18'
 - view_sort: N-serbia-company-data
   name: Serbia Company Data
   identifier: serbia-company-data
@@ -433,6 +890,31 @@
   verified: '2026-08-26'
   api_count: 1
   spec_version: '0.21'
+- view_sort: N-skipodds
+  name: SkipOdds
+  identifier: skipodds
+  url: https://skipodds.com/apis.json
+  description: 'Fair sports win probabilities: every surveyed bookmaker price averaged and de-vigged so
+    probabilities sum to exactly 100%'
+  image: /images/showcase/skipodds.png
+  source: all/skipodds
+  found_by: probe
+  status: live
+  verified: '2026-08-26'
+  api_count: 1
+  spec_version: '0.16'
+- view_sort: N-snapapi
+  name: SnapAPI
+  identifier: snapapi
+  url: https://snap.michaelcli.com/apis.json
+  description: REST API for website screenshots, metadata extraction, text extraction, and PDF generation
+  image: null
+  source: all/snapapi
+  found_by: probe
+  status: live
+  verified: '2026-08-26'
+  api_count: 1
+  spec_version: '0.18'
 - view_sort: N-socialcrawl
   name: SocialCrawl
   identifier: socialcrawl
@@ -472,6 +954,30 @@
   verified: '2026-08-26'
   api_count: 1
   spec_version: '0.21'
+- view_sort: N-sunrise-and-sunset
+  name: Sunrise and sunset
+  identifier: sunrise-and-sunset
+  url: https://sunrise-sunset.org/apis.json
+  description: Free API that provides sunset and sunrise times for a given latitude and longitude.
+  image: /images/showcase/sunrise-and-sunset.svg
+  source: all/sunrise-and-sunset
+  found_by: probe
+  status: live
+  verified: '2026-08-26'
+  api_count: 1
+  spec_version: '0.14'
+- view_sort: N-suprsonic
+  name: Suprsonic
+  identifier: suprsonic
+  url: https://suprsonic.ai/apis.json
+  description: Unified agent API
+  image: /images/showcase/suprsonic.png
+  source: all/suprsonic
+  found_by: probe
+  status: live
+  verified: '2026-08-26'
+  api_count: 1
+  spec_version: '0.18'
 - view_sort: N-sylvia-api
   name: Sylvia API
   identifier: sylvia-api
@@ -484,6 +990,31 @@
   status: live
   verified: '2026-08-26'
   api_count: 6
+  spec_version: '0.21'
+- view_sort: N-tadeus-api
+  name: Tadeus API
+  identifier: tadeus-api
+  url: https://tadeus.net/apis.json
+  description: Tadeus is a single AI voice agent that interviews your workforce in real voice, acts on
+    what it hears, and returns a structured record inside the systems your people already use
+  image: /images/showcase/tadeus-api.png
+  source: all/tadeus-api
+  found_by: probe
+  status: live
+  verified: '2026-08-26'
+  api_count: 1
+  spec_version: '0.18'
+- view_sort: N-tinyops-studio-api-catalog
+  name: TinyOps Studio API Catalog
+  identifier: tinyops-studio-api-catalog
+  url: https://tinyopsstudio.com/apis.json
+  description: Deterministic automation and integration-readiness APIs from TinyOps Studio LLC.
+  image: /images/showcase/tinyops-studio-api-catalog.png
+  source: all/automation-preflight-api
+  found_by: probe
+  status: live
+  verified: '2026-08-26'
+  api_count: 1
   spec_version: '0.21'
 - view_sort: N-tvarka-atk-api
   name: Tvarka ATK API
@@ -509,6 +1040,18 @@
   verified: '2026-08-26'
   api_count: 1
   spec_version: '0.22'
+- view_sort: N-virtuosis-api-index
+  name: Virtuosis API Index
+  identifier: virtuosis-api-index
+  url: https://www.virtuosis.ai/apis.json
+  description: Machine-readable index of the Virtuosis Voice Biomarker API.
+  image: /images/showcase/virtuosis-api-index.png
+  source: all/virtuosis-voice-biomarker-api
+  found_by: probe
+  status: live
+  verified: '2026-08-26'
+  api_count: 1
+  spec_version: '0.23'
 - view_sort: N-waodao
   name: WAODAO
   identifier: waodao
@@ -537,6 +1080,18 @@
   api_count: 2
   spec_version: '0.21'
   also_at: https://api.wegtultrarich.org/.well-known/apis.json
+- view_sort: N-wealthville
+  name: WealthVille
+  identifier: wealthville
+  url: https://wealthville.net/apis.json
+  description: Liquidity-pool scoring for DeFi
+  image: /images/showcase/wealthville.png
+  source: all/wealthville-defi-liquidity-pool-scores-api-solana-evm
+  found_by: probe
+  status: live
+  verified: '2026-08-26'
+  api_count: 1
+  spec_version: '0.16'
 - view_sort: N-xquik
   name: Xquik
   identifier: xquik
