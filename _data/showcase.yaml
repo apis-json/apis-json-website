@@ -5,93 +5,546 @@
   url: https://www.fitbit.com/apis.json
   description: Fitness tracking and health data
   image: /images/showcase/fitbit.png
+  status: live
+  verified: '2026-08-26'
+  api_count: 1
+  spec_version: '0.14'
 - view_sort: B
   name: Neutrino API
   identifier: neutrino
   url: https://www.neutrinoapi.com/apis.json
   description: General purpose API utility services
   image: /images/showcase/neutrino.png
+  status: live
+  verified: '2026-08-26'
+  api_count: 1
+  spec_version: '0.21'
 - view_sort: C
   name: Acuity Scheduling
   identifier: actuity-scheduling
   url: https://acuityscheduling.com/apis.json
   description: Online appointment scheduling
   image: /images/showcase/actuity-scheduling.png
+  status: live
+  verified: '2026-08-26'
+  api_count: 1
+  spec_version: '0.14'
 - view_sort: D
   name: Checkmarket
   identifier: checkmarket
   url: https://api.checkmarket.com/3/apis.json
   description: Online survey and feedback platform
   image: /images/showcase/checkmarket.png
+  status: live
+  verified: '2026-08-26'
+  api_count: 2
+  spec_version: '0.14'
 - view_sort: E
   name: DNS Check
   identifier: dns-check
   url: https://www.dnscheck.co/apis.json
   description: DNS monitoring and testing tools
   image: /images/showcase/dns-check.png
+  status: live
+  verified: '2026-08-26'
+  api_count: 1
+  spec_version: '0.14'
 - view_sort: F
   name: Social Searcher
   identifier: social-searcher
   url: https://www.social-searcher.com/apis.json
   description: Social media search and monitoring
   image: /images/showcase/social-searcher.png
+  status: live
+  verified: '2026-08-26'
+  api_count: 1
+  spec_version: '0.14'
 - view_sort: G1
   name: Super Monitoring
   identifier: super-monitoring
   url: https://www.supermonitoring.com/apis.json
   description: Website uptime monitoring
   image: /images/showcase/super-monitoring.png
+  status: live
+  verified: '2026-08-26'
+  api_count: 1
+  spec_version: '0.14'
 - view_sort: G2
   name: Twitch Bot Directory
   identifier: twitch-bot-directory
   url: https://twitchbots.info/apis.json
   description: Directory of Twitch chat bots
   image: /images/showcase/twitch-bot-directory.png
+  status: live
+  verified: '2026-08-26'
+  api_count: 2
+  spec_version: '0.15'
 - view_sort: G3
   name: Spoonacular
   identifier: spoonacular
   url: https://spoonacular.com/apis.json
   description: Recipe and food data API
   image: /images/showcase/spoonacular.png
+  status: live
+  verified: '2026-08-26'
+  api_count: 1
+  spec_version: '0.14'
 - view_sort: H
   name: IPinfo
   identifier: ipinfo
   url: https://ipinfo.io/apis.json
   description: IP geolocation and network intelligence
   image: /images/showcase/ipinfo.png
+  status: live
+  verified: '2026-08-26'
+  api_count: 1
+  spec_version: '0.14'
 - view_sort: I
   name: Weatherbit
   identifier: weatherbit
   url: https://weatherbit.io/apis.json
   description: Weather data and forecasts
   image: /images/showcase/weatherbit.png
+  status: live
+  verified: '2026-08-26'
+  api_count: 2
+  spec_version: '0.14'
 - view_sort: J
   name: IPWhois
   identifier: ipwhois
   url: https://ipwhois.io/apis.json
   description: IP geolocation and WHOIS data
   image: /images/showcase/ipwhois.png
+  status: live
+  verified: '2026-08-26'
+  api_count: 1
+  spec_version: '0.14'
 - view_sort: K
   name: Estated
   identifier: estated
   url: https://estated.com/apis.json
   description: Real estate and property data
   image: /images/showcase/estated.png
+  status: live
+  verified: '2026-08-26'
+  api_count: 1
+  spec_version: '1.0'
 - view_sort: L
   name: Bump.sh
   identifier: bump-sh
   url: https://demo.bump.sh/apis.json
   description: API documentation platform
   image: /images/showcase/bump-sh.png
+  status: live
+  verified: '2026-08-26'
+  api_count: 9
+  spec_version: '0.16'
 - view_sort: L2
   name: AppsMax
   identifier: appsmax
   url: https://appsmax.ru/apis.json
   description: Business workflows, mini apps and bots in MAX and Telegram
   image: /images/showcase/appsmax.png
+  status: live
+  verified: '2026-08-26'
+  api_count: 1
+  spec_version: '0.21'
 - view_sort: M
   name: APIs.io
   identifier: apis-io
   url: https://apis.io/apis.json
   description: APIs.json-powered API search engine
   image: /images/showcase/apis-io.png
+  status: live
+  verified: '2026-08-26'
+  api_count: 1
+  spec_version: '0.21'
+- view_sort: N-5dollarfootballapi
+  name: 5DollarFootballAPI
+  identifier: 5dollarfootballapi
+  url: https://5dollarfootballapi.com/apis.json
+  description: A read-only REST football (soccer) data API covering live scores, fixtures, standings,
+    league and team surfaces, match events, and corner and card statistics, plus a bookmakers endpoint
+    and a status check
+  image: /images/showcase/5dollarfootballapi.png
+  source: all/5dollarfootballapi
+  status: live
+  verified: '2026-08-26'
+  api_count: 1
+  spec_version: '0.16'
+- view_sort: N-catalog-guard
+  name: Catalog Guard
+  identifier: catalog-guard
+  url: https://catalogguard.noahcortezj-c.workers.dev/apis.json
+  description: A bounded, fail-closed catalog preflight and validation service for Shopify-shaped supplier
+    product CSVs
+  image: /images/showcase/catalog-guard.png
+  source: all/catalog-guard-api
+  status: live
+  verified: '2026-08-26'
+  api_count: 1
+  spec_version: '0.21'
+- view_sort: N-device-specs-api
+  name: Device Specs API
+  identifier: device-specs-api
+  url: https://ds.gtgroup.dev/apis.json
+  description: A normalized mobile-device specifications REST API covering 12,000+ smartphones and 10,000+
+    models from 50+ manufacturers, delivering cleaned, strictly typed JSON for chipsets, display metrics
+    (size, panel type, refresh rate, peak nits), CPU cores and clock speeds, RAM and storage options,
+    battery capacity and charging, camera counts and resolutions, physical dimensions and IP rating, sound,
+    connectivity, AnTuTu/Geekbench benchmarks, retail pricing in USD/EUR/GBP and EU energy-label data
+    (energy class, battery endurance, repairability)
+  image: /images/showcase/device-specs-api.png
+  source: all/device-specs-api
+  status: live
+  verified: '2026-08-26'
+  api_count: 1
+  spec_version: '0.21'
+- view_sort: N-discgolfapi
+  name: DiscGolfAPI
+  identifier: discgolfapi
+  url: https://discgolfapi.com/apis.json
+  description: DiscGolfAPI is a free, read-only public API that publishes structured JSON data about disc
+    golf courses for developers, clubs, publishers, apps, and AI systems
+  image: /images/showcase/discgolfapi.png
+  source: all/discgolfapi
+  status: live
+  verified: '2026-08-26'
+  api_count: 1
+  spec_version: '0.19'
+- view_sort: N-dreamthreads
+  name: DreamThreads
+  identifier: dreamthreads
+  url: https://mydreamthreads.xyz/apis.json
+  description: DreamThreads exposes the DreamGraph API, a context-first dream interpretation and structured
+    parsing platform
+  image: /images/showcase/dreamthreads.png
+  source: all/dreamthreads
+  status: live
+  verified: '2026-08-26'
+  api_count: 1
+  spec_version: '0.21'
+- view_sort: N-faturapdf-brazilian-invoice-receipt-pdf-api
+  name: FaturaPDF — Brazilian Invoice & Receipt PDF API
+  identifier: faturapdf-brazilian-invoice-receipt-pdf-api
+  url: https://faturapdf.com/apis.json
+  description: HTTP API that converts a JSON payload into a Brazilian invoice (fatura) or receipt (recibo)
+    PDF
+  image: /images/showcase/faturapdf-brazilian-invoice-receipt-pdf-api.png
+  source: all/faturapdf-brazilian-invoice-receipt-pdf-api
+  status: live
+  verified: '2026-08-26'
+  api_count: 1
+  spec_version: '0.16'
+- view_sort: N-frostbyte
+  name: Frostbyte
+  identifier: frostbyte
+  url: https://api-catalog-three.vercel.app/apis.json
+  description: Free API platform for developers and AI agents — 40+ services including IP Geolocation,
+    Crypto Prices, Screenshots, DNS, Scraping, Code Execution
+  image: /images/showcase/frostbyte.png
+  source: all/frostbyte
+  status: live
+  verified: '2026-08-26'
+  api_count: 7
+  spec_version: '0.18'
+- view_sort: N-hellosafe-atlas
+  name: HelloSafe Atlas
+  identifier: hellosafe-atlas
+  url: https://atlas.hellosafe.com/.well-known/apis.json
+  description: HelloSafe distributes travel insurance through APIs, under the Atlas platform at atlas.hellosafe.com
+  image: /images/showcase/hellosafe-atlas.png
+  source: all/hellosafe
+  status: live
+  verified: '2026-08-26'
+  api_count: 2
+  spec_version: '0.18'
+- view_sort: N-i6eal-open-ai-data-api
+  name: i6eal Open AI Data API
+  identifier: i6eal-open-ai-data-api
+  url: https://i6eal.de/apis.json
+  description: A free, no-authentication open-data REST API from i6eal (a German AI studio operated by
+    Syka Ventures UG) exposing 16 AI-related datasets and monitors for Germany and the EU as static JSON/CSV/JSON-LD/Atom
+    files served over HTTPS from CloudFront
+  image: /images/showcase/i6eal-open-ai-data-api.png
+  source: all/i6eal-open-ai-data-api
+  status: live
+  verified: '2026-08-26'
+  api_count: 1
+  spec_version: '0.22'
+- view_sort: N-infer-by-flow7
+  name: Infer by Flow7
+  identifier: infer-by-flow7
+  url: https://infer.flow7.org/.well-known/apis.json
+  description: A single Responses-compatible inference API that fronts multiple model families through
+    a private, opaque supplier pool
+  image: /images/showcase/infer-by-flow7.png
+  source: all/infer-by-flow7
+  status: live
+  verified: '2026-08-26'
+  api_count: 1
+  spec_version: '0.21'
+- view_sort: N-leadping
+  name: Leadping
+  identifier: leadping
+  url: https://api.leadping.ai/apis.json
+  description: Leadping is a lead-management and responsible-outreach platform for teams that need to
+    move a new inbound lead from source to first touch without stitching together separate tools
+  image: /images/showcase/leadping.png
+  source: all/leadping
+  status: live
+  verified: '2026-08-26'
+  api_count: 4
+  spec_version: '0.22'
+- view_sort: N-legal-ge-public-apis
+  name: legal.ge Public APIs
+  identifier: legal-ge-public-apis
+  url: https://legal.ge/apis.json
+  description: Georgia's (the country's) legal marketplace, exposing a public, keyless, read-only REST
+    API that turns a natural-language description of a legal problem into matched practice areas and a
+    ranked list of verified specialists — lawyers, law firms, accountants, tax consultants, mediators
+    and enforcement agents — each with a canonical, locale-prefixed profile URL
+  image: /images/showcase/legal-ge-public-apis.png
+  source: all/legal-ge-public-apis
+  status: live
+  verified: '2026-08-26'
+  api_count: 2
+  spec_version: '0.19'
+- view_sort: N-linkagi-model-api
+  name: LinkAGI Model API
+  identifier: linkagi-model-api
+  url: https://docs.linktoagi.com/apis.json
+  description: 'LinkAGI is a Chinese third-party AI API relay (中转站) that fronts a pool of upstream model
+    accounts behind a single host, api.linktoagi.com, and re-exposes them on three imitated vendor protocols:
+    OpenAI-compatible Chat Completions and Responses, an Anthropic Messages-shaped route, and a Gemini
+    generateContent-shaped route'
+  image: /images/showcase/linkagi-model-api.svg
+  source: all/linkagi-model-api
+  status: live
+  verified: '2026-08-26'
+  api_count: 1
+  spec_version: '0.19'
+- view_sort: N-loa-healthcare-pricing-api
+  name: Loa Healthcare Pricing API
+  identifier: loa-healthcare-pricing-api
+  url: https://www.loacare.com/apis.json
+  description: Source-labeled U.S
+  image: /images/showcase/loa-healthcare-pricing-api.png
+  source: all/loa-healthcare-pricing-api
+  status: live
+  verified: '2026-08-26'
+  api_count: 1
+  spec_version: '0.21'
+- view_sort: N-lookip
+  name: Lookip
+  identifier: lookip
+  url: https://lookip.io/.well-known/apis.json
+  description: Lookip is an IP and domain intelligence API — geolocation, network and ASN, hosting and
+    proxy detection, and related lookups over a single authenticated surface
+  image: /images/showcase/lookip.png
+  source: all/lookip
+  status: live
+  verified: '2026-08-26'
+  api_count: 1
+  spec_version: '0.19'
+- view_sort: N-makebimi
+  name: makeBIMI
+  identifier: makebimi
+  url: https://makebimi.com/public/apis.json
+  description: makeBIMI is a free web tool for preparing and validating brand logos for BIMI (Brand Indicators
+    for Message Identification)
+  image: /images/showcase/makebimi.png
+  source: all/makebimi
+  status: live
+  verified: '2026-08-26'
+  api_count: 1
+  spec_version: '0.22'
+- view_sort: N-mydentify-public-apis
+  name: Mydentify Public APIs
+  identifier: mydentify-public-apis
+  url: https://mydentify.com/apis.json
+  description: Public, keyless REST API for Mydentify — a permanent product directory with weekly community-signaled
+    product leaderboards
+  image: /images/showcase/mydentify-public-apis.svg
+  source: all/mydentify-public-api
+  status: live
+  verified: '2026-08-26'
+  api_count: 1
+  spec_version: '0.21'
+- view_sort: N-openmercantil
+  name: OpenMercantil
+  identifier: openmercantil
+  url: https://openmercantil.es/apis.json
+  description: OpenMercantil is an independent public-data API for Spanish company intelligence
+  image: /images/showcase/openmercantil.png
+  source: all/openmercantil
+  status: live
+  verified: '2026-08-26'
+  api_count: 2
+  spec_version: '0.16'
+- view_sort: N-plinth-us-grants-data
+  name: Plinth US Grants Data
+  identifier: plinth-us-grants-data
+  url: https://data.useplinth.com/.well-known/apis.json
+  description: A JSON API over the entire US grantmaking universe — about 205,000 grantmaking foundations
+    and 17.9 million grants, read from public IRS Form 990, 990-EZ and 990-PF e-file filings and the IRS
+    Business Master File
+  image: /images/showcase/plinth-us-grants-data.svg
+  source: all/plinth-us-grants-data
+  status: live
+  verified: '2026-08-26'
+  api_count: 2
+  spec_version: '0.19'
+- view_sort: N-qr-code-crafter
+  name: QR Code Crafter
+  identifier: qr-code-crafter
+  url: https://qrcodecrafter.com/apis.json
+  description: Public QR code generation API by Brand Aspect Ltd (England & Wales, company 05105266) supporting
+    27 payload types — URL, GS1 Digital Link, Wi-Fi, vCard, event, location, crypto and fifteen payment
+    schemes including PIX, UPI, PromptPay, VietQR, Swiss QR-bill and SEPA/GiroCode — exported as SVG,
+    PNG, JPG, WebP, PDF or EPS at up to 4096px
+  image: /images/showcase/qr-code-crafter.png
+  source: all/qr-code-crafter
+  status: live
+  verified: '2026-08-26'
+  api_count: 1
+  spec_version: '0.21'
+- view_sort: N-rugspull-read-api
+  name: Rugspull Read API
+  identifier: rugspull-read-api
+  url: https://rugspull.com/.well-known/apis.json
+  description: A read-only, GET-only discovery-cache REST API for Rugspull, a self-described high-risk
+    parody DeFi protocol on BNB Smart Chain (chain id 56)
+  image: /images/showcase/rugspull-read-api.png
+  source: all/rugspull-read-api
+  status: live
+  verified: '2026-08-26'
+  api_count: 1
+  spec_version: '0.21'
+- view_sort: N-serbia-company-data
+  name: Serbia Company Data
+  identifier: serbia-company-data
+  url: https://serbia-company-x402.vercel.app/.well-known/apis.json
+  description: A single-purpose, pay-per-call REST API serving normalized Serbian company registry data
+    and latest financial-statement summaries from official APR high-value open data
+  image: null
+  source: all/serbia-company-data
+  status: live
+  verified: '2026-08-26'
+  api_count: 1
+  spec_version: '0.21'
+- view_sort: N-socialcrawl
+  name: SocialCrawl
+  identifier: socialcrawl
+  url: https://www.socialcrawl.dev/.well-known/apis.json
+  description: 'SocialCrawl is a unified social, commerce and research data API: one key, one response
+    schema, 50 platforms and roughly 400 endpoints, plus a cross-platform search that fans out across
+    17 sources in a single call'
+  image: /images/showcase/socialcrawl.png
+  source: all/socialcrawl
+  status: live
+  verified: '2026-08-26'
+  api_count: 1
+  spec_version: '0.23'
+- view_sort: N-sorsa
+  name: Sorsa
+  identifier: sorsa
+  url: https://api.sorsa.io/apis.json
+  description: Sorsa Labs operates a real-time X (Twitter) data API providing developers access to tweets,
+    profiles, search, mentions, lists, communities, engagement verification, and Sorsa Score crypto-influence
+    analytics through 40 REST endpoints
+  image: /images/showcase/sorsa.png
+  source: all/sorsa
+  status: live
+  verified: '2026-08-26'
+  api_count: 1
+  spec_version: '0.16'
+- view_sort: N-southendonsea-city
+  name: SouthendOnSea.city
+  identifier: southendonsea-city
+  url: https://southendonsea.city/.well-known/apis.json
+  description: SouthendOnSea.city is an independent local information and community-participation platform
+    for Southend-on-Sea, Essex, covering local news, community propositions and public voting, city information
+    and the Southend Science Exhibition
+  image: null
+  source: all/southendonsea
+  status: live
+  verified: '2026-08-26'
+  api_count: 1
+  spec_version: '0.21'
+- view_sort: N-sylvia-api
+  name: Sylvia API
+  identifier: sylvia-api
+  url: https://sylvia-api.com/apis.json
+  description: Sylvia API is a third-party Reddit data API that serves Reddit content as JSON — posts,
+    comments with full recursive threads, subreddit and user surfaces, global search, and a live comment
+    stream
+  image: /images/showcase/sylvia-api.svg
+  source: all/sylvia-api
+  status: live
+  verified: '2026-08-26'
+  api_count: 6
+  spec_version: '0.21'
+- view_sort: N-tvarka-atk-api
+  name: Tvarka ATK API
+  identifier: tvarka-atk-api
+  url: https://atk.tvarka.pro/apis.json
+  description: A single REST API for Lithuanian eID authentication and qualified electronic signing (QES),
+    plus validation, timestamping and long-term-validation (LTV)/archive trust services
+  image: /images/showcase/tvarka-atk-api.svg
+  source: all/tvarka-atk-api
+  status: live
+  verified: '2026-08-26'
+  api_count: 1
+  spec_version: '0.19'
+- view_sort: N-venue-authority
+  name: Venue Authority
+  identifier: venue-authority
+  url: https://venueauthority.com/apis.json
+  description: Venue Authority is a self-serve facility verification and monitoring API for payment facilitators,
+    marketplaces, KYB providers and restaurant platforms working with food-service businesses
+  image: /images/showcase/venue-authority.svg
+  source: all/venueauthority
+  status: live
+  verified: '2026-08-26'
+  api_count: 1
+  spec_version: '0.22'
+- view_sort: N-waodao
+  name: WAODAO
+  identifier: waodao
+  url: https://waodao.ai/apis.json
+  description: 'WAODAO is a daily Human + AI "ArtChain": since 14 February 2023 one AI-generated NFT has
+    been minted every day from world news signals, digital trends, human input and AI art, producing an
+    on-chain cultural archive that stood at 1,272 published days when the index was read on 2026-08-09'
+  image: /images/showcase/waodao.png
+  source: all/waodao
+  status: live
+  verified: '2026-08-26'
+  api_count: 1
+  spec_version: '0.19'
+  also_at: https://waodao.ai/.well-known/apis.json
+- view_sort: N-we-ultrarich
+  name: We > Ultrarich
+  identifier: we-ultrarich
+  url: https://api.wegtultrarich.org/apis.json
+  description: 'A free, non-commercial tool and public API that visualize extreme wealth inequality by
+    comparing any wealth to ultrarich/billionaire/trillionaire wealth through four lenses: Duration Of
+    Daily Spend, Height Of Stacked Money, Number Of Items Paid For, and Growth Of Compound Interest'
+  image: /images/showcase/we-ultrarich.png
+  source: all/wegtultrarich
+  status: live
+  verified: '2026-08-26'
+  api_count: 2
+  spec_version: '0.21'
+  also_at: https://api.wegtultrarich.org/.well-known/apis.json
+- view_sort: N-xquik
+  name: Xquik
+  identifier: xquik
+  url: https://xquik.com/apis.yml
+  description: Xquik is an independent third-party X data and automation platform
+  image: /images/showcase/xquik.png
+  source: all/xquik-api
+  status: live
+  verified: '2026-08-26'
+  api_count: 3
+  spec_version: '0.21'

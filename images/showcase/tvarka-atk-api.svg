@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="48.75 51.8 249 64.2" width="100%" height="100%">
+  <path d="M105 622H173V0H105ZM273 622V563H5V622Z" fill="#1B4D4B" transform="translate(49.25,115) scale(0.1,-0.1)"/>
+  <g transform="translate(85.8 52.8)">
+    <rect width="62.2" height="62.2" fill="#1B4D4B"/>
+    <path d="M 12.0944 32.8278 L 25.0528 45.7861 L 50.1056 13.8222" fill="none" stroke="#62C4A5" stroke-width="8.6389" stroke-linecap="square" stroke-linejoin="miter"/>
+  </g>
+  <path d="M257 217V158H83V217ZM328 0H259L166 574L84 0H15L112 622H221Z" fill="#1B4D4B" transform="translate(155.75,115) scale(0.1,-0.1)"/>
+  <path d="M247 350V532Q247 552 241.5 557.5Q236 563 216 563H55V622H236Q276 622 295.5 602.5Q315 583 315 543V339Q315 299 295.5 279.5Q276 260 236 260H96V319H216Q236 319 241.5 325.0Q247 331 247 350ZM55 622H123V0H55ZM173 286H244L347 0H273Z" fill="#1B4D4B" transform="translate(191.05,115) scale(0.1,-0.1)"/>
+  <path d="M130 308H201L333 0H259ZM201 308H130L261 622H335ZM55 622H123V0H55Z" fill="#1B4D4B" transform="translate(228.45,115) scale(0.1,-0.1)"/>
+  <path d="M257 217V158H83V217ZM328 0H259L166 574L84 0H15L112 622H221Z" fill="#1B4D4B" transform="translate(263.95,115) scale(0.1,-0.1)"/>
+</svg>
