@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title id="title">Venue Authority mark</title>
+  <rect width="64" height="64" rx="14" fill="#16201c"/>
+  <path d="M16.5 18.5 32 46 47.5 18.5" fill="none" stroke="#fffdf8" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M23.5 31.5h17" fill="none" stroke="#55d69c" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="32" cy="46" r="3.75" fill="#55d69c"/>
+</svg>
