@@ -111,20 +111,38 @@ def generate_image(title, tags, image_slug, api_key):
     )
 
     client = genai.Client(api_key=api_key)
-    response = client.models.generate_images(
-        model='imagen-4.0-generate-001',
-        prompt=prompt,
-        config=types.GenerateImagesConfig(number_of_images=1, aspect_ratio='16:9'),
+    # The Imagen predict models were retired from this API surface; image
+    # generation now goes through generateContent on the image-output Gemini
+    # models. Same prompt, different call shape.
+    try:
+        config = types.GenerateContentConfig(
+            response_modalities=['IMAGE'],
+            image_config=types.ImageConfig(aspect_ratio='16:9'),
+        )
+    except Exception:
+        config = types.GenerateContentConfig(response_modalities=['IMAGE'])
+    response = client.models.generate_content(
+        model='gemini-3-pro-image',
+        contents=prompt,
+        config=config,
     )
 
-    if not response.generated_images:
+    image_bytes = None
+    for cand in (response.candidates or []):
+        for part in (cand.content.parts or []):
+            if getattr(part, 'inline_data', None) and part.inline_data.data:
+                image_bytes = part.inline_data.data
+                break
+        if image_bytes:
+            break
+    if not image_bytes:
         print(f"  No image generated for: {title}")
         return False
 
     os.makedirs(IMAGES_DIR, exist_ok=True)
     img_path = os.path.join(IMAGES_DIR, f"{image_slug}.png")
     with open(img_path, 'wb') as f:
-        f.write(response.generated_images[0].image.image_bytes)
+        f.write(image_bytes)
     print(f"  Generated: {image_slug}.png")
     return True
 

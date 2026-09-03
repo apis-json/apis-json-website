@@ -6,7 +6,7 @@
   description: Fitness tracking and health data
   image: /images/showcase/fitbit.png
   status: live
-  verified: '2026-08-26'
+  verified: '2026-09-03'
   api_count: 1
   spec_version: '0.14'
 - view_sort: B
@@ -16,7 +16,7 @@
   description: General purpose API utility services
   image: /images/showcase/neutrino.png
   status: live
-  verified: '2026-08-26'
+  verified: '2026-09-03'
   api_count: 1
   spec_version: '0.21'
 - view_sort: C
@@ -26,7 +26,7 @@
   description: Online appointment scheduling
   image: /images/showcase/actuity-scheduling.png
   status: live
-  verified: '2026-08-26'
+  verified: '2026-09-03'
   api_count: 1
   spec_version: '0.14'
 - view_sort: D
@@ -36,7 +36,7 @@
   description: Online survey and feedback platform
   image: /images/showcase/checkmarket.png
   status: live
-  verified: '2026-08-26'
+  verified: '2026-09-03'
   api_count: 2
   spec_version: '0.14'
 - view_sort: E
@@ -46,7 +46,7 @@
   description: DNS monitoring and testing tools
   image: /images/showcase/dns-check.png
   status: live
-  verified: '2026-08-26'
+  verified: '2026-09-03'
   api_count: 1
   spec_version: '0.14'
 - view_sort: F
@@ -56,7 +56,7 @@
   description: Social media search and monitoring
   image: /images/showcase/social-searcher.png
   status: live
-  verified: '2026-08-26'
+  verified: '2026-09-03'
   api_count: 1
   spec_version: '0.14'
 - view_sort: G1
@@ -66,7 +66,7 @@
   description: Website uptime monitoring
   image: /images/showcase/super-monitoring.png
   status: live
-  verified: '2026-08-26'
+  verified: '2026-09-03'
   api_count: 1
   spec_version: '0.14'
 - view_sort: G2
@@ -76,7 +76,7 @@
   description: Directory of Twitch chat bots
   image: /images/showcase/twitch-bot-directory.png
   status: live
-  verified: '2026-08-26'
+  verified: '2026-09-03'
   api_count: 2
   spec_version: '0.15'
 - view_sort: G3
@@ -86,7 +86,7 @@
   description: Recipe and food data API
   image: /images/showcase/spoonacular.png
   status: live
-  verified: '2026-08-26'
+  verified: '2026-09-03'
   api_count: 1
   spec_version: '0.14'
 - view_sort: H
@@ -96,7 +96,7 @@
   description: IP geolocation and network intelligence
   image: /images/showcase/ipinfo.png
   status: live
-  verified: '2026-08-26'
+  verified: '2026-09-03'
   api_count: 1
   spec_version: '0.14'
 - view_sort: I
@@ -106,7 +106,7 @@
   description: Weather data and forecasts
   image: /images/showcase/weatherbit.png
   status: live
-  verified: '2026-08-26'
+  verified: '2026-09-03'
   api_count: 2
   spec_version: '0.14'
 - view_sort: J
@@ -116,7 +116,7 @@
   description: IP geolocation and WHOIS data
   image: /images/showcase/ipwhois.png
   status: live
-  verified: '2026-08-26'
+  verified: '2026-09-03'
   api_count: 1
   spec_version: '0.14'
 - view_sort: K
@@ -126,7 +126,7 @@
   description: Real estate and property data
   image: /images/showcase/estated.png
   status: live
-  verified: '2026-08-26'
+  verified: '2026-09-03'
   api_count: 1
   spec_version: '1.0'
 - view_sort: L
@@ -136,7 +136,7 @@
   description: API documentation platform
   image: /images/showcase/bump-sh.png
   status: live
-  verified: '2026-08-26'
+  verified: '2026-09-03'
   api_count: 9
   spec_version: '0.16'
 - view_sort: L2
@@ -146,7 +146,7 @@
   description: Business workflows, mini apps and bots in MAX and Telegram
   image: /images/showcase/appsmax.png
   status: live
-  verified: '2026-08-26'
+  verified: '2026-09-03'
   api_count: 1
   spec_version: '0.21'
 - view_sort: M
@@ -156,7 +156,7 @@
   description: APIs.json-powered API search engine
   image: /images/showcase/apis-io.png
   status: live
-  verified: '2026-08-26'
+  verified: '2026-09-03'
   api_count: 1
   spec_version: '0.21'
 - view_sort: N-5dollarfootballapi
@@ -169,7 +169,7 @@
   image: /images/showcase/5dollarfootballapi.png
   source: all/5dollarfootballapi
   status: live
-  verified: '2026-08-26'
+  verified: '2026-09-03'
   api_count: 1
   spec_version: '0.16'
 - view_sort: N-ablo
@@ -182,7 +182,7 @@
   source: all/abloatai
   found_by: probe
   status: live
-  verified: '2026-08-26'
+  verified: '2026-09-03'
   api_count: 1
   spec_version: '0.21'
 - view_sort: N-admakeai
@@ -194,9 +194,21 @@
   source: all/admakeai
   found_by: probe
   status: live
-  verified: '2026-08-26'
+  verified: '2026-09-03'
   api_count: 1
   spec_version: '0.21'
+- view_sort: N-ai-crawler-index
+  name: AI Crawler Index
+  identifier: ai-crawler-index
+  url: https://www.pathwren.workers.dev/apis.json
+  description: Every AI crawler on the web, what it is for, what blocking it costs you, and the IP ranges
+    its operator publishes — as JSON, CSV, robots.txt and regex
+  image: /images/showcase/ai-crawler-index.png
+  source: all/pathwren
+  status: live
+  verified: '2026-09-03'
+  api_count: 1
+  spec_version: '1.0'
 - view_sort: N-alphaai
   name: AlphaAI
   identifier: alphaai
@@ -206,7 +218,7 @@
   source: all/alphaai
   found_by: probe
   status: live
-  verified: '2026-08-26'
+  verified: '2026-09-03'
   api_count: 2
   spec_version: '0.21'
 - view_sort: N-api-evangelist
@@ -218,7 +230,7 @@
   source: all/aviation-edge
   found_by: probe
   status: live
-  verified: '2026-08-26'
+  verified: '2026-09-03'
   api_count: 2
 - view_sort: N-api-met-no
   name: api.met.no
@@ -229,7 +241,7 @@
   source: all/meteorologisk-institutt
   found_by: probe
   status: live
-  verified: '2026-08-26'
+  verified: '2026-09-03'
   api_count: 32
   spec_version: '0.15'
 - view_sort: N-api-snap
@@ -241,7 +253,7 @@
   source: all/api-snap
   found_by: probe
   status: live
-  verified: '2026-08-26'
+  verified: '2026-09-03'
   api_count: 1
   spec_version: '0.18'
 - view_sort: N-apideck
@@ -253,7 +265,7 @@
   source: all/apideck
   found_by: probe
   status: live
-  verified: '2026-08-26'
+  verified: '2026-09-03'
   api_count: 7
   spec_version: '0.16'
 - view_sort: N-btc-war-public-apis
@@ -265,7 +277,7 @@
   source: all/btc-war-live-market-data-api
   found_by: probe
   status: live
-  verified: '2026-08-26'
+  verified: '2026-09-03'
   api_count: 1
   spec_version: '0.21'
 - view_sort: N-catalog-guard
@@ -277,7 +289,7 @@
   image: /images/showcase/catalog-guard.png
   source: all/catalog-guard-api
   status: live
-  verified: '2026-08-26'
+  verified: '2026-09-03'
   api_count: 1
   spec_version: '0.21'
 - view_sort: N-crob-at-apis
@@ -290,7 +302,7 @@
   source: all/crob-at
   found_by: probe
   status: live
-  verified: '2026-08-26'
+  verified: '2026-09-03'
   api_count: 1
   spec_version: '0.21'
 - view_sort: N-crs-credit-api
@@ -302,7 +314,7 @@
   source: all/crs-credit-api
   found_by: probe
   status: live
-  verified: '2026-08-26'
+  verified: '2026-09-03'
   api_count: 1
   spec_version: '0.21'
 - view_sort: N-cyclecalcs
@@ -316,7 +328,7 @@
   source: all/cyclecalcs
   found_by: probe
   status: live
-  verified: '2026-08-26'
+  verified: '2026-09-03'
   api_count: 1
   spec_version: '0.21'
 - view_sort: N-debitura
@@ -328,7 +340,7 @@
   source: all/debitura
   found_by: probe
   status: live
-  verified: '2026-08-26'
+  verified: '2026-09-03'
   api_count: 3
   spec_version: '0.20'
 - view_sort: N-device-specs-api
@@ -344,7 +356,7 @@
   image: /images/showcase/device-specs-api.jpg
   source: all/device-specs-api
   status: live
-  verified: '2026-08-26'
+  verified: '2026-09-03'
   api_count: 1
   spec_version: '0.21'
 - view_sort: N-discgolfapi
@@ -356,7 +368,7 @@
   image: /images/showcase/discgolfapi.png
   source: all/discgolfapi
   status: live
-  verified: '2026-08-26'
+  verified: '2026-09-03'
   api_count: 1
   spec_version: '0.19'
 - view_sort: N-dreamthreads
@@ -367,10 +379,11 @@
     parsing platform
   image: /images/showcase/dreamthreads.png
   source: all/dreamthreads
-  status: live
+  status: unreachable
   verified: '2026-08-26'
   api_count: 1
   spec_version: '0.21'
+  last_http_status: 404
 - view_sort: N-ean-search-api
   name: EAN-Search API
   identifier: ean-search-api
@@ -380,7 +393,7 @@
   source: all/barcode-scanners
   found_by: probe
   status: live
-  verified: '2026-08-26'
+  verified: '2026-09-03'
   api_count: 1
 - view_sort: N-email-verifier-api
   name: Email Verifier API
@@ -391,7 +404,7 @@
   source: all/email-verifier-api
   found_by: probe
   status: live
-  verified: '2026-08-26'
+  verified: '2026-09-03'
   api_count: 1
   spec_version: '0.16'
 - view_sort: N-famxplor-family-travel-api
@@ -409,7 +422,7 @@
   source: all/famxplor-family-travel-api
   found_by: probe
   status: live
-  verified: '2026-08-26'
+  verified: '2026-09-03'
   api_count: 1
   spec_version: '0.19'
 - view_sort: N-faturapdf-brazilian-invoice-receipt-pdf-api
@@ -421,7 +434,7 @@
   image: /images/showcase/faturapdf-brazilian-invoice-receipt-pdf-api.png
   source: all/faturapdf-brazilian-invoice-receipt-pdf-api
   status: live
-  verified: '2026-08-26'
+  verified: '2026-09-03'
   api_count: 1
   spec_version: '0.16'
 - view_sort: N-foxy
@@ -433,7 +446,7 @@
   source: all/foxycart
   found_by: probe
   status: live
-  verified: '2026-08-26'
+  verified: '2026-09-03'
   api_count: 1
   spec_version: '0.14'
 - view_sort: N-frostbyte
@@ -445,7 +458,7 @@
   image: /images/showcase/frostbyte.png
   source: all/frostbyte
   status: live
-  verified: '2026-08-26'
+  verified: '2026-09-03'
   api_count: 7
   spec_version: '0.18'
 - view_sort: N-gender-api-com
@@ -458,7 +471,7 @@
   source: all/gender-api
   found_by: probe
   status: live
-  verified: '2026-08-26'
+  verified: '2026-09-03'
   api_count: 1
   spec_version: '0.15'
 - view_sort: N-graph8
@@ -471,7 +484,7 @@
   source: all/graph8
   found_by: probe
   status: live
-  verified: '2026-08-26'
+  verified: '2026-09-03'
   api_count: 2
   spec_version: '0.21'
 - view_sort: N-hellosafe-atlas
@@ -482,7 +495,7 @@
   image: /images/showcase/hellosafe-atlas.png
   source: all/hellosafe
   status: live
-  verified: '2026-08-26'
+  verified: '2026-09-03'
   api_count: 2
   spec_version: '0.18'
 - view_sort: N-i6eal-open-ai-data-api
@@ -495,7 +508,7 @@
   image: /images/showcase/i6eal-open-ai-data-api.png
   source: all/i6eal-open-ai-data-api
   status: live
-  verified: '2026-08-26'
+  verified: '2026-09-03'
   api_count: 1
   spec_version: '0.22'
 - view_sort: N-ibanforge
@@ -509,7 +522,7 @@
   source: all/ibanforge
   found_by: probe
   status: live
-  verified: '2026-08-26'
+  verified: '2026-09-03'
   api_count: 1
   spec_version: '0.21'
 - view_sort: N-infer-by-flow7
@@ -521,7 +534,7 @@
   image: /images/showcase/infer-by-flow7.png
   source: all/infer-by-flow7
   status: live
-  verified: '2026-08-26'
+  verified: '2026-09-03'
   api_count: 1
   spec_version: '0.21'
 - view_sort: N-ip-find
@@ -533,7 +546,7 @@
   source: all/geoplugin
   found_by: probe
   status: live
-  verified: '2026-08-26'
+  verified: '2026-09-03'
   api_count: 1
 - view_sort: N-kairos-facial-recognition-api
   name: Kairos Facial Recognition API
@@ -547,7 +560,7 @@
   source: all/kairos-ar
   found_by: probe
   status: live
-  verified: '2026-08-26'
+  verified: '2026-09-03'
   api_count: 1
   spec_version: '0.14'
 - view_sort: N-leadping
@@ -559,7 +572,7 @@
   image: /images/showcase/leadping.png
   source: all/leadping
   status: live
-  verified: '2026-08-26'
+  verified: '2026-09-03'
   api_count: 4
   spec_version: '0.22'
 - view_sort: N-legal-ge-public-apis
@@ -573,7 +586,7 @@
   image: /images/showcase/legal-ge-public-apis.png
   source: all/legal-ge-public-apis
   status: live
-  verified: '2026-08-26'
+  verified: '2026-09-03'
   api_count: 2
   spec_version: '0.19'
 - view_sort: N-linkagi-model-api
@@ -587,7 +600,7 @@
   image: /images/showcase/linkagi-model-api.svg
   source: all/linkagi-model-api
   status: live
-  verified: '2026-08-26'
+  verified: '2026-09-03'
   api_count: 1
   spec_version: '0.19'
 - view_sort: N-listings-api
@@ -600,7 +613,7 @@
   source: all/listings-api
   found_by: probe
   status: live
-  verified: '2026-08-26'
+  verified: '2026-09-03'
   api_count: 1
   spec_version: '0.14'
 - view_sort: N-loa-healthcare-pricing-api
@@ -611,7 +624,7 @@
   image: /images/showcase/loa-healthcare-pricing-api.png
   source: all/loa-healthcare-pricing-api
   status: live
-  verified: '2026-08-26'
+  verified: '2026-09-03'
   api_count: 1
   spec_version: '0.21'
 - view_sort: N-lone-wolf-technologies
@@ -625,7 +638,7 @@
   source: all/lone-wolf
   found_by: probe
   status: live
-  verified: '2026-08-26'
+  verified: '2026-09-03'
   api_count: 10
   spec_version: '0.16'
 - view_sort: N-lookip
@@ -637,7 +650,7 @@
   image: /images/showcase/lookip.png
   source: all/lookip
   status: live
-  verified: '2026-08-26'
+  verified: '2026-09-03'
   api_count: 1
   spec_version: '0.19'
 - view_sort: N-makebimi
@@ -649,7 +662,7 @@
   image: /images/showcase/makebimi.png
   source: all/makebimi
   status: live
-  verified: '2026-08-26'
+  verified: '2026-09-03'
   api_count: 1
   spec_version: '0.22'
 - view_sort: N-microlink-io
@@ -661,7 +674,7 @@
   source: all/microlink-io
   found_by: probe
   status: live
-  verified: '2026-08-26'
+  verified: '2026-09-03'
   api_count: 1
   spec_version: '1.0'
 - view_sort: N-mobileapi-dev
@@ -673,7 +686,7 @@
   source: all/mobileapi-dev
   found_by: probe
   status: live
-  verified: '2026-08-26'
+  verified: '2026-09-03'
   api_count: 1
   spec_version: '0.16'
 - view_sort: N-mydentify-public-apis
@@ -685,7 +698,7 @@
   image: /images/showcase/mydentify-public-apis.svg
   source: all/mydentify-public-api
   status: live
-  verified: '2026-08-26'
+  verified: '2026-09-03'
   api_count: 1
   spec_version: '0.21'
 - view_sort: N-mystars-faas
@@ -698,7 +711,7 @@
   source: all/mystars-faas-fulfilment-api
   found_by: probe
   status: live
-  verified: '2026-08-26'
+  verified: '2026-09-03'
   api_count: 1
   spec_version: '0.18'
 - view_sort: N-nutrientsdb
@@ -711,7 +724,7 @@
   source: all/nutrientsdb
   found_by: probe
   status: live
-  verified: '2026-08-26'
+  verified: '2026-09-03'
   api_count: 1
   spec_version: '0.21'
 - view_sort: N-opencage-geocoding-api
@@ -723,7 +736,7 @@
   source: all/opencage
   found_by: probe
   status: live
-  verified: '2026-08-26'
+  verified: '2026-09-03'
   api_count: 1
   spec_version: '0.15'
 - view_sort: N-openmercantil
@@ -734,7 +747,7 @@
   image: /images/showcase/openmercantil.png
   source: all/openmercantil
   status: live
-  verified: '2026-08-26'
+  verified: '2026-09-03'
   api_count: 2
   spec_version: '0.16'
 - view_sort: N-pdf-generator-api
@@ -746,9 +759,20 @@
   source: all/pdfgeneratorapi
   found_by: probe
   status: live
-  verified: '2026-08-26'
+  verified: '2026-09-03'
   api_count: 1
   spec_version: '0.15'
+- view_sort: N-pexafy
+  name: Pexafy
+  identifier: pexafy
+  url: https://pexafy.com/.well-known/apis.json
+  description: Pexafy is a semantic (meaning-based) search engine over free-licence stock photography
+  image: /images/showcase/pexafy.png
+  source: all/pexafy
+  status: live
+  verified: '2026-09-03'
+  api_count: 2
+  spec_version: '0.21'
 - view_sort: N-pixelixe
   name: Pixelixe
   identifier: pixelixe
@@ -760,7 +784,7 @@
   source: all/pixelixe
   found_by: probe
   status: live
-  verified: '2026-08-26'
+  verified: '2026-09-03'
   api_count: 1
   spec_version: '0.14'
 - view_sort: N-plinth-us-grants-data
@@ -773,7 +797,7 @@
   image: /images/showcase/plinth-us-grants-data.svg
   source: all/plinth-us-grants-data
   status: live
-  verified: '2026-08-26'
+  verified: '2026-09-03'
   api_count: 2
   spec_version: '0.19'
 - view_sort: N-plotapi
@@ -785,7 +809,7 @@
   source: all/plotapi
   found_by: probe
   status: live
-  verified: '2026-08-26'
+  verified: '2026-09-03'
   api_count: 2
   spec_version: '0.17'
 - view_sort: N-qr-code-crafter
@@ -799,7 +823,7 @@
   image: /images/showcase/qr-code-crafter.png
   source: all/qr-code-crafter
   status: live
-  verified: '2026-08-26'
+  verified: '2026-09-03'
   api_count: 1
   spec_version: '0.21'
 - view_sort: N-quickchart
@@ -811,7 +835,7 @@
   source: all/quickchart
   found_by: probe
   status: live
-  verified: '2026-08-26'
+  verified: '2026-09-03'
   api_count: 1
   spec_version: '0.14'
 - view_sort: N-real-time-uv-index-forecast-api-openuv
@@ -824,7 +848,7 @@
   source: all/openuv
   found_by: probe
   status: live
-  verified: '2026-08-26'
+  verified: '2026-09-03'
   api_count: 3
   spec_version: '0.14'
 - view_sort: N-roxyapi
@@ -837,7 +861,7 @@
   source: all/roxyapi
   found_by: probe
   status: live
-  verified: '2026-08-26'
+  verified: '2026-09-03'
   api_count: 15
   spec_version: '0.21'
 - view_sort: N-rugspull-read-api
@@ -849,7 +873,7 @@
   image: /images/showcase/rugspull-read-api.png
   source: all/rugspull-read-api
   status: live
-  verified: '2026-08-26'
+  verified: '2026-09-03'
   api_count: 1
   spec_version: '0.21'
 - view_sort: N-sagaris
@@ -862,7 +886,7 @@
   source: all/sagaris
   found_by: probe
   status: live
-  verified: '2026-08-26'
+  verified: '2026-09-03'
   api_count: 2
   spec_version: '0.19'
 - view_sort: N-schemasure
@@ -875,7 +899,7 @@
   source: all/schemasure
   found_by: probe
   status: live
-  verified: '2026-08-26'
+  verified: '2026-09-03'
   api_count: 6
   spec_version: '0.18'
 - view_sort: N-serbia-company-data
@@ -887,9 +911,21 @@
   image: /images/showcase/serbia-company-data.svg
   source: all/serbia-company-data
   status: live
-  verified: '2026-08-26'
+  verified: '2026-09-03'
   api_count: 1
   spec_version: '0.21'
+- view_sort: N-signsealship-partner-api
+  name: SignSealShip Partner API
+  identifier: signsealship-partner-api
+  url: https://signsealship.com/.well-known/apis.json
+  description: E-signature, remote online notarization coordination, document verification and physical
+    delivery in one workflow
+  image: /images/showcase/signsealship-partner-api.png
+  source: all/signsealship
+  status: live
+  verified: '2026-09-03'
+  api_count: 2
+  spec_version: '0.15'
 - view_sort: N-skipodds
   name: SkipOdds
   identifier: skipodds
@@ -900,7 +936,7 @@
   source: all/skipodds
   found_by: probe
   status: live
-  verified: '2026-08-26'
+  verified: '2026-09-03'
   api_count: 1
   spec_version: '0.16'
 - view_sort: N-snapapi
@@ -911,10 +947,11 @@
   image: /images/showcase/snapapi.svg
   source: all/snapapi
   found_by: probe
-  status: live
+  status: unreachable
   verified: '2026-08-26'
   api_count: 1
   spec_version: '0.18'
+  last_http_status: 503
 - view_sort: N-socialcrawl
   name: SocialCrawl
   identifier: socialcrawl
@@ -925,7 +962,7 @@
   image: /images/showcase/socialcrawl.png
   source: all/socialcrawl
   status: live
-  verified: '2026-08-26'
+  verified: '2026-09-03'
   api_count: 1
   spec_version: '0.23'
 - view_sort: N-sorsa
@@ -938,7 +975,7 @@
   image: /images/showcase/sorsa.png
   source: all/sorsa
   status: live
-  verified: '2026-08-26'
+  verified: '2026-09-03'
   api_count: 1
   spec_version: '0.16'
 - view_sort: N-southendonsea-city
@@ -951,7 +988,7 @@
   image: /images/showcase/southendonsea-city.svg
   source: all/southendonsea
   status: live
-  verified: '2026-08-26'
+  verified: '2026-09-03'
   api_count: 1
   spec_version: '0.21'
 - view_sort: N-sunrise-and-sunset
@@ -963,7 +1000,7 @@
   source: all/sunrise-and-sunset
   found_by: probe
   status: live
-  verified: '2026-08-26'
+  verified: '2026-09-03'
   api_count: 1
   spec_version: '0.14'
 - view_sort: N-suprsonic
@@ -975,7 +1012,7 @@
   source: all/suprsonic
   found_by: probe
   status: live
-  verified: '2026-08-26'
+  verified: '2026-09-03'
   api_count: 1
   spec_version: '0.18'
 - view_sort: N-sylvia-api
@@ -988,7 +1025,7 @@
   image: /images/showcase/sylvia-api.svg
   source: all/sylvia-api
   status: live
-  verified: '2026-08-26'
+  verified: '2026-09-03'
   api_count: 6
   spec_version: '0.21'
 - view_sort: N-tadeus-api
@@ -1001,7 +1038,7 @@
   source: all/tadeus-api
   found_by: probe
   status: live
-  verified: '2026-08-26'
+  verified: '2026-09-03'
   api_count: 1
   spec_version: '0.18'
 - view_sort: N-tinyops-studio-api-catalog
@@ -1013,7 +1050,7 @@
   source: all/automation-preflight-api
   found_by: probe
   status: live
-  verified: '2026-08-26'
+  verified: '2026-09-03'
   api_count: 1
   spec_version: '0.21'
 - view_sort: N-tvarka-atk-api
@@ -1025,9 +1062,21 @@
   image: /images/showcase/tvarka-atk-api.svg
   source: all/tvarka-atk-api
   status: live
-  verified: '2026-08-26'
+  verified: '2026-09-03'
   api_count: 1
   spec_version: '0.19'
+- view_sort: N-vectorizer-ai
+  name: Vectorizer.AI
+  identifier: vectorizer-ai
+  url: https://vectorizer.ai/apis.json
+  description: Vectorizer.AI converts raster bitmap images into vector artwork through a production HTTP
+    API, returning SVG, PDF, EPS, DXF and PNG
+  image: /images/showcase/vectorizer-ai.png
+  source: all/vectorizer-ai
+  status: live
+  verified: '2026-09-03'
+  api_count: 1
+  spec_version: '0.20'
 - view_sort: N-venue-authority
   name: Venue Authority
   identifier: venue-authority
@@ -1037,7 +1086,7 @@
   image: /images/showcase/venue-authority.svg
   source: all/venueauthority
   status: live
-  verified: '2026-08-26'
+  verified: '2026-09-03'
   api_count: 1
   spec_version: '0.22'
 - view_sort: N-virtuosis-api-index
@@ -1049,7 +1098,7 @@
   source: all/virtuosis-voice-biomarker-api
   found_by: probe
   status: live
-  verified: '2026-08-26'
+  verified: '2026-09-03'
   api_count: 1
   spec_version: '0.23'
 - view_sort: N-waodao
@@ -1062,7 +1111,7 @@
   image: /images/showcase/waodao.png
   source: all/waodao
   status: live
-  verified: '2026-08-26'
+  verified: '2026-09-03'
   api_count: 1
   spec_version: '0.19'
   also_at: https://waodao.ai/.well-known/apis.json
@@ -1076,7 +1125,7 @@
   image: /images/showcase/we-ultrarich.png
   source: all/wegtultrarich
   status: live
-  verified: '2026-08-26'
+  verified: '2026-09-03'
   api_count: 2
   spec_version: '0.21'
   also_at: https://api.wegtultrarich.org/.well-known/apis.json
@@ -1089,9 +1138,21 @@
   source: all/wealthville-defi-liquidity-pool-scores-api-solana-evm
   found_by: probe
   status: live
-  verified: '2026-08-26'
+  verified: '2026-09-03'
   api_count: 1
   spec_version: '0.16'
+- view_sort: N-x402-list-api
+  name: x402 List API
+  identifier: x402-list-api
+  url: https://x402-list.com/.well-known/apis.json
+  description: An open, machine-readable, live-monitored directory of services that accept x402 protocol
+    payments (HTTP 402 Payment Required)
+  image: /images/showcase/x402-list-api.png
+  source: all/x402-list-api
+  status: live
+  verified: '2026-09-03'
+  api_count: 1
+  spec_version: '0.23'
 - view_sort: N-xquik
   name: Xquik
   identifier: xquik
@@ -1100,6 +1161,6 @@
   image: /images/showcase/xquik.png
   source: all/xquik-api
   status: live
-  verified: '2026-08-26'
+  verified: '2026-09-03'
   api_count: 3
   spec_version: '0.21'

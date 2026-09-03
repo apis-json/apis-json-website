@@ -1,0 +1,165 @@
+---
+layout: post
+title: "A List of 100 APIs.json"
+date: 2026-09-03
+image: /images/a-list-of-100-apis-json.png
+tags:
+  - APIs.json
+  - Discovery
+  - Adoption
+  - Index
+---
+
+<p>Here are one hundred APIs.json files. Not a hundred companies we believe have one, and not a hundred entries copied out of somebody else's list — a hundred URLs that were requested on 2026-09-03, answered with bytes that parsed, and had an <code>apis</code> array inside. The 80 organizations behind them describe 178 APIs.</p>
+
+<p>We publish the list rather than the number because a number cannot be checked. Every row below is a link. Click one and you get the raw index that host serves, right now, with nothing of ours in between.</p>
+
+<h3>What had to be true to make the table</h3>
+
+<p>Two rules, and the first is the one the specification already states in section 3.2.1: <strong>the index is served from the same domain as the APIs it describes</strong>. A copy of your APIs.json in a GitHub repository is a file. The same document at <code>yourdomain.com/apis.json</code> is a discovery endpoint, because a machine that knows your domain can find it without being told anything else. That rule threw out more candidates than it kept.</p>
+
+<p>The second rule is that <strong>a status code is not a document</strong>. Hosts that answer <code>200</code> to everything will happily return their HTML shell for <code>/apis.json</code>, and several pointers that providers gave us themselves turned out to aim at an OpenAPI rather than an index. Every URL here was parsed, not pinged. Four candidates were dropped on this pass for failing exactly that check.</p>
+
+<h3>One hundred documents is not one hundred organizations</h3>
+
+<p>It is 80. The table counts <em>files</em>, and 20 organizations serve the same index at more than one location — usually <code>/apis.json</code> and <code>/.well-known/apis.json</code> together, which is the belt-and-braces move and a sensible one while the convention is still settling. Those appear twice below, because two URLs that both answer are two places a machine can succeed.</p>
+
+<p>Counted as organizations instead of files, 94 publish an authoritative index today, and 119 URLs answer for them. The <a href="/">home page grid</a> is the organization-shaped view of this same data — one tile per provider, 94 tiles.</p>
+
+<h3>The versions are the interesting column</h3>
+
+<p>Across the hundred: <code>0.21</code> (38), <code>0.14</code> (16), <code>0.16</code> (10), <code>0.19</code> (9), <code>0.18</code> (7), <code>0.15</code> (5), <code>0.22</code> (4), <code>1.0</code> (4), <code>0.23</code> (2), <code>0.17</code> (1), <code>0.20</code> (1). That is every one of the 10 released versions of APIs.json from <code>0.14</code> on, all in production at the same time, the oldest of them a decade old and still parsing. It is also the wild in miniature: 4 documents declare <code>1.0</code>, a version that has never existed, and 3 declare no version at all — and their <code>apis</code> arrays parse fine anyway, which tells you which fields readers actually depend on.</p>
+
+<p>Nobody had to upgrade. An index written against 0.14 is still valid today and the tooling still reads it, because every release since has added vocabulary rather than moved the furniture. That is the entire argument for keeping the format small, and this column is the evidence for it rather than the claim.</p>
+
+<p>The other thing worth noticing is who is here. Weather data, postal code lookups, disc golf, debt collection, a city council. Most are small. Almost none are the companies that would appear on a list of the largest API providers — and the largest API providers are, with a few exceptions, absent. The organizations that publish a machine-readable index of their APIs are overwhelmingly the ones for whom being found is the whole business.</p>
+
+<h3>The list</h3>
+
+<table class="index-list">
+<thead><tr><th class="n">#</th><th>Provider</th><th>APIs.json</th><th class="n">APIs</th><th class="n">Version</th></tr></thead>
+<tbody>
+  <tr><td class="n">1</td><td>5DollarFootballAPI</td><td class="u"><a href="https://5dollarfootballapi.com/apis.json" target="_blank" rel="noopener">5dollarfootballapi.com/apis.json</a></td><td class="n">1</td><td class="n">0.16</td></tr>
+  <tr><td class="n">2</td><td>Ablo</td><td class="u"><a href="https://docs.abloatai.com/.well-known/apis.json" target="_blank" rel="noopener">docs.abloatai.com/.well-known/apis.json</a></td><td class="n">1</td><td class="n">0.21</td></tr>
+  <tr><td class="n">3</td><td>Ablo</td><td class="u"><a href="https://docs.abloatai.com/apis.json" target="_blank" rel="noopener">docs.abloatai.com/apis.json</a></td><td class="n">1</td><td class="n">0.21</td></tr>
+  <tr><td class="n">4</td><td>Acuity Scheduling</td><td class="u"><a href="https://acuityscheduling.com/apis.json" target="_blank" rel="noopener">acuityscheduling.com/apis.json</a></td><td class="n">1</td><td class="n">0.14</td></tr>
+  <tr><td class="n">5</td><td>AdMakeAI</td><td class="u"><a href="https://admakeai.com/.well-known/apis.json" target="_blank" rel="noopener">admakeai.com/.well-known/apis.json</a></td><td class="n">1</td><td class="n">0.21</td></tr>
+  <tr><td class="n">6</td><td>AdMakeAI</td><td class="u"><a href="https://admakeai.com/apis.json" target="_blank" rel="noopener">admakeai.com/apis.json</a></td><td class="n">1</td><td class="n">0.21</td></tr>
+  <tr><td class="n">7</td><td>AI Crawler Index</td><td class="u"><a href="https://www.pathwren.workers.dev/.well-known/apis.json" target="_blank" rel="noopener">www.pathwren.workers.dev/.well-known/apis.json</a></td><td class="n">1</td><td class="n">1.0</td></tr>
+  <tr><td class="n">8</td><td>AI Crawler Index</td><td class="u"><a href="https://www.pathwren.workers.dev/apis.json" target="_blank" rel="noopener">www.pathwren.workers.dev/apis.json</a></td><td class="n">1</td><td class="n">1.0</td></tr>
+  <tr><td class="n">9</td><td>AlphaAI</td><td class="u"><a href="https://api.alphai.io/apis.json" target="_blank" rel="noopener">api.alphai.io/apis.json</a></td><td class="n">2</td><td class="n">0.21</td></tr>
+  <tr><td class="n">10</td><td>API Evangelist</td><td class="u"><a href="https://aviation-edge.com/apis.json" target="_blank" rel="noopener">aviation-edge.com/apis.json</a></td><td class="n">2</td><td class="n">&mdash;</td></tr>
+  <tr><td class="n">11</td><td>API Snap</td><td class="u"><a href="https://api-snap.com/apis.json" target="_blank" rel="noopener">api-snap.com/apis.json</a></td><td class="n">1</td><td class="n">0.18</td></tr>
+  <tr><td class="n">12</td><td>api.met.no</td><td class="u"><a href="https://api.met.no/apis.json" target="_blank" rel="noopener">api.met.no/apis.json</a></td><td class="n">32</td><td class="n">0.15</td></tr>
+  <tr><td class="n">13</td><td>Apideck</td><td class="u"><a href="https://www.apideck.com/apis.json" target="_blank" rel="noopener">www.apideck.com/apis.json</a></td><td class="n">7</td><td class="n">0.16</td></tr>
+  <tr><td class="n">14</td><td>APIs.io</td><td class="u"><a href="https://apis.io/apis.json" target="_blank" rel="noopener">apis.io/apis.json</a></td><td class="n">1</td><td class="n">0.21</td></tr>
+  <tr><td class="n">15</td><td>APIs.io</td><td class="u"><a href="https://apis.io/apis.yml" target="_blank" rel="noopener">apis.io/apis.yml</a></td><td class="n">1</td><td class="n">0.21</td></tr>
+  <tr><td class="n">16</td><td>AppsMax</td><td class="u"><a href="https://appsmax.ru/.well-known/apis.json" target="_blank" rel="noopener">appsmax.ru/.well-known/apis.json</a></td><td class="n">1</td><td class="n">0.21</td></tr>
+  <tr><td class="n">17</td><td>AppsMax</td><td class="u"><a href="https://appsmax.ru/apis.json" target="_blank" rel="noopener">appsmax.ru/apis.json</a></td><td class="n">1</td><td class="n">0.21</td></tr>
+  <tr><td class="n">18</td><td>BTC War Public APIs</td><td class="u"><a href="https://btcwar.net/.well-known/apis.json" target="_blank" rel="noopener">btcwar.net/.well-known/apis.json</a></td><td class="n">1</td><td class="n">0.21</td></tr>
+  <tr><td class="n">19</td><td>BTC War Public APIs</td><td class="u"><a href="https://btcwar.net/apis.json" target="_blank" rel="noopener">btcwar.net/apis.json</a></td><td class="n">1</td><td class="n">0.21</td></tr>
+  <tr><td class="n">20</td><td>Bump.sh</td><td class="u"><a href="https://demo.bump.sh/apis.json" target="_blank" rel="noopener">demo.bump.sh/apis.json</a></td><td class="n">9</td><td class="n">0.16</td></tr>
+  <tr><td class="n">21</td><td>Catalog Guard</td><td class="u"><a href="https://catalogguard.noahcortezj-c.workers.dev/.well-known/apis.json" target="_blank" rel="noopener">catalogguard.noahcortezj-c.workers.dev/.well-known/apis.json</a></td><td class="n">1</td><td class="n">0.21</td></tr>
+  <tr><td class="n">22</td><td>Catalog Guard</td><td class="u"><a href="https://catalogguard.noahcortezj-c.workers.dev/apis.json" target="_blank" rel="noopener">catalogguard.noahcortezj-c.workers.dev/apis.json</a></td><td class="n">1</td><td class="n">0.21</td></tr>
+  <tr><td class="n">23</td><td>Checkmarket</td><td class="u"><a href="https://api.checkmarket.com/3/apis.json" target="_blank" rel="noopener">api.checkmarket.com/3/apis.json</a></td><td class="n">2</td><td class="n">0.14</td></tr>
+  <tr><td class="n">24</td><td>crob.at APIs</td><td class="u"><a href="https://crob.at/.well-known/apis.json" target="_blank" rel="noopener">crob.at/.well-known/apis.json</a></td><td class="n">1</td><td class="n">0.21</td></tr>
+  <tr><td class="n">25</td><td>crob.at APIs</td><td class="u"><a href="https://crob.at/apis.json" target="_blank" rel="noopener">crob.at/apis.json</a></td><td class="n">1</td><td class="n">0.21</td></tr>
+  <tr><td class="n">26</td><td>CRS Credit API</td><td class="u"><a href="https://crscreditapi.com/apis.json" target="_blank" rel="noopener">crscreditapi.com/apis.json</a></td><td class="n">1</td><td class="n">0.21</td></tr>
+  <tr><td class="n">27</td><td>CycleCalcs</td><td class="u"><a href="https://www.cyclecalcs.com/apis.json" target="_blank" rel="noopener">www.cyclecalcs.com/apis.json</a></td><td class="n">1</td><td class="n">0.21</td></tr>
+  <tr><td class="n">28</td><td>Debitura</td><td class="u"><a href="https://docs.debitura.com/apis.json" target="_blank" rel="noopener">docs.debitura.com/apis.json</a></td><td class="n">3</td><td class="n">0.20</td></tr>
+  <tr><td class="n">29</td><td>Device Specs API</td><td class="u"><a href="https://ds.gtgroup.dev/apis.json" target="_blank" rel="noopener">ds.gtgroup.dev/apis.json</a></td><td class="n">1</td><td class="n">0.21</td></tr>
+  <tr><td class="n">30</td><td>DiscGolfAPI</td><td class="u"><a href="https://discgolfapi.com/apis.json" target="_blank" rel="noopener">discgolfapi.com/apis.json</a></td><td class="n">1</td><td class="n">0.19</td></tr>
+  <tr><td class="n">31</td><td>DNS Check</td><td class="u"><a href="https://www.dnscheck.co/apis.json" target="_blank" rel="noopener">www.dnscheck.co/apis.json</a></td><td class="n">1</td><td class="n">0.14</td></tr>
+  <tr><td class="n">32</td><td>EAN-Search API</td><td class="u"><a href="https://www.ean-search.org/apis.json" target="_blank" rel="noopener">www.ean-search.org/apis.json</a></td><td class="n">1</td><td class="n">&mdash;</td></tr>
+  <tr><td class="n">33</td><td>Email Verifier API</td><td class="u"><a href="https://emailverifierapi.com/apis.json" target="_blank" rel="noopener">emailverifierapi.com/apis.json</a></td><td class="n">1</td><td class="n">0.16</td></tr>
+  <tr><td class="n">34</td><td>Estated</td><td class="u"><a href="https://estated.com/apis.json" target="_blank" rel="noopener">estated.com/apis.json</a></td><td class="n">1</td><td class="n">1.0</td></tr>
+  <tr><td class="n">35</td><td>Famxplor Family Travel API</td><td class="u"><a href="https://famxplor.com/apis.yml" target="_blank" rel="noopener">famxplor.com/apis.yml</a></td><td class="n">1</td><td class="n">0.19</td></tr>
+  <tr><td class="n">36</td><td>FaturaPDF — Brazilian Invoice &amp; Receipt PDF API</td><td class="u"><a href="https://faturapdf.com/apis.json" target="_blank" rel="noopener">faturapdf.com/apis.json</a></td><td class="n">1</td><td class="n">0.16</td></tr>
+  <tr><td class="n">37</td><td>Fitbit</td><td class="u"><a href="https://www.fitbit.com/apis.json" target="_blank" rel="noopener">www.fitbit.com/apis.json</a></td><td class="n">1</td><td class="n">0.14</td></tr>
+  <tr><td class="n">38</td><td>Foxy</td><td class="u"><a href="https://api.foxycart.com/apis.json" target="_blank" rel="noopener">api.foxycart.com/apis.json</a></td><td class="n">1</td><td class="n">0.14</td></tr>
+  <tr><td class="n">39</td><td>Frostbyte</td><td class="u"><a href="https://api-catalog-three.vercel.app/apis.json" target="_blank" rel="noopener">api-catalog-three.vercel.app/apis.json</a></td><td class="n">7</td><td class="n">0.18</td></tr>
+  <tr><td class="n">40</td><td>Gender-API.com</td><td class="u"><a href="https://gender-api.com/apis.json" target="_blank" rel="noopener">gender-api.com/apis.json</a></td><td class="n">1</td><td class="n">0.15</td></tr>
+  <tr><td class="n">41</td><td>graph8</td><td class="u"><a href="https://graph8.com/apis.json" target="_blank" rel="noopener">graph8.com/apis.json</a></td><td class="n">2</td><td class="n">0.21</td></tr>
+  <tr><td class="n">42</td><td>HelloSafe Atlas</td><td class="u"><a href="https://atlas.hellosafe.com/.well-known/apis.json" target="_blank" rel="noopener">atlas.hellosafe.com/.well-known/apis.json</a></td><td class="n">2</td><td class="n">0.18</td></tr>
+  <tr><td class="n">43</td><td>i6eal Open AI Data API</td><td class="u"><a href="https://i6eal.de/apis.json" target="_blank" rel="noopener">i6eal.de/apis.json</a></td><td class="n">1</td><td class="n">0.22</td></tr>
+  <tr><td class="n">44</td><td>IBANforge</td><td class="u"><a href="https://api.ibanforge.com/.well-known/apis.json" target="_blank" rel="noopener">api.ibanforge.com/.well-known/apis.json</a></td><td class="n">1</td><td class="n">0.21</td></tr>
+  <tr><td class="n">45</td><td>IBANforge</td><td class="u"><a href="https://api.ibanforge.com/apis.json" target="_blank" rel="noopener">api.ibanforge.com/apis.json</a></td><td class="n">1</td><td class="n">0.21</td></tr>
+  <tr><td class="n">46</td><td>Infer by Flow7</td><td class="u"><a href="https://infer.flow7.org/.well-known/apis.json" target="_blank" rel="noopener">infer.flow7.org/.well-known/apis.json</a></td><td class="n">1</td><td class="n">0.21</td></tr>
+  <tr><td class="n">47</td><td>Infer by Flow7</td><td class="u"><a href="https://infer.flow7.org/apis.json" target="_blank" rel="noopener">infer.flow7.org/apis.json</a></td><td class="n">1</td><td class="n">0.21</td></tr>
+  <tr><td class="n">48</td><td>IP Find</td><td class="u"><a href="https://www.geoplugin.com/apis.json" target="_blank" rel="noopener">www.geoplugin.com/apis.json</a></td><td class="n">1</td><td class="n">&mdash;</td></tr>
+  <tr><td class="n">49</td><td>IPinfo</td><td class="u"><a href="https://ipinfo.io/apis.json" target="_blank" rel="noopener">ipinfo.io/apis.json</a></td><td class="n">1</td><td class="n">0.14</td></tr>
+  <tr><td class="n">50</td><td>IPWhois</td><td class="u"><a href="https://ipwhois.io/apis.json" target="_blank" rel="noopener">ipwhois.io/apis.json</a></td><td class="n">1</td><td class="n">0.14</td></tr>
+  <tr><td class="n">51</td><td>Kairos Facial Recognition API</td><td class="u"><a href="https://face.kairos.com/apis.json" target="_blank" rel="noopener">face.kairos.com/apis.json</a></td><td class="n">1</td><td class="n">0.14</td></tr>
+  <tr><td class="n">52</td><td>Leadping</td><td class="u"><a href="https://api.leadping.ai/apis.json" target="_blank" rel="noopener">api.leadping.ai/apis.json</a></td><td class="n">4</td><td class="n">0.22</td></tr>
+  <tr><td class="n">53</td><td>legal.ge Public APIs</td><td class="u"><a href="https://legal.ge/apis.json" target="_blank" rel="noopener">legal.ge/apis.json</a></td><td class="n">2</td><td class="n">0.19</td></tr>
+  <tr><td class="n">54</td><td>LinkAGI Model API</td><td class="u"><a href="https://docs.linktoagi.com/.well-known/apis.json" target="_blank" rel="noopener">docs.linktoagi.com/.well-known/apis.json</a></td><td class="n">1</td><td class="n">0.19</td></tr>
+  <tr><td class="n">55</td><td>LinkAGI Model API</td><td class="u"><a href="https://docs.linktoagi.com/apis.json" target="_blank" rel="noopener">docs.linktoagi.com/apis.json</a></td><td class="n">1</td><td class="n">0.19</td></tr>
+  <tr><td class="n">56</td><td>Listings API</td><td class="u"><a href="https://docs.listingsapi.com/apis.json" target="_blank" rel="noopener">docs.listingsapi.com/apis.json</a></td><td class="n">1</td><td class="n">0.14</td></tr>
+  <tr><td class="n">57</td><td>Loa Healthcare Pricing API</td><td class="u"><a href="https://www.loacare.com/apis.json" target="_blank" rel="noopener">www.loacare.com/apis.json</a></td><td class="n">1</td><td class="n">0.21</td></tr>
+  <tr><td class="n">58</td><td>Lone Wolf Technologies</td><td class="u"><a href="https://apidocs.lwolf.com/apis.json" target="_blank" rel="noopener">apidocs.lwolf.com/apis.json</a></td><td class="n">10</td><td class="n">0.16</td></tr>
+  <tr><td class="n">59</td><td>Lookip</td><td class="u"><a href="https://lookip.io/.well-known/apis.json" target="_blank" rel="noopener">lookip.io/.well-known/apis.json</a></td><td class="n">1</td><td class="n">0.19</td></tr>
+  <tr><td class="n">60</td><td>makeBIMI</td><td class="u"><a href="https://makebimi.com/apis.json" target="_blank" rel="noopener">makebimi.com/apis.json</a></td><td class="n">1</td><td class="n">0.22</td></tr>
+  <tr><td class="n">61</td><td>makeBIMI</td><td class="u"><a href="https://makebimi.com/public/apis.json" target="_blank" rel="noopener">makebimi.com/public/apis.json</a></td><td class="n">1</td><td class="n">0.22</td></tr>
+  <tr><td class="n">62</td><td>microlink.io</td><td class="u"><a href="https://microlink.io/apis.json" target="_blank" rel="noopener">microlink.io/apis.json</a></td><td class="n">1</td><td class="n">1.0</td></tr>
+  <tr><td class="n">63</td><td>MobileAPI.dev</td><td class="u"><a href="https://api.mobileapi.dev/apis.json" target="_blank" rel="noopener">api.mobileapi.dev/apis.json</a></td><td class="n">1</td><td class="n">0.16</td></tr>
+  <tr><td class="n">64</td><td>Mydentify Public APIs</td><td class="u"><a href="https://mydentify.com/apis.json" target="_blank" rel="noopener">mydentify.com/apis.json</a></td><td class="n">1</td><td class="n">0.21</td></tr>
+  <tr><td class="n">65</td><td>MyStars FaaS</td><td class="u"><a href="https://mystars.tg/apis.json" target="_blank" rel="noopener">mystars.tg/apis.json</a></td><td class="n">1</td><td class="n">0.18</td></tr>
+  <tr><td class="n">66</td><td>Neutrino API</td><td class="u"><a href="https://www.neutrinoapi.com/apis.json" target="_blank" rel="noopener">www.neutrinoapi.com/apis.json</a></td><td class="n">1</td><td class="n">0.21</td></tr>
+  <tr><td class="n">67</td><td>NutrientsDB</td><td class="u"><a href="https://www.nutrientsdb.com/.well-known/apis.json" target="_blank" rel="noopener">www.nutrientsdb.com/.well-known/apis.json</a></td><td class="n">1</td><td class="n">0.21</td></tr>
+  <tr><td class="n">68</td><td>OpenCage Geocoding API</td><td class="u"><a href="https://opencagedata.com/apis.json" target="_blank" rel="noopener">opencagedata.com/apis.json</a></td><td class="n">1</td><td class="n">0.15</td></tr>
+  <tr><td class="n">69</td><td>OpenMercantil</td><td class="u"><a href="https://openmercantil.es/apis.json" target="_blank" rel="noopener">openmercantil.es/apis.json</a></td><td class="n">2</td><td class="n">0.16</td></tr>
+  <tr><td class="n">70</td><td>PDF Generator API</td><td class="u"><a href="https://us1.pdfgeneratorapi.com/apis.json" target="_blank" rel="noopener">us1.pdfgeneratorapi.com/apis.json</a></td><td class="n">1</td><td class="n">0.15</td></tr>
+  <tr><td class="n">71</td><td>Pexafy</td><td class="u"><a href="https://pexafy.com/.well-known/apis.json" target="_blank" rel="noopener">pexafy.com/.well-known/apis.json</a></td><td class="n">2</td><td class="n">0.21</td></tr>
+  <tr><td class="n">72</td><td>Pexafy</td><td class="u"><a href="https://pexafy.com/apis.json" target="_blank" rel="noopener">pexafy.com/apis.json</a></td><td class="n">2</td><td class="n">0.21</td></tr>
+  <tr><td class="n">73</td><td>Pixelixe</td><td class="u"><a href="https://pixelixe.com/apis.json" target="_blank" rel="noopener">pixelixe.com/apis.json</a></td><td class="n">1</td><td class="n">0.14</td></tr>
+  <tr><td class="n">74</td><td>Plinth US Grants Data</td><td class="u"><a href="https://data.useplinth.com/.well-known/apis.json" target="_blank" rel="noopener">data.useplinth.com/.well-known/apis.json</a></td><td class="n">2</td><td class="n">0.19</td></tr>
+  <tr><td class="n">75</td><td>Plinth US Grants Data</td><td class="u"><a href="https://data.useplinth.com/apis.json" target="_blank" rel="noopener">data.useplinth.com/apis.json</a></td><td class="n">2</td><td class="n">0.19</td></tr>
+  <tr><td class="n">76</td><td>PlotAPI</td><td class="u"><a href="https://plotapi.co/apis.json" target="_blank" rel="noopener">plotapi.co/apis.json</a></td><td class="n">2</td><td class="n">0.17</td></tr>
+  <tr><td class="n">77</td><td>QR Code Crafter</td><td class="u"><a href="https://qrcodecrafter.com/apis.json" target="_blank" rel="noopener">qrcodecrafter.com/apis.json</a></td><td class="n">1</td><td class="n">0.21</td></tr>
+  <tr><td class="n">78</td><td>QuickChart</td><td class="u"><a href="https://quickchart.io/apis.json" target="_blank" rel="noopener">quickchart.io/apis.json</a></td><td class="n">1</td><td class="n">0.14</td></tr>
+  <tr><td class="n">79</td><td>Real-time UV Index Forecast API - OpenUV</td><td class="u"><a href="https://api.openuv.io/apis.json" target="_blank" rel="noopener">api.openuv.io/apis.json</a></td><td class="n">3</td><td class="n">0.14</td></tr>
+  <tr><td class="n">80</td><td>RoxyAPI</td><td class="u"><a href="https://roxyapi.com/.well-known/apis.json" target="_blank" rel="noopener">roxyapi.com/.well-known/apis.json</a></td><td class="n">15</td><td class="n">0.21</td></tr>
+  <tr><td class="n">81</td><td>RoxyAPI</td><td class="u"><a href="https://roxyapi.com/apis.json" target="_blank" rel="noopener">roxyapi.com/apis.json</a></td><td class="n">15</td><td class="n">0.21</td></tr>
+  <tr><td class="n">82</td><td>Rugspull Read API</td><td class="u"><a href="https://rugspull.com/.well-known/apis.json" target="_blank" rel="noopener">rugspull.com/.well-known/apis.json</a></td><td class="n">1</td><td class="n">0.21</td></tr>
+  <tr><td class="n">83</td><td>Rugspull Read API</td><td class="u"><a href="https://rugspull.com/apis.json" target="_blank" rel="noopener">rugspull.com/apis.json</a></td><td class="n">1</td><td class="n">0.21</td></tr>
+  <tr><td class="n">84</td><td>SAGARIS</td><td class="u"><a href="https://www.sagaris.ai/apis.json" target="_blank" rel="noopener">www.sagaris.ai/apis.json</a></td><td class="n">2</td><td class="n">0.19</td></tr>
+  <tr><td class="n">85</td><td>SchemaSure</td><td class="u"><a href="https://schemasure.com/.well-known/apis.json" target="_blank" rel="noopener">schemasure.com/.well-known/apis.json</a></td><td class="n">6</td><td class="n">0.18</td></tr>
+  <tr><td class="n">86</td><td>SchemaSure</td><td class="u"><a href="https://schemasure.com/apis.json" target="_blank" rel="noopener">schemasure.com/apis.json</a></td><td class="n">6</td><td class="n">0.18</td></tr>
+  <tr><td class="n">87</td><td>Serbia Company Data</td><td class="u"><a href="https://serbia-company-x402.vercel.app/.well-known/apis.json" target="_blank" rel="noopener">serbia-company-x402.vercel.app/.well-known/apis.json</a></td><td class="n">1</td><td class="n">0.21</td></tr>
+  <tr><td class="n">88</td><td>Serbia Company Data</td><td class="u"><a href="https://serbia-company-x402.vercel.app/apis.json" target="_blank" rel="noopener">serbia-company-x402.vercel.app/apis.json</a></td><td class="n">1</td><td class="n">0.21</td></tr>
+  <tr><td class="n">89</td><td>SignSealShip Partner API</td><td class="u"><a href="https://signsealship.com/.well-known/apis.json" target="_blank" rel="noopener">signsealship.com/.well-known/apis.json</a></td><td class="n">2</td><td class="n">0.15</td></tr>
+  <tr><td class="n">90</td><td>SkipOdds</td><td class="u"><a href="https://skipodds.com/apis.json" target="_blank" rel="noopener">skipodds.com/apis.json</a></td><td class="n">1</td><td class="n">0.16</td></tr>
+  <tr><td class="n">91</td><td>Social Searcher</td><td class="u"><a href="https://www.social-searcher.com/apis.json" target="_blank" rel="noopener">www.social-searcher.com/apis.json</a></td><td class="n">1</td><td class="n">0.14</td></tr>
+  <tr><td class="n">92</td><td>SocialCrawl</td><td class="u"><a href="https://www.socialcrawl.dev/.well-known/apis.json" target="_blank" rel="noopener">www.socialcrawl.dev/.well-known/apis.json</a></td><td class="n">1</td><td class="n">0.23</td></tr>
+  <tr><td class="n">93</td><td>SocialCrawl</td><td class="u"><a href="https://www.socialcrawl.dev/apis.json" target="_blank" rel="noopener">www.socialcrawl.dev/apis.json</a></td><td class="n">1</td><td class="n">0.23</td></tr>
+  <tr><td class="n">94</td><td>Sorsa</td><td class="u"><a href="https://api.sorsa.io/apis.json" target="_blank" rel="noopener">api.sorsa.io/apis.json</a></td><td class="n">1</td><td class="n">0.16</td></tr>
+  <tr><td class="n">95</td><td>SouthendOnSea.city</td><td class="u"><a href="https://southendonsea.city/.well-known/apis.json" target="_blank" rel="noopener">southendonsea.city/.well-known/apis.json</a></td><td class="n">1</td><td class="n">0.21</td></tr>
+  <tr><td class="n">96</td><td>SouthendOnSea.city</td><td class="u"><a href="https://southendonsea.city/apis.json" target="_blank" rel="noopener">southendonsea.city/apis.json</a></td><td class="n">1</td><td class="n">0.21</td></tr>
+  <tr><td class="n">97</td><td>Spoonacular</td><td class="u"><a href="https://spoonacular.com/apis.json" target="_blank" rel="noopener">spoonacular.com/apis.json</a></td><td class="n">1</td><td class="n">0.14</td></tr>
+  <tr><td class="n">98</td><td>Sunrise and sunset</td><td class="u"><a href="https://sunrise-sunset.org/apis.json" target="_blank" rel="noopener">sunrise-sunset.org/apis.json</a></td><td class="n">1</td><td class="n">0.14</td></tr>
+  <tr><td class="n">99</td><td>Super Monitoring</td><td class="u"><a href="https://www.supermonitoring.com/apis.json" target="_blank" rel="noopener">www.supermonitoring.com/apis.json</a></td><td class="n">1</td><td class="n">0.14</td></tr>
+  <tr><td class="n">100</td><td>Suprsonic</td><td class="u"><a href="https://suprsonic.ai/apis.json" target="_blank" rel="noopener">suprsonic.ai/apis.json</a></td><td class="n">1</td><td class="n">0.18</td></tr>
+</tbody>
+</table>
+
+<p class="list-note">Fetched and parsed 2026-09-03. 119 URLs passed; the 100 above are the first 100 alphabetically by provider, and the remaining 19 are reachable from the <a href="/">home page grid</a>.</p>
+
+<h3>If you publish one and you are not on it</h3>
+
+<p>You are almost certainly not missing because we judged you. You are missing because nobody asked your server. For most of this list's history the only route onto it was to tell us, which meant it measured who had heard of us rather than who had done the work. When we finally sent the request to every host we knew about, nearly half of the organizations on this list came back from servers that had been quietly answering it for years.</p>
+
+<p>So: put an <code>apis.json</code> at the root of the domain your APIs live on, or at <code>/.well-known/apis.json</code>, or both, and <a href="https://github.com/apis-json/apis-json-website/issues/new?title=Add%20our%20APIs.json%20to%20the%20showcase" target="_blank" rel="noopener">open an issue</a>. It gets fetched and parsed and added, or it gets turned down with the reason.</p>
+
+<style>
+  .index-list { width: 100%; border-collapse: collapse; margin: 1.5rem 0 1rem; font-size: 0.9rem; }
+  .index-list th { text-align: left; font-weight: 700; color: #1a1a2e; border-bottom: 2px solid #e3e7ee; padding: 0.5rem 0.6rem; }
+  .index-list td { border-bottom: 1px solid #eef1f6; padding: 0.45rem 0.6rem; vertical-align: top; }
+  .index-list td.n, .index-list th.n { text-align: right; white-space: nowrap; color: #64748b; }
+  .index-list td.u { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.82rem; overflow-wrap: anywhere; }
+  .index-list tr:hover td { background: #f8f9fb; }
+  .list-note { font-size: 0.88rem; color: #64748b; }
+  @media (max-width: 640px) {
+    .index-list { font-size: 0.82rem; }
+    .index-list td.u { font-size: 0.74rem; }
+  }
+</style>
