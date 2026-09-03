@@ -148,7 +148,18 @@ def discover():
     for path in sorted(glob.glob(os.path.join(ALL_DIR, '*', 'apis.yml'))):
         slug = os.path.basename(os.path.dirname(path))
         try:
-            d = yaml.safe_load(open(path))
+            raw = open(path, encoding='utf-8', errors='replace').read()
+        except Exception:
+            continue
+        # Parsing 27,900 profiles takes many minutes and all but a few dozen
+        # cannot possibly hold a pointer. A profile with neither type name
+        # anywhere in its bytes yields nothing below, so skip the parse.
+        has_pointer = 'APIsJSON' in raw or 'APIsYAML' in raw
+        well_known = glob.glob(os.path.join(os.path.dirname(path), 'well-known', '*'))
+        if not has_pointer and not well_known:
+            continue
+        try:
+            d = yaml.safe_load(raw)
         except Exception:
             continue
         if not isinstance(d, dict):
@@ -175,12 +186,17 @@ def discover():
                     note(slug, c.get('url'), site, name, desc)
 
         scan(d.get('common'))
+        # A profile may hang its pointers off a top-level `properties` block
+        # rather than `common`. Both spellings occur in all/*, and reading only
+        # `common` silently loses the provider -- vectorizer.ai and debitura
+        # were both declared this way and neither was ever discovered.
+        scan(d.get('properties'))
         for a in (d.get('apis') or []):
             if isinstance(a, dict):
                 scan(a.get('properties'))
 
         # Harvested copies: the file records the URL it came from.
-        for f in glob.glob(os.path.join(os.path.dirname(path), 'well-known', '*.json')):
+        for f in [w for w in well_known if w.endswith('.json')]:
             try:
                 doc = json.load(open(f))
             except Exception:
@@ -189,9 +205,17 @@ def discover():
                 note(slug, doc['url'], site, doc.get('name') or name, desc)
 
         # Probe artifacts: a recorded 2xx on an apis.json path.
-        for f in glob.glob(os.path.join(os.path.dirname(path), 'well-known', '*.yml')):
+        for f in [w for w in well_known if w.endswith('.yml')]:
             try:
-                doc = yaml.safe_load(open(f))
+                raw_probe = open(f, encoding='utf-8', errors='replace').read()
+            except Exception:
+                continue
+            # Same reasoning as above: only a recorded apis.json/apis.yml path
+            # can produce a candidate, and the artifacts are large.
+            if not re.search(r'apis\.(json|ya?ml)', raw_probe, re.I):
+                continue
+            try:
+                doc = yaml.safe_load(raw_probe)
             except Exception:
                 continue
             if not isinstance(doc, dict):

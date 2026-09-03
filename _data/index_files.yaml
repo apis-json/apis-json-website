@@ -1,0 +1,598 @@
+---
+verified: '2026-09-03'
+files:
+- url: https://5dollarfootballapi.com/apis.json
+  provider: 5DollarFootballAPI
+  identifier: 5dollarfootballapi
+  api_count: 1
+  spec_version: '0.16'
+- url: https://docs.abloatai.com/.well-known/apis.json
+  provider: Ablo
+  identifier: ablo
+  api_count: 1
+  spec_version: '0.21'
+- url: https://docs.abloatai.com/apis.json
+  provider: Ablo
+  identifier: ablo
+  api_count: 1
+  spec_version: '0.21'
+- url: https://acuityscheduling.com/apis.json
+  provider: Acuity Scheduling
+  identifier: actuity-scheduling
+  api_count: 1
+  spec_version: '0.14'
+- url: https://admakeai.com/.well-known/apis.json
+  provider: AdMakeAI
+  identifier: admakeai
+  api_count: 1
+  spec_version: '0.21'
+- url: https://admakeai.com/apis.json
+  provider: AdMakeAI
+  identifier: admakeai
+  api_count: 1
+  spec_version: '0.21'
+- url: https://www.pathwren.workers.dev/.well-known/apis.json
+  provider: AI Crawler Index
+  identifier: ai-crawler-index
+  api_count: 1
+  spec_version: '1.0'
+- url: https://www.pathwren.workers.dev/apis.json
+  provider: AI Crawler Index
+  identifier: ai-crawler-index
+  api_count: 1
+  spec_version: '1.0'
+- url: https://api.alphai.io/apis.json
+  provider: AlphaAI
+  identifier: alphaai
+  api_count: 2
+  spec_version: '0.21'
+- url: https://aviation-edge.com/apis.json
+  provider: API Evangelist
+  identifier: api-evangelist
+  api_count: 2
+  spec_version: ''
+- url: https://api-snap.com/apis.json
+  provider: API Snap
+  identifier: api-snap
+  api_count: 1
+  spec_version: '0.18'
+- url: https://api.met.no/apis.json
+  provider: api.met.no
+  identifier: api-met-no
+  api_count: 32
+  spec_version: '0.15'
+- url: https://www.apideck.com/apis.json
+  provider: Apideck
+  identifier: apideck
+  api_count: 7
+  spec_version: '0.16'
+- url: https://apis.io/apis.json
+  provider: APIs.io
+  identifier: apis-io
+  api_count: 1
+  spec_version: '0.21'
+- url: https://apis.io/apis.yml
+  provider: APIs.io
+  identifier: apis-io
+  api_count: 1
+  spec_version: '0.21'
+- url: https://appsmax.ru/.well-known/apis.json
+  provider: AppsMax
+  identifier: appsmax
+  api_count: 1
+  spec_version: '0.21'
+- url: https://appsmax.ru/apis.json
+  provider: AppsMax
+  identifier: appsmax
+  api_count: 1
+  spec_version: '0.21'
+- url: https://btcwar.net/.well-known/apis.json
+  provider: BTC War Public APIs
+  identifier: btc-war-public-apis
+  api_count: 1
+  spec_version: '0.21'
+- url: https://btcwar.net/apis.json
+  provider: BTC War Public APIs
+  identifier: btc-war-public-apis
+  api_count: 1
+  spec_version: '0.21'
+- url: https://demo.bump.sh/apis.json
+  provider: Bump.sh
+  identifier: bump-sh
+  api_count: 9
+  spec_version: '0.16'
+- url: https://catalogguard.noahcortezj-c.workers.dev/.well-known/apis.json
+  provider: Catalog Guard
+  identifier: catalog-guard
+  api_count: 1
+  spec_version: '0.21'
+- url: https://catalogguard.noahcortezj-c.workers.dev/apis.json
+  provider: Catalog Guard
+  identifier: catalog-guard
+  api_count: 1
+  spec_version: '0.21'
+- url: https://api.checkmarket.com/3/apis.json
+  provider: Checkmarket
+  identifier: checkmarket
+  api_count: 2
+  spec_version: '0.14'
+- url: https://crob.at/.well-known/apis.json
+  provider: crob.at APIs
+  identifier: crob-at-apis
+  api_count: 1
+  spec_version: '0.21'
+- url: https://crob.at/apis.json
+  provider: crob.at APIs
+  identifier: crob-at-apis
+  api_count: 1
+  spec_version: '0.21'
+- url: https://crscreditapi.com/apis.json
+  provider: CRS Credit API
+  identifier: crs-credit-api
+  api_count: 1
+  spec_version: '0.21'
+- url: https://www.cyclecalcs.com/apis.json
+  provider: CycleCalcs
+  identifier: cyclecalcs
+  api_count: 1
+  spec_version: '0.21'
+- url: https://docs.debitura.com/apis.json
+  provider: Debitura
+  identifier: debitura
+  api_count: 3
+  spec_version: '0.20'
+- url: https://ds.gtgroup.dev/apis.json
+  provider: Device Specs API
+  identifier: device-specs-api
+  api_count: 1
+  spec_version: '0.21'
+- url: https://discgolfapi.com/apis.json
+  provider: DiscGolfAPI
+  identifier: discgolfapi
+  api_count: 1
+  spec_version: '0.19'
+- url: https://www.dnscheck.co/apis.json
+  provider: DNS Check
+  identifier: dns-check
+  api_count: 1
+  spec_version: '0.14'
+- url: https://www.ean-search.org/apis.json
+  provider: EAN-Search API
+  identifier: ean-search-api
+  api_count: 1
+  spec_version: ''
+- url: https://emailverifierapi.com/apis.json
+  provider: Email Verifier API
+  identifier: email-verifier-api
+  api_count: 1
+  spec_version: '0.16'
+- url: https://estated.com/apis.json
+  provider: Estated
+  identifier: estated
+  api_count: 1
+  spec_version: '1.0'
+- url: https://famxplor.com/apis.yml
+  provider: Famxplor Family Travel API
+  identifier: famxplor-family-travel-api
+  api_count: 1
+  spec_version: '0.19'
+- url: https://faturapdf.com/apis.json
+  provider: FaturaPDF — Brazilian Invoice & Receipt PDF API
+  identifier: faturapdf-brazilian-invoice-receipt-pdf-api
+  api_count: 1
+  spec_version: '0.16'
+- url: https://www.fitbit.com/apis.json
+  provider: Fitbit
+  identifier: fitbit
+  api_count: 1
+  spec_version: '0.14'
+- url: https://api.foxycart.com/apis.json
+  provider: Foxy
+  identifier: foxy
+  api_count: 1
+  spec_version: '0.14'
+- url: https://api-catalog-three.vercel.app/apis.json
+  provider: Frostbyte
+  identifier: frostbyte
+  api_count: 7
+  spec_version: '0.18'
+- url: https://gender-api.com/apis.json
+  provider: Gender-API.com
+  identifier: gender-api-com
+  api_count: 1
+  spec_version: '0.15'
+- url: https://graph8.com/apis.json
+  provider: graph8
+  identifier: graph8
+  api_count: 2
+  spec_version: '0.21'
+- url: https://atlas.hellosafe.com/.well-known/apis.json
+  provider: HelloSafe Atlas
+  identifier: hellosafe-atlas
+  api_count: 2
+  spec_version: '0.18'
+- url: https://i6eal.de/apis.json
+  provider: i6eal Open AI Data API
+  identifier: i6eal-open-ai-data-api
+  api_count: 1
+  spec_version: '0.22'
+- url: https://api.ibanforge.com/.well-known/apis.json
+  provider: IBANforge
+  identifier: ibanforge
+  api_count: 1
+  spec_version: '0.21'
+- url: https://api.ibanforge.com/apis.json
+  provider: IBANforge
+  identifier: ibanforge
+  api_count: 1
+  spec_version: '0.21'
+- url: https://infer.flow7.org/.well-known/apis.json
+  provider: Infer by Flow7
+  identifier: infer-by-flow7
+  api_count: 1
+  spec_version: '0.21'
+- url: https://infer.flow7.org/apis.json
+  provider: Infer by Flow7
+  identifier: infer-by-flow7
+  api_count: 1
+  spec_version: '0.21'
+- url: https://www.geoplugin.com/apis.json
+  provider: IP Find
+  identifier: ip-find
+  api_count: 1
+  spec_version: ''
+- url: https://ipinfo.io/apis.json
+  provider: IPinfo
+  identifier: ipinfo
+  api_count: 1
+  spec_version: '0.14'
+- url: https://ipwhois.io/apis.json
+  provider: IPWhois
+  identifier: ipwhois
+  api_count: 1
+  spec_version: '0.14'
+- url: https://face.kairos.com/apis.json
+  provider: Kairos Facial Recognition API
+  identifier: kairos-facial-recognition-api
+  api_count: 1
+  spec_version: '0.14'
+- url: https://api.leadping.ai/apis.json
+  provider: Leadping
+  identifier: leadping
+  api_count: 4
+  spec_version: '0.22'
+- url: https://legal.ge/apis.json
+  provider: legal.ge Public APIs
+  identifier: legal-ge-public-apis
+  api_count: 2
+  spec_version: '0.19'
+- url: https://docs.linktoagi.com/.well-known/apis.json
+  provider: LinkAGI Model API
+  identifier: linkagi-model-api
+  api_count: 1
+  spec_version: '0.19'
+- url: https://docs.linktoagi.com/apis.json
+  provider: LinkAGI Model API
+  identifier: linkagi-model-api
+  api_count: 1
+  spec_version: '0.19'
+- url: https://docs.listingsapi.com/apis.json
+  provider: Listings API
+  identifier: listings-api
+  api_count: 1
+  spec_version: '0.14'
+- url: https://www.loacare.com/apis.json
+  provider: Loa Healthcare Pricing API
+  identifier: loa-healthcare-pricing-api
+  api_count: 1
+  spec_version: '0.21'
+- url: https://apidocs.lwolf.com/apis.json
+  provider: Lone Wolf Technologies
+  identifier: lone-wolf-technologies
+  api_count: 10
+  spec_version: '0.16'
+- url: https://lookip.io/.well-known/apis.json
+  provider: Lookip
+  identifier: lookip
+  api_count: 1
+  spec_version: '0.19'
+- url: https://makebimi.com/apis.json
+  provider: makeBIMI
+  identifier: makebimi
+  api_count: 1
+  spec_version: '0.22'
+- url: https://makebimi.com/public/apis.json
+  provider: makeBIMI
+  identifier: makebimi
+  api_count: 1
+  spec_version: '0.22'
+- url: https://microlink.io/apis.json
+  provider: microlink.io
+  identifier: microlink-io
+  api_count: 1
+  spec_version: '1.0'
+- url: https://api.mobileapi.dev/apis.json
+  provider: MobileAPI.dev
+  identifier: mobileapi-dev
+  api_count: 1
+  spec_version: '0.16'
+- url: https://mydentify.com/apis.json
+  provider: Mydentify Public APIs
+  identifier: mydentify-public-apis
+  api_count: 1
+  spec_version: '0.21'
+- url: https://mystars.tg/apis.json
+  provider: MyStars FaaS
+  identifier: mystars-faas
+  api_count: 1
+  spec_version: '0.18'
+- url: https://www.neutrinoapi.com/apis.json
+  provider: Neutrino API
+  identifier: neutrino
+  api_count: 1
+  spec_version: '0.21'
+- url: https://www.nutrientsdb.com/.well-known/apis.json
+  provider: NutrientsDB
+  identifier: nutrientsdb
+  api_count: 1
+  spec_version: '0.21'
+- url: https://opencagedata.com/apis.json
+  provider: OpenCage Geocoding API
+  identifier: opencage-geocoding-api
+  api_count: 1
+  spec_version: '0.15'
+- url: https://openmercantil.es/apis.json
+  provider: OpenMercantil
+  identifier: openmercantil
+  api_count: 2
+  spec_version: '0.16'
+- url: https://us1.pdfgeneratorapi.com/apis.json
+  provider: PDF Generator API
+  identifier: pdf-generator-api
+  api_count: 1
+  spec_version: '0.15'
+- url: https://pexafy.com/.well-known/apis.json
+  provider: Pexafy
+  identifier: pexafy
+  api_count: 2
+  spec_version: '0.21'
+- url: https://pexafy.com/apis.json
+  provider: Pexafy
+  identifier: pexafy
+  api_count: 2
+  spec_version: '0.21'
+- url: https://pixelixe.com/apis.json
+  provider: Pixelixe
+  identifier: pixelixe
+  api_count: 1
+  spec_version: '0.14'
+- url: https://data.useplinth.com/.well-known/apis.json
+  provider: Plinth US Grants Data
+  identifier: plinth-us-grants-data
+  api_count: 2
+  spec_version: '0.19'
+- url: https://data.useplinth.com/apis.json
+  provider: Plinth US Grants Data
+  identifier: plinth-us-grants-data
+  api_count: 2
+  spec_version: '0.19'
+- url: https://plotapi.co/apis.json
+  provider: PlotAPI
+  identifier: plotapi
+  api_count: 2
+  spec_version: '0.17'
+- url: https://qrcodecrafter.com/apis.json
+  provider: QR Code Crafter
+  identifier: qr-code-crafter
+  api_count: 1
+  spec_version: '0.21'
+- url: https://quickchart.io/apis.json
+  provider: QuickChart
+  identifier: quickchart
+  api_count: 1
+  spec_version: '0.14'
+- url: https://api.openuv.io/apis.json
+  provider: Real-time UV Index Forecast API - OpenUV
+  identifier: real-time-uv-index-forecast-api-openuv
+  api_count: 3
+  spec_version: '0.14'
+- url: https://roxyapi.com/.well-known/apis.json
+  provider: RoxyAPI
+  identifier: roxyapi
+  api_count: 15
+  spec_version: '0.21'
+- url: https://roxyapi.com/apis.json
+  provider: RoxyAPI
+  identifier: roxyapi
+  api_count: 15
+  spec_version: '0.21'
+- url: https://rugspull.com/.well-known/apis.json
+  provider: Rugspull Read API
+  identifier: rugspull-read-api
+  api_count: 1
+  spec_version: '0.21'
+- url: https://rugspull.com/apis.json
+  provider: Rugspull Read API
+  identifier: rugspull-read-api
+  api_count: 1
+  spec_version: '0.21'
+- url: https://www.sagaris.ai/apis.json
+  provider: SAGARIS
+  identifier: sagaris
+  api_count: 2
+  spec_version: '0.19'
+- url: https://schemasure.com/.well-known/apis.json
+  provider: SchemaSure
+  identifier: schemasure
+  api_count: 6
+  spec_version: '0.18'
+- url: https://schemasure.com/apis.json
+  provider: SchemaSure
+  identifier: schemasure
+  api_count: 6
+  spec_version: '0.18'
+- url: https://serbia-company-x402.vercel.app/.well-known/apis.json
+  provider: Serbia Company Data
+  identifier: serbia-company-data
+  api_count: 1
+  spec_version: '0.21'
+- url: https://serbia-company-x402.vercel.app/apis.json
+  provider: Serbia Company Data
+  identifier: serbia-company-data
+  api_count: 1
+  spec_version: '0.21'
+- url: https://signsealship.com/.well-known/apis.json
+  provider: SignSealShip Partner API
+  identifier: signsealship-partner-api
+  api_count: 2
+  spec_version: '0.15'
+- url: https://skipodds.com/apis.json
+  provider: SkipOdds
+  identifier: skipodds
+  api_count: 1
+  spec_version: '0.16'
+- url: https://www.social-searcher.com/apis.json
+  provider: Social Searcher
+  identifier: social-searcher
+  api_count: 1
+  spec_version: '0.14'
+- url: https://www.socialcrawl.dev/.well-known/apis.json
+  provider: SocialCrawl
+  identifier: socialcrawl
+  api_count: 1
+  spec_version: '0.23'
+- url: https://www.socialcrawl.dev/apis.json
+  provider: SocialCrawl
+  identifier: socialcrawl
+  api_count: 1
+  spec_version: '0.23'
+- url: https://api.sorsa.io/apis.json
+  provider: Sorsa
+  identifier: sorsa
+  api_count: 1
+  spec_version: '0.16'
+- url: https://southendonsea.city/.well-known/apis.json
+  provider: SouthendOnSea.city
+  identifier: southendonsea-city
+  api_count: 1
+  spec_version: '0.21'
+- url: https://southendonsea.city/apis.json
+  provider: SouthendOnSea.city
+  identifier: southendonsea-city
+  api_count: 1
+  spec_version: '0.21'
+- url: https://spoonacular.com/apis.json
+  provider: Spoonacular
+  identifier: spoonacular
+  api_count: 1
+  spec_version: '0.14'
+- url: https://sunrise-sunset.org/apis.json
+  provider: Sunrise and sunset
+  identifier: sunrise-and-sunset
+  api_count: 1
+  spec_version: '0.14'
+- url: https://www.supermonitoring.com/apis.json
+  provider: Super Monitoring
+  identifier: super-monitoring
+  api_count: 1
+  spec_version: '0.14'
+- url: https://suprsonic.ai/apis.json
+  provider: Suprsonic
+  identifier: suprsonic
+  api_count: 1
+  spec_version: '0.18'
+- url: https://sylvia-api.com/apis.json
+  provider: Sylvia API
+  identifier: sylvia-api
+  api_count: 6
+  spec_version: '0.21'
+- url: https://sylvia-api.com/apis.yml
+  provider: Sylvia API
+  identifier: sylvia-api
+  api_count: 6
+  spec_version: '0.21'
+- url: https://tadeus.net/apis.json
+  provider: Tadeus API
+  identifier: tadeus-api
+  api_count: 1
+  spec_version: '0.18'
+- url: https://tinyopsstudio.com/.well-known/apis.json
+  provider: TinyOps Studio API Catalog
+  identifier: tinyops-studio-api-catalog
+  api_count: 1
+  spec_version: '0.21'
+- url: https://tinyopsstudio.com/apis.json
+  provider: TinyOps Studio API Catalog
+  identifier: tinyops-studio-api-catalog
+  api_count: 1
+  spec_version: '0.21'
+- url: https://atk.tvarka.pro/apis.json
+  provider: Tvarka ATK API
+  identifier: tvarka-atk-api
+  api_count: 1
+  spec_version: '0.19'
+- url: https://twitchbots.info/apis.json
+  provider: Twitch Bot Directory
+  identifier: twitch-bot-directory
+  api_count: 2
+  spec_version: '0.15'
+- url: https://vectorizer.ai/apis.json
+  provider: Vectorizer.AI
+  identifier: vectorizer-ai
+  api_count: 1
+  spec_version: '0.20'
+- url: https://venueauthority.com/apis.json
+  provider: Venue Authority
+  identifier: venue-authority
+  api_count: 1
+  spec_version: '0.22'
+- url: https://www.virtuosis.ai/apis.json
+  provider: Virtuosis API Index
+  identifier: virtuosis-api-index
+  api_count: 1
+  spec_version: '0.23'
+- url: https://waodao.ai/.well-known/apis.json
+  provider: WAODAO
+  identifier: waodao
+  api_count: 1
+  spec_version: '0.19'
+- url: https://waodao.ai/apis.json
+  provider: WAODAO
+  identifier: waodao
+  api_count: 1
+  spec_version: '0.19'
+- url: https://api.wegtultrarich.org/.well-known/apis.json
+  provider: We > Ultrarich
+  identifier: we-ultrarich
+  api_count: 2
+  spec_version: '0.21'
+- url: https://api.wegtultrarich.org/apis.json
+  provider: We > Ultrarich
+  identifier: we-ultrarich
+  api_count: 2
+  spec_version: '0.21'
+- url: https://wealthville.net/.well-known/apis.json
+  provider: WealthVille
+  identifier: wealthville
+  api_count: 1
+  spec_version: '0.16'
+- url: https://wealthville.net/apis.json
+  provider: WealthVille
+  identifier: wealthville
+  api_count: 1
+  spec_version: '0.16'
+- url: https://weatherbit.io/apis.json
+  provider: Weatherbit
+  identifier: weatherbit
+  api_count: 2
+  spec_version: '0.14'
+- url: https://x402-list.com/.well-known/apis.json
+  provider: x402 List API
+  identifier: x402-list-api
+  api_count: 1
+  spec_version: '0.23'
+- url: https://xquik.com/apis.yml
+  provider: Xquik
+  identifier: xquik
+  api_count: 3
+  spec_version: '0.21'
