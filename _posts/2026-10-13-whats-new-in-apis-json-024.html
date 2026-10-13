@@ -1,0 +1,24 @@
+---
+layout: post
+title: "What's New in APIs.json 0.24"
+date: 2026-10-13
+tags:
+  - specification
+  - 0.24
+---
+
+<p>APIs.json 0.24 changes one thing: where an APIs.json document lives. It defines <code>/.well-known/apis.json</code> as a well-known URI under <a href="https://www.rfc-editor.org/rfc/rfc8615" target="_blank" rel="noopener">RFC 8615</a>, so the path can be registered with IANA. No new properties, no schema change beyond the version label.</p>
+
+<h3>Twelve years of "it is intended"</h3>
+
+<p>Since the earliest drafts, section 3.7 has said that <em>"if there is sufficient traction, the 'well known' location '/apis.json' ... will be submitted"</em> — under RFC 5785, which RFC 8615 has since obsoleted. The traction came. Providers publish APIs.json at <code>/.well-known/apis.json</code> today; ten of the twelve sites in the <a href="/">showcase</a> serve a valid document there. What never happened was the submission, and the IANA registry requires that the specification itself define the value as a well-known URI before it can be registered. 0.24 does that.</p>
+
+<h3>What changed</h3>
+
+<ul>
+  <li><strong>Section 3.1, Access method.</strong> <code>/.well-known/apis.json</code> is now the location a publisher SHOULD use and a robot SHOULD request first. The root <code>/apis.*</code> paths remain conformant, so nothing that works today stops working.</li>
+  <li><strong>Section 3.7, Well Known.</strong> A normative definition of the <code>apis.json</code> well-known URI — it returns an APIs.json document describing the APIs operated on or offered by that origin — and the IANA registration template.</li>
+  <li><strong>RFC 9727.</strong> The <code>api-catalog</code> well-known URI already lists APIs.json as one of the catalog formats it can point to. 0.24 makes the relationship explicit: the two are complementary, a publisher may serve both, an <code>api-catalog</code> linkset may link to <code>/.well-known/apis.json</code>, and a robot that finds one should follow it to the other.</li>
+</ul>
+
+<p>Read the <a href="https://apisjson.org/format/apisjson_0.24.txt" target="_blank">0.24 specification</a> or the <a href="https://apisjson.org/format/schema_0.24.yml" target="_blank">schema</a>. Why now is in <a href="https://apievangelist.com/2026/10/13/the-well-known-folder-is-filling-up/" target="_blank" rel="noopener">The Well-Known Folder Is Filling Up</a>.</p>
