@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+<title>HookPulse</title>
+<g transform="translate(0.0000,0.0000) scale(1.000000)">
+  <defs>
+    <linearGradient id="grad-ico" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3ecf9a"/>
+      <stop offset="1" stop-color="#0f6b4c"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14.0000" fill="url(#grad-ico)"/>
+  <path d="M10 36 H22 L26 28 L32 44 L38 20 L44 36 H54" fill="none" stroke="#ffffff" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="54" cy="36" r="3.2" fill="#ffffff" fill-opacity=".9"/>
+</g>
+</svg>

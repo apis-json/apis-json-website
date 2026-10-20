@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+<title>CommsHarbor</title>
+<defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0" stop-color="#38bdf8"/><stop offset="1" stop-color="#075985"/></linearGradient></defs>
+<rect width="64" height="64" rx="14" fill="url(#g)"/>
+<circle cx="32" cy="17" r="5" fill="none" stroke="#ffffff" stroke-width="3.4"/>
+<path d="M32 22v27" stroke="#ffffff" stroke-width="3.6" stroke-linecap="round"/>
+<path d="M22 29h20" stroke="#ffffff" stroke-width="3.4" stroke-linecap="round"/>
+<path d="M17 38c0 8 7 13 15 13s15-5 15-13" fill="none" stroke="#ffffff" stroke-width="3.6" stroke-linecap="round"/>
+</svg>

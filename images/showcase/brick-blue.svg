@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" shape-rendering="crispEdges">
+  <!-- The brick: one blue rectangle, 25:12, the wordmark's field without the word. -->
+  <rect x="25" y="38" width="50" height="24" fill="#002FA7"/>
+</svg>

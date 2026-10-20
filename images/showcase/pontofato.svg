@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+<title>PontoFato</title>
+<defs>
+  <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#2fc08a"/>
+    <stop offset="1" stop-color="#0a6b4f"/>
+  </linearGradient>
+</defs>
+<rect width="64" height="64" rx="14" fill="url(#g)"/>
+<!-- alfinete: o ponto no mapa, que é o produto -->
+<path d="M32 12c-7.7 0-14 6.2-14 13.9 0 10 12.2 22.4 13.2 23.4a1.1 1.1 0 0 0 1.6 0C33.8 48.3 46 35.9 46 25.9 46 18.2 39.7 12 32 12z" fill="#ffffff" opacity="0.97"/>
+<circle cx="32" cy="25.6" r="5.6" fill="#0a6b4f"/>
+<!-- a coordenada: par de eixos discreto na base -->
+<g stroke="#ffffff" stroke-width="2.4" stroke-linecap="round" opacity="0.85">
+  <path d="M14 55h36"/>
+</g>
+</svg>

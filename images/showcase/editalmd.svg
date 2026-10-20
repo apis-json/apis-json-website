@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+<title>EditalMD</title>
+<defs>
+  <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#4d7cfe"/>
+    <stop offset="1" stop-color="#1b3fa0"/>
+  </linearGradient>
+</defs>
+<rect width="64" height="64" rx="14" fill="url(#g)"/>
+<!-- folha do edital -->
+<path d="M20 13h16l10 10v28a3 3 0 0 1-3 3H20a3 3 0 0 1-3-3V16a3 3 0 0 1 3-3z" fill="#ffffff" opacity="0.96"/>
+<path d="M36 13l10 10H38a2 2 0 0 1-2-2z" fill="#c8d6ff"/>
+<!-- marca do markdown: as duas setas/linhas -->
+<g fill="#1b3fa0">
+  <rect x="22" y="31" width="4" height="14" rx="1"/>
+  <rect x="32" y="31" width="4" height="14" rx="1"/>
+  <path d="M26 31l3 6 3-6z"/>
+  <rect x="39" y="31" width="3.4" height="9" rx="1"/>
+  <path d="M37 39.5h7.4L40.7 46z"/>
+</g>
+</svg>

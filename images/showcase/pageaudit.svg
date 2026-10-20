@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+<title>PageAudit</title>
+<g transform="translate(0.0000,0.0000) scale(1.000000)">
+  <rect width="64" height="64" rx="14.0000" fill="#1a56db"/>
+  <path d="M16 14a4 4 0 0 1 4-4h15l13 13v27a4 4 0 0 1-4 4H20a4 4 0 0 1-4-4z" fill="#ffffff"/>
+  <path d="M35 10l13 13H38a3 3 0 0 1-3-3z" fill="#9fbcf2"/>
+  <path d="M23 40l6 6L43 30" fill="none" stroke="#0d7a4f" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</svg>

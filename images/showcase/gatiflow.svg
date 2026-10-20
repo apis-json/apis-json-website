@@ -1,0 +1,15 @@
+<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="GatiFlow">
+  <title>GatiFlow</title>
+  <rect width="32" height="32" rx="6" fill="#0b0f14"/>
+  <path
+    d="M 22 11
+       A 8 8 0 1 0 22 21
+       L 17 21
+       L 17 17
+       L 22 17"
+    fill="none"
+    stroke="#7dd3fc"
+    stroke-width="3"
+    stroke-linecap="round"
+    stroke-linejoin="round"/>
+</svg>

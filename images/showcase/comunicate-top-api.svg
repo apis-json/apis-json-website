@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="592 184 352 352">
+<!--
+  Faviconul: marca pe fundal întunecat, ca în tab să se vadă silueta.
+
+  ─── De ce fundal, și nu transparent ────────────────────────────────────────
+
+  Fiindcă traseele și rama sunt desenate în tonuri închise, iar pe un tab
+  deschis rămâneau un pătrat cenușiu fără contur. Cu fundalul propriu, marca
+  arată la fel oriunde e pusă — tab deschis, tab întunecat, ecran de start pe
+  telefon — și nu depinde de tema browserului.
+
+  ─── Ce intră în decupaj ────────────────────────────────────────────────────
+
+  Doar cadrul cu silueta. Traseele și nodurile există în pictogramele mari
+  (`public/icoane/`), unde au loc; la 16 px devin ceață și fură din singurul
+  lucru care se citește la mărimea aia — silueta.
+
+  Fără animație: în tab nu rulează oricum.
+-->
+<defs>
+<linearGradient id="a" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#a3e635"/><stop offset="1" stop-color="#14b8a6"/></linearGradient>
+<linearGradient id="s" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#c9f455"/><stop offset="0.5" stop-color="#7ddb3a"/><stop offset="1" stop-color="#12b5a3"/></linearGradient>
+<radialGradient id="g" cx="0.5" cy="0.42" r="0.62"><stop offset="0" stop-color="#84cc16" stop-opacity="0.25"/><stop offset="1" stop-color="#84cc16" stop-opacity="0"/></radialGradient>
+<linearGradient id="f" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff"/><stop offset="0.82" stop-color="#fff"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+<mask id="m"><rect x="0" y="0" width="1536" height="548" fill="url(#f)"/></mask>
+</defs>
+<rect x="592" y="184" width="352" height="352" fill="#050807"/>
+<rect x="608" y="200" width="320" height="320" rx="72" fill="#0d0f13" stroke="url(#a)" stroke-width="14"/>
+<rect x="617" y="209" width="302" height="302" rx="64" fill="url(#g)"/>
+<g mask="url(#m)">
+<g transform="translate(233.9,44.4) scale(0.7)" fill-rule="evenodd">
+<path d="M754,187L739,194L732,201L725,215L725,244L720,254L724,268L732,278L736,293L735,303L718,321L646,349L637,358L602,480L595,511L596,521L611,562L641,626L647,631L652,631L662,642L658,647L658,709L744,711L749,705L760,674L765,670L779,705L785,711L862,710L865,707L866,660L870,652L869,640L875,632L882,629L888,611L918,557L931,520L930,502L906,410L888,355L882,350L814,322L798,305L797,291L802,276L810,266L813,253L807,242L809,226L807,212L798,198L787,190L773,186ZM665,472L671,484L678,526L675,551L671,564L667,568L647,516ZM861,470L866,476L880,517L859,571L853,562L848,546L846,511L854,481Z" fill="url(#s)"/>
+</g>
+</g>
+</svg>

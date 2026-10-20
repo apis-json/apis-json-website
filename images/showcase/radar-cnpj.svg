@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+<title>Radar CNPJ</title>
+<g transform="translate(0,0) scale(1.000000)">
+  <defs>
+    <linearGradient id="grad-icone" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3b82f6"/><stop offset="1" stop-color="#1d4ed8"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14.016" fill="url(#grad-icone)"/>
+  <circle cx="32" cy="32" r="21" fill="none" stroke="#fff" stroke-opacity=".55" stroke-width="4.5"/>
+  <circle cx="32" cy="32" r="11.5" fill="none" stroke="#fff" stroke-opacity=".26" stroke-width="3"/>
+  <path d="M32 32 L28.35 11.32 A21 21 0 0 1 39.18 12.27 Z" fill="#fff" fill-opacity=".60"/>
+  <path d="M32 32 L18.50 15.91 A21 21 0 0 1 28.35 11.32 Z" fill="#fff" fill-opacity=".34"/>
+  <path d="M32 32 L12.27 24.82 A21 21 0 0 1 18.50 15.91 Z" fill="#fff" fill-opacity=".16"/>
+  <path d="M32 32 L39.18 12.27" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="32" cy="32" r="3.5" fill="#fff"/>
+  <circle cx="42.7" cy="41" r="6.5" fill="#67e8f9"/>
+</g>
+</svg>

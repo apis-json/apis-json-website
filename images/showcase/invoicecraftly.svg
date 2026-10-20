@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" role="img" aria-label="InvoiceCraftly">
+  <rect width="32" height="32" rx="7" fill="#102038"/>
+  <g transform="translate(2 2) scale(0.291667)">
+    <circle cx="48" cy="48" r="42" fill="none" stroke="#E96868" stroke-width="3.2"/>
+    <path d="M65.5 31.5C61.3 26.4 55 23.5 47.8 23.5C34.2 23.5 24.8 33.7 24.8 48C24.8 62.3 34.4 72.5 48 72.5C55.3 72.5 61.6 69.5 65.8 64.2" fill="none" stroke="#E96868" stroke-width="6" stroke-linecap="round"/>
+    <path d="M39 28.5H58V34H52.2V62H58V67.5H39V62H44.8V34H39V28.5Z" fill="#F2EFE6"/>
+    <path d="M72 43.5L76.5 48L72 52.5L67.5 48L72 43.5Z" fill="#F4B2B2"/>
+  </g>
+</svg>
