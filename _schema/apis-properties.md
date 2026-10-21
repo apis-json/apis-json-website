@@ -5,5 +5,5 @@ image: /images/schema.png
 url: #
 tags:
   - Collection 
-  - Option
+  - Optional
 ---

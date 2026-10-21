@@ -4,5 +4,5 @@ description: Web URL corresponding to the root URL of the API or primary endpoin
 image: /images/schema.png
 url: #
 tags:
-  - Mandatory 
+  - Optional
 ---

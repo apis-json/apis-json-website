@@ -4,5 +4,5 @@ description: A unique identifier for the api, consisting of [root domain]:[strin
 image: /images/schema.png
 url: #
 tags:
-  - Mandatory 
+  - Recommended
 ---

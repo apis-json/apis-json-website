@@ -4,5 +4,5 @@ description: A unique identifier for the collection, consisting of [root domain]
 image: /images/schema.png
 url: #
 tags:
-  - Mandatory 
+  - Recommended
 ---
