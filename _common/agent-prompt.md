@@ -9,7 +9,6 @@ tags:
   - Prompts
   - AI
   - Agents
-  - Spotlight
 yaml_example: |
   prompts:
     - type: AgentPrompt
