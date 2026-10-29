@@ -1,0 +1,114 @@
+---
+layout: post
+title: "What is in the Fleet apis.yml"
+date: 2026-10-29
+tags:
+  - providers
+  - kin-score
+provider: fleet
+---
+
+<p><a href="https://apis.io/providers/fleet/"><img src="https://apis.io/badge/fleet/card.svg" alt="Fleet on APIs.io — Kin Score by API Evangelist" height="40" style="height:40px;width:auto;max-width:100%"></a></p>
+
+<p><a href="https://apis.io/providers/fleet/">Fleet</a> is profiled on APIs.io from a single APIs.json file, <a href="https://github.com/api-evangelist/fleet/blob/main/apis.yml"><code>apis.yml</code></a>. Fleet is an open-source device management platform built on osquery. The file indexes <strong>1 API</strong> and <strong>34 common properties</strong>. 64 Kin Score checks read this file, and it earns <strong>155.1 of their 267 points</strong>. Fleet scored <strong>55.2</strong> (strong) on 2026-10-29; the badge above is live and shows the current score.</p>
+
+<h3>What the file contains</h3>
+<ul>
+  <li><strong>9 tags</strong>: Company, Developer Tools, Device Management, MDM, Endpoint Security, Vulnerability Management, osquery, Open Source, DevOps</li>
+  <li><strong>Specification version:</strong> 0.23</li>
+  <li><strong>Created:</strong> 2026-07-17</li>
+  <li><strong>Modified:</strong> 2026-09-16</li>
+  <li><strong>Maintainers:</strong> 2 listed</li>
+</ul>
+<p><strong>Common properties</strong> (34 types) apply across every API in the file:</p>
+<p>AgenticAccess · AgentSkill · <a href="https://fleetdm.com/docs/rest-api/rest-api">APIReference</a> · Authentication · <a href="https://fleetdm.com/articles">Blog</a> · ChangeLog · CLI · <a href="https://trust.fleetdm.com/">Compliance</a> · Conformance · Conventions · DataModel · <a href="https://fleetdm.com/docs">DeveloperPortal</a> · <a href="https://fleetdm.com/docs">Documentation</a> · DomainSecurity · ErrorCatalog · <a href="https://fleetdm.com/docs/get-started/anatomy">GettingStarted</a> · <a href="https://github.com/fleetdm">GitHubOrganization</a> · Lifecycle · LLMsTxt · Overlay · Packages · Plans · <a href="https://fleetdm.com/pricing">Pricing</a> · <a href="https://fleetdm.com/legal/privacy">PrivacyPolicy</a> · <a href="https://github.com/fleetdm/fleet/blob/main/SECURITY.md">Security</a> · <a href="https://fleetdm.com/register">SignUp</a> · <a href="https://status.fleetdm.com">StatusPage</a> · <a href="https://fleetdm.com/support">Support</a> · <a href="https://fleetdm.com/legal/terms">TermsOfService</a> · TrustCenter · VulnerabilityDisclosure · Webhooks · <a href="https://fleetdm.com/">Website</a> · X-MCPServerCandidate</p>
+<p><strong>APIs</strong> (1):</p>
+<ul>
+  <li><a href="https://apis.io/apis/fleet/fleet-fleet-api/">Fleet API</a> — AgenticAccess, Authentication, Conventions, DataModel, ErrorCatalog, OpenAPI</li>
+</ul>
+
+<h3>How the file drives the Kin Score</h3>
+<p>64 checks in rubric 0.25.0 read this file. 33 are earned, 4 partly, and 27 are not.</p>
+<table class="table">
+  <thead><tr><th>Check</th><th>Points</th><th>What it reads</th></tr></thead>
+  <tbody>
+    <tr><th colspan="3">Discoverability — 37 of 43 points</th></tr>
+    <tr><td>Publishes an apis.yml index</td><td>10 / 10</td><td><code>source_filename == &quot;apis.yml&quot;</code></td></tr>
+    <tr><td>Base URL on every API</td><td>5 / 5</td><td><code>every api has baseURL and no baseURL contains &quot;localhost&quot;</code></td></tr>
+    <tr><td>Human URL on every API</td><td>5 / 5</td><td><code>every api has humanURL</code></td></tr>
+    <tr><td>Substantive description</td><td>5 / 5</td><td><code>len(description) &gt;= 200</code></td></tr>
+    <tr><td>Tagged for discovery</td><td>5 / 5</td><td><code>len(tags) &gt;= 5</code></td></tr>
+    <tr><td>Named maintainer</td><td>3 / 3</td><td><code>maintainers[0].email is set</code></td></tr>
+    <tr><td>Created and modified dates</td><td>2 / 2</td><td><code>created and modified both ISO dates</code></td></tr>
+    <tr><td>Provider image</td><td>2 / 2</td><td><code>image is set</code></td></tr>
+    <tr><th colspan="3">Operational transparency — 20 of 26 points</th></tr>
+    <tr><td>Change log</td><td>6 / 6</td><td><code>common[].type includes &quot;ChangeLog&quot; (alias-aware)</code></td></tr>
+    <tr><td>Status page</td><td>6 / 6</td><td><code>common[].type includes &quot;StatusPage&quot;</code></td></tr>
+    <tr><td>Security disclosure</td><td>4 / 4</td><td><code>common[].type includes &quot;Security&quot; (alias-aware)</code></td></tr>
+    <tr><td>Webhooks advertised</td><td>3 / 3</td><td><code>common[].type includes &quot;Webhooks&quot;</code></td></tr>
+    <tr><td>GitHub organization</td><td>1 / 2</td><td><code>common[].type includes &quot;GitHubOrganization&quot; or &quot;GitHubRepository&quot; (alias-aware)</code></td></tr>
+    <tr><th colspan="3">Developer ergonomics — 29.7 of 42 points</th></tr>
+    <tr><td>Authentication documented</td><td>5 / 5</td><td><code>common[].type includes &quot;Authentication&quot;</code></td></tr>
+    <tr><td>Getting started guide</td><td>5 / 5</td><td><code>common[].type includes &quot;GettingStarted&quot; or &quot;Quickstart&quot;</code></td></tr>
+    <tr><td>Developer portal</td><td>4 / 4</td><td><code>common[].type includes &quot;DeveloperPortal&quot; (alias-aware)</code></td></tr>
+    <tr><td>Documentation</td><td>4 / 4</td><td><code>common[].type includes &quot;Documentation&quot;</code></td></tr>
+    <tr><td>API reference</td><td>3 / 3</td><td><code>common[].type includes &quot;APIReference&quot; (alias-aware)</code></td></tr>
+    <tr><td>Command-line interface</td><td>3 / 3</td><td><code>common[].type includes &quot;CLI&quot;</code></td></tr>
+    <tr><td>Agent Skill</td><td>2.7 / 3</td><td><code>common[].type includes &quot;AgentSkill&quot;, graded by who authored it</code></td></tr>
+    <tr><td>Support channel</td><td>2 / 2</td><td><code>common[].type includes &quot;Support&quot; or &quot;HelpCenter&quot; or &quot;Community&quot;</code></td></tr>
+    <tr><td>Blog</td><td>1 / 1</td><td><code>common[].type includes &quot;Blog&quot;</code></td></tr>
+    <tr><th colspan="3">Access clarity — 23 of 23 points</th></tr>
+    <tr><td>Self-service sign-up</td><td>5 / 5</td><td><code>common[].type includes &quot;SignUp&quot; or &quot;Login&quot;</code></td></tr>
+    <tr><td>Pricing published</td><td>4 / 4</td><td><code>common[].type includes &quot;Pricing&quot;</code></td></tr>
+    <tr><td>Privacy policy</td><td>4 / 4</td><td><code>common[].type includes &quot;PrivacyPolicy&quot; (alias-aware)</code></td></tr>
+    <tr><td>Terms of service</td><td>4 / 4</td><td><code>common[].type includes &quot;TermsOfService&quot; (alias-aware)</code></td></tr>
+    <tr><td>Compliance published</td><td>3 / 3</td><td><code>common[].type includes &quot;Compliance&quot;</code></td></tr>
+    <tr><td>Trust center</td><td>3 / 3</td><td><code>common[].type includes &quot;TrustCenter&quot; or &quot;Trust&quot;</code></td></tr>
+    <tr><th colspan="3">Regulatory — 36 of 94 points</th></tr>
+    <tr><td>Authentication model documented</td><td>6 / 6</td><td><code>common[].type includes &quot;Authentication&quot; or &quot;OpenIDConnect&quot;</code></td></tr>
+    <tr><td>Security posture published</td><td>6 / 6</td><td><code>common[].type includes &quot;Security&quot; or &quot;DomainSecurity&quot;</code></td></tr>
+    <tr><td>Vulnerability disclosure program</td><td>6 / 6</td><td><code>common[].type includes &quot;VulnerabilityDisclosure&quot;</code></td></tr>
+    <tr><td>Compliance / certification disclosure</td><td>5 / 5</td><td><code>common[].type includes &quot;Compliance&quot; or &quot;TrustCenter&quot; or &quot;Trust&quot;</code></td></tr>
+    <tr><td>Data-standard conformance</td><td>5 / 5</td><td><code>implements a recognized data standard — common[].type includes &quot;Standard&quot;/&quot;Conformance&quot;, or a Vocabulary/JSON-LD context is published</code></td></tr>
+    <tr><td>Privacy policy (data handling)</td><td>4 / 4</td><td><code>common[].type includes &quot;PrivacyPolicy&quot;</code></td></tr>
+    <tr><td>Terms of service (legal basis)</td><td>4 / 4</td><td><code>common[].type includes &quot;TermsOfService&quot;</code></td></tr>
+    <tr><th colspan="3">Agent readiness — 9.4 of 30 points</th></tr>
+    <tr><td>Typed Event Surface</td><td>5.4 / 6</td><td><code>AsyncAPI document, OR webhooks/callbacks objects in the as-published OpenAPI, OR common[].type includes Webhooks</code></td></tr>
+    <tr><td>Stable Error Semantics</td><td>4 / 8</td><td><code>OpenAPI $refs a shared error schema across 4xx/5xx responses (verified), else common[].type includes ErrorCatalog / ErrorCodes / DeclineCodes</code></td></tr>
+  </tbody>
+</table>
+<h3>What the file does not say yet</h3>
+<p>111.9 more points depend on entries this file does not have. A missing pointer means the file does not link to it. It does not mean Fleet has not published it.</p>
+<ul>
+  <li><strong>Consent-scoped authorization</strong> (10 pts) — <code>common[].type includes &quot;OAuthScopes&quot; OR a scopes artifact is present</code></li>
+  <li><strong>Idempotency</strong> (9 pts) — <code>OpenAPI mutating operations declare an idempotency key — a header, a request-body property, or a named de-duplication token whose own description says so (verified); else common[].type matches /idempoten/i (documented)</code></li>
+  <li><strong>Publishes a vocabulary</strong> (5 pts) — <code>common[].type includes &quot;Vocabulary&quot;</code></li>
+  <li><strong>Accessibility conformance report</strong> (4 pts) — <code>common[].type includes &quot;AccessibilityConformance&quot;</code></li>
+  <li><strong>Age assurance</strong> (4 pts) — <code>common[].type includes &quot;AgeAssurance&quot;</code></li>
+  <li><strong>Data residency statement</strong> (4 pts) — <code>common[].type includes &quot;DataResidency&quot;</code></li>
+  <li><strong>Data-subject request route</strong> (4 pts) — <code>common[].type includes &quot;DataSubjectRequest&quot;</code></li>
+  <li><strong>Declared support lifetime</strong> (4 pts) — <code>common[].type includes &quot;SupportLifetime&quot;</code></li>
+  <li><strong>Exit assistance / switching terms</strong> (4 pts) — <code>common[].type includes &quot;ExitAssistance&quot;</code></li>
+  <li><strong>Global Privacy Control honoured</strong> (4 pts) — <code>common[].type includes &quot;GlobalPrivacyControl&quot;</code></li>
+  <li><strong>Incident notification commitment</strong> (4 pts) — <code>common[].type includes &quot;IncidentNotification&quot;</code></li>
+  <li><strong>Notice-and-action mechanism</strong> (4 pts) — <code>common[].type includes &quot;NoticeAndAction&quot;</code></li>
+  <li><strong>Published example corpus</strong> (4 pts) — <code>common[].type includes &quot;Examples&quot; (alias-aware: CodeExamples, Samples, CodeSamples, Demos)</code></li>
+  <li><strong>Self-hosts the APIs.json index</strong> (4 pts) — <code>apis.yml url points at a host the provider controls, not the catalog</code></li>
+  <li><strong>Software bill of materials</strong> (4 pts) — <code>common[].type includes &quot;SBOM&quot;</code></li>
+  <li><strong>Subprocessor list</strong> (4 pts) — <code>common[].type includes &quot;Subprocessors&quot;</code></li>
+  <li><strong>Three or more SDKs</strong> (4 pts) — <code>count(common[].type == &quot;SDK&quot; alias-aware) &gt;= 3</code></li>
+  <li><strong>Transparency report</strong> (4 pts) — <code>common[].type includes &quot;TransparencyReport&quot;</code></li>
+  <li><strong>Well-Known Catalog</strong> (4 pts) — <code>common[].type includes WellKnown, APICatalog, or api-catalog</code></li>
+  <li><strong>At least one SDK</strong> (3 pts) — <code>count(common[].type == &quot;SDK&quot; alias-aware) &gt;= 1</code></li>
+  <li><strong>Consent &amp; Bot Identity</strong> (3 pts) — <code>common[].type includes AIPREF, ContentSignal, WebBotAuth, or HTTPMessageSignatures</code></li>
+  <li><strong>Console or sandbox</strong> (3 pts) — <code>common[].type includes &quot;Console&quot; or &quot;Sandbox&quot; or &quot;Playground&quot;</code></li>
+  <li><strong>Deprecation policy</strong> (3 pts) — <code>common[].type includes &quot;Deprecation&quot; (alias-aware)</code></li>
+  <li><strong>Postman collection</strong> (2 pts) — <code>common[].type includes &quot;Postman&quot; (alias-aware), graded by who authored it</code></li>
+  <li><strong>Public roadmap</strong> (2 pts) — <code>common[].type includes &quot;RoadMap&quot; or &quot;Roadmap&quot;</code></li>
+  <li><strong>Leadership page</strong> (1 pt) — <code>common[].type includes Leadership, LeadershipTeam, Management or ExecutiveTeam</code></li>
+  <li><strong>Newsroom</strong> (1 pt) — <code>common[].type includes Newsroom, PressReleases, Press or News</code></li>
+</ul>
+
+<h3>Who keeps this file</h3>
+<p>API Evangelist maintains this file at <a href="https://github.com/api-evangelist/fleet">github.com/api-evangelist/fleet</a>. If you work at Fleet, you can <a href="https://github.com/api-evangelist/fleet/issues/new">open an issue</a> or a pull request to add or correct an entry. You can also publish your own APIs.json at <code>/.well-known/apis.json</code> on your domain, which earns the self-hosting check and makes the file yours.</p>
+<p>See the full rating on the <a href="https://apis.io/providers/fleet/">Fleet profile</a>, and how every check is scored at <a href="https://apis.io/rating/">apis.io/rating</a>.</p>
