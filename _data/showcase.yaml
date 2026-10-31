@@ -735,6 +735,18 @@
   verified: '2026-10-20'
   api_count: 1
   spec_version: '0.16'
+- view_sort: N-fax-for-agents
+  name: Fax for Agents
+  identifier: fax-for-agents
+  url: https://faxforagents.com/.well-known/apis.json
+  description: A fax API, a hosted MCP server and SDKs built so AI agents can send and receive
+    faxes, with quotes, human approvals and delegated policies
+  image: /images/showcase/fax-for-agents.png
+  status: live
+  verified: '2026-10-31'
+  api_count: 2
+  spec_version: '0.24'
+  added: '2026-10-31'
 - view_sort: N-flatin-pt
   name: flatin.pt
   identifier: flatin-pt
