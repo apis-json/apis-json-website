@@ -2009,3 +2009,16 @@
   api_count: 2
   spec_version: '0.19'
   added: '2026-10-20'
+- view_sort: N-predic8
+  name: predic8
+  identifier: predic8
+  url: https://api.predic8.de/apis.json
+  description: Public APIs for REST exploration, test and demonstration.
+  image: /images/showcase/predic8.png
+  source: manual addition
+  found_by: submission
+  status: live
+  verified: '2026-11-02'
+  api_count: 3
+  spec_version: '0.24'
+  added: '2026-11-02'
