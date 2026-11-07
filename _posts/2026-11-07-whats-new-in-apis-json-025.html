@@ -1,0 +1,50 @@
+---
+layout: post
+title: "What's New in APIs.json 0.25"
+date: 2026-11-07
+tags:
+  - specification
+  - 0.25
+image: /images/whats-new-in-apis-json-025.png
+---
+
+<p>APIs.json 0.25 makes the specification agree with itself. Through 0.24, the text, its examples and its JSON Schema described three slightly different formats, and nothing checked one against the others. 0.25 brings them into line, writes down the extension rules that had only ever lived in the schema, registers the property types a scoring pipeline and independent publishers were already reaching for, and adds the check that keeps all of it from drifting again.</p>
+
+<p>Measured against the 153 APIs.json indexes that providers host themselves on the <a href="/">showcase</a>, <strong>87 validated in full under 0.24 and 95 do under 0.25.</strong></p>
+
+<h3>The text, the examples and the schema now agree</h3>
+
+<ul>
+  <li><strong><code>aid</code> is Recommended, not Mandatory.</strong> 72 of 151 live, self-hosted indexes omit the document <code>aid</code>, and 193 of their APIs omit one. A first version that 40% of real publishers fail is describing a different format from the one in use.</li>
+  <li><strong><code>networks</code> is the name of the networks collection.</strong> The text said <code>networks</code> and the schema said <code>network</code>. <code>networks</code> matches every other collection name; <code>network</code> is still accepted.</li>
+  <li><strong>The contact fields match.</strong> The text listed lowercase vCard spellings (<code>fn</code>, <code>org</code>, <code>x-twitter</code>), while its own examples and the schema used <code>FN</code>, <code>organizationName</code> and <code>X-twitter</code>. Publishers followed the examples, so the text now does too, and the lowercase spellings stay valid. Any other social handle is an extension, such as <code>x-bluesky</code>.</li>
+  <li><strong>A workflow can carry a <code>humanURL</code></strong>, as an API can, so an index can link to a page where a person reads or runs an Arazzo workflow.</li>
+</ul>
+
+<h3>Extensions are written down</h3>
+
+<p>Section 3.9 said "TBD" for several releases while the schema changed the rules underneath it: uppercase keys only, then either case, then no rule at all. 0.25 writes them down. An extension may appear on the document, on an API, on a property and on a contact. Its key starts with <code>x-</code> or <code>X-</code>, lower case preferred. Its value can be anything, so <code>x-tier: enterprise</code> is valid. A key that is neither defined nor prefixed is allowed, and a consumer that does not recognise it must ignore it rather than reject the document.</p>
+
+<h3>Nineteen property types, by measured use</h3>
+
+<p>The privacy and regulation types are the larger part of this. The <a href="https://apis.io/rating/" target="_blank" rel="noopener">APIs.io Kin Score</a> reads every one of them, so a provider publishing exactly the disclosure a regulation asks for was failing validation. That is the same wrong-way-round problem that prompted 0.23: if a consumer is looking for a property type, the specification should have a word for it. Counted across 37,661 indexes in the APIs.io catalog:</p>
+
+<ul>
+  <li><strong>Organisation:</strong> <code>Leadership</code> (1,003 indexes).</li>
+  <li><strong>Privacy and regulation:</strong> <code>DataSubjectRequest</code> (125), <code>Subprocessors</code> (77), <code>AITransparency</code> (48), <code>DataResidency</code> (42), <code>IncidentNotification</code> (28), <code>ExitAssistance</code> (20), <code>GlobalPrivacyControl</code> (15), <code>NoticeAndAction</code> (15), <code>SupportLifetime</code> (9), <code>AccessibilityConformance</code> (6), <code>TransparencyReport</code> (3), <code>TrainingDataSummary</code> (2), <code>AgeAssurance</code> (1) and <code>BiometricDataPolicy</code> (0).</li>
+  <li><strong>Agents and security</strong>, where independent publishers led: <code>MCPServerCard</code> (8 self-hosted publishers), <code>X402</code> (4), and the two OAuth discovery documents, <code>ProtectedResourceMetadata</code> (RFC 9728) and <code>AuthorizationServerMetadata</code> (RFC 8414), with 4 each.</li>
+</ul>
+
+<p>Thirteen alternate spellings now validate beside their canonical names, among them <code>MCP</code> for MCPServer, <code>News</code> and <code>Press</code> for Newsroom, <code>Status</code> for StatusPage and <code>Changelog</code> for ChangeLog. Every type and spelling is on the <a href="/format/reservedwords">reserved words</a> page, which was also brought up to date: it had stopped at 0.21, and is now checked against the schema.</p>
+
+<p>What 0.25 does not promote matters as much. The largest invalid values in the catalog are <code>Hosts</code>, <code>Vendors</code> and <code>CapabilityMap</code>, each on thousands of indexes. They are pointers written by one catalog's own pipeline, not words the market uses, and they belong in extensions.</p>
+
+<h3>A check that runs on every change</h3>
+
+<p>Building 0.25 turned up a bug that had been in the published specification all along: the YAML example in section 4 did not parse. Its multi-line description was not indented and the keys after each list item sat a space too deep. It is now generated from the JSON example and round-trips to it exactly.</p>
+
+<p>Nothing had caught that, or the schema drifting from the text, because nothing was checking. 0.25 adds a validation workflow to the specification repository. On every change it confirms each schema is valid, that the examples validate against it, and that every reserved word the text lists is one the schema accepts. It also reports how the live showcase fares, without failing on it, because real publishers are not the specification's to fail.</p>
+
+<p>Thanks to <a href="https://github.com/christiangoerdes" target="_blank" rel="noopener">Christian Gördes</a>, whose pull request aligning the 0.24 schema with its text started this release, and to <a href="https://github.com/erwinkramer" target="_blank" rel="noopener">@erwinkramer</a> for the workflow <code>humanURL</code> and the YAML clean-up.</p>
+
+<p>Read the <a href="https://apisjson.org/format/apisjson_0.25.txt" target="_blank">0.25 specification</a> or the <a href="https://apisjson.org/format/schema_0.25.yml" target="_blank">schema</a>, and the discussion in <a href="https://github.com/apis-json/api-json/pull/134" target="_blank" rel="noopener">pull request #134</a>.</p>
