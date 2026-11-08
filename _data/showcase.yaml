@@ -1716,6 +1716,20 @@
   api_count: 1
   spec_version: '0.19'
   added: '2026-10-20'
+- view_sort: N-smklog
+  name: SMKlog
+  identifier: smklog
+  url: https://smklog.com/.well-known/apis.json
+  description: Parcel shipping quotes and labels across USPS, UPS, FedEx and DHL Express
+  image: /images/showcase/smklog.png
+  source: apis-json/apis-json-website#8
+  found_by: submission
+  status: live
+  verified: '2026-11-07'
+  api_count: 1
+  spec_version: '0.25'
+  added: '2026-11-07'
+  also_at: https://smklog.com/apis.json
 - view_sort: N-snowsignals
   name: SnowSignals
   identifier: snowsignals
