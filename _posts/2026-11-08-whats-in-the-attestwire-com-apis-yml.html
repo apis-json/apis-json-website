@@ -1,0 +1,123 @@
+---
+layout: post
+title: "What is in the Attestwire apis.yml"
+date: 2026-11-08
+tags:
+  - providers
+  - kin-score
+provider: attestwire-com
+---
+
+<p><a href="https://apis.io/providers/attestwire-com/"><img src="https://apis.io/badge/attestwire-com/card.svg" alt="Attestwire on APIs.io — Kin Score by API Evangelist" height="40" style="height:40px;width:auto;max-width:100%"></a></p>
+
+<p><a href="https://apis.io/providers/attestwire-com/">Attestwire</a> is profiled on APIs.io from a single APIs.json file, <a href="https://github.com/api-evangelist/attestwire-com/blob/main/apis.yml"><code>apis.yml</code></a>. Attestwire provides an online service to validate European e‑invoices such as XRechnung and Peppol. The file indexes <strong>9 APIs</strong> and <strong>39 common properties</strong>. 64 Kin Score checks read this file, and it earns <strong>116 of their 267 points</strong>. Attestwire scored <strong>55.3</strong> (strong) on 2026-11-08; the badge above is live and shows the current score.</p>
+
+<h3>What the file contains</h3>
+<ul>
+  <li><strong>7 tags</strong>: Attestwire, E-invoice, Validation, XRechnung, Peppol, API, MCP</li>
+  <li><strong>Specification version:</strong> 0.20</li>
+  <li><strong>Created:</strong> 2026-11-02</li>
+  <li><strong>Modified:</strong> 2026-11-02</li>
+  <li><strong>Maintainers:</strong> 2 listed</li>
+</ul>
+<p><strong>Common properties</strong> (38 types) apply across every API in the file:</p>
+<p>AgenticAccess · AgentSkill · <a href="https://api.attestwire.com/docs">APIReference</a> · Authentication · ChangeLog · <a href="https://attestwire.com/security">Compliance</a> · Conformance · DataModel · <a href="https://api.attestwire.com/docs">DeveloperPortal</a> · <a href="https://api.attestwire.com/docs">Documentation</a> · DomainSecurity · ErrorCatalog · <a href="https://attestwire.com/playground">GettingStarted</a> · <a href="https://github.com/attestwire">GitHubOrganization</a> · Hosts · JSONLD · Lifecycle · LLMsTxt · MCPServer · Packages · Plans · <a href="https://attestwire.com/pricing">Pricing</a> · <a href="https://attestwire.com/privacy">PrivacyPolicy</a> · RateLimits · SDKs · <a href="https://attestwire.com/security">Security</a> · SecurityTxt · Spectral · <a href="https://status.attestwire.com">StatusPage</a> · Support · <a href="https://attestwire.com/terms">TermsOfService</a> · ToolCrosswalk · TrustCenter · Vendors · Vocabulary · VulnerabilityDisclosure · <a href="https://attestwire.com/">Website</a> · WellKnown</p>
+<p><strong>APIs</strong> (9):</p>
+<ul>
+  <li><a href="https://apis.io/apis/attestwire-com/attestwire-com-billing-api/">Attestwire Billing API</a> — APIReference, Documentation, JSONSchema, OpenAPI</li>
+  <li><a href="https://apis.io/apis/attestwire-com/attestwire-com-diagnose-api/">Attestwire Diagnose API</a> — APIReference, Documentation, JSONSchema, OpenAPI</li>
+  <li><a href="https://apis.io/apis/attestwire-com/attestwire-com-invoices-api/">Attestwire Invoices API</a> — APIReference, Documentation, JSONSchema, OpenAPI</li>
+  <li><a href="https://apis.io/apis/attestwire-com/attestwire-com-keys-api/">Attestwire Keys API</a> — APIReference, Documentation, JSONSchema, OpenAPI</li>
+  <li><a href="https://apis.io/apis/attestwire-com/attestwire-com-meta-api/">Attestwire Meta API</a> — APIReference, Documentation, JSONSchema, OpenAPI</li>
+  <li><a href="https://apis.io/apis/attestwire-com/attestwire-com-peppol-api/">Attestwire Peppol API</a> — APIReference, Documentation, JSONSchema, OpenAPI</li>
+  <li><a href="https://apis.io/apis/attestwire-com/attestwire-com-recipient-api/">Attestwire Recipient API</a> — APIReference, Documentation, JSONSchema, OpenAPI</li>
+  <li><a href="https://apis.io/apis/attestwire-com/attestwire-com-records-api/">Attestwire Records API</a> — APIReference, Documentation, JSONSchema, OpenAPI</li>
+  <li><a href="https://apis.io/apis/attestwire-com/attestwire-com-vat-api/">Attestwire Vat API</a> — APIReference, Documentation, JSONSchema, OpenAPI</li>
+</ul>
+
+<h3>How the file drives the Kin Score</h3>
+<p>64 checks in rubric 0.26.0 read this file. 17 are earned, 17 partly, and 30 are not.</p>
+<table class="table">
+  <thead><tr><th>Check</th><th>Points</th><th>What it reads</th></tr></thead>
+  <tbody>
+    <tr><th colspan="3">Discoverability — 37 of 43 points</th></tr>
+    <tr><td>Publishes an apis.yml index</td><td>10 / 10</td><td><code>source_filename == &quot;apis.yml&quot;</code></td></tr>
+    <tr><td>Base URL on every API</td><td>5 / 5</td><td><code>every api has baseURL and no baseURL contains &quot;localhost&quot;</code></td></tr>
+    <tr><td>Human URL on every API</td><td>5 / 5</td><td><code>every api has humanURL</code></td></tr>
+    <tr><td>Substantive description</td><td>5 / 5</td><td><code>len(description) &gt;= 200</code></td></tr>
+    <tr><td>Tagged for discovery</td><td>5 / 5</td><td><code>len(tags) &gt;= 5</code></td></tr>
+    <tr><td>Named maintainer</td><td>3 / 3</td><td><code>maintainers[0].email is set</code></td></tr>
+    <tr><td>Created and modified dates</td><td>2 / 2</td><td><code>created and modified both ISO dates</code></td></tr>
+    <tr><td>Provider image</td><td>2 / 2</td><td><code>image is set</code></td></tr>
+    <tr><th colspan="3">Contract governance — 1.2 of 5 points</th></tr>
+    <tr><td>Publishes a vocabulary</td><td>1.2 / 5</td><td><code>common[].type includes &quot;Vocabulary&quot;</code></td></tr>
+    <tr><th colspan="3">Operational transparency — 9 of 26 points</th></tr>
+    <tr><td>Change log</td><td>3 / 6</td><td><code>common[].type includes &quot;ChangeLog&quot; (alias-aware)</code></td></tr>
+    <tr><td>Status page</td><td>3 / 6</td><td><code>common[].type includes &quot;StatusPage&quot;</code></td></tr>
+    <tr><td>Security disclosure</td><td>2 / 4</td><td><code>common[].type includes &quot;Security&quot; (alias-aware)</code></td></tr>
+    <tr><td>GitHub organization</td><td>1 / 2</td><td><code>common[].type includes &quot;GitHubOrganization&quot; or &quot;GitHubRepository&quot; (alias-aware)</code></td></tr>
+    <tr><th colspan="3">Developer ergonomics — 20.7 of 42 points</th></tr>
+    <tr><td>Authentication documented</td><td>5 / 5</td><td><code>common[].type includes &quot;Authentication&quot;</code></td></tr>
+    <tr><td>At least one SDK</td><td>3 / 3</td><td><code>count(common[].type == &quot;SDK&quot; alias-aware) &gt;= 1</code></td></tr>
+    <tr><td>Agent Skill</td><td>2.7 / 3</td><td><code>common[].type includes &quot;AgentSkill&quot;, graded by who authored it</code></td></tr>
+    <tr><td>Getting started guide</td><td>2.5 / 5</td><td><code>common[].type includes &quot;GettingStarted&quot; or &quot;Quickstart&quot;</code></td></tr>
+    <tr><td>Developer portal</td><td>2 / 4</td><td><code>common[].type includes &quot;DeveloperPortal&quot; (alias-aware)</code></td></tr>
+    <tr><td>Documentation</td><td>2 / 4</td><td><code>common[].type includes &quot;Documentation&quot;</code></td></tr>
+    <tr><td>Support channel</td><td>2 / 2</td><td><code>common[].type includes &quot;Support&quot; or &quot;HelpCenter&quot; or &quot;Community&quot;</code></td></tr>
+    <tr><td>API reference</td><td>1.5 / 3</td><td><code>common[].type includes &quot;APIReference&quot; (alias-aware)</code></td></tr>
+    <tr><th colspan="3">Access clarity — 10.5 of 23 points</th></tr>
+    <tr><td>Trust center</td><td>3 / 3</td><td><code>common[].type includes &quot;TrustCenter&quot; or &quot;Trust&quot;</code></td></tr>
+    <tr><td>Pricing published</td><td>2 / 4</td><td><code>common[].type includes &quot;Pricing&quot;</code></td></tr>
+    <tr><td>Privacy policy</td><td>2 / 4</td><td><code>common[].type includes &quot;PrivacyPolicy&quot; (alias-aware)</code></td></tr>
+    <tr><td>Terms of service</td><td>2 / 4</td><td><code>common[].type includes &quot;TermsOfService&quot; (alias-aware)</code></td></tr>
+    <tr><td>Compliance published</td><td>1.5 / 3</td><td><code>common[].type includes &quot;Compliance&quot;</code></td></tr>
+    <tr><th colspan="3">Regulatory — 29.5 of 94 points</th></tr>
+    <tr><td>Authentication model documented</td><td>6 / 6</td><td><code>common[].type includes &quot;Authentication&quot; or &quot;OpenIDConnect&quot;</code></td></tr>
+    <tr><td>Security posture published</td><td>6 / 6</td><td><code>common[].type includes &quot;Security&quot; or &quot;DomainSecurity&quot;</code></td></tr>
+    <tr><td>Vulnerability disclosure program</td><td>6 / 6</td><td><code>common[].type includes &quot;VulnerabilityDisclosure&quot;</code></td></tr>
+    <tr><td>Data-standard conformance</td><td>5 / 5</td><td><code>implements a recognized data standard — common[].type includes &quot;Standard&quot;/&quot;Conformance&quot;, or a Vocabulary/JSON-LD context is published</code></td></tr>
+    <tr><td>Compliance / certification disclosure</td><td>2.5 / 5</td><td><code>common[].type includes &quot;Compliance&quot; or &quot;TrustCenter&quot; or &quot;Trust&quot;</code></td></tr>
+    <tr><td>Privacy policy (data handling)</td><td>2 / 4</td><td><code>common[].type includes &quot;PrivacyPolicy&quot;</code></td></tr>
+    <tr><td>Terms of service (legal basis)</td><td>2 / 4</td><td><code>common[].type includes &quot;TermsOfService&quot;</code></td></tr>
+    <tr><th colspan="3">Agent readiness — 8 of 30 points</th></tr>
+    <tr><td>Stable Error Semantics</td><td>8 / 8</td><td><code>OpenAPI $refs a shared error schema across 4xx/5xx responses (verified), else common[].type includes ErrorCatalog / ErrorCodes / DeclineCodes</code></td></tr>
+  </tbody>
+</table>
+<h3>What the file does not say yet</h3>
+<p>151.1 more points depend on entries this file does not have. A missing pointer means the file does not link to it. It does not mean Attestwire has not published it.</p>
+<ul>
+  <li><strong>Consent-scoped authorization</strong> (10 pts) — <code>common[].type includes &quot;OAuthScopes&quot; OR a scopes artifact is present</code></li>
+  <li><strong>Idempotency</strong> (9 pts) — <code>OpenAPI mutating operations declare an idempotency key — a header, a request-body property, or a named de-duplication token whose own description says so (verified); else common[].type matches /idempoten/i (documented)</code></li>
+  <li><strong>Typed Event Surface</strong> (6 pts) — <code>AsyncAPI document, OR webhooks/callbacks objects in the as-published OpenAPI, OR common[].type includes Webhooks</code></li>
+  <li><strong>Self-service sign-up</strong> (5 pts) — <code>common[].type includes &quot;SignUp&quot; or &quot;Login&quot;</code></li>
+  <li><strong>Accessibility conformance report</strong> (4 pts) — <code>common[].type includes &quot;AccessibilityConformance&quot;</code></li>
+  <li><strong>Age assurance</strong> (4 pts) — <code>common[].type includes &quot;AgeAssurance&quot;</code></li>
+  <li><strong>Data residency statement</strong> (4 pts) — <code>common[].type includes &quot;DataResidency&quot;</code></li>
+  <li><strong>Data-subject request route</strong> (4 pts) — <code>common[].type includes &quot;DataSubjectRequest&quot;</code></li>
+  <li><strong>Declared support lifetime</strong> (4 pts) — <code>common[].type includes &quot;SupportLifetime&quot;</code></li>
+  <li><strong>Exit assistance / switching terms</strong> (4 pts) — <code>common[].type includes &quot;ExitAssistance&quot;</code></li>
+  <li><strong>Global Privacy Control honoured</strong> (4 pts) — <code>common[].type includes &quot;GlobalPrivacyControl&quot;</code></li>
+  <li><strong>Incident notification commitment</strong> (4 pts) — <code>common[].type includes &quot;IncidentNotification&quot;</code></li>
+  <li><strong>Notice-and-action mechanism</strong> (4 pts) — <code>common[].type includes &quot;NoticeAndAction&quot;</code></li>
+  <li><strong>Published example corpus</strong> (4 pts) — <code>common[].type includes &quot;Examples&quot; (alias-aware: CodeExamples, Samples, CodeSamples, Demos)</code></li>
+  <li><strong>Self-hosts the APIs.json index</strong> (4 pts) — <code>apis.yml url points at a host the provider controls, not the catalog</code></li>
+  <li><strong>Software bill of materials</strong> (4 pts) — <code>common[].type includes &quot;SBOM&quot;</code></li>
+  <li><strong>Subprocessor list</strong> (4 pts) — <code>common[].type includes &quot;Subprocessors&quot;</code></li>
+  <li><strong>Three or more SDKs</strong> (4 pts) — <code>count(common[].type == &quot;SDK&quot; alias-aware) &gt;= 3</code></li>
+  <li><strong>Transparency report</strong> (4 pts) — <code>common[].type includes &quot;TransparencyReport&quot;</code></li>
+  <li><strong>Well-Known Catalog</strong> (4 pts) — <code>common[].type includes WellKnown, APICatalog, or api-catalog</code></li>
+  <li><strong>Command-line interface</strong> (3 pts) — <code>common[].type includes &quot;CLI&quot;</code></li>
+  <li><strong>Consent &amp; Bot Identity</strong> (3 pts) — <code>common[].type includes AIPREF, ContentSignal, WebBotAuth, or HTTPMessageSignatures</code></li>
+  <li><strong>Console or sandbox</strong> (3 pts) — <code>common[].type includes &quot;Console&quot; or &quot;Sandbox&quot; or &quot;Playground&quot;</code></li>
+  <li><strong>Deprecation policy</strong> (3 pts) — <code>common[].type includes &quot;Deprecation&quot; (alias-aware)</code></li>
+  <li><strong>Webhooks advertised</strong> (3 pts) — <code>common[].type includes &quot;Webhooks&quot;</code></li>
+  <li><strong>Postman collection</strong> (2 pts) — <code>common[].type includes &quot;Postman&quot; (alias-aware), graded by who authored it</code></li>
+  <li><strong>Public roadmap</strong> (2 pts) — <code>common[].type includes &quot;RoadMap&quot; or &quot;Roadmap&quot;</code></li>
+  <li><strong>Blog</strong> (1 pt) — <code>common[].type includes &quot;Blog&quot;</code></li>
+  <li><strong>Leadership page</strong> (1 pt) — <code>common[].type includes Leadership, LeadershipTeam, Management or ExecutiveTeam</code></li>
+  <li><strong>Newsroom</strong> (1 pt) — <code>common[].type includes Newsroom, PressReleases, Press or News</code></li>
+</ul>
+
+<h3>Who keeps this file</h3>
+<p>API Evangelist maintains this file at <a href="https://github.com/api-evangelist/attestwire-com">github.com/api-evangelist/attestwire-com</a>. If you work at Attestwire, you can <a href="https://github.com/api-evangelist/attestwire-com/issues/new">open an issue</a> or a pull request to add or correct an entry. You can also publish your own APIs.json at <code>/.well-known/apis.json</code> on your domain, which earns the self-hosting check and makes the file yours.</p>
+<p>See the full rating on the <a href="https://apis.io/providers/attestwire-com/">Attestwire profile</a>, and how every check is scored at <a href="https://apis.io/rating/">apis.io/rating</a>.</p>
