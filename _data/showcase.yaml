@@ -1442,7 +1442,7 @@
   api_count: 1
   spec_version: '0.15'
 - view_sort: N-pexafy
-  name: Pexafy
+  name: Pexafy Stock Photos
   identifier: pexafy
   url: https://pexafy.com/.well-known/apis.json
   description: Pexafy is a semantic (meaning-based) search engine over free-licence stock photography
